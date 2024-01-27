@@ -1,0 +1,85 @@
+.header {
+    padding: 20px 40px 24px 40px;
+    background-color: #f8f9ff;
+    &Flex {
+        display: flex;
+        justify-content: space-between;
+        & > div {
+            &:first-child {
+                h2 {
+                    max-width: 675px;
+                    color: #005c9a;
+                    margin-top: 12px;
+                    margin-bottom: 24px;
+                }
+                p {
+                    max-width: 557px;
+                    color: #265071;
+                }
+            }
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+    &SecondaryFlex {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        & > div {
+            &:first-child {
+                max-width: 331px;
+                p {
+                    color: #265071;
+                    display: flex;
+                    gap: 8px;
+                    margin-bottom: 4px;
+                    &::before {
+                        font-size: 24px;
+                        color: #39a1ed;
+                    }
+                }
+            }
+        }
+    }
+    &Btn,
+    &SecondaryBtn {
+        background-color: transparent;
+        text-align: left;
+        display: flex;
+        gap: 8px;
+        padding: 16px 0;
+        &::before {
+            font-size: 24px;
+            color: #39a1ed;
+        }
+    }
+    &Btn {
+        width: 374px;
+        color: #39a1ed;
+    }
+    &SecondaryBtn {
+        width: 423px;
+        padding-left: 16px;
+        padding-right: 8px;
+        border: 1px solid #39a1ed;
+        border-radius: 8px;
+        color: #193a54;
+    }
+    &LinkBtn {
+        background-color: transparent;
+        color: #39a1ed;
+        margin-left: 32px;
+        padding: 4px 0;
+        display: flex;
+        gap: 4px;
+        flex-direction: row-reverse;
+        &::before {
+            font-size: 16px;
+            color: #39a1ed;
+            transform: rotate(-90deg);
+        }
+    }
+}

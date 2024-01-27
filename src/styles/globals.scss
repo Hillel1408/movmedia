@@ -1,3 +1,33 @@
 @import "null";
 @import "fonts";
 @import "icons";
+
+body {
+    min-width: 1440px;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.text-xs,
+.text-medium-xs {
+    font-size: 12px;
+    line-height: 16px;
+}
+.text-medium-xs {
+    font-weight: 500;
+}
+.text-s,
+.text-medium-s {
+    font-size: 14px;
+    line-height: 18px;
+}
+.text-medium-s {
+    font-weight: 500;
+}
+.subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+}

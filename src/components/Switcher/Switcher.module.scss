@@ -1,0 +1,39 @@
+.switcher {
+    padding: 4px 4px 4px 8px;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 4px 4px 4px 0px rgba(67, 67, 67, 0.1) inset;
+    width: 87px;
+    height: 32px;
+    position: relative;
+    & > div {
+        width: 24px;
+        height: 24px;
+        background-color: #e4f4ff;
+        border-radius: 100%;
+        transition: 0.7s;
+        filter: drop-shadow(2px 2px 4px rgba(2, 39, 88, 0.15));
+        cursor: pointer;
+    }
+    & > span {
+        position: absolute;
+        top: 50%;
+
+        transform: translateY(-50%);
+        color: #193a54;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &Active {
+        & > div {
+            background-color: #39a1ed;
+            transform: translateX(51px);
+        }
+        & > span {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.7s;
+            transition-delay: 0.5s;
+        }
+    }
+}

@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icomoon";
-    src: url("../fonts/icomoon.eot?xtvr4n");
-    src: url("../fonts/icomoon.eot?xtvr4n#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xtvr4n") format("truetype"),
-        url("../fonts/icomoon.woff?xtvr4n") format("woff"), url("../fonts/icomoon.svg?xtvr4n#icomoon") format("svg");
+    src: url("../fonts/icomoon.eot?rxc3q1");
+    src: url("../fonts/icomoon.eot?rxc3q1#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?rxc3q1") format("truetype"),
+        url("../fonts/icomoon.woff?rxc3q1") format("woff"), url("../fonts/icomoon.svg?rxc3q1#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -24,6 +24,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-record-voice-over:before {
+    content: "\e923";
+}
+.icon-partner-exchange:before {
+    content: "\e924";
+}
+.icon-person-play:before {
+    content: "\e925";
+}
+.icon-support-agent:before {
+    content: "\e926";
+}
 .icon-developer-guide:before {
     content: "\e901";
 }
@@ -123,6 +135,6 @@
 .icon-01:before {
     content: "\e920";
 }
-.icon-chevron_right_FILL0_wght400_GRAD0_opsz24-1-1:before {
+.icon-chevron-right:before {
     content: "\e921";
 }
