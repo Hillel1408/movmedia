@@ -44,42 +44,191 @@
             }
         }
     }
-    &Btn,
+    &Btn > button,
     &SecondaryBtn {
         background-color: transparent;
         text-align: left;
         display: flex;
         gap: 8px;
-        padding: 16px 0;
         &::before {
             font-size: 24px;
             color: #39a1ed;
         }
     }
     &Btn {
-        width: 374px;
-        color: #39a1ed;
+        width: 390px;
+        padding: 16px;
+        transform: translateX(-16px);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        position: relative;
+        transition: 0.4s;
+        &:hover {
+            background-color: white;
+            & > p {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        & > button {
+            color: #39a1ed;
+            transition: 0.4s;
+        }
+        & > p {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            transform: translateX(-16px);
+            position: absolute;
+            width: 100%;
+            padding: 8px 16px 16px 48px;
+            background-color: white;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
     }
     &SecondaryBtn {
         width: 423px;
-        padding-left: 16px;
-        padding-right: 8px;
+        padding: 16px 8px 16px 16px;
         border: 1px solid #39a1ed;
         border-radius: 8px;
         color: #193a54;
+        transition: 0.4s;
+        &:hover {
+            background-color: white;
+        }
     }
     &LinkBtn {
-        background-color: transparent;
-        color: #39a1ed;
+        position: relative;
         margin-left: 32px;
-        padding: 4px 0;
-        display: flex;
-        gap: 4px;
-        flex-direction: row-reverse;
-        &::before {
-            font-size: 16px;
+        & > button {
+            background-color: transparent;
             color: #39a1ed;
-            transform: rotate(-90deg);
+            padding: 4px 0;
+            display: flex;
+            gap: 4px;
+            flex-direction: row-reverse;
+            &::before {
+                font-size: 16px;
+                color: #39a1ed;
+                transform: rotate(-90deg);
+            }
+        }
+        &:hover {
+            & > ul {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        & > ul {
+            position: absolute;
+            top: 32px;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.4s;
+            padding: 16px 16px 16px 32px;
+            width: 419px;
+            border-radius: 8px;
+            background: #ebf3fb;
+            color: #003f6a;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            li {
+                list-style-type: disc;
+            }
+        }
+    }
+}
+.navigation {
+    height: 722px;
+    position: relative;
+    & > img {
+        width: 100%;
+    }
+    & > button {
+        position: absolute;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
+        display: flex;
+        gap: 10px;
+        font-family: "Roboto Flex";
+        font-size: 16px;
+        font-weight: 600;
+        padding: 16px 12px;
+        align-items: center;
+        color: #193a54;
+        text-align: left;
+        transition: 0.4s;
+        &:hover {
+            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+            color: white;
+            &:before {
+                color: white !important;
+            }
+        }
+        &:active {
+            box-shadow: none;
+        }
+        &:before {
+            font-size: 32px;
+            transition: 0.4s;
+        }
+        &:nth-child(2) {
+            top: 260px;
+            left: 90px;
+            &:before {
+                color: #f48a2c;
+            }
+            &:hover {
+                background-color: #ffbb7f;
+            }
+        }
+        &:nth-child(3) {
+            top: 120px;
+            left: 384px;
+            width: 240px;
+            &:before {
+                color: #5545d7;
+            }
+            &:hover {
+                background-color: #e2c1ff;
+            }
+        }
+        &:nth-child(4) {
+            top: 51px;
+            left: 882px;
+            width: 270px;
+            &:before {
+                color: #39a1ed;
+            }
+            &:hover {
+                background-color: #99d4ff;
+            }
+        }
+        &:nth-child(5) {
+            top: 325px;
+            left: 1132px;
+            width: 268px;
+            &:before {
+                color: #f46c63;
+            }
+            &:hover {
+                background-color: #ff938a;
+            }
+        }
+        &:nth-child(6) {
+            top: 556px;
+            left: 843px;
+            width: 299px;
+            &:before {
+                color: #9cc040;
+            }
+            &:hover {
+                background-color: #b5d664;
+            }
         }
     }
 }
