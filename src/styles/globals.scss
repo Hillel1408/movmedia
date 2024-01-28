@@ -4,16 +4,21 @@
 
 body {
     min-width: 1440px;
+    &.lock {
+        overflow: hidden;
+    }
 }
 .container {
-    max-width: 1480px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 .text-xs,
 .text-medium-xs {
     font-size: 12px;
     line-height: 16px;
+}
+.text-xs {
+    font-weight: 400;
 }
 .text-medium-xs {
     font-weight: 500;
@@ -22,6 +27,9 @@ body {
 .text-medium-s {
     font-size: 14px;
     line-height: 18px;
+}
+.text-s {
+    font-weight: 400;
 }
 .text-medium-s {
     font-weight: 500;

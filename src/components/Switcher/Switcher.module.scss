@@ -6,6 +6,7 @@
     width: 87px;
     height: 32px;
     position: relative;
+    cursor: pointer;
     & > div {
         width: 24px;
         height: 24px;
@@ -13,12 +14,10 @@
         border-radius: 100%;
         transition: 0.7s;
         filter: drop-shadow(2px 2px 4px rgba(2, 39, 88, 0.15));
-        cursor: pointer;
     }
     & > span {
         position: absolute;
         top: 50%;
-
         transform: translateY(-50%);
         color: #193a54;
         opacity: 0;
