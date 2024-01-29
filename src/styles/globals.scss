@@ -34,8 +34,25 @@ body {
 .text-medium-s {
     font-weight: 500;
 }
+.title {
+    font-size: 48px;
+    font-family: "Roboto Flex";
+    font-weight: 600;
+    line-height: normal;
+}
 .subtitle {
     font-size: 24px;
     font-weight: 500;
     line-height: 30px;
+}
+.small-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.modal-subtitle {
+    font-family: "Roboto Flex";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
 }

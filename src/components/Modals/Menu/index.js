@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
-import { Overlay } from "../../index";
+import { Overlay, ModalsSwitcn } from "../../index";
 import styles from "./Menu.module.scss";
 import classNames from "classnames";
 
@@ -10,6 +10,8 @@ export default function Menu({ activeModal, setActiveModal }) {
     const navItems = [
         {
             title: "Создать нормативную базу",
+            modal: "normative-base",
+            color: "#F48A2C",
             modals: [
                 { title: "Положение о закупках", modal: "" },
                 { title: "Перечень ВЗЛ", modal: "" },
@@ -18,6 +20,8 @@ export default function Menu({ activeModal, setActiveModal }) {
         },
         {
             title: "Организовать работу в информационных системах",
+            modal: "information-systems",
+            color: "#5545D7",
             modals: [
                 { title: "АСЭЗ", modal: "" },
                 { title: "ЕИС", modal: "" },
@@ -28,6 +32,8 @@ export default function Menu({ activeModal, setActiveModal }) {
         },
         {
             title: "Наладить взаимодействие участников процесса",
+            modal: "list-of-participants",
+            color: "#39A1ED",
             modals: [
                 { title: "Закупочное подразделение", modal: "" },
                 { title: "Закупочная комиссия", modal: "" },
@@ -35,9 +41,11 @@ export default function Menu({ activeModal, setActiveModal }) {
                 { title: "Организатор закупок", modal: "" },
             ],
         },
-        { title: "Обеспечить контроль, работу с договорами, формирование отчетности", modals: [] },
+        { title: "Обеспечить контроль, работу с договорами, формирование отчетности", modal: "", modals: [] },
         {
             title: "Настроить отдельные элементы планирования",
+            modal: "planning-elements",
+            color: "#F46C63",
             modals: [
                 { title: "Формирование потребности", modal: "" },
                 { title: "Закупки у СМСП", modal: "" },
@@ -60,20 +68,21 @@ export default function Menu({ activeModal, setActiveModal }) {
                 }}
                 className={classNames("container", styles.menuContainer)}
             >
-                <div onClick={(e) => e.stopPropagation()} className={classNames(styles.menu, activeModal && styles.menuActive)}>
+                <div onClick={(e) => e.stopPropagation()} className={classNames(styles.menu, active && styles.menuActive)}>
                     <ul>
                         {navItems.map((item, index) => (
                             <li
                                 key={index}
                                 onClick={() => {
-                                    setActive(item.title);
+                                    setActive(item.modal);
                                 }}
+                                style={{ outline: active === item.modal && `2px solid ${item.color}` }}
                             >
                                 <span>{item.title}</span>
                                 {item.modals.length > 0 && (
-                                    <ul className={classNames("text-s", active === item.title && styles.active)}>
+                                    <ul className={classNames("text-s", active === item.modal && styles.active)}>
                                         {item.modals.map((item, index) => (
-                                            <li>{item.title}</li>
+                                            <li key={index}>{item.title}</li>
                                         ))}
                                     </ul>
                                 )}
@@ -81,6 +90,7 @@ export default function Menu({ activeModal, setActiveModal }) {
                         ))}
                     </ul>
                 </div>
+                <ModalsSwitcn modal={active} />
             </div>
         </>,
         document.getElementById("portal"),

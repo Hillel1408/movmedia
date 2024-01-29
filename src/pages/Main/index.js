@@ -16,11 +16,11 @@ export default function Main() {
         "дочерние хозяйственные общества, в уставном капитале которых более 50% долей в совокупности принадлежит указанным выше дочерним хозяйственным обществам.",
     ];
     const buttons = [
-        { text: "Создать нормативную базу", icon: "icon-box-edit" },
-        { text: "Организовать работу в информационных системах", icon: "icon-display-settings" },
-        { text: "Наладить взаимодействие участников процесса", icon: "icon-groups" },
-        { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring" },
-        { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open" },
+        { text: "Создать нормативную базу", icon: "icon-box-edit", modal: "normative-base" },
+        { text: "Организовать работу в информационных системах", icon: "icon-display-settings", modal: "information-systems" },
+        { text: "Наладить взаимодействие участников процесса", icon: "icon-groups", modal: "list-of-participants" },
+        { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring", modal: "" },
+        { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "planning-elements" },
     ];
 
     return (
@@ -74,8 +74,9 @@ export default function Main() {
                     <img src="/images/main/main.webp" alt=""></img>
                     {buttons.map((item, index) => (
                         <button
+                            key={index}
                             onClick={() => {
-                                setActiveModal(item.text);
+                                setActiveModal(item.modal);
                             }}
                             className={classNames(item.icon)}
                         >

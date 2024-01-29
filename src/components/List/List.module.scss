@@ -1,0 +1,41 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateX(-8px);
+    & > div {
+        display: flex;
+        gap: 24px;
+        padding: 8px;
+        min-height: 96px;
+        & > div {
+            &:first-child {
+                display: flex;
+                align-items: center;
+                padding-left: 17px;
+            }
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                align-items: flex-start;
+                justify-content: center;
+                & > h3 {
+                    color: #193a54;
+                    font-family: "Roboto Flex";
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+                & > p {
+                    color: #265071;
+                    white-space: pre-wrap;
+                }
+                & > button {
+                    background-color: transparent;
+                    color: #39a1ed;
+                }
+            }
+        }
+    }
+}

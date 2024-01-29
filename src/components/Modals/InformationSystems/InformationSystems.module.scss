@@ -1,0 +1,31 @@
+.informationSystems {
+    & > h2 {
+        color: #193a54;
+        margin-bottom: 16px;
+    }
+    & > p {
+        color: #265071;
+    }
+    & > ul {
+        display: flex;
+        flex-direction: column;
+        & > li {
+            padding: 8px 16px;
+            min-height: 96px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            & > h3 {
+                color: #193a54;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                margin-bottom: 4px;
+            }
+            & > p {
+                color: #265071;
+                white-space: pre-wrap;
+            }
+        }
+    }
+}
