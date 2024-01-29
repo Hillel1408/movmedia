@@ -1,0 +1,21 @@
+.layoutPageModal {
+    width: 843px;
+    background-color: white;
+    padding: 32px 40px 80px 40px;
+    position: absolute;
+    right: 597px;
+    top: 0;
+    overflow-y: auto;
+    height: 100%;
+    & > button {
+        background-color: transparent;
+        color: #39a1ed;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding: 4px;
+        &:before {
+            transform: rotate(90deg);
+        }
+    }
+}

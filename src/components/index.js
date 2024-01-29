@@ -8,5 +8,24 @@ import LayoutModal from "./Modals/LayoutModal";
 import InformationSystems from "./Modals/InformationSystems";
 import ListOfParticipants from "./Modals/ListOfParticipants";
 import List from "./List";
+import PlanningElements from "./Modals/PlanningElements";
+import WorkingWithContracts from "./Modals/WorkingWithContracts";
+import LayoutPageModal from "./Modals/LayoutPageModal";
+import ResponsibleASEZEIS from "./Modals/ResponsibleASEZEIS";
 
-export { Switcher, Scheme, Overlay, Menu, ModalsSwitcn, NormativeBase, LayoutModal, InformationSystems, ListOfParticipants, List };
+export {
+    Switcher,
+    Scheme,
+    Overlay,
+    Menu,
+    ModalsSwitcn,
+    NormativeBase,
+    LayoutModal,
+    InformationSystems,
+    ListOfParticipants,
+    List,
+    PlanningElements,
+    WorkingWithContracts,
+    LayoutPageModal,
+    ResponsibleASEZEIS,
+};

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Overlay, ModalsSwitcn } from "../../index";
 import styles from "./Menu.module.scss";
@@ -37,11 +37,11 @@ export default function Menu({ activeModal, setActiveModal }) {
             modals: [
                 { title: "Закупочное подразделение", modal: "" },
                 { title: "Закупочная комиссия", modal: "" },
-                { title: "Ответственные за работу в АСЭЗ/ЕИС", modal: "" },
+                { title: "Ответственные за работу в АСЭЗ/ЕИС", modal: "responsible-ASEZEIS" },
                 { title: "Организатор закупок", modal: "" },
             ],
         },
-        { title: "Обеспечить контроль, работу с договорами, формирование отчетности", modal: "", modals: [] },
+        { title: "Обеспечить контроль, работу с договорами, формирование отчетности", modal: "working-with-contracts", color: "#9CC040", modals: [] },
         {
             title: "Настроить отдельные элементы планирования",
             modal: "planning-elements",
@@ -54,6 +54,10 @@ export default function Menu({ activeModal, setActiveModal }) {
             ],
         },
     ];
+
+    useEffect(() => {
+        console.log(active);
+    }, [active]);
 
     return createPortal(
         <>
@@ -76,13 +80,28 @@ export default function Menu({ activeModal, setActiveModal }) {
                                 onClick={() => {
                                     setActive(item.modal);
                                 }}
-                                style={{ outline: active === item.modal && `2px solid ${item.color}` }}
+                                style={{ outline: (active === item.modal || item.modals.find((el) => el.modal === active)) && `2px solid ${item.color}` }}
                             >
                                 <span>{item.title}</span>
                                 {item.modals.length > 0 && (
-                                    <ul className={classNames("text-s", active === item.modal && styles.active)}>
-                                        {item.modals.map((item, index) => (
-                                            <li key={index}>{item.title}</li>
+                                    <ul
+                                        className={classNames("text-s")}
+                                        style={{ maxHeight: (active === item.modal || item.modals.find((el) => el.modal === active)) && "700px" }}
+                                    >
+                                        {item.modals.map((el, index) => (
+                                            <li
+                                                key={index}
+                                                style={{
+                                                    backgroundColor: active === el.modal && `${item.color}`,
+                                                    color: active === el.modal && "white",
+                                                }}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setActive(el.modal);
+                                                }}
+                                            >
+                                                {el.title}
+                                            </li>
                                         ))}
                                     </ul>
                                 )}
