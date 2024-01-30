@@ -15,6 +15,9 @@ import ResponsibleASEZEIS from "./Modals/ResponsibleASEZEIS";
 import Asez from "./Modals/Asez";
 import Stepper from "./Stepper";
 import Etpgpb from "./Modals/Etpgpb";
+import Iusmtr from "./Modals/Iusmtr";
+import Purasbu from "./Modals/Purasbu";
+import Eis from "./Modals/Eis";
 
 export {
     Switcher,
@@ -34,4 +37,7 @@ export {
     Asez,
     Stepper,
     Etpgpb,
+    Iusmtr,
+    Purasbu,
+    Eis,
 };

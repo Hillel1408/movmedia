@@ -1,0 +1,20 @@
+.eis {
+    position: relative;
+    & > img {
+        position: absolute;
+        right: 0;
+        top: -18px;
+    }
+    & > h2 {
+        color: #193a54;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    &Text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: #265071;
+        max-width: 472px;
+    }
+}

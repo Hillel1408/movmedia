@@ -1,0 +1,18 @@
+.purasbu {
+    position: relative;
+    & > img {
+        position: absolute;
+        right: 0;
+        top: -60px;
+    }
+    & > h2 {
+        color: #193a54;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    & > p {
+        color: #265071;
+        max-width: 457px;
+        margin-bottom: 48px;
+    }
+}

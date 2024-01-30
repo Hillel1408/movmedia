@@ -12,6 +12,9 @@
     &:after {
         background-color: #f3f1ff;
     }
+    & > img {
+        margin: 0 auto;
+    }
     & > ul {
         display: flex;
         flex-direction: column;
@@ -37,6 +40,7 @@
             color: #193a54;
             margin-bottom: 8px;
             margin-top: -3px;
+            white-space: pre-wrap;
         }
         & > p {
             color: #265071;

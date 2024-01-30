@@ -24,10 +24,10 @@ export default function Menu({ activeModal, setActiveModal }) {
             color: "#5545D7",
             modals: [
                 { title: "АСЭЗ", modal: "asez" },
-                { title: "ЕИС", modal: "" },
+                { title: "ЕИС", modal: "eis" },
                 { title: "ЭТП ГПБ", modal: "etpgpb" },
-                { title: "ИУС МТР", modal: "" },
-                { title: "ПУР АСБУ", modal: "" },
+                { title: "ИУС МТР", modal: "iusmtr" },
+                { title: "ПУР АСБУ", modal: "purasbu" },
             ],
         },
         {

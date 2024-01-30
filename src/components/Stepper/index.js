@@ -10,7 +10,7 @@ export default function Stepper({ image, steps }) {
                 {steps.map((item, index) => (
                     <li key={index} className={styles.stepperItem}>
                         <span className="text-medium-s">{item.title}</span>
-                        <p className="text-s">{item.text}</p>
+                        {item.text && <p className="text-s">{item.text}</p>}
                         {item.list && (
                             <ul className="text-s" style={{ paddingLeft: item.list?.dots && "15px", gap: !item.list?.dots && "8px" }}>
                                 {item.list.items.map((el, index) => (

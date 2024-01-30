@@ -1,5 +1,17 @@
 import React from "react";
-import { NormativeBase, InformationSystems, ListOfParticipants, PlanningElements, WorkingWithContracts, ResponsibleASEZEIS, Asez, Etpgpb } from "../../index";
+import {
+    NormativeBase,
+    InformationSystems,
+    ListOfParticipants,
+    PlanningElements,
+    WorkingWithContracts,
+    ResponsibleASEZEIS,
+    Asez,
+    Etpgpb,
+    Iusmtr,
+    Purasbu,
+    Eis,
+} from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
     switch (modal) {
@@ -19,6 +31,12 @@ export default function ModalsSwitcn({ modal }) {
             return <Asez />;
         case "etpgpb":
             return <Etpgpb />;
+        case "iusmtr":
+            return <Iusmtr />;
+        case "purasbu":
+            return <Purasbu />;
+        case "eis":
+            return <Eis />;
 
         default:
             return <div></div>;
