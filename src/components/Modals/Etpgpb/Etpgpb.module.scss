@@ -1,0 +1,67 @@
+.etpgpb {
+    position: relative;
+    & > img {
+        position: absolute;
+        right: 0;
+        top: -55px;
+    }
+    & > h2 {
+        color: #193a54;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    & > p {
+        color: #265071;
+        max-width: 455px;
+        margin-bottom: 48px;
+        & > button {
+            background-color: transparent;
+            color: #39a1ed;
+        }
+    }
+    &Grid,
+    &SecondaryGrid {
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 24px;
+        }
+        & > div {
+            display: grid;
+            & > p {
+                color: #265071;
+                display: flex;
+                gap: 8px;
+                &:before {
+                    font-size: 16px;
+                    color: #5545d7;
+                }
+            }
+        }
+    }
+    &Grid {
+        border-radius: 8px;
+        border: 1px solid #5545d7;
+        padding: 24px;
+        margin-bottom: 48px;
+        & > div {
+            grid-template-columns: 1fr 266px;
+        }
+    }
+    &SecondaryGrid {
+        & > div {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &Stepper {
+        margin-bottom: 45px;
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 24px;
+        }
+        & > p {
+            color: #265071;
+            max-width: 415px;
+            padding-bottom: 16px;
+        }
+    }
+}

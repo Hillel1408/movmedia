@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import { Overlay, ModalsSwitcn } from "../../index";
 import styles from "./Menu.module.scss";
@@ -23,9 +23,9 @@ export default function Menu({ activeModal, setActiveModal }) {
             modal: "information-systems",
             color: "#5545D7",
             modals: [
-                { title: "АСЭЗ", modal: "" },
+                { title: "АСЭЗ", modal: "asez" },
                 { title: "ЕИС", modal: "" },
-                { title: "ЭТП ГПБ", modal: "" },
+                { title: "ЭТП ГПБ", modal: "etpgpb" },
                 { title: "ИУС МТР", modal: "" },
                 { title: "ПУР АСБУ", modal: "" },
             ],
@@ -55,10 +55,6 @@ export default function Menu({ activeModal, setActiveModal }) {
         },
     ];
 
-    useEffect(() => {
-        console.log(active);
-    }, [active]);
-
     return createPortal(
         <>
             <Overlay
@@ -66,12 +62,7 @@ export default function Menu({ activeModal, setActiveModal }) {
                     setActiveModal("");
                 }}
             />
-            <div
-                onClick={() => {
-                    setActiveModal("");
-                }}
-                className={classNames("container", styles.menuContainer)}
-            >
+            <div className={classNames("container", styles.menuContainer)}>
                 <div onClick={(e) => e.stopPropagation()} className={classNames(styles.menu, active && styles.menuActive)}>
                     <ul>
                         {navItems.map((item, index) => (

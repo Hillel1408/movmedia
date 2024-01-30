@@ -56,3 +56,23 @@ body {
     font-weight: 600;
     line-height: normal;
 }
+.block {
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        height: 26px;
+        position: absolute;
+        top: -26px;
+        left: 0;
+    }
+    &:before {
+        width: 135px;
+        border-radius: 8px 4px 0px 0px;
+    }
+    &:after {
+        width: 60px;
+        border-radius: 0px 4px 0px 0px;
+        transform: skew(60deg) translateX(100px);
+    }
+}

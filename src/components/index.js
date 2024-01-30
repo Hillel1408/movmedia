@@ -12,6 +12,9 @@ import PlanningElements from "./Modals/PlanningElements";
 import WorkingWithContracts from "./Modals/WorkingWithContracts";
 import LayoutPageModal from "./Modals/LayoutPageModal";
 import ResponsibleASEZEIS from "./Modals/ResponsibleASEZEIS";
+import Asez from "./Modals/Asez";
+import Stepper from "./Stepper";
+import Etpgpb from "./Modals/Etpgpb";
 
 export {
     Switcher,
@@ -28,4 +31,7 @@ export {
     WorkingWithContracts,
     LayoutPageModal,
     ResponsibleASEZEIS,
+    Asez,
+    Stepper,
+    Etpgpb,
 };

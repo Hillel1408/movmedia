@@ -1,8 +1,7 @@
 import React from "react";
-import { NormativeBase, InformationSystems, ListOfParticipants, PlanningElements, WorkingWithContracts, ResponsibleASEZEIS } from "../../index";
+import { NormativeBase, InformationSystems, ListOfParticipants, PlanningElements, WorkingWithContracts, ResponsibleASEZEIS, Asez, Etpgpb } from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
-    console.log(modal);
     switch (modal) {
         case "normative-base":
             return <NormativeBase />;
@@ -16,6 +15,10 @@ export default function ModalsSwitcn({ modal }) {
             return <WorkingWithContracts />;
         case "responsible-ASEZEIS":
             return <ResponsibleASEZEIS />;
+        case "asez":
+            return <Asez />;
+        case "etpgpb":
+            return <Etpgpb />;
 
         default:
             return <div></div>;

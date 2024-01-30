@@ -29,7 +29,7 @@ export default function WorkingWithContracts() {
                 <img src="/images/main/img-8.webp" alt=""></img>
                 <h2 className="title">Работа с договорами. Отчетность. Контроль.</h2>
                 <h3 className="subtitle">С какими документами нужно работать:</h3>
-                <ul>
+                <ul className="block">
                     {list.map((item, index) => (
                         <li key={index}>
                             <span className="subtitle">0{index + 1}</span>
