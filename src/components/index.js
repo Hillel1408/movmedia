@@ -18,6 +18,8 @@ import Etpgpb from "./Modals/Etpgpb";
 import Iusmtr from "./Modals/Iusmtr";
 import Purasbu from "./Modals/Purasbu";
 import Eis from "./Modals/Eis";
+import BackButton from "./BackButton";
+import Spoiler from "./Spoiler";
 
 export {
     Switcher,
@@ -40,4 +42,6 @@ export {
     Iusmtr,
     Purasbu,
     Eis,
+    BackButton,
+    Spoiler,
 };

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Switcher, Menu } from "../../components";
+import { Switcher, Menu, Scheme } from "../../components";
 import styles from "./Main.module.scss";
 import { useState } from "react";
 
@@ -85,6 +85,8 @@ export default function Main() {
                     ))}
                 </div>
             </div>
+
+            <Scheme />
 
             {activeModal && <Menu activeModal={activeModal} setActiveModal={setActiveModal} />}
         </>

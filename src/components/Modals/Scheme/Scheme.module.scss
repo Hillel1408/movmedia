@@ -1,0 +1,36 @@
+.scheme {
+    padding: 32px 40px 82px 40px;
+    background-color: #f8f9ff;
+    &Container {
+        position: absolute;
+        width: 1440px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 980px;
+        overflow-y: auto;
+    }
+    &Grid {
+        display: grid;
+        grid-template-columns: 768px 577px;
+        margin-top: 16px;
+        gap: 16px;
+        & > h2 {
+            color: #193a54;
+        }
+        & > p {
+            color: #265071;
+            & > span {
+                font-weight: 500;
+            }
+        }
+    }
+    &Spoilers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        margin-top: 37px;
+    }
+}

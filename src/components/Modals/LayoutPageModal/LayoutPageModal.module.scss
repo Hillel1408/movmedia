@@ -8,15 +8,4 @@
     overflow-y: auto;
     height: 100%;
     z-index: 3;
-    & > button {
-        background-color: transparent;
-        color: #39a1ed;
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        padding: 4px;
-        &:before {
-            transform: rotate(90deg);
-        }
-    }
 }
