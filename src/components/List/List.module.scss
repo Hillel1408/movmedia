@@ -5,14 +5,28 @@
     transform: translateX(-8px);
     & > div {
         display: flex;
-        gap: 24px;
         padding: 8px;
         min-height: 96px;
+        border-radius: 4px;
+        transition: 0.2s;
+        &:hover {
+            background-color: #f8f9ff;
+            & > div {
+                &:first-child {
+                    width: 0;
+                    border: none !important;
+                    color: transparent !important;
+                }
+            }
+        }
         & > div {
             &:first-child {
+                transition: width 0.2s;
                 display: flex;
                 align-items: center;
-                padding-left: 17px;
+                width: 51px;
+                justify-content: center;
+                overflow: hidden;
             }
             &:last-child {
                 display: flex;

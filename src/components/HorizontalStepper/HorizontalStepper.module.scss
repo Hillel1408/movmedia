@@ -1,7 +1,6 @@
 .horizontalStepper {
     display: grid;
     gap: 8px;
-    grid-template-columns: 179px 165px 261px 111px;
     & > div {
         display: flex;
         flex-direction: column;

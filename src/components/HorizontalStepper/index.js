@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./HorizontalStepper.module.scss";
 import classNames from "classnames";
 
-export default function HorizontalStepper({ list, color }) {
+export default function HorizontalStepper({ list, color, grid }) {
     return (
-        <div className={styles.horizontalStepper}>
+        <div className={styles.horizontalStepper} style={{ gridTemplateColumns: grid }}>
             {list.map((item, index) => (
                 <div>
                     <div>

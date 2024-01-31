@@ -9,12 +9,18 @@
     & > ul {
         display: flex;
         flex-direction: column;
+        margin-top: 8px;
         & > li {
             padding: 8px 16px;
             min-height: 96px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border-radius: 4px;
+            transition: 0.2s;
+            &:hover {
+                background-color: #f8f9ff;
+            }
             & > h3 {
                 color: #193a54;
                 font-size: 16px;
