@@ -1,0 +1,38 @@
+.horizontalStepper {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 179px 165px 261px 111px;
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        & > span {
+            color: #193a54;
+        }
+        & > p {
+            color: #265071;
+        }
+        & > div {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            align-items: center;
+            position: relative;
+            & > div {
+                &:nth-child(1) {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                }
+                &:nth-child(2) {
+                    height: 1px;
+                    flex: 1 1 auto;
+                }
+            }
+            & > svg {
+                position: absolute;
+                right: -1px;
+            }
+        }
+    }
+}

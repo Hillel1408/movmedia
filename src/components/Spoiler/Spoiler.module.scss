@@ -16,14 +16,9 @@
         margin-bottom: 8px;
     }
     &Content {
-        max-height: 39px;
         overflow: hidden;
         transition: 0.7s;
         cursor: pointer;
-        background: linear-gradient(180deg, #265071 8.5%, rgba(38, 80, 113, 0) 89%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         & > p {
             color: #265071;
             display: flex;
@@ -34,7 +29,6 @@
                 font-size: 24px;
                 color: #39a1ed;
                 transition: 0.7s;
-                -webkit-text-fill-color: #39a1ed;
             }
         }
     }
@@ -96,4 +90,10 @@
     &:before {
         transform: rotate(180deg);
     }
+}
+.contentBg {
+    background: linear-gradient(180deg, #265071 8.5%, rgba(38, 80, 113, 0) 89%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -3,7 +3,7 @@ import { Overlay, BackButton, Spoiler } from "../../index";
 import styles from "./Scheme.module.scss";
 import classNames from "classnames";
 
-export default function Scheme() {
+export default function Scheme({ setActiveModal }) {
     const spoilers = [
         {
             image: "/images/scheme/img-2.webp",
@@ -62,10 +62,18 @@ export default function Scheme() {
 
     return createPortal(
         <>
-            <Overlay clickHandler={() => {}} />
+            <Overlay
+                clickHandler={() => {
+                    setActiveModal("");
+                }}
+            />
             <div className={classNames(styles.schemeContainer, "container")}>
                 <div className={styles.scheme}>
-                    <BackButton />
+                    <BackButton
+                        clickHandler={() => {
+                            setActiveModal("");
+                        }}
+                    />
                     <div className={styles.schemeGrid}>
                         <h2 className="subtitle">
                             Закупочная деятельность в Группе Газпром осуществляются в соответствии с едиными правилами и принципами. В этом разделе мы подробно

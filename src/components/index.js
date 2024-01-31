@@ -20,6 +20,7 @@ import Purasbu from "./Modals/Purasbu";
 import Eis from "./Modals/Eis";
 import BackButton from "./BackButton";
 import Spoiler from "./Spoiler";
+import HorizontalStepper from "./HorizontalStepper";
 
 export {
     Switcher,
@@ -44,4 +45,5 @@ export {
     Eis,
     BackButton,
     Spoiler,
+    HorizontalStepper,
 };

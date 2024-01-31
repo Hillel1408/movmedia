@@ -1,8 +1,10 @@
 import React from "react";
-import { LayoutPageModal, Stepper } from "../../index";
+import { LayoutPageModal, Stepper, HorizontalStepper } from "../../index";
 import styles from "./Purasbu.module.scss";
+import classNames from "classnames";
 
 export default function Purasbu() {
+    const list = ["Через ПУР АСБУ в ЕИС передается информация о договорах и их исполнении.", "Оплата по договорам осуществляется через ПУР АСБУ."];
     const steps = [
         { title: "Определите ответственных внутри компании." },
         { title: "Направьте письмо в ЦОУЗ о подключении к ПУР АСБУ." },
@@ -21,6 +23,12 @@ export default function Purasbu() {
             title: "Получите в ООО «Газпром информ» носитель с сертификатом. Если вы уже получили носитель при регистрации в АСЭЗ, сертификат АСБУ можно тоже записать на него.",
         },
     ];
+    const horizontalStepperList = [
+        { title: "Транзакция SBWP" },
+        { title: "Общие папки" },
+        { title: "АСБУ ПУР:", text: "Операционные\nинструкции ПУР АСБУ" },
+        { title: "01:", text: "Функции кураторов" },
+    ];
 
     return (
         <LayoutPageModal>
@@ -28,6 +36,32 @@ export default function Purasbu() {
                 <img src="/images/information-systems/img-7.webp" alt=""></img>
                 <h2 className="title">ПУР АСБУ</h2>
                 <p className="text-s">Эта система, в которую подгружается информация о договорах и их исполнении.</p>
+                <div className={styles.purasbuGrid}>
+                    <h3 className="subtitle">Зачем регистрироваться на ЭТП?</h3>
+                    <div>
+                        {list.map((item, index) => (
+                            <p key={index} className={classNames("text-s", "icon-polygon")}>
+                                {item}
+                            </p>
+                        ))}
+                    </div>
+                </div>
+                <div className={styles.purasbuStepper}>
+                    <h3 className="subtitle">Как зарегистрироваться в ПУР АСБУ?</h3>
+                    <div className={classNames("text-s", styles.purasbuText)}>
+                        <p>
+                            <span>Срок регистрации:</span>1 месяц.
+                        </p>
+                        <p>
+                            <span>Кто регистрирует:</span>ООО «Газпром информ».
+                        </p>
+                    </div>
+                    <Stepper image="/images/information-systems/img-10.webp" steps={steps} />
+                </div>
+                <div className={styles.purasbuInstructions}>
+                    <h3 className={classNames("subtitle", "icon-developer-guide")}>Инструкции пользователей: в АСБУ.</h3>
+                    <HorizontalStepper list={horizontalStepperList} color="#5545D7" />
+                </div>
             </div>
         </LayoutPageModal>
     );

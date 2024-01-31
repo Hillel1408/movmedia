@@ -64,7 +64,12 @@ export default function Main() {
                                 </div>
                                 <Switcher />
                             </div>
-                            <button className={classNames(styles.headerSecondaryBtn, "icon-tabs", "text-medium-s")}>
+                            <button
+                                className={classNames(styles.headerSecondaryBtn, "icon-tabs", "text-medium-s")}
+                                onClick={() => {
+                                    setActiveModal("scheme");
+                                }}
+                            >
                                 Перед началом обучения предлагаем ознакомиться с тем, как устроена закупочная система
                             </button>
                         </div>
@@ -86,7 +91,11 @@ export default function Main() {
                 </div>
             </div>
 
-            {activeModal === "scheme" ? <Scheme /> : activeModal && <Menu activeModal={activeModal} setActiveModal={setActiveModal} />}
+            {activeModal === "scheme" ? (
+                <Scheme setActiveModal={setActiveModal} />
+            ) : (
+                activeModal && <Menu activeModal={activeModal} setActiveModal={setActiveModal} />
+            )}
         </>
     );
 }

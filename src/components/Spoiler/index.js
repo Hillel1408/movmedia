@@ -11,8 +11,8 @@ export default function Spoiler({ item }) {
             <h3>{item.title}</h3>
             <div className={styles.spoilerLine}></div>
             <div
-                className={styles.spoilerContent}
-                style={{ maxHeight: active && "500px", webkitTextFillColor: active && "#265071" }}
+                className={classNames(styles.spoilerContent, !active && styles.contentBg)}
+                style={{ maxHeight: active ? "500px" : "39px" }}
                 onClick={() => {
                     setActive((prev) => !prev);
                 }}
