@@ -86,9 +86,7 @@ export default function Main() {
                 </div>
             </div>
 
-            <Scheme />
-
-            {activeModal && <Menu activeModal={activeModal} setActiveModal={setActiveModal} />}
+            {activeModal === "scheme" ? <Scheme /> : activeModal && <Menu activeModal={activeModal} setActiveModal={setActiveModal} />}
         </>
     );
 }

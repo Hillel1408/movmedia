@@ -4,6 +4,7 @@ import styles from "./Eis.module.scss";
 import classNames from "classnames";
 
 export default function Eis() {
+    const list = ["Положение о закупках", "Информация о закупках", "Сведения о договорах и их исполнении", "Перечень ВЗЛ", "Отчетность"];
     const steps = [
         {
             title: "Определите ответственных внутри компании.",
@@ -68,6 +69,36 @@ export default function Eis() {
                         Важно начать процесс регистрации в ЕИС параллельно с процессом разработки решения о присоединении к Положению/принятии собственного
                         Положения.
                     </p>
+                </div>
+                <div className={styles.eisGrid}>
+                    <h3 className="subtitle">Зачем регистрироваться в ЕИС?</h3>
+                    <span className="text-medium-s">В ЕИС размещается:</span>
+                    <div>
+                        {list.map((item, index) => (
+                            <p key={index} className={classNames("text-s", "icon-polygon")}>
+                                {item}
+                            </p>
+                        ))}
+                    </div>
+                    <p className="text-xs">
+                        Неразмещение/несоблюдение сроков размещения влечет за собой ответственность — <button>ст. 3 № 223-ФЗ</button>,
+                        <button>ст. 7 № 223-ФЗ</button>,<button>ст. 8 № 223-ФЗ</button>, а также <button>ст. 7 КоАП.</button>
+                    </p>
+                    <div className="text-s">
+                        <p>
+                            <span>Срок регистрации:</span>от 1-го до нескольких дней.
+                        </p>
+                        <p>
+                            <span>Кто регистрирует:</span>заказчики регистрируют себя самостоятельно.
+                        </p>
+                    </div>
+                </div>
+                <div className={styles.eisStepper}>
+                    <h3 className="subtitle">Как зарегистрироваться в ЕИС?</h3>
+                    <div>
+                        <button className="text-xs">Инструкция на официальном сайте ЕИС</button>
+                    </div>
+                    <Stepper image="/images/information-systems/img-9.webp" steps={steps} />
                 </div>
             </div>
         </LayoutPageModal>
