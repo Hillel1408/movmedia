@@ -15,7 +15,7 @@ export default function Menu({ activeModal, setActiveModal }) {
             modals: [
                 { title: "Положение о закупках", modal: "" },
                 { title: "Перечень ВЗЛ", modal: "" },
-                { title: "Регламентные документы", modal: "" },
+                { title: "Регламентные документы", modal: "regulator-documents" },
             ],
         },
         {

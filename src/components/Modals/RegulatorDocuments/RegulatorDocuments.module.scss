@@ -1,0 +1,71 @@
+.regulatorDocuments {
+    position: relative;
+    & > img {
+        position: absolute;
+        right: 0;
+        top: -55px;
+    }
+    & > h2 {
+        color: #193a54;
+        margin-top: 24px;
+        margin-bottom: 48px;
+    }
+    &Grid {
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 24px;
+        }
+        & > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        &Item {
+            min-height: 113px;
+            background-color: #ffe6d0;
+            padding: 16px 0 0 16px;
+            border-right: 16px solid white;
+            border-bottom: 16px solid white;
+            border-radius: 5px;
+            position: relative;
+            & > span {
+                color: #265071;
+                white-space: pre-wrap;
+            }
+            & > div {
+                position: absolute;
+                width: 42px;
+                height: 35px;
+                background-color: white;
+                right: -16px;
+                bottom: -16px;
+                border-top-left-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #f48a2c;
+            }
+            &:after,
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                background-color: #ffe6d0;
+            }
+            &:after {
+                width: 199px;
+                height: 16px;
+                left: 0;
+                bottom: -16px;
+                border-radius: 0 0 5px 5px;
+            }
+            &:before {
+                width: 16px;
+                height: 78px;
+                right: -16px;
+                top: 0;
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+}

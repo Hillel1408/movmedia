@@ -13,6 +13,7 @@ import {
     Eis,
     Vzl,
     PurchaseOfGoods,
+    RegulatorDocuments,
 } from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
@@ -43,6 +44,8 @@ export default function ModalsSwitcn({ modal }) {
             return <Vzl />;
         case "purchase-of-goods":
             return <PurchaseOfGoods />;
+        case "regulator-documents":
+            return <RegulatorDocuments />;
 
         default:
             return <div></div>;

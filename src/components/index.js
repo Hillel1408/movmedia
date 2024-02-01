@@ -23,6 +23,7 @@ import Spoiler from "./Spoiler";
 import HorizontalStepper from "./HorizontalStepper";
 import Vzl from "./Modals/Vzl";
 import PurchaseOfGoods from "./Modals/PurchaseOfGoods";
+import RegulatorDocuments from "./Modals/RegulatorDocuments";
 
 export {
     Switcher,
@@ -50,4 +51,5 @@ export {
     HorizontalStepper,
     Vzl,
     PurchaseOfGoods,
+    RegulatorDocuments,
 };

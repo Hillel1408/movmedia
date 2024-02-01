@@ -60,15 +60,15 @@ export default function PurchaseOfGoods() {
                     <div>
                         {gridList.map((el, index) =>
                             el.image ? (
-                                <img src={el.image} alt="" />
+                                <img key={index} src={el.image} alt="" />
                             ) : (
-                                <div className={styles.purchaseOfGoodsGridItem}>
+                                <div key={index} className={styles.purchaseOfGoodsGridItem}>
                                     {el.items.map((item, index) => (
-                                        <div>
+                                        <div key={index}>
                                             <h4 className="text-medium-s">{item.title}</h4>
                                             <ul className="text-xs">
                                                 {item.list?.map((listItem, index) => (
-                                                    <li>{listItem}</li>
+                                                    <li key={index}>{listItem}</li>
                                                 ))}
                                             </ul>
                                             <span className="text-medium-s">{item.idx}</span>
