@@ -22,6 +22,7 @@ import BackButton from "./BackButton";
 import Spoiler from "./Spoiler";
 import HorizontalStepper from "./HorizontalStepper";
 import Vzl from "./Modals/Vzl";
+import PurchaseOfGoods from "./Modals/PurchaseOfGoods";
 
 export {
     Switcher,
@@ -48,4 +49,5 @@ export {
     Spoiler,
     HorizontalStepper,
     Vzl,
+    PurchaseOfGoods,
 };

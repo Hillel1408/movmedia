@@ -12,6 +12,7 @@ import {
     Purasbu,
     Eis,
     Vzl,
+    PurchaseOfGoods,
 } from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
@@ -40,6 +41,8 @@ export default function ModalsSwitcn({ modal }) {
             return <Eis />;
         case "vzl":
             return <Vzl />;
+        case "purchase-of-goods":
+            return <PurchaseOfGoods />;
 
         default:
             return <div></div>;
