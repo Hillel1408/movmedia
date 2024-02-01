@@ -50,7 +50,7 @@ export default function Menu({ activeModal, setActiveModal }) {
                 { title: "Формирование потребности", modal: "" },
                 { title: "Закупки у СМСП", modal: "" },
                 { title: "Закупки квотируемых товаров", modal: "" },
-                { title: "Закупки у ВЗЛ", modal: "" },
+                { title: "Закупки у ВЗЛ", modal: "vzl" },
             ],
         },
     ];

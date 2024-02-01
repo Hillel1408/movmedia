@@ -21,6 +21,7 @@ import Eis from "./Modals/Eis";
 import BackButton from "./BackButton";
 import Spoiler from "./Spoiler";
 import HorizontalStepper from "./HorizontalStepper";
+import Vzl from "./Modals/Vzl";
 
 export {
     Switcher,
@@ -46,4 +47,5 @@ export {
     BackButton,
     Spoiler,
     HorizontalStepper,
+    Vzl,
 };

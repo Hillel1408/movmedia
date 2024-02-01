@@ -11,6 +11,7 @@ import {
     Iusmtr,
     Purasbu,
     Eis,
+    Vzl,
 } from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
@@ -37,6 +38,8 @@ export default function ModalsSwitcn({ modal }) {
             return <Purasbu />;
         case "eis":
             return <Eis />;
+        case "vzl":
+            return <Vzl />;
 
         default:
             return <div></div>;
