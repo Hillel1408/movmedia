@@ -4,7 +4,6 @@
     & > div {
         display: flex;
         flex-direction: column;
-        gap: 4px;
         & > span {
             color: #193a54;
         }
@@ -13,8 +12,7 @@
         }
         & > div {
             display: flex;
-            gap: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             align-items: center;
             position: relative;
             & > div {

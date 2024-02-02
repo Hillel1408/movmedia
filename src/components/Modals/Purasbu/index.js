@@ -60,7 +60,7 @@ export default function Purasbu() {
                 </div>
                 <div className={styles.purasbuInstructions}>
                     <h3 className={classNames("subtitle", "icon-developer-guide")}>Инструкции пользователей: в АСБУ.</h3>
-                    <HorizontalStepper list={horizontalStepperList} color="#5545D7" grid="179px 165px 261px 111px" />
+                    <HorizontalStepper list={horizontalStepperList} color="#5545D7" grid="179px 165px 261px 111px" type="primary" />
                 </div>
             </div>
         </LayoutPageModal>

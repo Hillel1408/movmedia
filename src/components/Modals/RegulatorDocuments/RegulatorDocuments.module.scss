@@ -10,6 +10,41 @@
         margin-top: 24px;
         margin-bottom: 48px;
     }
+    &List {
+        position: relative;
+        margin-top: 48px;
+        margin-bottom: 48px;
+        & > img {
+            position: absolute;
+            right: 0;
+            top: 69px;
+        }
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 24px;
+        }
+        & > ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            color: #265071;
+            & > li {
+                display: flex;
+                align-items: center;
+                gap: 19px;
+                &:before {
+                    color: #f48a2c;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    &Stepper {
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 24px;
+        }
+    }
     &Grid {
         & > h3 {
             color: #193a54;
@@ -65,6 +100,50 @@
                 right: -16px;
                 top: 0;
                 border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+    &Block {
+        margin-bottom: 48px;
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 24px;
+        }
+        & > div {
+            display: grid;
+            grid-template-columns: 354px 372px;
+            gap: 36px;
+            & > div {
+                position: relative;
+                padding-top: 16px;
+                & > h4 {
+                    color: #193a54;
+                    font-weight: 500;
+                }
+                & > p {
+                    margin-top: 8px;
+                    color: #265071;
+                    & > button {
+                        color: #39a1ed;
+                        background-color: transparent;
+                        text-align: left;
+                    }
+                }
+                & > span {
+                    color: #f48a2c;
+                    position: absolute;
+                    top: -8px;
+                    right: 0;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 79px;
+                    height: 2px;
+                    background-color: #f48a2c;
+                    top: 0;
+                }
             }
         }
     }
