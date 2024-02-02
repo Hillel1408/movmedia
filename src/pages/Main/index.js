@@ -25,6 +25,8 @@ export default function Main() {
         { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "planning-elements" },
     ];
 
+    activeModal ? document.body.classList.add("lock") : document.body.classList.remove("lock");
+
     return (
         <>
             <div className="container">

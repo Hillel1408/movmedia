@@ -91,6 +91,24 @@ export default function Scheme({ setActiveModal }) {
                         {spoilers.map((item, index) => (
                             <Spoiler key={index} item={item} />
                         ))}
+                        <div className={styles.schemeLastSpoiler}>
+                            <img src="/images/scheme/img-1.webp" alt="" width="254px" height="206px"></img>
+                            <div>
+                                <div>
+                                    <h3>Метоическое обеспечение и координация закупочной деятельности</h3>
+                                    <p className="text-s">
+                                        Весь процесс должен быть описан в регламентных документах и организован с соблюдением надлежащей последовательности.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3>Контроль и отчетность</h3>
+                                    <p className="text-s">
+                                        В компании должен быть организован контроль исполнения шагов по процессу и процедура формирования отчетности по
+                                        закупкам.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

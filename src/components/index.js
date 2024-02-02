@@ -24,6 +24,8 @@ import HorizontalStepper from "./HorizontalStepper";
 import Vzl from "./Modals/Vzl";
 import PurchaseOfGoods from "./Modals/PurchaseOfGoods";
 import RegulatorDocuments from "./Modals/RegulatorDocuments";
+import ProcurementOrganizer from "./Modals/ProcurementOrganizer";
+import NumberedStepper from "./NumberedStepper";
 
 export {
     Switcher,
@@ -52,4 +54,6 @@ export {
     Vzl,
     PurchaseOfGoods,
     RegulatorDocuments,
+    ProcurementOrganizer,
+    NumberedStepper,
 };

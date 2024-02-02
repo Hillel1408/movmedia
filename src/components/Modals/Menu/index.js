@@ -38,7 +38,7 @@ export default function Menu({ activeModal, setActiveModal }) {
                 { title: "Закупочное подразделение", modal: "" },
                 { title: "Закупочная комиссия", modal: "" },
                 { title: "Ответственные за работу в АСЭЗ/ЕИС", modal: "responsible-ASEZEIS" },
-                { title: "Организатор закупок", modal: "" },
+                { title: "Организатор закупок", modal: "procurement-organizer" },
             ],
         },
         { title: "Обеспечить контроль, работу с договорами, формирование отчетности", modal: "working-with-contracts", color: "#9CC040", modals: [] },

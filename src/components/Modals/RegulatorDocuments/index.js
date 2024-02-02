@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from "react";
 import { LayoutPageModal, HorizontalStepper } from "../../index";
 import styles from "./RegulatorDocuments.module.scss";
 
 export default function RegulatorDocuments() {
-    const [active, setActive] = useState(false);
-    useEffect(() => {
-        console.log(active);
-    }, [active]);
     const gridList = [
         "Федеральный закон\n№223-ФЗ",
         "Постановление\nи положение\nПравительства РФ № 1352",

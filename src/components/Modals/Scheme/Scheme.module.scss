@@ -1,6 +1,5 @@
 .scheme {
     padding: 32px 40px 82px 40px;
-
     &Container {
         position: absolute;
         width: 1440px;
@@ -33,5 +32,31 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
         margin-top: 37px;
+    }
+    &LastSpoiler {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        & > div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #93d1ff;
+            & > div {
+                & > h3 {
+                    color: #193a54;
+                    margin-bottom: 8px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: #193a54;
+                }
+                & > p {
+                    color: #265071;
+                }
+            }
+        }
     }
 }

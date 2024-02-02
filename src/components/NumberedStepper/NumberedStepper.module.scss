@@ -1,0 +1,50 @@
+.numberedStepper {
+    padding: 24px;
+    position: relative;
+    border-radius: 0px 8px 8px 8px;
+    &:before,
+    &:after {
+        background-color: #e3f3ff;
+    }
+    & > div {
+        &:first-child {
+            display: grid;
+            grid-template-columns: 59px 1fr;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+            & > span {
+                color: white;
+            }
+        }
+        &:last-child {
+            padding-left: 68px;
+        }
+    }
+    &List {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+        margin-left: 6px;
+        & > li {
+            display: flex;
+            gap: 8px;
+            transform: translateX(-8.5px);
+            & > span {
+                display: block;
+                min-width: 16px;
+                height: 16px;
+                border-radius: 100%;
+            }
+        }
+    }
+    &SecondaryList {
+        margin-bottom: 8px;
+        color: white;
+        padding-left: 10px;
+        & > li {
+            list-style-type: disc;
+        }
+    }
+}
