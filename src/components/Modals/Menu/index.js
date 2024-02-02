@@ -88,7 +88,7 @@ export default function Menu({ activeModal, setActiveModal }) {
                                                 }}
                                                 onClick={(e) => {
                                                     e.stopPropagation();
-                                                    setActive(el.modal);
+                                                    el.modal && setActive(el.modal);
                                                 }}
                                             >
                                                 {el.title}
@@ -100,6 +100,7 @@ export default function Menu({ activeModal, setActiveModal }) {
                         ))}
                     </ul>
                 </div>
+
                 <ModalsSwitcn modal={active} />
             </div>
         </>,
