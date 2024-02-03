@@ -3,7 +3,7 @@ import styles from "./HorizontalStepper.module.scss";
 
 export default function HorizontalStepper({ list, color, grid, type }) {
     return (
-        <div className={styles.horizontalStepper} style={{ gridTemplateColumns: grid }}>
+        <div className={styles.horizontalStepper} style={{ gridTemplateColumns: grid, gap: type === "primary" && "8px" }}>
             {list.map((item, index) => (
                 <div>
                     <div style={{ gap: type === "primary" && "8px" }}>

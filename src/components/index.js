@@ -28,6 +28,8 @@ import ProcurementOrganizer from "./Modals/ProcurementOrganizer";
 import NumberedStepper from "./NumberedStepper";
 import SkewBlock from "./SkewBlock";
 import PurchasingDivision from "./Modals/PurchasingDivision";
+import Important from "./Important";
+import PurchasingCommission from "./Modals/PurchasingCommission";
 
 export {
     Switcher,
@@ -60,4 +62,6 @@ export {
     NumberedStepper,
     SkewBlock,
     PurchasingDivision,
+    Important,
+    PurchasingCommission,
 };

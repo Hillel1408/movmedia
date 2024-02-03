@@ -16,6 +16,7 @@ import {
     RegulatorDocuments,
     ProcurementOrganizer,
     PurchasingDivision,
+    PurchasingCommission,
 } from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
@@ -52,6 +53,8 @@ export default function ModalsSwitcn({ modal }) {
             return <ProcurementOrganizer />;
         case "purchasing-division":
             return <PurchasingDivision />;
+        case "purchasing-commission":
+            return <PurchasingCommission />;
 
         default:
             return <div></div>;

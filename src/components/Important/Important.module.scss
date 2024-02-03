@@ -1,0 +1,38 @@
+.important {
+    padding: 24px;
+    border-radius: 0px 8px 8px 8px;
+    position: relative;
+    margin-top: 26px;
+    & > div {
+        &:first-child {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-100%);
+        }
+    }
+    & > span {
+        position: absolute;
+        color: #265071;
+        top: -10px;
+    }
+    & > ul {
+        & > li {
+            padding: 16px;
+            background-color: white;
+            border-radius: 8px 8px 0px 0px;
+            border-width: 1px;
+            border-style: solid;
+            display: flex;
+            gap: 14px;
+            & > p {
+                color: #265071;
+                & > button {
+                    color: #39a1ed;
+                    background-color: transparent;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
