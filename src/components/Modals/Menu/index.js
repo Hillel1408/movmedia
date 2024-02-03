@@ -35,7 +35,7 @@ export default function Menu({ activeModal, setActiveModal }) {
             modal: "list-of-participants",
             color: "#39A1ED",
             modals: [
-                { title: "Закупочное подразделение", modal: "" },
+                { title: "Закупочное подразделение", modal: "purchasing-division" },
                 { title: "Закупочная комиссия", modal: "" },
                 { title: "Ответственные за работу в АСЭЗ/ЕИС", modal: "responsible-ASEZEIS" },
                 { title: "Организатор закупок", modal: "procurement-organizer" },

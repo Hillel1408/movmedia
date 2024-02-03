@@ -40,7 +40,7 @@ export default function RegulatorDocuments() {
                     <HorizontalStepper list={stepperList} color="#F48A2C" grid="225px 262px 276px" type="secondary" />
                 </div>
                 <div className={styles.regulatorDocumentsList}>
-                    <img src="/images/normative-base/img-2.webp" alt=""></img>
+                    <img src="/images/normative-base/img-2.webp" width="326px" height="177px" alt=""></img>
                     <h3 className="subtitle">Руководящими документами должны быть определены</h3>
                     <ul className="text-s">
                         {list.map((item, index) => (

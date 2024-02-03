@@ -1,9 +1,11 @@
 import classNames from "classnames";
+import { SkewBlock } from "../index";
 import styles from "./NumberedStepper.module.scss";
 
 export default function NumberedStepper({ item, idx, bgColor }) {
     return (
-        <div className={classNames(styles.numberedStepper, "block")} style={{ backgroundColor: bgColor }}>
+        <div className={classNames(styles.numberedStepper)} style={{ backgroundColor: bgColor }}>
+            <SkewBlock color={bgColor} />
             <div>
                 <span className="title">0{idx + 1}</span>
                 <p className="text-medium-s" style={{ color: bgColor === "#e3f3ff" ? "#193a54" : "white" }}>
@@ -25,7 +27,10 @@ export default function NumberedStepper({ item, idx, bgColor }) {
                 )}
                 <ul
                     className={classNames("text-xs", styles.numberedStepperList)}
-                    style={{ borderLeft: bgColor === "#e3f3ff" ? "1px solid #39a1ed" : "1px solid white", color: bgColor === "#e3f3ff" ? "#265071" : "white" }}
+                    style={{
+                        borderLeft: bgColor === "#e3f3ff" ? "1px solid #39a1ed" : "1px solid white",
+                        color: bgColor === "#e3f3ff" ? "#265071" : "white",
+                    }}
                 >
                     {item.list?.map((el, index) => (
                         <li>

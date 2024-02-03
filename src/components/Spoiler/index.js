@@ -37,7 +37,6 @@ export default function Spoiler({ item }) {
                             </ul>
                         </div>
                     )}
-
                     {item.registration.length > 0 && (
                         <div>
                             <p className="text-medium-s">Нужны регистрации</p>

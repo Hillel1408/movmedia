@@ -7,7 +7,13 @@
         background-color: #e3f3ff;
     }
     & > div {
-        &:first-child {
+        &:nth-child(1) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(-100%);
+        }
+        &:nth-child(2) {
             display: grid;
             grid-template-columns: 59px 1fr;
             gap: 8px;

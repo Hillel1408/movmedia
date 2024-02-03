@@ -26,6 +26,8 @@ import PurchaseOfGoods from "./Modals/PurchaseOfGoods";
 import RegulatorDocuments from "./Modals/RegulatorDocuments";
 import ProcurementOrganizer from "./Modals/ProcurementOrganizer";
 import NumberedStepper from "./NumberedStepper";
+import SkewBlock from "./SkewBlock";
+import PurchasingDivision from "./Modals/PurchasingDivision";
 
 export {
     Switcher,
@@ -56,4 +58,6 @@ export {
     RegulatorDocuments,
     ProcurementOrganizer,
     NumberedStepper,
+    SkewBlock,
+    PurchasingDivision,
 };

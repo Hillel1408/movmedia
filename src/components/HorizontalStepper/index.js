@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./HorizontalStepper.module.scss";
-import classNames from "classnames";
 
 export default function HorizontalStepper({ list, color, grid, type }) {
     return (
