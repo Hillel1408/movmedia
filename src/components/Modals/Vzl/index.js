@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { LayoutPageModal } from "../../index";
+import { LayoutPageModal, TextModal } from "../../index";
 import styles from "./Vzl.module.scss";
 
 export default function Vzl() {

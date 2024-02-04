@@ -31,6 +31,7 @@ import PurchasingDivision from "./Modals/PurchasingDivision";
 import Important from "./Important";
 import PurchasingCommission from "./Modals/PurchasingCommission";
 import ListOfVzl from "./Modals/ListOfVzl";
+import TextModal from "./Modals/TextModal";
 
 export {
     Switcher,
@@ -66,4 +67,5 @@ export {
     Important,
     PurchasingCommission,
     ListOfVzl,
+    TextModal,
 };
