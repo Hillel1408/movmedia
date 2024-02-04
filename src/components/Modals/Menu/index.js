@@ -14,7 +14,7 @@ export default function Menu({ activeModal, setActiveModal }) {
             color: "#F48A2C",
             modals: [
                 { title: "Положение о закупках", modal: "" },
-                { title: "Перечень ВЗЛ", modal: "" },
+                { title: "Перечень ВЗЛ", modal: "list-of-vzl" },
                 { title: "Регламентные документы", modal: "regulator-documents" },
             ],
         },

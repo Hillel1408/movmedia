@@ -30,6 +30,7 @@ import SkewBlock from "./SkewBlock";
 import PurchasingDivision from "./Modals/PurchasingDivision";
 import Important from "./Important";
 import PurchasingCommission from "./Modals/PurchasingCommission";
+import ListOfVzl from "./Modals/ListOfVzl";
 
 export {
     Switcher,
@@ -64,4 +65,5 @@ export {
     PurchasingDivision,
     Important,
     PurchasingCommission,
+    ListOfVzl,
 };

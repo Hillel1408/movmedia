@@ -1,0 +1,21 @@
+.listOfVzl {
+    position: relative;
+    & > img {
+        position: absolute;
+        right: 0;
+        top: -30px;
+    }
+    & > h2 {
+        color: #193a54;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    & > p {
+        max-width: 471px;
+        color: #265071;
+        & > button {
+            color: #39a1ed;
+            background-color: transparent;
+        }
+    }
+}
