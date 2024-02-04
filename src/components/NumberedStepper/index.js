@@ -5,10 +5,12 @@ import styles from "./NumberedStepper.module.scss";
 export default function NumberedStepper({ item, idx, bgColor }) {
     return (
         <div className={classNames(styles.numberedStepper)} style={{ backgroundColor: bgColor }}>
-            <SkewBlock color={bgColor} />
+            <div>{bgColor !== "transparent" && <SkewBlock color={bgColor} />}</div>
             <div>
-                <span className="title">0{idx + 1}</span>
-                <p className="text-medium-s" style={{ color: bgColor === "#e3f3ff" ? "#193a54" : "white" }}>
+                <span className="title" style={{ color: bgColor === "#e3f3ff" ? "white" : "#E3F3FF" }}>
+                    0{idx + 1}
+                </span>
+                <p className="text-medium-s" style={{ color: bgColor === "#39A1ED" ? "white" : "#193a54" }}>
                     {item.title}
                 </p>
             </div>
@@ -25,20 +27,22 @@ export default function NumberedStepper({ item, idx, bgColor }) {
                         {item.text}
                     </p>
                 )}
-                <ul
-                    className={classNames("text-xs", styles.numberedStepperList)}
-                    style={{
-                        borderLeft: bgColor === "#e3f3ff" ? "1px solid #39a1ed" : "1px solid white",
-                        color: bgColor === "#e3f3ff" ? "#265071" : "white",
-                    }}
-                >
-                    {item.list?.map((el, index) => (
-                        <li>
-                            <span style={{ backgroundColor: bgColor === "#e3f3ff" ? "#39a1ed" : "white" }}></span>
-                            {el}
-                        </li>
-                    ))}
-                </ul>
+                {item.list && (
+                    <ul
+                        className={classNames("text-xs", styles.numberedStepperList)}
+                        style={{
+                            borderLeft: bgColor === "#39A1ED" ? "1px solid white" : "1px solid #39a1ed",
+                            color: bgColor === "#39A1ED" ? "white" : "#265071",
+                        }}
+                    >
+                        {item.list?.map((el, index) => (
+                            <li>
+                                <span style={{ backgroundColor: bgColor === "#39A1ED" ? "white" : "#39a1ed" }}></span>
+                                {el}
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </div>
     );

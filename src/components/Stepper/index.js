@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Stepper.module.scss";
 import classNames from "classnames";
 
-export default function Stepper({ image, steps }) {
+export default function Stepper({ image, steps, width, height }) {
     return (
         <div className={classNames(styles.stepper, "block")}>
-            <img src={image} alt=""></img>
+            <img src={image} alt="" width={width} height={height}></img>
             <ul>
                 {steps.map((item, index) => (
                     <li key={index} className={styles.stepperItem}>

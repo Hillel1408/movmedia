@@ -46,7 +46,7 @@ export default function Etpgpb() {
                 <div className={styles.etpgpbStepper}>
                     <h3 className="subtitle">Как зарегистрироваться на ЭТП?</h3>
                     <p className="text-s">Служба поддержки ЭТП ГПБ: 8-495-276-00-51 добавочный 396. E-mail: tech@etpgpb.ru.</p>
-                    <Stepper image="/images/information-systems/img-4.webp" steps={steps} />
+                    <Stepper image="/images/information-systems/img-4.webp" steps={steps} width="221px" height="199px" />
                 </div>
                 <div className={styles.etpgpbSecondaryGrid}>
                     <h3 className="subtitle">Инструкция для работы на ЭТП ГПБ.</h3>

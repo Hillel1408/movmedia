@@ -56,7 +56,7 @@ export default function Purasbu() {
                             <span>Кто регистрирует:</span>ООО «Газпром информ».
                         </p>
                     </div>
-                    <Stepper image="/images/information-systems/img-10.webp" steps={steps} />
+                    <Stepper image="/images/information-systems/img-10.webp" steps={steps} width="215px" height="186px" />
                 </div>
                 <div className={styles.purasbuInstructions}>
                     <h3 className={classNames("subtitle", "icon-developer-guide")}>Инструкции пользователей: в АСБУ.</h3>

@@ -108,6 +108,13 @@ export default function Scheme({ setActiveModal }) {
                                     </p>
                                 </div>
                             </div>
+                            <div>
+                                <p className="text-medium-s">В процессе участвуют</p>
+                                <ul className="text-s">
+                                    <li className="icon-admin-panel-settings">ЦОУЗ</li>
+                                    <li className="icon-groups">Закупочное подразделение</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

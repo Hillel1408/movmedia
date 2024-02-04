@@ -53,7 +53,7 @@ export default function Iusmtr() {
                 </div>
                 <div className={styles.iusmtrStepper}>
                     <h3 className="subtitle">Для регистрации в ИУС МТР</h3>
-                    <Stepper image="/images/information-systems/img-6.webp" steps={steps} />
+                    <Stepper image="/images/information-systems/img-6.webp" steps={steps} width="164px" height="200px" />
                 </div>
                 <div className={classNames(styles.iusmtrText, "text-s")}>
                     <span>Контакт техподдержки ООО «Газпром информ»:</span>

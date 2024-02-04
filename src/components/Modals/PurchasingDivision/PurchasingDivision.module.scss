@@ -99,6 +99,13 @@
                     & > p {
                         color: #265071;
                     }
+                    & > ul {
+                        color: #265071;
+                        padding-left: 20px;
+                        & > li {
+                            list-style-type: disc;
+                        }
+                    }
                 }
             }
         }

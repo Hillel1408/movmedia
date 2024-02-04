@@ -67,7 +67,7 @@ export default function Asez() {
                 </div>
                 <div className={styles.asezStepper}>
                     <h3 className="subtitle">Как зарегистрироваться в АСЭЗ?</h3>
-                    <Stepper image="/images/information-systems/img-1.webp" steps={steps} />
+                    <Stepper image="/images/information-systems/img-1.webp" steps={steps} width="227px" height="328px" />
                 </div>
             </div>
         </LayoutPageModal>

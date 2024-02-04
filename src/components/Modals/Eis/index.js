@@ -98,7 +98,7 @@ export default function Eis() {
                     <div>
                         <button className="text-xs">Инструкция на официальном сайте ЕИС</button>
                     </div>
-                    <Stepper image="/images/information-systems/img-9.webp" steps={steps} />
+                    <Stepper image="/images/information-systems/img-9.webp" steps={steps} width="231px" height="309px" />
                 </div>
             </div>
         </LayoutPageModal>

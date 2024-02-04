@@ -36,25 +36,54 @@
     &LastSpoiler {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 16px;
+        & > img {
+            margin: 0 auto;
+        }
         & > div {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #93d1ff;
-            & > div {
-                & > h3 {
-                    color: #193a54;
-                    margin-bottom: 8px;
-                    font-size: 16px;
-                    line-height: 22px;
-                    font-weight: 500;
-                    color: #193a54;
+            &:nth-child(2) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #93d1ff;
+                & > div {
+                    & > h3 {
+                        color: #193a54;
+                        margin-bottom: 8px;
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-weight: 500;
+                        color: #193a54;
+                    }
+                    & > p {
+                        color: #265071;
+                    }
                 }
+            }
+            &:nth-child(3) {
                 & > p {
+                    color: #193a54;
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+                & > ul {
+                    display: grid;
+                    grid-template-columns: 201px 201px;
+                    gap: 8px;
                     color: #265071;
+                    & > li {
+                        padding: 12px 8px;
+                        border-radius: 4px;
+                        background-color: white;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                        &:before {
+                            color: #39a1ed;
+                            font-size: 24px;
+                        }
+                    }
                 }
             }
         }
