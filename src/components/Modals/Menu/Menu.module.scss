@@ -121,8 +121,9 @@
         transform: none;
     }
     &Container {
-        position: absolute;
-        height: 980px;
+        position: fixed;
+        max-height: 980px;
+        height: 100vh;
         width: 1440px;
         top: 0;
         left: 50%;

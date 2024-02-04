@@ -1,15 +1,15 @@
 .scheme {
     padding: 32px 40px 82px 40px;
     &Container {
-        position: absolute;
+        position: fixed;
         width: 1440px;
         top: 0;
         left: 0;
         z-index: 1;
         left: 50%;
         transform: translateX(-50%);
-        height: 100vh;
         max-height: 980px;
+        height: 100vh;
         overflow-y: auto;
         background-color: #f8f9ff;
     }
