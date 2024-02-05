@@ -18,4 +18,176 @@
             background-color: transparent;
         }
     }
+    &Text {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 48px;
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 14px;
+        }
+        & > p {
+            color: #265071;
+        }
+    }
+    &List {
+        position: relative;
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 14px;
+        }
+        & > ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px;
+            padding-bottom: 56px;
+            & > li {
+                color: #265071;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                & > span {
+                    min-width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    background-color: #ffbb7f;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+            }
+        }
+        & > img {
+            position: absolute;
+            right: 0;
+            top: 260px;
+        }
+    }
+    &Block {
+        margin-top: 48px;
+        & > h3 {
+            color: #193a54;
+            margin-bottom: 14px;
+        }
+        & > div {
+            &:nth-child(2) {
+                padding-bottom: 24px;
+                display: grid;
+                grid-template-columns: 147px 1fr;
+                align-items: center;
+                & > h4 {
+                    color: #193a54;
+                }
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 57px;
+                    padding-left: 115px;
+                    position: relative;
+                    & > p {
+                        color: #265071;
+                        display: flex;
+                        gap: 18px;
+                        align-items: center;
+                        & > span {
+                            min-width: 16px;
+                            height: 16px;
+                            border-radius: 100%;
+                            background-color: #f48a2c;
+                        }
+                    }
+                    & > svg {
+                        position: absolute;
+                        left: 0;
+                        top: 52%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+    &Documents {
+        margin-top: 48px;
+        & > h3 {
+            color: #265071;
+            margin-bottom: 24px;
+        }
+        & > div {
+            display: grid;
+            grid-template-columns: 219px 267px;
+            gap: 8px;
+            & > button {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 8px;
+                background-color: transparent;
+                justify-content: center;
+                align-items: center;
+                color: #f48a2c;
+                padding: 11px 16px;
+                border: 1px solid #f48a2c;
+                border-radius: 8px;
+                &:before {
+                    color: #f48a2c;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &Agreement {
+        margin-top: 48px;
+        & > h3 {
+            color: #265071;
+            margin-bottom: 24px;
+        }
+        & > div {
+            &:nth-child(2) {
+                padding-left: 17px;
+                border-left: 1px solid #f48a2c;
+                margin-bottom: 50px;
+                padding-bottom: 24px;
+                white-space: pre-wrap;
+                & > p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: #265071;
+                    margin-bottom: 24px;
+                }
+                & > ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    & > li {
+                        display: flex;
+                        gap: 16px;
+                        &:before {
+                            color: #f48a2c;
+                            font-size: 32px;
+                        }
+                        & > div {
+                            display: flex;
+                            flex-direction: column;
+                            color: #265071;
+                            max-width: 602px;
+                            gap: 8px;
+                            & > ul {
+                                padding-left: 20px;
+                                max-width: 598px;
+                                & > li {
+                                    list-style-type: disc;
+                                    &::marker {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
