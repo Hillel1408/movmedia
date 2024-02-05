@@ -11,9 +11,12 @@ export default function Vzl() {
         "к таким закупки не применяются сроки оплаты, определенные в разделе 5 Положения ПАО «Газпром».",
     ];
     const gridList = [
-        { image: "/images/planning-elements/img-2.webp", text: "маркетинговые исследования (когда закупка осуществляется среди нескольких ВЗЛ);" },
         {
-            image: "/images/planning-elements/img-3.webp",
+            image: { url: "/images/planning-elements/img-2.webp", width: "202px", height: "168px" },
+            text: "маркетинговые исследования (когда закупка осуществляется среди нескольких ВЗЛ);",
+        },
+        {
+            image: { url: "/images/planning-elements/img-3.webp", width: "203px", height: "141px" },
             text: "у единственного поставщика (подрядчика, исполнителя) – по основаниям, предусмотренным пунктом 22.13 Положения ПАО «Газпром».",
         },
     ];
@@ -32,7 +35,7 @@ export default function Vzl() {
                     <div>
                         {gridList.map((item, index) => (
                             <div key={index} className={styles.vzlGridItem}>
-                                <img src={item.image} alt=""></img>
+                                <img src={item.image.url} alt="" width={item.image.width} height={item.image.height}></img>
                                 <p className="text-s">{item.text}</p>
                             </div>
                         ))}

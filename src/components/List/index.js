@@ -10,7 +10,11 @@ export default function List({ list, color }) {
                     <div>
                         <h3>{item.title}</h3>
                         {item.text && <p className="text-xs">{item.text}</p>}
-                        {item.button && <button className="text-xs">{item.button}</button>}
+                        {item.button && (
+                            <button className="text-xs" onClick={(e) => item.clickHandler(e)}>
+                                {item.button}
+                            </button>
+                        )}
                     </div>
                 </div>
             ))}
