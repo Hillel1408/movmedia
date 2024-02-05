@@ -14,7 +14,7 @@ export default function Important({ list, color, width, secondaryColor }) {
                         </svg>
                         <p>
                             {item.text}
-                            {item.button && <button>{item.button}</button>}
+                            {item.button && <button onClick={(e) => item.clickHandler(e)}>{item.button}</button>}
                         </p>
                     </li>
                 ))}
