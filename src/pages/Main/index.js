@@ -1,6 +1,6 @@
 import { useState, createContext } from "react";
 import classNames from "classnames";
-import { Switcher, Menu, Scheme } from "../../components";
+import { Switcher, Menu, Scheme, Transition } from "../../components";
 import styles from "./Main.module.scss";
 
 export const ModalContext = createContext();
@@ -95,14 +95,13 @@ export default function Main() {
                 </div>
             </div>
 
-            {activeModal === "scheme" ? (
+            <Transition activeModal={activeModal === "scheme"}>
                 <Scheme setActiveModal={setActiveModal} />
-            ) : (
-                activeModal && (
-                    <ModalContext.Provider value={setActiveModal}>
-                        <Menu activeModal={activeModal} setActiveModal={setActiveModal} />
-                    </ModalContext.Provider>
-                )
+            </Transition>
+            {activeModal !== "scheme" && activeModal && (
+                <ModalContext.Provider value={setActiveModal}>
+                    <Menu activeModal={activeModal} setActiveModal={setActiveModal} />
+                </ModalContext.Provider>
             )}
         </>
     );

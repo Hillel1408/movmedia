@@ -61,7 +61,7 @@ export default function Scheme({ setActiveModal }) {
     ];
 
     return createPortal(
-        <>
+        <div>
             <Overlay
                 clickHandler={() => {
                     setActiveModal("");
@@ -119,7 +119,7 @@ export default function Scheme({ setActiveModal }) {
                     </div>
                 </div>
             </div>
-        </>,
+        </div>,
         document.getElementById("portal"),
     );
 }

@@ -34,6 +34,7 @@ import ListOfVzl from "./Modals/ListOfVzl";
 import TextModal from "./Modals/TextModal";
 import FormationOfNeed from "./Modals/FormationOfNeed";
 import GridList from "./GridList";
+import Transition from "./Transition";
 
 export {
     Switcher,
@@ -72,4 +73,5 @@ export {
     TextModal,
     FormationOfNeed,
     GridList,
+    Transition,
 };
