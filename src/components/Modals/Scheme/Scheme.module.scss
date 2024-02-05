@@ -8,7 +8,8 @@
         z-index: 1;
         left: 50%;
         transform: translateX(-50%);
-        height: 980px;
+        max-height: 980px;
+        height: 100vh;
         overflow-y: auto;
         background-color: #f8f9ff;
     }
