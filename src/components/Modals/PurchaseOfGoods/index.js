@@ -1,10 +1,10 @@
 import React from "react";
-import { LayoutPageModal } from "../../index";
+import { LayoutPageModal, GridList } from "../../index";
 import styles from "./PurchaseOfGoods.module.scss";
 
 export default function PurchaseOfGoods() {
-    const gridList = [
-        { image: "/images/planning-elements/img-5.webp" },
+    const list = [
+        { image: { url: "/images/planning-elements/img-5.webp", width: "374px", height: "219px" } },
         {
             items: [
                 {
@@ -34,8 +34,8 @@ export default function PurchaseOfGoods() {
                 },
             ],
         },
-        { image: "/images/planning-elements/img-6.webp" },
-        { image: "/images/planning-elements/img-7.webp" },
+        { image: { url: "/images/planning-elements/img-6.webp", width: "373px", height: "290px" } },
+        { image: { url: "/images/planning-elements/img-7.webp", width: "285px", height: "275px" } },
         {
             items: [
                 {
@@ -57,27 +57,7 @@ export default function PurchaseOfGoods() {
                 </p>
                 <div className={styles.purchaseOfGoodsGrid}>
                     <h3 className="subtitle">Для организации соблюдения и контроля выполнения доли закупок квотируемых товаров:</h3>
-                    <div>
-                        {gridList.map((el, index) =>
-                            el.image ? (
-                                <img key={index} src={el.image} alt="" />
-                            ) : (
-                                <div key={index} className={styles.purchaseOfGoodsGridItem}>
-                                    {el.items.map((item, index) => (
-                                        <div key={index}>
-                                            <h4 className="text-medium-s">{item.title}</h4>
-                                            <ul className="text-xs">
-                                                {item.list?.map((listItem, index) => (
-                                                    <li key={index}>{listItem}</li>
-                                                ))}
-                                            </ul>
-                                            <span className="text-medium-s">{item.idx}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            ),
-                        )}
-                    </div>
+                    <GridList gridList={list} />
                 </div>
             </div>
         </LayoutPageModal>

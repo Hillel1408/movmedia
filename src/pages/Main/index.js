@@ -21,8 +21,8 @@ export default function Main() {
         { text: "Создать нормативную базу", icon: "icon-box-edit", modal: "normative-base" },
         { text: "Организовать работу в информационных системах", icon: "icon-display-settings", modal: "information-systems" },
         { text: "Наладить взаимодействие участников процесса", icon: "icon-groups", modal: "list-of-participants" },
-        { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring", modal: "working-with-contracts" },
-        { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "planning-elements" },
+        { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring", modal: "planning-elements" },
+        { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "working-with-contracts" },
     ];
 
     activeModal ? document.body.classList.add("lock") : document.body.classList.remove("lock");

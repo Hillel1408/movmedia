@@ -18,6 +18,7 @@ import {
     PurchasingDivision,
     PurchasingCommission,
     ListOfVzl,
+    FormationOfNeed,
 } from "../../index";
 
 export default function ModalsSwitcn({ modal }) {
@@ -58,6 +59,8 @@ export default function ModalsSwitcn({ modal }) {
             return <PurchasingCommission />;
         case "list-of-vzl":
             return <ListOfVzl />;
+        case "formation-of-need":
+            return <FormationOfNeed />;
 
         default:
             return <div></div>;

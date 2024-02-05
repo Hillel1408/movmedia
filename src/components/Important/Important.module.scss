@@ -33,6 +33,12 @@
                     text-decoration: underline;
                 }
             }
+            &:not(:first-child) {
+                margin-top: -10px;
+            }
+            & > svg {
+                min-width: 16px;
+            }
         }
     }
 }

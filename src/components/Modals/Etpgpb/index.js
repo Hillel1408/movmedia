@@ -27,7 +27,7 @@ export default function Etpgpb() {
     return (
         <LayoutPageModal>
             <div className={styles.etpgpb}>
-                <img src="/images/information-systems/img-3.webp" alt=""></img>
+                <img src="/images/information-systems/img-3.webp" alt="" />
                 <h2 className="title">ЭТП ГПБ</h2>
                 <p className="text-s">
                     Используется для закупок по <button>№ 223-ФЗ</button>, <button>№ 44-ФЗ</button> и коммерческих тендеров, проведения онлайн торгов и
