@@ -48,7 +48,7 @@ export default function Menu({ activeModal, setActiveModal }) {
             color: "#F46C63",
             modals: [
                 { title: "Формирование потребности", modal: "formation-of-need" },
-                { title: "Закупки у СМСП", modal: "" },
+                { title: "Закупки у СМСП", modal: "smsp" },
                 { title: "Закупки квотируемых товаров", modal: "purchase-of-goods" },
                 { title: "Закупки у ВЗЛ", modal: "vzl" },
             ],

@@ -1,4 +1,3 @@
-import React from "react";
 import { LayoutPageModal } from "../../index";
 import styles from "./ResponsibleASEZEIS.module.scss";
 

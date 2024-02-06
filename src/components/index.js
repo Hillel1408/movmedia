@@ -37,6 +37,7 @@ import GridList from "./GridList";
 import Transition from "./Transition";
 import ProcurementRegulations from "./Modals/ProcurementRegulations";
 import Button from "./Button";
+import Smsp from "./Modals/Smsp";
 
 export {
     Switcher,
@@ -78,4 +79,5 @@ export {
     Transition,
     ProcurementRegulations,
     Button,
+    Smsp,
 };
