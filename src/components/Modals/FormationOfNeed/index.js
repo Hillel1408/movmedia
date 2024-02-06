@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classNames from "classnames";
-import { LayoutPageModal, TextModal, HorizontalStepper, Important, GridList } from "../../index";
+import { LayoutPageModal, TextModal, HorizontalStepper, Important, GridList, Transition } from "../../index";
 import styles from "./FormationOfNeed.module.scss";
 
 export default function FormationOfNeed() {
     const [textModal, setTextModal] = useState("");
+    const [activeModal, setActiveModal] = useState(false);
+
+    useEffect(() => {
+        textModal && setActiveModal(true);
+    }, [textModal]);
 
     const list = [
         {
@@ -143,7 +148,9 @@ export default function FormationOfNeed() {
                 </div>
             </LayoutPageModal>
 
-            {textModal && <TextModal value={textModal} setTextModal={setTextModal} width="527px" color="#FFE8E7" />}
+            <Transition activeModal={activeModal}>
+                <TextModal value={textModal} setActiveModal={setActiveModal} width="527px" color="#FFE8E7" />
+            </Transition>
         </>
     );
 }

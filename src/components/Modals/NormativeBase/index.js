@@ -1,9 +1,14 @@
-import { useState } from "react";
-import { LayoutModal, List, TextModal } from "../../index";
+import { useState, useEffect } from "react";
+import { LayoutModal, List, TextModal, Transition } from "../../index";
 import styles from "./NormativeBase.module.scss";
 
 export default function NormativeBase() {
     const [textModal, setTextModal] = useState("");
+    const [activeModal, setActiveModal] = useState(false);
+
+    useEffect(() => {
+        textModal && setActiveModal(true);
+    }, [textModal]);
 
     const list = [
         {
@@ -51,7 +56,9 @@ export default function NormativeBase() {
                 </div>
             </LayoutModal>
 
-            {textModal && <TextModal value={textModal} setTextModal={setTextModal} width="527px" color="#FFE6D0" />}
+            <Transition activeModal={activeModal}>
+                <TextModal value={textModal} setActiveModal={setActiveModal} width="527px" color="#FFE6D0" />
+            </Transition>
         </>
     );
 }

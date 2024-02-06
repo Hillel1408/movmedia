@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import styles from "./Switcher.module.scss";
+import { useState } from "react";
 import classNames from "classnames";
+import styles from "./Switcher.module.scss";
 
 export default function Switcher() {
     const [active, setActive] = useState(false);

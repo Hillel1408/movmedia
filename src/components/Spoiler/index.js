@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Spoiler.module.scss";
 import classNames from "classnames";
 

@@ -1,10 +1,25 @@
+import { useRef } from "react";
 import { createPortal } from "react-dom";
 import styles from "./TextModal.module.scss";
 
-export default function TextModal({ value, setTextModal, width, color }) {
+export default function TextModal({ value, setActiveModal, width, color }) {
+    const modalRef = useRef(null);
+
     return createPortal(
-        <div className={styles.textModal} onClick={() => setTextModal("")}>
-            <div style={{ left: `${value.clientX}px`, top: `${value.clientY}px`, width: width, backgroundColor: color }} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.textModal} onClick={() => setActiveModal(false)}>
+            <div
+                ref={modalRef}
+                style={{
+                    left: `${value.clientX}px`,
+                    top:
+                        window.innerHeight - value.clientY - modalRef.current?.offsetHeight > 0
+                            ? `${value.clientY}px`
+                            : `${value.clientY - Math.abs(window.innerHeight - value.clientY - modalRef.current?.offsetHeight) - 30}px`,
+                    width: width,
+                    backgroundColor: color,
+                }}
+                onClick={(e) => e.stopPropagation()}
+            >
                 <span>{value.title}</span>
                 {value.text && <p className="text-s">{value.text}</p>}
                 {value.list && (

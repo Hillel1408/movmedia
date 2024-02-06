@@ -1,10 +1,15 @@
-import { useState } from "react";
-import { LayoutPageModal, Stepper, TextModal } from "../../index";
+import { useState, useEffect } from "react";
+import { LayoutPageModal, Stepper, TextModal, Transition } from "../../index";
 import styles from "./Eis.module.scss";
 import classNames from "classnames";
 
 export default function Eis() {
     const [textModal, setTextModal] = useState("");
+    const [activeModal, setActiveModal] = useState(false);
+
+    useEffect(() => {
+        textModal && setActiveModal(true);
+    }, [textModal]);
 
     const list = ["Положение о закупках", "Информация о закупках", "Сведения о договорах и их исполнении", "Перечень ВЗЛ", "Отчетность"];
     const steps = [
@@ -162,7 +167,9 @@ export default function Eis() {
                 </div>
             </LayoutPageModal>
 
-            {textModal && <TextModal value={textModal} setTextModal={setTextModal} width="527px" color="#F3F1FF" />}
+            <Transition activeModal={activeModal}>
+                <TextModal value={textModal} setActiveModal={setActiveModal} width="527px" color="#F3F1FF" />
+            </Transition>
         </>
     );
 }

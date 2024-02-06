@@ -1,9 +1,14 @@
-import { useState } from "react";
-import { LayoutPageModal, TextModal, Important, Button } from "../../index";
+import { useEffect, useState } from "react";
+import { LayoutPageModal, TextModal, Important, Button, Transition } from "../../index";
 import styles from "./ProcurementRegulations.module.scss";
 
 export default function ProcurementRegulations() {
     const [textModal, setTextModal] = useState("");
+    const [activeModal, setActiveModal] = useState(false);
+
+    useEffect(() => {
+        textModal && setActiveModal(true);
+    }, [textModal]);
 
     const gridList = [
         { text: "подготовить проект Решения", icon: "icon-receipt-long" },
@@ -228,7 +233,9 @@ export default function ProcurementRegulations() {
                 </div>
             </LayoutPageModal>
 
-            {textModal && <TextModal value={textModal} setTextModal={setTextModal} width="392px" color="#FFE6D0" />}
+            <Transition activeModal={activeModal}>
+                <TextModal value={textModal} setActiveModal={setActiveModal} width="392px" color="#FFE6D0" />
+            </Transition>
         </>
     );
 }

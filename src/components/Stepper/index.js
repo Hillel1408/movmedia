@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Stepper.module.scss";
 import classNames from "classnames";
 
