@@ -117,22 +117,11 @@
         }
         & > div {
             display: grid;
-            grid-template-columns: 219px 267px;
+            grid-template-columns: 231px 267px;
             gap: 8px;
-            & > button {
-                display: flex;
-                flex-direction: row-reverse;
-                gap: 8px;
-                background-color: transparent;
-                justify-content: center;
-                align-items: center;
-                color: #f48a2c;
-                padding: 11px 16px;
-                border: 1px solid #f48a2c;
-                border-radius: 8px;
-                &:before {
-                    color: #f48a2c;
-                    font-size: 24px;
+            & > a {
+                &:nth-child(3) {
+                    grid-column: span 2;
                 }
             }
         }

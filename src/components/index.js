@@ -35,6 +35,8 @@ import TextModal from "./Modals/TextModal";
 import FormationOfNeed from "./Modals/FormationOfNeed";
 import GridList from "./GridList";
 import Transition from "./Transition";
+import ProcurementRegulations from "./Modals/ProcurementRegulations";
+import Button from "./Button";
 
 export {
     Switcher,
@@ -74,4 +76,6 @@ export {
     FormationOfNeed,
     GridList,
     Transition,
+    ProcurementRegulations,
+    Button,
 };

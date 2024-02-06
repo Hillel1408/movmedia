@@ -1,4 +1,4 @@
-import { LayoutPageModal, Important } from "../../index";
+import { LayoutPageModal, Important, Button } from "../../index";
 import styles from "./ListOfVzl.module.scss";
 
 export default function ListOfVzl() {
@@ -41,6 +41,11 @@ export default function ListOfVzl() {
             text: "К списку документов нужно приложить копию обращения АО «СОГАЗ» о возможности признания/сохранения взаимозависимости с Компанией Группы Газпром и копию обращения Компании Группы Газпром к АО «СОГАЗ» о получении согласия на  самостоятельное признание взаимозависимости. Компания обязана обеспечить ежегодный обмен такими письмами-подтверждениями вне зависимости от того, вносятся ли изменения в перечень.",
             icon: "icon-fact-check",
         },
+    ];
+    const buttons = [
+        { text: "Проект нового перечня", href: "/" },
+        { text: "Проект изменений в перечень", href: "/" },
+        { text: "Справка-обоснование включения юридического лица в перечень", href: "/" },
     ];
 
     return (
@@ -108,12 +113,10 @@ export default function ListOfVzl() {
                 </div>
                 <div className={styles.listOfVzlDocuments}>
                     <h3 className="subtitle">Шаблоны и документы</h3>
-                    <div className="text-s">
-                        <button className="icon-north-east">Проект нового перечня</button>
-                        <button className="icon-north-east">Проект изменений в перечень</button>
-                        <button className="icon-north-east" style={{ gridColumn: "span 2" }}>
-                            Справка-обоснование включения юридического лица в перечень
-                        </button>
+                    <div>
+                        {buttons.map((item, index) => (
+                            <Button key={index} text={item.text} href={item.href} />
+                        ))}
                     </div>
                 </div>
                 <div className={styles.listOfVzlAgreement}>

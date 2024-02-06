@@ -1,0 +1,16 @@
+.button {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    color: #f48a2c;
+    padding: 9px 16px;
+    border: 1px solid #f48a2c;
+    border-radius: 8px;
+    &:before {
+        color: #f48a2c;
+        font-size: 24px;
+    }
+}
