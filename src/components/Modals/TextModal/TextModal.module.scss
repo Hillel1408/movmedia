@@ -28,6 +28,20 @@
             flex-direction: column;
             gap: 10px;
             color: #193a54;
+            & > li {
+                & > ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 10px;
+                    & > li {
+                        list-style-type: disc;
+                        &::marker {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

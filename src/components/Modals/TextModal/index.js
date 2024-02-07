@@ -20,12 +20,21 @@ export default function TextModal({ value, setActiveModal, width, color }) {
                 }}
                 onClick={(e) => e.stopPropagation()}
             >
-                <span>{value.title}</span>
+                {value.title && <span>{value.title}</span>}
                 {value.text && <p className="text-s">{value.text}</p>}
                 {value.list && (
-                    <ul className="text-s">
+                    <ul className="text-s" style={{ paddingLeft: value.type === "numbered" && "14px" }}>
                         {value.list.map((item, index) => (
-                            <li key={index}>{item}</li>
+                            <li key={index} style={{ listStyleType: value.type === "numbered" && "auto" }}>
+                                {typeof item === "string" ? item : item.text}
+                                {item.subList && (
+                                    <ul>
+                                        {item.subList.map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
                         ))}
                     </ul>
                 )}
