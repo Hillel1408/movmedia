@@ -72,8 +72,8 @@ export default function ListOfVzl() {
                                 <span></span>осуществляются в соответствии с разделом 22 Положения <br /> о закупках.
                             </p>
                             <svg width="120" height="92" viewBox="0 0 120 92" fill="none">
-                                <path d="M0 46H96C108.703 46 119 35.7025 119 23V0" stroke="#F48A2C" stroke-dasharray="2 2" />
-                                <path d="M0 46H96C108.703 46 119 56.2975 119 69V92" stroke="#F48A2C" stroke-dasharray="2 2" />
+                                <path d="M0 46H96C108.703 46 119 35.7025 119 23V0" stroke="#F48A2C" strokeDasharray="2 2" />
+                                <path d="M0 46H96C108.703 46 119 56.2975 119 69V92" stroke="#F48A2C" strokeDasharray="2 2" />
                             </svg>
                         </div>
                     </div>

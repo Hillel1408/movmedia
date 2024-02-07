@@ -7,6 +7,7 @@ export const ModalContext = createContext();
 
 export default function Main() {
     const [activeModal, setActiveModal] = useState("");
+    const [activeTooltip, setActiveTooltip] = useState("");
 
     const list = [
         "государственные корпорации;",
@@ -33,11 +34,14 @@ export default function Main() {
                 <div className={styles.header}>
                     <div className={styles.headerFlex}>
                         <div>
-                            <div className={styles.headerBtn}>
-                                <button className={classNames("icon-deployed-code-alert", "text-xs")}>
+                            <div className={styles.headerBtn} style={{ backgroundColor: activeTooltip === "standards" && "white" }}>
+                                <button
+                                    className={classNames("icon-deployed-code-alert", "text-xs")}
+                                    onClick={() => setActiveTooltip((prev) => (prev === "standards" ? "" : "standards"))}
+                                >
                                     Почему моей компании нужно переходить на корпоративные закупочные стандарты Группы Газпром?
                                 </button>
-                                <p className="text-xs">
+                                <p className={classNames("text-xs", activeTooltip === "standards" && styles.activeTooltip)}>
                                     Компании Группы Газпром ведут свою закупочную деятельность в соответствии с едиными правилами и в соответствии с принципами,
                                     установленными в Положении о закупках товаров, работ, услуг ПАО «Газпром» и Компаний Группы Газпром — Положение ПАО
                                     «Газпром».
@@ -58,8 +62,13 @@ export default function Main() {
                                         Обратите внимание, состав мероприятий относится к заказщикам, работающим по 223-ФЗ.
                                     </p>
                                     <div className={styles.headerLinkBtn}>
-                                        <button className={classNames("text-s", "icon-chevron-right")}>Кто к ним относится</button>
-                                        <ul className="text-s">
+                                        <button
+                                            className={classNames("text-s", "icon-chevron-right")}
+                                            onClick={() => setActiveTooltip((prev) => (prev === "223-fz" ? "" : "223-fz"))}
+                                        >
+                                            Кто к ним относится
+                                        </button>
+                                        <ul className={classNames("text-s", activeTooltip === "223-fz" && styles.activeTooltip)}>
                                             {list.map((item, index) => (
                                                 <li key={index}>{item}</li>
                                             ))}

@@ -63,13 +63,6 @@
         border-top-right-radius: 8px;
         position: relative;
         transition: 0.4s;
-        &:hover {
-            background-color: white;
-            & > p {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
         & > button {
             color: #39a1ed;
             transition: 0.4s;
@@ -112,12 +105,6 @@
                 font-size: 16px;
                 color: #39a1ed;
                 transform: rotate(-90deg);
-            }
-        }
-        &:hover {
-            & > ul {
-                opacity: 1;
-                visibility: visible;
             }
         }
         & > ul {
@@ -231,4 +218,8 @@
             }
         }
     }
+}
+.activeTooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
