@@ -36,7 +36,7 @@ export default function ProcurementRegulations() {
         <>
             <LayoutPageModal>
                 <div className={styles.procurementRegulations}>
-                    <img src="/images/normativeBase/img-5.webp" alt="" width="307px" height="212px"></img>
+                    <img src="/images/normativeBase/img-5.webp" alt="" width="316px" height="223px"></img>
                     <h2 className="title">Положение о закупках</h2>
                     <div className={styles.procurementRegulationsText}>
                         <h3 className="subtitle">
