@@ -67,11 +67,17 @@
                     flex-direction: column;
                     gap: 16px;
                     & > p {
-                        display: flex;
-                        gap: 8px;
+                        position: relative;
+                        padding-left: 24px;
+                        & > button {
+                            color: #39a1ed;
+                            background-color: transparent;
+                        }
                         &:before {
                             color: #f46c63;
                             font-size: 16px;
+                            position: absolute;
+                            left: 0;
                         }
                     }
                     & > span {
@@ -93,6 +99,19 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    &Grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        & > p {
+            display: flex;
+            gap: 8px;
+            &:before {
+                color: #f46c63;
+                font-size: 16px;
             }
         }
     }

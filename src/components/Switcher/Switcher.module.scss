@@ -2,15 +2,18 @@
     padding: 4px 4px 4px 8px;
     border-radius: 24px;
     background: #fff;
-    box-shadow: 4px 4px 4px 0px rgba(67, 67, 67, 0.1) inset;
+    box-shadow: 4px 4px 4px 0px #4343431a inset;
     width: 87px;
     height: 32px;
     position: relative;
     cursor: pointer;
+    outline: 1px solid #c5c5c5;
+    transition: 0.7s;
+    background-color: #ececec;
     & > div {
         width: 24px;
         height: 24px;
-        background-color: #e4f4ff;
+        background-color: #bbe2ff;
         border-radius: 100%;
         transition: 0.7s;
         filter: drop-shadow(2px 2px 4px rgba(2, 39, 88, 0.15));
@@ -24,6 +27,8 @@
         visibility: hidden;
     }
     &Active {
+        outline: 1px solid #dedede;
+        background-color: white;
         & > div {
             background-color: #39a1ed;
             transform: translateX(51px);

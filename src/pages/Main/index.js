@@ -8,6 +8,7 @@ export const ModalContext = createContext();
 export default function Main() {
     const [activeModal, setActiveModal] = useState("");
     const [activeTooltip, setActiveTooltip] = useState("");
+    const [activeSwitcher, setActiveSwitcher] = useState(false);
 
     const list = [
         "государственные корпорации;",
@@ -75,7 +76,7 @@ export default function Main() {
                                         </ul>
                                     </div>
                                 </div>
-                                <Switcher />
+                                <Switcher activeSwitcher={activeSwitcher} setActiveSwitcher={setActiveSwitcher} />
                             </div>
                             <button
                                 className={classNames(styles.headerSecondaryBtn, "icon-tabs", "text-medium-s")}
@@ -104,14 +105,15 @@ export default function Main() {
                 </div>
             </div>
 
-            <Transition activeModal={activeModal === "scheme"}>
+            <Transition activeModal={activeModal === "scheme"} cls="animation">
                 <Scheme setActiveModal={setActiveModal} />
             </Transition>
-            {activeModal !== "scheme" && activeModal && (
+
+            <Transition activeModal={activeModal !== "scheme" && activeModal} cls="animation">
                 <ModalContext.Provider value={setActiveModal}>
-                    <Menu activeModal={activeModal} setActiveModal={setActiveModal} />
+                    <Menu activeModal={activeModal} setActiveModal={setActiveModal} activeSwitcher={activeSwitcher} />
                 </ModalContext.Provider>
-            )}
+            </Transition>
         </>
     );
 }

@@ -56,7 +56,7 @@ export default function NormativeBase() {
                 </div>
             </LayoutModal>
 
-            <Transition activeModal={activeModal}>
+            <Transition activeModal={activeModal} cls="animation">
                 <TextModal value={textModal} setActiveModal={setActiveModal} width="527px" color="#FFE6D0" />
             </Transition>
         </>

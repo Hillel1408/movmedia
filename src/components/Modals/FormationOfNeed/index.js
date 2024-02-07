@@ -148,7 +148,7 @@ export default function FormationOfNeed() {
                 </div>
             </LayoutPageModal>
 
-            <Transition activeModal={activeModal}>
+            <Transition activeModal={activeModal} cls="animation">
                 <TextModal value={textModal} setActiveModal={setActiveModal} width="527px" color="#FFE8E7" />
             </Transition>
         </>

@@ -233,7 +233,7 @@ export default function ProcurementRegulations() {
                 </div>
             </LayoutPageModal>
 
-            <Transition activeModal={activeModal}>
+            <Transition activeModal={activeModal} cls="animation">
                 <TextModal value={textModal} setActiveModal={setActiveModal} width="392px" color="#FFE6D0" />
             </Transition>
         </>

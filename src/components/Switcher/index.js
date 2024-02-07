@@ -1,15 +1,12 @@
-import { useState } from "react";
 import classNames from "classnames";
 import styles from "./Switcher.module.scss";
 
-export default function Switcher() {
-    const [active, setActive] = useState(false);
-
+export default function Switcher({ activeSwitcher, setActiveSwitcher }) {
     return (
         <div
-            className={classNames(styles.switcher, active && styles.switcherActive)}
+            className={classNames(styles.switcher, activeSwitcher && styles.switcherActive)}
             onClick={() => {
-                setActive((prev) => !prev);
+                setActiveSwitcher((prev) => !prev);
             }}
         >
             <div></div>

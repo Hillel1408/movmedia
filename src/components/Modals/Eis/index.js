@@ -167,7 +167,7 @@ export default function Eis() {
                 </div>
             </LayoutPageModal>
 
-            <Transition activeModal={activeModal}>
+            <Transition activeModal={activeModal} cls="animation">
                 <TextModal value={textModal} setActiveModal={setActiveModal} width="527px" color="#F3F1FF" />
             </Transition>
         </>
