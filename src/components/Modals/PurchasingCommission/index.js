@@ -43,7 +43,7 @@ export default function PurchasingCommission() {
     return (
         <LayoutPageModal>
             <div className={styles.purchasingCommission}>
-                <img src="/images/list-of-participants/img-4.png" alt=""></img>
+                <img src="/images/listOfParticipants/img-4.png" alt=""></img>
                 <h2 className="title">
                     Сформируйте
                     <br />

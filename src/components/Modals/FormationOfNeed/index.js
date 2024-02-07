@@ -55,7 +55,7 @@ export default function FormationOfNeed() {
         },
     ];
     const gridList = [
-        { image: { url: "/images/planning-elements/img-9.png", width: "297px", height: "262px" } },
+        { image: { url: "/images/planningElements/img-9.png", width: "297px", height: "262px" } },
         {
             items: [
                 {
@@ -79,8 +79,8 @@ export default function FormationOfNeed() {
                 },
             ],
         },
-        { image: { url: "/images/planning-elements/img-10.png", width: "299px", height: "165px" } },
-        { image: { url: "/images/planning-elements/img-11.png", width: "306px", height: "235px" } },
+        { image: { url: "/images/planningElements/img-10.png", width: "299px", height: "165px" } },
+        { image: { url: "/images/planningElements/img-11.png", width: "306px", height: "235px" } },
         {
             items: [
                 {
@@ -109,7 +109,7 @@ export default function FormationOfNeed() {
         <>
             <LayoutPageModal>
                 <div className={styles.formationOfNeed}>
-                    <img src="/images/planning-elements/img-8.png" alt="" />
+                    <img src="/images/planningElements/img-8.png" alt="" />
                     <h2 className="title">
                         Формирование
                         <br />

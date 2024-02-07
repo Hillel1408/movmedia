@@ -30,7 +30,7 @@ export default function Iusmtr() {
     return (
         <LayoutPageModal>
             <div className={styles.iusmtr}>
-                <img src="/images/information-systems/img-5.webp" alt=""></img>
+                <img src="/images/informationSystems/img-5.webp" alt=""></img>
                 <h2 className="title">ИУС МТР</h2>
                 <p className="text-s">Это система, используемая централизованным поставщиком МТР для Группы Газпром.</p>
                 <div className={styles.iusmtrBlock}>
@@ -53,7 +53,7 @@ export default function Iusmtr() {
                 </div>
                 <div className={styles.iusmtrStepper}>
                     <h3 className="subtitle">Для регистрации в ИУС МТР</h3>
-                    <Stepper image="/images/information-systems/img-6.webp" steps={steps} width="164px" height="200px" />
+                    <Stepper image="/images/informationSystems/img-6.webp" steps={steps} width="164px" height="200px" />
                 </div>
                 <div className={classNames(styles.iusmtrText, "text-s")}>
                     <span>Контакт техподдержки ООО «Газпром информ»:</span>

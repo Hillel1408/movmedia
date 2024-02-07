@@ -4,7 +4,7 @@ import styles from "./PurchaseOfGoods.module.scss";
 
 export default function PurchaseOfGoods() {
     const list = [
-        { image: { url: "/images/planning-elements/img-5.webp", width: "374px", height: "219px" } },
+        { image: { url: "/images/planningElements/img-5.webp", width: "374px", height: "219px" } },
         {
             items: [
                 {
@@ -34,8 +34,8 @@ export default function PurchaseOfGoods() {
                 },
             ],
         },
-        { image: { url: "/images/planning-elements/img-6.webp", width: "373px", height: "290px" } },
-        { image: { url: "/images/planning-elements/img-7.webp", width: "285px", height: "275px" } },
+        { image: { url: "/images/planningElements/img-6.webp", width: "373px", height: "290px" } },
+        { image: { url: "/images/planningElements/img-7.webp", width: "285px", height: "275px" } },
         {
             items: [
                 {
@@ -49,7 +49,7 @@ export default function PurchaseOfGoods() {
     return (
         <LayoutPageModal>
             <div className={styles.purchaseOfGoods}>
-                <img src="/images/planning-elements/img-4.webp" alt="" />
+                <img src="/images/planningElements/img-4.webp" alt="" />
                 <h2 className="title">Закупки квотируемых товаров</h2>
                 <p className="text-s">
                     Требования к обеспечению выполнения доли закупок квотируемых товаров российского происхождения предусмотрены Постановлением Правительства

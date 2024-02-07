@@ -12,11 +12,11 @@ export default function Vzl() {
     ];
     const gridList = [
         {
-            image: { url: "/images/planning-elements/img-2.webp", width: "202px", height: "168px" },
+            image: { url: "/images/planningElements/img-2.webp", width: "202px", height: "168px" },
             text: "маркетинговые исследования (когда закупка осуществляется среди нескольких ВЗЛ);",
         },
         {
-            image: { url: "/images/planning-elements/img-3.webp", width: "203px", height: "141px" },
+            image: { url: "/images/planningElements/img-3.webp", width: "203px", height: "141px" },
             text: "у единственного поставщика (подрядчика, исполнителя) – по основаниям, предусмотренным пунктом 22.13 Положения ПАО «Газпром».",
         },
     ];
@@ -24,7 +24,7 @@ export default function Vzl() {
     return (
         <LayoutPageModal>
             <div className={styles.vzl}>
-                <img src="/images/planning-elements/img-1.webp" alt=""></img>
+                <img src="/images/planningElements/img-1.webp" alt=""></img>
                 <h2 className="title">Закупки у ВЗЛ</h2>
                 <p className="text-s">
                     Закупки у ВЗЛ включаются в план закупок на срок не менее чем 1 (один) год в соответствии с требованиями к форме такого плана, установленными

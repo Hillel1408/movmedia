@@ -66,7 +66,7 @@ export default function Eis() {
         <>
             <LayoutPageModal>
                 <div className={styles.eis}>
-                    <img src="/images/information-systems/img-8.webp" alt=""></img>
+                    <img src="/images/informationSystems/img-8.webp" alt=""></img>
                     <h2 className="title">ЕИС</h2>
                     <div className={classNames(styles.eisText, "text-s")}>
                         <p>
@@ -162,7 +162,7 @@ export default function Eis() {
                         <div>
                             <button className="text-xs">Инструкция на официальном сайте ЕИС</button>
                         </div>
-                        <Stepper image="/images/information-systems/img-9.webp" steps={steps} width="231px" height="309px" />
+                        <Stepper image="/images/informationSystems/img-9.webp" steps={steps} width="231px" height="309px" />
                     </div>
                 </div>
             </LayoutPageModal>

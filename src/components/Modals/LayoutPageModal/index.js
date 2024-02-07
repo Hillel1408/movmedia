@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ModalContext } from "../../../pages/Main";
-import { BackButton } from "../../../components";
+import { BackButton } from "../..";
 import styles from "./LayoutPageModal.module.scss";
 
 export default function LayoutPageModal({ children }) {

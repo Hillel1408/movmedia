@@ -41,7 +41,7 @@ export default function PurchasingDivision() {
     return (
         <LayoutPageModal>
             <div className={styles.purchasingDivision}>
-                <img src="/images/list-of-participants/img-3.png" alt=""></img>
+                <img src="/images/listOfParticipants/img-3.png" alt=""></img>
                 <h2 className="title">
                     Сформируйте
                     <br />
