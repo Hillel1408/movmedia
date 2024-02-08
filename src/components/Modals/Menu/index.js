@@ -11,7 +11,8 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         {
             title: "Создать нормативную базу",
             modal: "normative-base",
-            color: "#F48A2C",
+            color: "#ffe8d5",
+            borderColor: "#F48A2C",
             modals: [
                 { title: "Положение о закупках", modal: "procurement-regulations", active: true },
                 { title: "Перечень ВЗЛ", modal: "list-of-vzl", active: true },
@@ -21,7 +22,8 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         {
             title: "Организовать работу в информационных системах",
             modal: "information-systems",
-            color: "#5545D7",
+            color: "#eedaff",
+            borderColor: "#5545D7",
             modals: [
                 { title: "АСЭЗ", modal: "asez", active: true },
                 { title: "ЕИС", modal: "eis", active: activeSwitcher },
@@ -33,7 +35,8 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         {
             title: "Наладить взаимодействие участников процесса",
             modal: "list-of-participants",
-            color: "#39A1ED",
+            color: "#dff2ff",
+            borderColor: "#39A1ED",
             modals: [
                 { title: "Закупочное подразделение", modal: "purchasing-division", active: true },
                 { title: "Закупочная комиссия", modal: "purchasing-commission", active: true },
@@ -41,11 +44,18 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                 { title: "Организатор закупок", modal: "procurement-organizer", active: true },
             ],
         },
-        { title: "Обеспечить контроль, работу с договорами, формирование отчетности", modal: "working-with-contracts", color: "#9CC040", modals: [] },
+        {
+            title: "Обеспечить контроль, работу с договорами, формирование отчетности",
+            modal: "working-with-contracts",
+            color: "#9CC040",
+            borderColor: "#9CC040",
+            modals: [],
+        },
         {
             title: "Настроить отдельные элементы планирования",
             modal: "planning-elements",
-            color: "#F46C63",
+            color: "#ffe0dd",
+            borderColor: "#F46C63",
             modals: [
                 { title: "Формирование потребности", modal: "formation-of-need", active: true },
                 { title: "Закупки у СМСП", modal: "smsp", active: activeSwitcher },
@@ -71,7 +81,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                                 onClick={() => {
                                     setActive(item.modal);
                                 }}
-                                style={{ outline: (active === item.modal || item.modals.find((el) => el.modal === active)) && `2px solid ${item.color}` }}
+                                style={{ outline: (active === item.modal || item.modals.find((el) => el.modal === active)) && `2px solid ${item.borderColor}` }}
                             >
                                 <span>{item.title}</span>
                                 {item.modals.length > 0 && (
@@ -85,7 +95,8 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                                                     <li
                                                         key={index}
                                                         style={{
-                                                            backgroundColor: active === el.modal && `${item.color}`,
+                                                            outline: active === el.modal && `1px solid ${item.color}`,
+                                                            backgroundPosition: active === el.modal && "99% 50%",
                                                             color: active === el.modal && "white",
                                                         }}
                                                         onClick={(e) => {
