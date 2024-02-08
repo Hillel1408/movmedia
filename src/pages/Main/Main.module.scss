@@ -137,7 +137,6 @@
     & > button {
         position: absolute;
         border-radius: 8px;
-        // background: #fff;
         box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
         display: flex;
         gap: 10px;
@@ -149,11 +148,9 @@
         color: #193a54;
         text-align: left;
         transition: 0.4s;
-
         &:hover {
             box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
             color: white;
-
             &:before {
                 color: white !important;
             }
@@ -168,50 +165,58 @@
         &:nth-child(2) {
             top: 260px;
             left: 90px;
+            background: linear-gradient(270deg, #ffe8d5, #ffbe84, #ffa85a, white 50%);
+            background-size: 300% 300%;
             &:before {
                 color: #f48a2c;
             }
             &:hover {
-                background-color: #ffbb7f;
+                background-position: 99% 50%;
             }
         }
         &:nth-child(3) {
             top: 120px;
             left: 384px;
             width: 240px;
+            background: linear-gradient(270deg, #eedaff, #d3a0ff, #c481ff, white 50%);
+            background-size: 300% 300%;
             &:before {
                 color: #5545d7;
             }
             &:hover {
-                background-color: #e2c1ff;
+                background-position: 99% 50%;
             }
         }
         &:nth-child(4) {
             top: 51px;
             left: 882px;
             width: 270px;
+            background: linear-gradient(270deg, #dff2ff, #9ad4ff, #99d4ff, white 50%);
+            background-size: 300% 300%;
             &:before {
                 color: #39a1ed;
             }
             &:hover {
-                background-color: #99d4ff;
+                background-position: 99% 50%;
             }
         }
         &:nth-child(5) {
             top: 325px;
             left: 1132px;
             width: 268px;
+            background: linear-gradient(270deg, #ffe0dd, #f99087, #ff7c71, white 50%);
+            background-size: 300% 300%;
             &:before {
                 color: #f46c63;
             }
             &:hover {
-                background-color: #ff938a;
+                background-position: 99% 50%;
             }
         }
         &:nth-child(6) {
             top: 556px;
             left: 843px;
-            width: 299px;
+            width: 292px;
             background: linear-gradient(270deg, #eaffb7, #c1e763, #a2c942, white 50%);
             background-size: 300% 300%;
             &:before {
