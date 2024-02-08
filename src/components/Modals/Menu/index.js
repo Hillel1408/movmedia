@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 import { Overlay, ModalsSwitcn } from "../../index";
 import styles from "./Menu.module.scss";
@@ -24,7 +24,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
             color: "#5545D7",
             modals: [
                 { title: "АСЭЗ", modal: "asez", active: true },
-                { title: "ЕИС", modal: "eis", active: activeSwitcher || false },
+                { title: "ЕИС", modal: "eis", active: activeSwitcher },
                 { title: "ЭТП ГПБ", modal: "etpgpb", active: true },
                 { title: "ИУС МТР", modal: "iusmtr", active: true },
                 { title: "ПУР АСБУ", modal: "purasbu", active: true },

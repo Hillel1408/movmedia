@@ -137,7 +137,7 @@
     & > button {
         position: absolute;
         border-radius: 8px;
-        background: #fff;
+        // background: #fff;
         box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
         display: flex;
         gap: 10px;
@@ -149,9 +149,11 @@
         color: #193a54;
         text-align: left;
         transition: 0.4s;
+
         &:hover {
             box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
             color: white;
+
             &:before {
                 color: white !important;
             }
@@ -210,11 +212,13 @@
             top: 556px;
             left: 843px;
             width: 299px;
+            background: linear-gradient(270deg, #eaffb7, #c1e763, #a2c942, white 50%);
+            background-size: 300% 300%;
             &:before {
                 color: #9cc040;
             }
             &:hover {
-                background-color: #b5d664;
+                background-position: 99% 50%;
             }
         }
     }

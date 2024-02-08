@@ -1,4 +1,3 @@
-import React from "react";
 import { LayoutPageModal } from "../../index";
 import styles from "./WorkingWithContracts.module.scss";
 
@@ -34,6 +33,13 @@ export default function WorkingWithContracts() {
                         <li key={index}>
                             <span className="subtitle">0{index + 1}</span>
                             <p className="text-s">{item.text}</p>
+                            {item.sublist && (
+                                <ul className="text-xs">
+                                    {item.sublist.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
+                                </ul>
+                            )}
                         </li>
                     ))}
                 </ul>
