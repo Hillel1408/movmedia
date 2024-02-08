@@ -51,7 +51,7 @@ export default function ListOfVzl() {
     return (
         <LayoutPageModal>
             <div className={styles.listOfVzl}>
-                <img src="/images/normativeBase/img-3.png" alt=""></img>
+                <img src="/images/normativeBase/img-3.webp" alt="" width="282px" height="218px"></img>
                 <h2 className="title">Перечень ВЗЛ</h2>
                 <p className="text-s">
                     Перечень ВЗЛ — часть положения о закупках <button>(Ст. 1 Закона №223-ФЗ)</button>, поэтому он утверждается вместе с принятием решения о
@@ -108,7 +108,7 @@ export default function ListOfVzl() {
                             </li>
                         ))}
                     </ul>
-                    <img src="/images/normativeBase/img-4.png" alt=""></img>
+                    <img src="/images/normativeBase/img-4.webp" alt="" width="303px" height="193px"></img>
                     <Important color="#FFE6D0" list={importantList} width="100%" secondaryColor="#F48A2C" />
                 </div>
                 <div className={styles.listOfVzlDocuments}>

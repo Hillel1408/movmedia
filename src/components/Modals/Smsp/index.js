@@ -15,7 +15,7 @@ export default function Smsp() {
         <>
             <LayoutPageModal>
                 <div className={styles.smsp}>
-                    <img src="/images/planningElements/img-12.png" alt=""></img>
+                    <img src="/images/planningElements/img-12.webp" alt="" width="321px" height="258px"></img>
                     <h2 className="title">Закупки у СМСП</h2>
                     <h3 className="subtitle">
                         Зачем обеспечивать выполнение требований к обеспечению доли закупок у субъектов малого и среднего предпринимательства?

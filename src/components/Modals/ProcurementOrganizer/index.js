@@ -74,7 +74,7 @@ export default function ProcurementOrganizer() {
     return (
         <LayoutPageModal>
             <div className={styles.procurementOrganizer}>
-                <img src="/images/listOfParticipants/img-2.webp" alt=""></img>
+                <img src="/images/listOfParticipants/img-2.webp" alt="" width="326px" height="280px"></img>
                 <h2 className="title">
                     Организатор
                     <br />

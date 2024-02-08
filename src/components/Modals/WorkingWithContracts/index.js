@@ -25,7 +25,7 @@ export default function WorkingWithContracts() {
     return (
         <LayoutPageModal>
             <div className={styles.workingWithContracts}>
-                <img src="/images/workingWithContracts/img-1.webp" alt=""></img>
+                <img src="/images/workingWithContracts/img-1.webp" alt="" width="276px" height="269px"></img>
                 <h2 className="title">Работа с договорами. Отчетность. Контроль.</h2>
                 <h3 className="subtitle">С какими документами нужно работать:</h3>
                 <ul className="block">

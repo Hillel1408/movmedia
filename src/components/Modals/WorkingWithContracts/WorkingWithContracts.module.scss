@@ -41,6 +41,13 @@
             & > span {
                 color: #9cc040;
             }
+            & > ul {
+                color: #265071;
+                padding-left: 20px;
+                & > li {
+                    list-style-type: disc;
+                }
+            }
         }
     }
 }

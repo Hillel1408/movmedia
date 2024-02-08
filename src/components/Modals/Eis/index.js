@@ -66,7 +66,7 @@ export default function Eis() {
         <>
             <LayoutPageModal>
                 <div className={styles.eis}>
-                    <img src="/images/informationSystems/img-8.webp" alt=""></img>
+                    <img src="/images/informationSystems/img-8.webp" alt="" width="287px" height="223px"></img>
                     <h2 className="title">ЕИС</h2>
                     <div className={classNames(styles.eisText, "text-s")}>
                         <p>

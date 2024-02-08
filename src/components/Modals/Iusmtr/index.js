@@ -30,7 +30,7 @@ export default function Iusmtr() {
     return (
         <LayoutPageModal>
             <div className={styles.iusmtr}>
-                <img src="/images/informationSystems/img-5.webp" alt=""></img>
+                <img src="/images/informationSystems/img-5.webp" alt="" width="232px" height="220px"></img>
                 <h2 className="title">ИУС МТР</h2>
                 <p className="text-s">Это система, используемая централизованным поставщиком МТР для Группы Газпром.</p>
                 <div className={styles.iusmtrBlock}>

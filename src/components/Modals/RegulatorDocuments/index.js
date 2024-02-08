@@ -38,7 +38,7 @@ export default function RegulatorDocuments() {
         <>
             <LayoutPageModal>
                 <div className={styles.regulatorDocuments}>
-                    <img src="/images/normativeBase/img-1.webp" alt=""></img>
+                    <img src="/images/normativeBase/img-1.webp" alt="" width="293px" height="209px"></img>
                     <h2 className="title">
                         Регламентные
                         <br />

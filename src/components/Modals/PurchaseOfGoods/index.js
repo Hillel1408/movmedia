@@ -49,7 +49,7 @@ export default function PurchaseOfGoods() {
     return (
         <LayoutPageModal>
             <div className={styles.purchaseOfGoods}>
-                <img src="/images/planningElements/img-4.webp" alt="" />
+                <img src="/images/planningElements/img-4.webp" alt="" width="284px" height="195px" />
                 <h2 className="title">Закупки квотируемых товаров</h2>
                 <p className="text-s">
                     Требования к обеспечению выполнения доли закупок квотируемых товаров российского происхождения предусмотрены Постановлением Правительства

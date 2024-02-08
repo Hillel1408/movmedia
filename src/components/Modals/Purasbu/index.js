@@ -33,7 +33,7 @@ export default function Purasbu() {
     return (
         <LayoutPageModal>
             <div className={styles.purasbu}>
-                <img src="/images/informationSystems/img-7.webp" alt=""></img>
+                <img src="/images/informationSystems/img-7.webp" alt="" width="276px" height="213px"></img>
                 <h2 className="title">ПУР АСБУ</h2>
                 <p className="text-s">Эта система, в которую подгружается информация о договорах и их исполнении.</p>
                 <div className={styles.purasbuGrid}>

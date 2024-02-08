@@ -40,7 +40,7 @@ export default function Asez() {
     return (
         <LayoutPageModal>
             <div className={styles.asez}>
-                <img src="/images/informationSystems/img-2.webp" alt=""></img>
+                <img src="/images/informationSystems/img-2.webp" alt="" width="282px" height="278px"></img>
                 <h2 className="title">АСЭЗ</h2>
                 <div className={classNames(styles.asezText, "text-s")}>
                     <p>
@@ -67,7 +67,7 @@ export default function Asez() {
                 </div>
                 <div className={styles.asezStepper}>
                     <h3 className="subtitle">Как зарегистрироваться в АСЭЗ?</h3>
-                    <Stepper image="/images/informationSystems/img-1.webp" steps={steps} width="227px" height="328px" />
+                    <Stepper image="/images/informationSystems/img-1.webp" steps={steps} width="232px" height="328px" />
                 </div>
             </div>
         </LayoutPageModal>

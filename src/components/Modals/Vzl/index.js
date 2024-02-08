@@ -24,7 +24,7 @@ export default function Vzl() {
     return (
         <LayoutPageModal>
             <div className={styles.vzl}>
-                <img src="/images/planningElements/img-1.webp" alt=""></img>
+                <img src="/images/planningElements/img-1.webp" alt="" width="257px" height="277px"></img>
                 <h2 className="title">Закупки у ВЗЛ</h2>
                 <p className="text-s">
                     Закупки у ВЗЛ включаются в план закупок на срок не менее чем 1 (один) год в соответствии с требованиями к форме такого плана, установленными

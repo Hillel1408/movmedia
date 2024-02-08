@@ -5,7 +5,7 @@ export default function ResponsibleASEZEIS() {
     return (
         <LayoutPageModal>
             <div className={styles.responsibleASEZEIS}>
-                <img src="/images/listOfParticipants/img-1.webp" alt=""></img>
+                <img src="/images/listOfParticipants/img-1.webp" alt="" width="276px" height="256px"></img>
                 <h2 className="title">
                     Ответственные
                     <br /> за работу в ЕИС
