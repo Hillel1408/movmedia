@@ -65,8 +65,11 @@
                 }
                 & > ul > li {
                     outline: 1px solid #f48a2c;
+                    background: linear-gradient(270deg, #ffe8d5, #ffbe84, #ffa85a, white 50%);
+                    background-size: 300% 300%;
                     &:hover {
-                        background-color: #f48a2c;
+                        background-position: 99% 50%;
+                        outline: 1px solid #ffe8d5;
                     }
                 }
             }
@@ -76,8 +79,11 @@
                 }
                 & > ul > li {
                     outline: 1px solid #5545d7;
+                    background: linear-gradient(270deg, #eedaff, #d3a0ff, #c481ff, white 50%);
+                    background-size: 300% 300%;
                     &:hover {
-                        background-color: #5545d7;
+                        background-position: 99% 50%;
+                        outline: 1px solid #eedaff;
                     }
                 }
             }
@@ -87,8 +93,11 @@
                 }
                 & > ul > li {
                     outline: 1px solid #39a1ed;
+                    background: linear-gradient(270deg, #dff2ff, #9ad4ff, #99d4ff, white 50%);
+                    background-size: 300% 300%;
                     &:hover {
-                        background-color: #39a1ed;
+                        background-position: 99% 50%;
+                        outline: 1px solid #dff2ff;
                     }
                 }
             }
@@ -108,8 +117,11 @@
                 }
                 & > ul > li {
                     outline: 1px solid #f46c63;
+                    background: linear-gradient(270deg, #ffe0dd, #f99087, #ff7c71, white 50%);
+                    background-size: 300% 300%;
                     &:hover {
-                        background-color: #f46c63;
+                        background-position: 99% 50%;
+                        outline: 1px solid #ffe0dd;
                     }
                 }
             }
