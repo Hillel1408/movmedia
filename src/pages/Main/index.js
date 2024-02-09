@@ -37,6 +37,28 @@ export default function Main() {
         { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring", modal: "planning-elements" },
         { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "working-with-contracts" },
     ];
+    const pedestals = [
+        {
+            imageTop: { url: "/images/main/pedestals/1/img-1.webp", width: "283px", height: "" },
+            imageBottom: { url: "/images/main/pedestals/1/img-2.webp", width: "283px", height: "px" },
+        },
+        {
+            imageTop: { url: "/images/main/pedestals/2/img-1.webp", width: "283px", height: "" },
+            imageBottom: { url: "/images/main/pedestals/2/img-2.webp", width: "283px", height: "" },
+        },
+        {
+            imageTop: { url: "/images/main/pedestals/3/img-1.webp", width: "283px", height: "" },
+            imageBottom: { url: "/images/main/pedestals/3/img-2.webp", width: "283px", height: "" },
+        },
+        {
+            imageTop: { url: "/images/main/pedestals/4/img-1.webp", width: "283px", height: "" },
+            imageBottom: { url: "/images/main/pedestals/4/img-2.webp", width: "283px", height: "" },
+        },
+        {
+            imageTop: { url: "/images/main/pedestals/5/img-1.webp", width: "283px", height: "" },
+            imageBottom: { url: "/images/main/pedestals/5/img-2.webp", width: "287px", height: "" },
+        },
+    ];
 
     activeModal ? document.body.classList.add("lock") : document.body.classList.remove("lock");
 
@@ -108,17 +130,27 @@ export default function Main() {
                 </div>
                 <div className={styles.navigation}>
                     <img src="/images/main/main.webp" alt=""></img>
-                    {buttons.map((item, index) => (
-                        <button
-                            key={index}
-                            onClick={() => {
-                                setActiveModal(item.modal);
-                            }}
-                            className={classNames(item.icon)}
-                        >
-                            {item.text}
-                        </button>
-                    ))}
+                    <div className={styles.navigationButtons}>
+                        {buttons.map((item, index) => (
+                            <button
+                                key={index}
+                                onClick={() => {
+                                    setActiveModal(item.modal);
+                                }}
+                                className={classNames(item.icon)}
+                            >
+                                {item.text}
+                            </button>
+                        ))}
+                    </div>
+                    <div className={styles.navigationPedestals}>
+                        {pedestals.map((item, index) => (
+                            <div key={index}>
+                                <img src={item.imageTop.url} alt="" width={item.imageTop.width} height={item.imageTop.height}></img>
+                                <img src={item.imageBottom.url} alt="" width={item.imageBottom.width} height={item.imageBottom.height}></img>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 

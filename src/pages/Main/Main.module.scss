@@ -110,7 +110,7 @@
         & > ul {
             position: absolute;
             top: 32px;
-            z-index: 1;
+            z-index: 4;
             opacity: 0;
             visibility: hidden;
             transition: 0.4s;
@@ -131,99 +131,177 @@
 .navigation {
     height: 722px;
     position: relative;
+    overflow: hidden;
     & > img {
         width: 100%;
     }
-    & > button {
-        position: absolute;
-        border-radius: 8px;
-        box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
-        display: flex;
-        gap: 10px;
-        font-family: "Roboto Flex";
-        font-size: 16px;
-        font-weight: 600;
-        padding: 16px 12px;
-        align-items: center;
-        color: #193a54;
-        text-align: left;
-        transition: 0.4s;
-        &:hover {
-            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-            color: white;
-            &:before {
-                color: white !important;
-            }
-        }
-        &:active {
-            box-shadow: none;
-        }
-        &:before {
-            font-size: 32px;
+    &Buttons {
+        & > button {
+            position: absolute;
+            border-radius: 8px;
+            box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
+            display: flex;
+            gap: 10px;
+            font-family: "Roboto Flex";
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 12px;
+            align-items: center;
+            color: #193a54;
+            text-align: left;
             transition: 0.4s;
-        }
-        &:nth-child(2) {
-            top: 260px;
-            left: 90px;
-            background: linear-gradient(270deg, #ffe8d5, #ffbe84, #ffa85a, white 50%);
-            background-size: 300% 300%;
-            &:before {
-                color: #f48a2c;
-            }
+            z-index: 6;
             &:hover {
-                background-position: 99% 50%;
+                box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+                color: white;
+                &:before {
+                    color: white !important;
+                }
+            }
+            &:active {
+                box-shadow: none;
+            }
+            &:before {
+                font-size: 32px;
+                transition: 0.4s;
+            }
+            &:nth-child(1) {
+                top: 260px;
+                left: 90px;
+                background: linear-gradient(270deg, #ffe8d5, #ffbe84, #ffa85a, white 50%);
+                background-size: 300% 300%;
+                &:before {
+                    color: #f48a2c;
+                }
+                &:hover {
+                    background-position: 99% 50%;
+                }
+            }
+            &:nth-child(2) {
+                top: 120px;
+                left: 384px;
+                width: 240px;
+                background: linear-gradient(270deg, #eedaff, #d3a0ff, #c481ff, white 50%);
+                background-size: 300% 300%;
+                &:before {
+                    color: #5545d7;
+                }
+                &:hover {
+                    background-position: 99% 50%;
+                }
+            }
+            &:nth-child(3) {
+                top: 51px;
+                left: 882px;
+                width: 270px;
+                background: linear-gradient(270deg, #dff2ff, #9ad4ff, #99d4ff, white 50%);
+                background-size: 300% 300%;
+                &:before {
+                    color: #39a1ed;
+                }
+                &:hover {
+                    background-position: 99% 50%;
+                }
+            }
+            &:nth-child(4) {
+                top: 325px;
+                left: 1132px;
+                width: 268px;
+                background: linear-gradient(270deg, #ffe0dd, #f99087, #ff7c71, white 50%);
+                background-size: 300% 300%;
+                &:before {
+                    color: #f46c63;
+                }
+                &:hover {
+                    background-position: 99% 50%;
+                }
+            }
+            &:nth-child(5) {
+                top: 556px;
+                left: 843px;
+                width: 292px;
+                background: linear-gradient(270deg, #eaffb7, #c1e763, #a2c942, white 50%);
+                background-size: 300% 300%;
+                &:before {
+                    color: #9cc040;
+                }
+                &:hover {
+                    background-position: 99% 50%;
+                }
             }
         }
-        &:nth-child(3) {
-            top: 120px;
-            left: 384px;
-            width: 240px;
-            background: linear-gradient(270deg, #eedaff, #d3a0ff, #c481ff, white 50%);
-            background-size: 300% 300%;
-            &:before {
-                color: #5545d7;
-            }
+    }
+    &Pedestals {
+        & > div {
+            position: absolute;
             &:hover {
-                background-position: 99% 50%;
+                & > img {
+                    &:first-child {
+                        transform: matrix(1, 0, 0, 1, 0, -25);
+                    }
+                }
             }
-        }
-        &:nth-child(4) {
-            top: 51px;
-            left: 882px;
-            width: 270px;
-            background: linear-gradient(270deg, #dff2ff, #9ad4ff, #99d4ff, white 50%);
-            background-size: 300% 300%;
-            &:before {
-                color: #39a1ed;
+            & > img {
+                &:first-child {
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.4s;
+                }
+                &:last-child {
+                    position: absolute;
+                    left: 0;
+                }
             }
-            &:hover {
-                background-position: 99% 50%;
+            &:nth-child(1) {
+                bottom: 99px;
+                left: 199px;
+                z-index: 5;
+                & > img {
+                    &:last-child {
+                        bottom: -36px;
+                    }
+                }
             }
-        }
-        &:nth-child(5) {
-            top: 325px;
-            left: 1132px;
-            width: 268px;
-            background: linear-gradient(270deg, #ffe0dd, #f99087, #ff7c71, white 50%);
-            background-size: 300% 300%;
-            &:before {
-                color: #f46c63;
+            &:nth-child(2) {
+                bottom: 233px;
+                left: 453px;
+                z-index: 3;
+                & > img {
+                    &:last-child {
+                        bottom: -108px;
+                    }
+                }
             }
-            &:hover {
-                background-position: 99% 50%;
+            &:nth-child(3) {
+                bottom: 55px;
+                left: 662px;
+                z-index: 4;
+                & > img {
+                    &:last-child {
+                        bottom: -65px;
+                    }
+                }
             }
-        }
-        &:nth-child(6) {
-            top: 556px;
-            left: 843px;
-            width: 292px;
-            background: linear-gradient(270deg, #eaffb7, #c1e763, #a2c942, white 50%);
-            background-size: 300% 300%;
-            &:before {
-                color: #9cc040;
+            &:nth-child(4) {
+                bottom: 232px;
+                left: 895px;
+                z-index: 2;
+                & > img {
+                    &:last-child {
+                        bottom: -145px;
+                    }
+                }
             }
-            &:hover {
-                background-position: 99% 50%;
+            &:nth-child(5) {
+                bottom: 374px;
+                left: 690px;
+                z-index: 1;
+                & > img {
+                    &:last-child {
+                        bottom: -199px;
+                        transform: translateX(-1.7px);
+                    }
+                }
             }
         }
     }
