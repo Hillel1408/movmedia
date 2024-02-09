@@ -6,7 +6,7 @@ import styles from "./Main.module.scss";
 export const ModalContext = createContext();
 
 export default function Main() {
-    const [activeModal, setActiveModal] = useState("");
+    const [activeModal, setActiveModal] = useState(false);
     const [activeTooltip, setActiveTooltip] = useState("");
     const [activeSwitcher, setActiveSwitcher] = useState(false);
 
@@ -39,24 +39,24 @@ export default function Main() {
     ];
     const pedestals = [
         {
-            imageTop: { url: "/images/main/pedestals/1/img-1.webp", width: "283px", height: "" },
-            imageBottom: { url: "/images/main/pedestals/1/img-2.webp", width: "283px", height: "px" },
+            imageTop: { url: "/images/main/pedestals/1/img-1.webp", width: "283px", height: "317px" },
+            imageBottom: { url: "/images/main/pedestals/1/img-2.webp", width: "283px", height: "259px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/2/img-1.webp", width: "283px", height: "" },
-            imageBottom: { url: "/images/main/pedestals/2/img-2.webp", width: "283px", height: "" },
+            imageTop: { url: "/images/main/pedestals/2/img-1.webp", width: "283px", height: "309px" },
+            imageBottom: { url: "/images/main/pedestals/2/img-2.webp", width: "283px", height: "330px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/3/img-1.webp", width: "283px", height: "" },
-            imageBottom: { url: "/images/main/pedestals/3/img-2.webp", width: "283px", height: "" },
+            imageTop: { url: "/images/main/pedestals/3/img-1.webp", width: "283px", height: "300px" },
+            imageBottom: { url: "/images/main/pedestals/3/img-2.webp", width: "283px", height: "292px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/4/img-1.webp", width: "283px", height: "" },
-            imageBottom: { url: "/images/main/pedestals/4/img-2.webp", width: "283px", height: "" },
+            imageTop: { url: "/images/main/pedestals/4/img-1.webp", width: "283px", height: "323px" },
+            imageBottom: { url: "/images/main/pedestals/4/img-2.webp", width: "283px", height: "368px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/5/img-1.webp", width: "283px", height: "" },
-            imageBottom: { url: "/images/main/pedestals/5/img-2.webp", width: "287px", height: "" },
+            imageTop: { url: "/images/main/pedestals/5/img-1.webp", width: "283px", height: "334px" },
+            imageBottom: { url: "/images/main/pedestals/5/img-2.webp", width: "287px", height: "420px" },
         },
     ];
 
