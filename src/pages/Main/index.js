@@ -39,24 +39,24 @@ export default function Main() {
     ];
     const pedestals = [
         {
-            imageTop: { url: "/images/main/pedestals/1/img-1.webp", width: "283px", height: "317px" },
-            imageBottom: { url: "/images/main/pedestals/1/img-2.webp", width: "283px", height: "259px" },
+            imageTop: { url: "/images/main/pedestals/1/img-1.avif", width: "283px", height: "317px" },
+            imageBottom: { url: "/images/main/pedestals/1/img-2.avif", width: "283px", height: "259px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/2/img-1.webp", width: "283px", height: "309px" },
-            imageBottom: { url: "/images/main/pedestals/2/img-2.webp", width: "283px", height: "330px" },
+            imageTop: { url: "/images/main/pedestals/2/img-1.avif", width: "283px", height: "309px" },
+            imageBottom: { url: "/images/main/pedestals/2/img-2.avif", width: "283px", height: "330px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/3/img-1.webp", width: "283px", height: "300px" },
-            imageBottom: { url: "/images/main/pedestals/3/img-2.webp", width: "283px", height: "292px" },
+            imageTop: { url: "/images/main/pedestals/3/img-1.avif", width: "283px", height: "300px" },
+            imageBottom: { url: "/images/main/pedestals/3/img-2.avif", width: "283px", height: "292px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/4/img-1.webp", width: "283px", height: "323px" },
-            imageBottom: { url: "/images/main/pedestals/4/img-2.webp", width: "283px", height: "368px" },
+            imageTop: { url: "/images/main/pedestals/4/img-1.avif", width: "283px", height: "323px" },
+            imageBottom: { url: "/images/main/pedestals/4/img-2.avif", width: "283px", height: "368px" },
         },
         {
-            imageTop: { url: "/images/main/pedestals/5/img-1.webp", width: "283px", height: "334px" },
-            imageBottom: { url: "/images/main/pedestals/5/img-2.webp", width: "287px", height: "420px" },
+            imageTop: { url: "/images/main/pedestals/5/img-1.avif", width: "283px", height: "334px" },
+            imageBottom: { url: "/images/main/pedestals/5/img-2.avif", width: "287px", height: "420px" },
         },
     ];
 
@@ -129,7 +129,7 @@ export default function Main() {
                     </div>
                 </div>
                 <div className={styles.navigation}>
-                    <img src="/images/main/main.webp" alt=""></img>
+                    <img src="/images/main/main.avif" alt="" width="1440px" height="722px"></img>
                     <div className={styles.navigationButtons}>
                         {buttons.map((item, index) => (
                             <button

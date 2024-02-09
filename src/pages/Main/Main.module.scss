@@ -129,12 +129,8 @@
     }
 }
 .navigation {
-    height: 722px;
     position: relative;
     overflow: hidden;
-    & > img {
-        width: 100%;
-    }
     &Buttons {
         & > button {
             position: absolute;
