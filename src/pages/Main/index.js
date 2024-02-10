@@ -1,9 +1,7 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Switcher, Menu, Scheme, Transition } from "../../components";
 import styles from "./Main.module.scss";
-
-export const ModalContext = createContext();
 
 export default function Main() {
     const [activeModal, setActiveModal] = useState(false);
@@ -159,9 +157,7 @@ export default function Main() {
             </Transition>
 
             <Transition activeModal={activeModal !== "scheme" && activeModal} cls="animation">
-                <ModalContext.Provider value={setActiveModal}>
-                    <Menu activeModal={activeModal} setActiveModal={setActiveModal} activeSwitcher={activeSwitcher} />
-                </ModalContext.Provider>
+                <Menu activeModal={activeModal} setActiveModal={setActiveModal} activeSwitcher={activeSwitcher} />
             </Transition>
         </>
     );

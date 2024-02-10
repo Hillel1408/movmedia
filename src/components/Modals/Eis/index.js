@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
-import { LayoutPageModal, Stepper, TextModal, Transition } from "../../index";
-import styles from "./Eis.module.scss";
+import { useState, useEffect, useContext } from "react";
 import classNames from "classnames";
+import { LayoutPageModal, Stepper, TextModal, Transition } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
+import styles from "./Eis.module.scss";
 
 export default function Eis() {
     const [textModal, setTextModal] = useState("");
     const [activeModal, setActiveModal] = useState(false);
+
+    const value = useContext(ModalContext);
 
     useEffect(() => {
         textModal && setActiveModal(true);
@@ -64,7 +67,7 @@ export default function Eis() {
 
     return (
         <>
-            <LayoutPageModal>
+            <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
                 <div className={styles.eis}>
                     <img src="/images/informationSystems/img-8.webp" alt="" width="287px" height="223px"></img>
                     <h2 className="title">ЕИС</h2>

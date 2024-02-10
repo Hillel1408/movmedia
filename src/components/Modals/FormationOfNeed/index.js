@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, TextModal, HorizontalStepper, Important, GridList, Transition } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./FormationOfNeed.module.scss";
 
 export default function FormationOfNeed() {
     const [textModal, setTextModal] = useState("");
     const [activeModal, setActiveModal] = useState(false);
+
+    const value = useContext(ModalContext);
 
     useEffect(() => {
         textModal && setActiveModal(true);
@@ -107,7 +110,7 @@ export default function FormationOfNeed() {
 
     return (
         <>
-            <LayoutPageModal>
+            <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
                 <div className={styles.formationOfNeed}>
                     <img src="/images/planningElements/img-8.webp" alt="" width="282px" height="255px" />
                     <h2 className="title">

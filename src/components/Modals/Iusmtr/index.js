@@ -1,9 +1,12 @@
-import React from "react";
+import { useContext } from "react";
 import { LayoutPageModal, Stepper } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./Iusmtr.module.scss";
 import classNames from "classnames";
 
 export default function Iusmtr() {
+    const value = useContext(ModalContext);
+
     const steps = [
         {
             title: "Направьте письмо в ООО «Газпром комплектация»\nо необходимости подключения к ИУС МТР в качестве Заказчика.",
@@ -28,7 +31,7 @@ export default function Iusmtr() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
             <div className={styles.iusmtr}>
                 <img src="/images/informationSystems/img-5.webp" alt="" width="232px" height="220px"></img>
                 <h2 className="title">ИУС МТР</h2>

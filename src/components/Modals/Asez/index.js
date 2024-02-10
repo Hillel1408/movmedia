@@ -1,9 +1,12 @@
-import React from "react";
-import { LayoutPageModal, Stepper } from "../../index";
-import styles from "./Asez.module.scss";
+import { useContext } from "react";
 import classNames from "classnames";
+import { LayoutPageModal, Stepper } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
+import styles from "./Asez.module.scss";
 
 export default function Asez() {
+    const value = useContext(ModalContext);
+
     const list = [
         { polygon: true, text: "В соответствии с едиными корпоративными правилами ВСЕ процессы и процедуры закупок реализуются в АСЭЗ." },
         {
@@ -38,7 +41,7 @@ export default function Asez() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
             <div className={styles.asez}>
                 <img src="/images/informationSystems/img-2.webp" alt="" width="282px" height="278px"></img>
                 <h2 className="title">АСЭЗ</h2>

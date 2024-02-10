@@ -1,14 +1,10 @@
-import { useContext } from "react";
-import { ModalContext } from "../../../pages/Main";
-import { BackButton } from "../..";
+import { BackButton } from "../../index";
 import styles from "./LayoutPageModal.module.scss";
 
-export default function LayoutPageModal({ children }) {
-    const value = useContext(ModalContext);
-
+export default function LayoutPageModal({ children, clickHandler = () => {} }) {
     return (
         <div className={styles.layoutPageModal}>
-            <BackButton clickHandler={() => value("")} />
+            <BackButton clickHandler={() => clickHandler()} />
             {children}
         </div>
     );

@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, HorizontalStepper, Important } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./PurchasingDivision.module.scss";
 
 export default function PurchasingDivision() {
+    const value = useContext(ModalContext);
+
     const stepperList = [
         { text: "Материалы методической поддержки" },
         { text: "Методические материалы" },
@@ -39,7 +43,7 @@ export default function PurchasingDivision() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
             <div className={styles.purchasingDivision}>
                 <img src="/images/listOfParticipants/img-3.webp" alt="" width="283px" height="252px"></img>
                 <h2 className="title">

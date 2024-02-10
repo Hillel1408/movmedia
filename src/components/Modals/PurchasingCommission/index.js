@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, Important, NumberedStepper } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./PurchasingCommission.module.scss";
 
 export default function PurchasingCommission() {
+    const value = useContext(ModalContext);
+
     const importantList = [
         {
             text: "Состав потенциальных членов закупочной комиссии должен быть согласован с ЦОУЗ. Ознакомиться с порядком согласования Вы можете ",
@@ -41,7 +45,7 @@ export default function PurchasingCommission() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
             <div className={styles.purchasingCommission}>
                 <img src="/images/listOfParticipants/img-4.webp" alt="" width="299px" height="335px"></img>
                 <h2 className="title">

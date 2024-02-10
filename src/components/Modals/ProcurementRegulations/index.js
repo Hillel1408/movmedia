@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { LayoutPageModal, TextModal, Important, Button, Transition } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./ProcurementRegulations.module.scss";
 
 export default function ProcurementRegulations() {
     const [textModal, setTextModal] = useState("");
     const [activeModal, setActiveModal] = useState(false);
+
+    const value = useContext(ModalContext);
 
     useEffect(() => {
         textModal && setActiveModal(true);
@@ -34,7 +37,7 @@ export default function ProcurementRegulations() {
 
     return (
         <>
-            <LayoutPageModal>
+            <LayoutPageModal clickHandler={() => value.setActiveModal("normative-base")}>
                 <div className={styles.procurementRegulations}>
                     <img src="/images/normativeBase/img-5.webp" alt="" width="316px" height="223px"></img>
                     <h2 className="title">Положение о закупках</h2>

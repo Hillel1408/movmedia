@@ -1,8 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 import { LayoutPageModal, GridList } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./PurchaseOfGoods.module.scss";
 
 export default function PurchaseOfGoods() {
+    const value = useContext(ModalContext);
+
     const list = [
         { image: { url: "/images/planningElements/img-5.webp", width: "374px", height: "219px" } },
         {
@@ -47,7 +50,7 @@ export default function PurchaseOfGoods() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
             <div className={styles.purchaseOfGoods}>
                 <img src="/images/planningElements/img-4.webp" alt="" width="284px" height="195px" />
                 <h2 className="title">Закупки квотируемых товаров</h2>

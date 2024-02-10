@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { LayoutPageModal, HorizontalStepper, Transition, TextModal } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./RegulatorDocuments.module.scss";
 
 export default function RegulatorDocuments() {
     const [textModal, setTextModal] = useState("");
     const [activeModal, setActiveModal] = useState(false);
+
+    const value = useContext(ModalContext);
 
     useEffect(() => {
         textModal && setActiveModal(true);
@@ -36,7 +39,7 @@ export default function RegulatorDocuments() {
 
     return (
         <>
-            <LayoutPageModal>
+            <LayoutPageModal clickHandler={() => value.setActiveModal("normative-base")}>
                 <div className={styles.regulatorDocuments}>
                     <img src="/images/normativeBase/img-1.webp" alt="" width="293px" height="209px"></img>
                     <h2 className="title">

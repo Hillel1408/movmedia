@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./Vzl.module.scss";
 
 export default function Vzl() {
+    const value = useContext(ModalContext);
+
     const list = [
         "информацию о таких закупках не нужно размещать в ЕИС;",
         "информацию о договорах, заключенных по результатам таких закупок, не нужно размещать в ЕИС;",
@@ -22,7 +26,7 @@ export default function Vzl() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
             <div className={styles.vzl}>
                 <img src="/images/planningElements/img-1.webp" alt="" width="257px" height="277px"></img>
                 <h2 className="title">Закупки у ВЗЛ</h2>

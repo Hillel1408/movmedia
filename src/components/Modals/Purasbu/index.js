@@ -1,9 +1,12 @@
-import React from "react";
+import { useContext } from "react";
 import { LayoutPageModal, Stepper, HorizontalStepper } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./Purasbu.module.scss";
 import classNames from "classnames";
 
 export default function Purasbu() {
+    const value = useContext(ModalContext);
+
     const list = ["Через ПУР АСБУ в ЕИС передается информация о договорах и их исполнении.", "Оплата по договорам осуществляется через ПУР АСБУ."];
     const steps = [
         { title: "Определите ответственных внутри компании." },
@@ -31,7 +34,7 @@ export default function Purasbu() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
             <div className={styles.purasbu}>
                 <img src="/images/informationSystems/img-7.webp" alt="" width="276px" height="213px"></img>
                 <h2 className="title">ПУР АСБУ</h2>

@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { LayoutPageModal, Important, Button } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./ListOfVzl.module.scss";
 
 export default function ListOfVzl() {
+    const value = useContext(ModalContext);
+
     const list = [
         "Проанализируйте свою потребность на предмет возможности ее удовлетворения взаимозависимыми лицами.",
         "Проверьте, включены ли вы в перечень ВЗЛ компании, которые не включены в перечень ПАО «Газпром» — включение таких ВЗЛ необходимо согласовать с ЦОХЗ.",
@@ -49,7 +53,7 @@ export default function ListOfVzl() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("normative-base")}>
             <div className={styles.listOfVzl}>
                 <img src="/images/normativeBase/img-3.webp" alt="" width="282px" height="218px"></img>
                 <h2 className="title">Перечень ВЗЛ</h2>

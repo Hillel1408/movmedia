@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, NumberedStepper } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./ProcurementOrganizer.module.scss";
 
 export default function ProcurementOrganizer() {
+    const value = useContext(ModalContext);
+
     const list = [
         { title: "ПАО «Газпром»", text: "Чтобы ПАО «Газпром» мог выполнять функции Организатора." },
         { title: "АО «Газпром закупки»", text: "Специализированная Компания Группы Газпром, осуществляющая функции Организатора." },
@@ -72,7 +76,7 @@ export default function ProcurementOrganizer() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
             <div className={styles.procurementOrganizer}>
                 <img src="/images/listOfParticipants/img-2.webp" alt="" width="326px" height="280px"></img>
                 <h2 className="title">

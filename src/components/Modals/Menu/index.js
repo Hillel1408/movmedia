@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { createPortal } from "react-dom";
 import { Overlay, ModalsSwitcn } from "../../index";
 import styles from "./Menu.module.scss";
 import classNames from "classnames";
+
+export const ModalContext = createContext();
 
 export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
     const [active, setActive] = useState(activeModal);
@@ -116,7 +118,9 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                     </ul>
                 </div>
 
-                <ModalsSwitcn modal={active} />
+                <ModalContext.Provider value={{ closeModal: setActiveModal, setActiveModal: setActive }}>
+                    <ModalsSwitcn modal={active} />
+                </ModalContext.Provider>
             </div>
         </div>,
         document.getElementById("portal"),

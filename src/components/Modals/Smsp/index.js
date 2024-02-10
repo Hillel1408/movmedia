@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, Important, Transition, TextModal } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./Smsp.module.scss";
 
 export default function Smsp() {
     const [textModal, setTextModal] = useState("");
     const [activeModal, setActiveModal] = useState(false);
+
+    const value = useContext(ModalContext);
 
     useEffect(() => {
         textModal && setActiveModal(true);
@@ -13,7 +16,7 @@ export default function Smsp() {
 
     return (
         <>
-            <LayoutPageModal>
+            <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
                 <div className={styles.smsp}>
                     <img src="/images/planningElements/img-12.webp" alt="" width="321px" height="258px"></img>
                     <h2 className="title">Закупки у СМСП</h2>

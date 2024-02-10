@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { LayoutPageModal } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./WorkingWithContracts.module.scss";
 
 export default function WorkingWithContracts() {
+    const value = useContext(ModalContext);
+
     const list = [
         {
             text: "Утвердите локальный документ, определяющий порядок взаимодействия подразделений по формированию и направлению отчетности о закупках. После подключения к АСЭЗ и ПУР АСБУ формируйте ежеквартальную отчетность о закупочной деятельности с использованием АСЭЗ, которая использует данные ПУР АСБУ (только для тех Компаний Группы Газпром, которым направлены соответствующие письма ЦОУЗ).",
@@ -23,7 +27,7 @@ export default function WorkingWithContracts() {
     ];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.closeModal("")}>
             <div className={styles.workingWithContracts}>
                 <img src="/images/workingWithContracts/img-1.webp" alt="" width="276px" height="269px"></img>
                 <h2 className="title">Работа с договорами. Отчетность. Контроль.</h2>

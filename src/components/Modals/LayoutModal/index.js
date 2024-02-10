@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ModalContext } from "../../../pages/Main";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./LayoutModal.module.scss";
 
 export default function LayoutModal({ children }) {
@@ -7,7 +7,7 @@ export default function LayoutModal({ children }) {
 
     return (
         <div className={styles.layoutModal}>
-            <button className="icon-cancel" onClick={() => value("")}></button>
+            <button className="icon-cancel" onClick={() => value.closeModal("")}></button>
             {children}
         </div>
     );

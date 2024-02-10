@@ -1,9 +1,12 @@
-import React from "react";
-import { LayoutPageModal, Stepper } from "../../index";
-import styles from "./Etpgpb.module.scss";
+import { useContext } from "react";
 import classNames from "classnames";
+import { LayoutPageModal, Stepper } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
+import styles from "./Etpgpb.module.scss";
 
 export default function Etpgpb() {
+    const value = useContext(ModalContext);
+
     const list = ["Основная масса закупок в Группе Газпром проводится в электронном виде на ЭТП ГПБ.", "АСЭЗ синхронизирована с ЭТП ГПБ."];
     const steps = [
         {
@@ -25,7 +28,7 @@ export default function Etpgpb() {
     const secondaryList = ["Настройте интернет-браузер.", "Установите и настройте программное обеспечение для работы с электронной подписью."];
 
     return (
-        <LayoutPageModal>
+        <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
             <div className={styles.etpgpb}>
                 <img src="/images/informationSystems/img-3.webp" alt="" width="253px" height="233px" />
                 <h2 className="title">ЭТП ГПБ</h2>
