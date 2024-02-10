@@ -110,6 +110,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                                         )}
                                     </ul>
                                 )}
+                                <div></div>
                             </li>
                         ))}
                     </ul>

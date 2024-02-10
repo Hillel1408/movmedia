@@ -83,7 +83,7 @@ body {
 }
 .animation-enter-active {
     opacity: 1;
-    transition: 300ms;
+    transition: opacity 300ms;
 }
 .animation-exit {
     opacity: 1;

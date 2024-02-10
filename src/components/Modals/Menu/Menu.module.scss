@@ -30,9 +30,17 @@
             flex-direction: column;
             justify-content: center;
             cursor: pointer;
+            position: relative;
+            & > div {
+                background: linear-gradient(90deg, #ffffff 55%, rgba(255, 255, 255, 0) 89%);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
             & > span {
                 max-width: 291px;
                 color: #193a54;
+                z-index: 1;
             }
             & > ul {
                 display: flex;
@@ -44,6 +52,7 @@
                 overflow: hidden;
                 padding: 1px;
                 transition: 0.7s;
+                z-index: 1;
                 & > li {
                     padding: 8px;
                     border-radius: 4px;
@@ -58,7 +67,7 @@
             }
             &:nth-child(1) {
                 background-image: url("../../../../public/images/main/menu/img-1.webp");
-                background-position-y: -14px;
+                background-size: 231px;
                 &:hover {
                     outline: 1px solid #f48a2c;
                 }
@@ -73,6 +82,8 @@
                 }
             }
             &:nth-child(2) {
+                background-image: url("../../../../public/images/main/menu/img-2.webp");
+                background-size: 291px;
                 &:hover {
                     outline: 1px solid #5545d7;
                 }
@@ -87,6 +98,8 @@
                 }
             }
             &:nth-child(3) {
+                background-image: url("../../../../public/images/main/menu/img-5.webp");
+                background-size: 262px;
                 &:hover {
                     outline: 1px solid #39a1ed;
                 }
@@ -102,7 +115,7 @@
             }
             &:nth-child(4) {
                 background-image: url("../../../../public/images/main/menu/img-4.webp");
-                background-position-y: -40px;
+                background-size: 240px;
                 & > span {
                     max-width: 281px;
                 }
@@ -111,6 +124,8 @@
                 }
             }
             &:nth-child(5) {
+                background-image: url("../../../../public/images/main/menu/img-3.webp");
+                background-size: 272px;
                 &:hover {
                     outline: 1px solid #f46c63;
                 }
