@@ -83,7 +83,7 @@ body {
 }
 .animation-enter-active {
     opacity: 1;
-    transition: opacity 300ms;
+    transition: 300ms;
 }
 .animation-exit {
     opacity: 1;
@@ -92,5 +92,13 @@ body {
 }
 .animation-exit-active {
     opacity: 0;
-    transition: opacity 300ms;
+    transition: 300ms;
+}
+
+.secondary-animation-enter {
+    transform: translateX(100%);
+}
+.secondary-animation-enter-active {
+    transform: none;
+    transition: 600ms;
 }

@@ -33,7 +33,8 @@
                 max-width: 331px;
                 p {
                     color: #265071;
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 24px 1fr;
                     gap: 8px;
                     margin-bottom: 4px;
                     &::before {
@@ -48,7 +49,8 @@
     &SecondaryBtn {
         background-color: transparent;
         text-align: left;
-        display: flex;
+        display: grid;
+        grid-template-columns: 24px 1fr;
         gap: 8px;
         &::before {
             font-size: 24px;
@@ -131,12 +133,14 @@
 .navigation {
     position: relative;
     overflow: hidden;
+    background: #f8f9ff;
     &Buttons {
         & > button {
             position: absolute;
             border-radius: 8px;
             box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
-            display: flex;
+            display: grid;
+            grid-template-columns: 32px 1fr;
             gap: 10px;
             font-family: "Roboto Flex";
             font-size: 16px;

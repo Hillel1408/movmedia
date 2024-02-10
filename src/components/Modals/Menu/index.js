@@ -1,6 +1,6 @@
 import { useState, createContext } from "react";
 import { createPortal } from "react-dom";
-import { Overlay, ModalsSwitcn } from "../../index";
+import { Overlay, ModalsSwitcn, Transition } from "../../index";
 import styles from "./Menu.module.scss";
 import classNames from "classnames";
 
@@ -67,6 +67,13 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         },
     ];
 
+    const clickHandler = (str) => {
+        setActive("");
+        setTimeout(() => {
+            setActive(str);
+        }, 10);
+    };
+
     return createPortal(
         <div>
             <Overlay
@@ -75,13 +82,17 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                 }}
             />
             <div className={classNames("container", styles.menuContainer)}>
-                <div onClick={(e) => e.stopPropagation()} className={classNames(styles.menu, active && styles.menuActive)}>
+                <div
+                    onClick={(e) => e.stopPropagation()}
+                    className={classNames(styles.menu, active && styles.menuActive)}
+                    style={{ boxShadow: !active && "-4px 4px 16px 0px rgba(25, 58, 84, 0.12)" }}
+                >
                     <ul>
                         {navItems.map((item, index) => (
                             <li
                                 key={index}
                                 onClick={() => {
-                                    setActive(item.modal);
+                                    clickHandler(item.modal);
                                 }}
                                 style={{ outline: (active === item.modal || item.modals.find((el) => el.modal === active)) && `2px solid ${item.borderColor}` }}
                             >
@@ -103,7 +114,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                                                         }}
                                                         onClick={(e) => {
                                                             e.stopPropagation();
-                                                            el.modal && setActive(el.modal);
+                                                            el.modal && clickHandler(el.modal);
                                                         }}
                                                     >
                                                         {el.title}
@@ -119,7 +130,9 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                 </div>
 
                 <ModalContext.Provider value={{ closeModal: setActiveModal, setActiveModal: setActive }}>
-                    <ModalsSwitcn modal={active} />
+                    <Transition activeModal={Boolean(active)} cls="secondary-animation" timeout={600}>
+                        <>{active && <ModalsSwitcn modal={active} />}</>
+                    </Transition>
                 </ModalContext.Provider>
             </div>
         </div>,
