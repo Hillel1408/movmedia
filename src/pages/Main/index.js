@@ -7,7 +7,7 @@ export default function Main() {
     const [activeModal, setActiveModal] = useState(false);
     const [activeTooltip, setActiveTooltip] = useState("");
     const [activeSwitcher, setActiveSwitcher] = useState(false);
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState(false);
 
     const list = [
         "государственные корпорации;",
@@ -145,7 +145,7 @@ export default function Main() {
 
                 <div className={styles.navigation}>
                     {loading ? (
-                        <img src="/images/oval.svg" width="40" alt="" />
+                        <div class="loader"></div>
                     ) : (
                         <>
                             <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
