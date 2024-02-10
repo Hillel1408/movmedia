@@ -7,7 +7,7 @@ export default function Main() {
     const [activeModal, setActiveModal] = useState(false);
     const [activeTooltip, setActiveTooltip] = useState("");
     const [activeSwitcher, setActiveSwitcher] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const list = [
         "государственные корпорации;",
@@ -68,7 +68,6 @@ export default function Main() {
     };
 
     useEffect(() => {
-        setLoading(true);
         cacheImages([].concat(...pedestals.map((pd) => [pd.imageTop.url, pd.imageBottom.url]), "/images/main/main.avif"));
         window.addEventListener("click", clickHandler);
         return () => {
