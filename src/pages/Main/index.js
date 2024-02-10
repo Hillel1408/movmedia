@@ -7,17 +7,7 @@ export default function Main() {
     const [activeModal, setActiveModal] = useState(false);
     const [activeTooltip, setActiveTooltip] = useState("");
     const [activeSwitcher, setActiveSwitcher] = useState(false);
-
-    useEffect(() => {
-        const clickHandler = (e) => {
-            if (!e.target.closest(".btnTooltipOpen")) setActiveTooltip(false);
-        };
-
-        window.addEventListener("click", clickHandler);
-        return () => {
-            window.removeEventListener("click", clickHandler);
-        };
-    }, []);
+    const [loading, setLoading] = useState();
 
     const list = [
         "государственные корпорации;",
@@ -59,6 +49,32 @@ export default function Main() {
     ];
 
     activeModal ? document.body.classList.add("lock") : document.body.classList.remove("lock");
+
+    const clickHandler = (e) => {
+        if (!e.target.closest(".btnTooltipOpen")) setActiveTooltip(false);
+    };
+
+    const cacheImages = async (srcArray) => {
+        const promises = await srcArray.map((src) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = src;
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+        });
+        await Promise.all(promises);
+        setLoading(false);
+    };
+
+    useEffect(() => {
+        setLoading(true);
+        cacheImages([].concat(...pedestals.map((pd) => [pd.imageTop.url, pd.imageBottom.url]), "/images/main/main.avif"));
+        window.addEventListener("click", clickHandler);
+        return () => {
+            window.removeEventListener("click", clickHandler);
+        };
+    }, []);
 
     return (
         <>
@@ -126,29 +142,36 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
+
                 <div className={styles.navigation}>
-                    <img src="/images/main/main.avif" alt="" width="1440px" height="722px"></img>
-                    <div className={styles.navigationButtons}>
-                        {buttons.map((item, index) => (
-                            <button
-                                key={index}
-                                onClick={() => {
-                                    setActiveModal(item.modal);
-                                }}
-                                className={classNames(item.icon)}
-                            >
-                                {item.text}
-                            </button>
-                        ))}
-                    </div>
-                    <div className={styles.navigationPedestals}>
-                        {pedestals.map((item, index) => (
-                            <div key={index}>
-                                <img src={item.imageTop.url} alt="" width={item.imageTop.width} height={item.imageTop.height}></img>
-                                <img src={item.imageBottom.url} alt="" width={item.imageBottom.width} height={item.imageBottom.height}></img>
+                    {loading ? (
+                        <img src="/images/oval.svg" width="40" alt="" />
+                    ) : (
+                        <>
+                            <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
+                            <div className={styles.navigationButtons}>
+                                {buttons.map((item, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => {
+                                            setActiveModal(item.modal);
+                                        }}
+                                        className={classNames(item.icon)}
+                                    >
+                                        {item.text}
+                                    </button>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                            <div className={styles.navigationPedestals}>
+                                {pedestals.map((item, index) => (
+                                    <div key={index}>
+                                        <img src={item.imageTop.url} alt="" width={item.imageTop.width} height={item.imageTop.height}></img>
+                                        <img src={item.imageBottom.url} alt="" width={item.imageBottom.width} height={item.imageBottom.height}></img>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
 
