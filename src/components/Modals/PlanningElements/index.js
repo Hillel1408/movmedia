@@ -12,7 +12,7 @@ export default function PlanningElements() {
 
     return (
         <LayoutModal>
-            <div className={styles.planningElements}>
+            <div className={styles.root}>
                 <h2 className="modal-subtitle">Элементы планирования</h2>
             </div>
             <List list={list} color="#F46C63" />

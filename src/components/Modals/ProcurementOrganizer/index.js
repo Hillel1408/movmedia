@@ -77,7 +77,7 @@ export default function ProcurementOrganizer() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
-            <div className={styles.procurementOrganizer}>
+            <div className={styles.root}>
                 <img src="/images/listOfParticipants/img-2.webp" alt="" width="326px" height="280px"></img>
                 <h2 className="title">
                     Организатор
@@ -88,7 +88,7 @@ export default function ProcurementOrganizer() {
                     <br />
                     поставщик
                 </h2>
-                <div className={classNames("text-s", styles.procurementOrganizerText)}>
+                <div className={classNames("text-s", styles.text)}>
                     <p>
                         Организатор закупки определяется на стадии планирования закупок заказчика Департаментом ЦОУЗ <button>(п. 1.3.1.3 Положения)</button>.
                     </p>
@@ -97,7 +97,7 @@ export default function ProcurementOrganizer() {
                         централизованные закупки МТР для Компании Группы Газпром может проводить Централизованный поставщик — ООО «Газпром комплектация».
                     </p>
                 </div>
-                <div className={styles.procurementOrganizerBlock}>
+                <div className={styles.block}>
                     <h3 className="subtitle">Как организовать закупки с привлечением Организатора/централизованного поставщика:</h3>
                     <p className="text-s">
                         Чтобы организовать поставки и провести закупки, нужно подписать агентские договоры с подразделениями ПАО «Газпром». Всего их четыре:
@@ -111,7 +111,7 @@ export default function ProcurementOrganizer() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.procurementOrganizerGrid}>
+                <div className={styles.grid}>
                     {gridList.map((item, index) => (
                         <div>
                             <h3 className="subtitle">{item.title}</h3>
@@ -132,7 +132,7 @@ export default function ProcurementOrganizer() {
                         </div>
                     ))}
                 </div>
-                <div className={styles.procurementOrganizerStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Для передачи полномочий на организацию поставок ООО «Газпром комплектация»</h3>
                     <div>
                         {stepperList.map((item, index) => (
@@ -140,7 +140,7 @@ export default function ProcurementOrganizer() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.procurementOrganizerStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Для оказания ООО «Газпром комплектация» услуг по проведению закупок:</h3>
                     <div>
                         {secondaryStepperList.map((item, index) => (

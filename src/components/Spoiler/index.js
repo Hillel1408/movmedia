@@ -1,24 +1,24 @@
 import { useState } from "react";
-import styles from "./Spoiler.module.scss";
 import classNames from "classnames";
+import styles from "./Spoiler.module.scss";
 
 export default function Spoiler({ item }) {
     const [active, setActive] = useState(false);
 
     return (
-        <div className={styles.spoiler}>
+        <div className={styles.root}>
             <img src={item.image.url} alt="" width={item.image.width} height={item.image.height}></img>
             <h3>{item.title}</h3>
-            <div className={styles.spoilerLine}></div>
+            <div className={styles.line}></div>
             <div
-                className={classNames(styles.spoilerContent, !active && styles.contentBg)}
+                className={classNames(styles.content, !active && styles.contentBg)}
                 style={{ maxHeight: active ? "500px" : "39px" }}
                 onClick={() => {
                     setActive((prev) => !prev);
                 }}
             >
                 <p className={classNames("text-s", "icon-chevron-right", active && styles.iconActive)}>{item.text}</p>
-                <div className={styles.spoilerBlocks}>
+                <div className={styles.blocks}>
                     {item.participants.length > 0 && (
                         <div>
                             <p className="text-medium-s">В процессе участвуют</p>

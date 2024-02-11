@@ -6,7 +6,7 @@ export default function LayoutModal({ children }) {
     const value = useContext(ModalContext);
 
     return (
-        <div className={styles.layoutModal}>
+        <div className={styles.root}>
             <button className="icon-cancel" onClick={() => value.closeModal("")}></button>
             {children}
         </div>

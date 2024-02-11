@@ -47,7 +47,7 @@ export default function NormativeBase() {
     return (
         <>
             <LayoutModal>
-                <div className={styles.normativeBase}>
+                <div className={styles.root}>
                     <h2 className="modal-subtitle">
                         Для перехода на систему управления закупочной деятельностью в соответствии с корпоративными правилами Группы Газпром компания должна
                         создать нормативную базу:

@@ -8,7 +8,7 @@ export default function ResponsibleASEZEIS() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
-            <div className={styles.responsibleASEZEIS}>
+            <div className={styles.root}>
                 <img src="/images/listOfParticipants/img-1.webp" alt="" width="276px" height="256px"></img>
                 <h2 className="title">
                     Ответственные

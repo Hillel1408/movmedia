@@ -32,18 +32,18 @@ export default function Iusmtr() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
-            <div className={styles.iusmtr}>
+            <div className={styles.root}>
                 <img src="/images/informationSystems/img-5.webp" alt="" width="232px" height="220px"></img>
                 <h2 className="title">ИУС МТР</h2>
                 <p className="text-s">Это система, используемая централизованным поставщиком МТР для Группы Газпром.</p>
-                <div className={styles.iusmtrBlock}>
+                <div className={styles.block}>
                     <h3 className="subtitle">Зачем регистрироваться в ИУС МТР?</h3>
                     <p className={classNames("icon-polygon", "text-s")}>
                         Через ИУС МТР осуществляется сбор потребности в МТР
                         <br /> централизованным поставщиком.
                     </p>
                 </div>
-                <div className={styles.iusmtrSecondaryGrid}>
+                <div className={styles.secondaryGrid}>
                     <h3 className="subtitle">Как зарегистрироваться в ИУС МТР?</h3>
                     <div>
                         {secondaryList.map((item, index) => (
@@ -54,11 +54,11 @@ export default function Iusmtr() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.iusmtrStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Для регистрации в ИУС МТР</h3>
                     <Stepper image="/images/informationSystems/img-6.webp" steps={steps} width="164px" height="200px" />
                 </div>
-                <div className={classNames(styles.iusmtrText, "text-s")}>
+                <div className={classNames(styles.text, "text-s")}>
                     <span>Контакт техподдержки ООО «Газпром информ»:</span>
                     <p>
                         тел. (495) 719-45-88, газ. (701) 9-45-88, <br /> sap-callcentre@inform.gazprom.ru

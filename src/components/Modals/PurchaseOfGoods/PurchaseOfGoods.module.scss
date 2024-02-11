@@ -1,4 +1,4 @@
-.purchaseOfGoods {
+.root {
     position: relative;
     & > img {
         position: absolute;
@@ -16,10 +16,10 @@
         max-width: 666px;
         margin-bottom: 48px;
     }
-    &Grid {
-        & > h3 {
-            color: #193a54;
-            margin-bottom: 24px;
-        }
+}
+.grid {
+    & > h3 {
+        color: #193a54;
+        margin-bottom: 24px;
     }
 }

@@ -1,4 +1,4 @@
-.textModal {
+.root {
     position: fixed;
     background: rgba(12, 27, 38, 0.5);
     width: 100%;
@@ -23,25 +23,23 @@
             font-weight: 500;
             color: #193a54;
         }
-        & > ul {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            color: #193a54;
-            & > li {
-                & > ul {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    margin-top: 10px;
-                    & > li {
-                        list-style-type: disc;
-                        &::marker {
-                            font-size: 10px;
-                        }
-                    }
-                }
-            }
+    }
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #193a54;
+}
+.subList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    & > li {
+        list-style-type: disc;
+        &::marker {
+            font-size: 10px;
         }
     }
 }

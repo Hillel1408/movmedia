@@ -1,4 +1,4 @@
-.iusmtr {
+.root {
     position: relative;
     & > img {
         position: absolute;
@@ -15,64 +15,64 @@
         max-width: 465px;
         margin-bottom: 48px;
     }
-    &Stepper {
-        & > h3 {
-            color: #193a54;
-            padding-bottom: 24px;
-        }
+}
+.stepper {
+    & > h3 {
+        color: #193a54;
+        padding-bottom: 24px;
     }
-    &Text {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 32px;
-        & > span {
-            color: #193a54;
-        }
-        & > p {
-            color: #3b698d;
-        }
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+    & > span {
+        color: #193a54;
     }
-    &SecondaryGrid {
+    & > p {
+        color: #3b698d;
+    }
+}
+.secondaryGrid {
+    margin-bottom: 24px;
+    & > h3 {
+        color: #193a54;
         margin-bottom: 24px;
-        & > h3 {
-            color: #193a54;
-            margin-bottom: 24px;
-        }
-        & > div {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            justify-content: space-between;
-            & > p {
-                color: #265071;
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-                white-space: pre-wrap;
-                & > span {
-                    color: #193a54;
-                    font-weight: 500;
-                }
+    }
+    & > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        & > p {
+            color: #265071;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            white-space: pre-wrap;
+            & > span {
+                color: #193a54;
+                font-weight: 500;
             }
         }
     }
-    &Block {
-        border-radius: 8px;
-        border: 1px solid #5545d7;
-        padding: 24px;
-        margin-bottom: 48px;
-        & > h3 {
-            color: #193a54;
-            margin-bottom: 24px;
-        }
-        & > p {
-            display: flex;
-            gap: 8px;
-            color: #265071;
-            &:before {
-                font-size: 16px;
-                color: #5545d7;
-            }
+}
+.block {
+    border-radius: 8px;
+    border: 1px solid #5545d7;
+    padding: 24px;
+    margin-bottom: 48px;
+    & > h3 {
+        color: #193a54;
+        margin-bottom: 24px;
+    }
+    & > p {
+        display: flex;
+        gap: 8px;
+        color: #265071;
+        &:before {
+            font-size: 16px;
+            color: #5545d7;
         }
     }
 }

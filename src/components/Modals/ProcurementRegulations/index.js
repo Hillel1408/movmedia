@@ -38,10 +38,10 @@ export default function ProcurementRegulations() {
     return (
         <>
             <LayoutPageModal clickHandler={() => value.setActiveModal("normative-base")}>
-                <div className={styles.procurementRegulations}>
+                <div className={styles.root}>
                     <img src="/images/normativeBase/img-5.webp" alt="" width="316px" height="223px"></img>
                     <h2 className="title">Положение о закупках</h2>
-                    <div className={styles.procurementRegulationsText}>
+                    <div className={styles.text}>
                         <h3 className="subtitle">
                             Присоединитесь к Положению
                             <br />о закупках ПАО «Газпром».
@@ -59,7 +59,7 @@ export default function ProcurementRegulations() {
                             <p className="text-s">До 1-го месяца.</p>
                         </div>
                     </div>
-                    <div className={styles.procurementRegulationsGrid}>
+                    <div className={styles.grid}>
                         <h3 className="subtitle">Для присоединения к Положению ПАО «Газпром» нужно:</h3>
                         <ul className="text-s">
                             {gridList.map((item, index) => (
@@ -70,7 +70,7 @@ export default function ProcurementRegulations() {
                             ))}
                         </ul>
                     </div>
-                    <div className={styles.procurementRegulationsImportant}>
+                    <div className={styles.important}>
                         <h3 className="modal-subtitle">Что важно помнить</h3>
                         <div className="text-s">
                             <p>
@@ -141,7 +141,7 @@ export default function ProcurementRegulations() {
                             secondaryColor="#F48A2C"
                         />
                     </div>
-                    <div className={styles.procurementRegulationsDocuments}>
+                    <div className={styles.documents}>
                         <h3 className="modal-subtitle">Шаблоны и документы</h3>
                         <div>
                             {buttons.map((item, index) => (
@@ -153,7 +153,7 @@ export default function ProcurementRegulations() {
                             положения о закупках согласовывается с ЦОУЗ.
                         </p>
                     </div>
-                    <div className={styles.procurementRegulationsStepper}>
+                    <div className={styles.stepper}>
                         <h3 className="modal-subtitle">Для утверждения своего Положения о закупках нужно:</h3>
                         <ul className="text-s">
                             <li>
@@ -225,7 +225,7 @@ export default function ProcurementRegulations() {
                             secondaryColor="#F48A2C"
                         />
                     </div>
-                    <div className={styles.procurementRegulationsDocuments}>
+                    <div className={styles.documents}>
                         <h3 className="modal-subtitle">Шаблоны и документы</h3>
                         <div>
                             {buttons.map((item, index) => (

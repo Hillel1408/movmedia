@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { LayoutPageModal } from "../../index";
 import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./WorkingWithContracts.module.scss";
+import classNames from "classnames";
 
 export default function WorkingWithContracts() {
     const value = useContext(ModalContext);
@@ -28,17 +29,17 @@ export default function WorkingWithContracts() {
 
     return (
         <LayoutPageModal clickHandler={() => value.closeModal("")}>
-            <div className={styles.workingWithContracts}>
+            <div className={styles.root}>
                 <img src="/images/workingWithContracts/img-1.webp" alt="" width="276px" height="269px"></img>
                 <h2 className="title">Работа с договорами. Отчетность. Контроль.</h2>
                 <h3 className="subtitle">С какими документами нужно работать:</h3>
-                <ul className="block">
+                <ul className={classNames("block", styles.list)}>
                     {list.map((item, index) => (
                         <li key={index}>
                             <span className="subtitle">0{index + 1}</span>
                             <p className="text-s">{item.text}</p>
                             {item.sublist && (
-                                <ul className="text-xs">
+                                <ul className={classNames("text-xs", styles.subList)}>
                                     {item.sublist.map((item, index) => (
                                         <li key={index}>{item}</li>
                                     ))}

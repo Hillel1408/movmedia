@@ -1,89 +1,89 @@
-.scheme {
+.root {
     padding: 32px 40px 82px 40px;
-    &Container {
-        position: fixed;
-        width: 1440px;
-        top: 0;
-        left: 0;
-        z-index: 7;
-        left: 50%;
-        transform: translateX(-50%);
-        max-height: 980px;
-        height: 100%;
-        overflow-y: auto;
-        background-color: #f8f9ff;
+}
+.container {
+    position: fixed;
+    width: 1440px;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 980px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f8f9ff;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 768px 577px;
+    margin-top: 16px;
+    gap: 16px;
+    & > h2 {
+        color: #193a54;
     }
-    &Grid {
-        display: grid;
-        grid-template-columns: 768px 577px;
-        margin-top: 16px;
-        gap: 16px;
-        & > h2 {
-            color: #193a54;
-        }
-        & > p {
-            color: #265071;
-            & > span {
-                font-weight: 500;
-            }
+    & > p {
+        color: #265071;
+        & > span {
+            font-weight: 500;
         }
     }
-    &Spoilers {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 16px;
-        margin-top: 37px;
+}
+.spoilers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 37px;
+}
+.lastSpoiler {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    & > img {
+        margin: 0 auto;
     }
-    &LastSpoiler {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        & > img {
-            margin: 0 auto;
-        }
-        & > div {
-            &:nth-child(2) {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 16px;
-                padding-bottom: 16px;
-                border-bottom: 1px solid #93d1ff;
-                & > div {
-                    & > h3 {
-                        color: #193a54;
-                        margin-bottom: 8px;
-                        font-size: 16px;
-                        line-height: 22px;
-                        font-weight: 500;
-                        color: #193a54;
-                    }
-                    & > p {
-                        color: #265071;
-                    }
-                }
-            }
-            &:nth-child(3) {
-                & > p {
+    & > div {
+        &:nth-child(2) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #93d1ff;
+            & > div {
+                & > h3 {
                     color: #193a54;
-                    text-align: center;
-                    margin-bottom: 16px;
+                    margin-bottom: 8px;
+                    font-size: 16px;
+                    line-height: 22px;
+                    font-weight: 500;
+                    color: #193a54;
                 }
-                & > ul {
-                    display: grid;
-                    grid-template-columns: 201px 201px;
-                    gap: 8px;
+                & > p {
                     color: #265071;
-                    & > li {
-                        padding: 12px 8px;
-                        border-radius: 4px;
-                        background-color: white;
-                        display: flex;
-                        gap: 8px;
-                        align-items: center;
-                        &:before {
-                            color: #39a1ed;
-                            font-size: 24px;
-                        }
+                }
+            }
+        }
+        &:nth-child(3) {
+            & > p {
+                color: #193a54;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+            & > ul {
+                display: grid;
+                grid-template-columns: 201px 201px;
+                gap: 8px;
+                color: #265071;
+                & > li {
+                    padding: 12px 8px;
+                    border-radius: 4px;
+                    background-color: white;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    &:before {
+                        color: #39a1ed;
+                        font-size: 24px;
                     }
                 }
             }

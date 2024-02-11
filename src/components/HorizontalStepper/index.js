@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./HorizontalStepper.module.scss";
 
 export default function HorizontalStepper({ list, color, grid, type }) {

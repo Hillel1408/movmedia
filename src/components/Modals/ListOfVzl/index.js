@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import classNames from "classnames";
 import { LayoutPageModal, Important, Button } from "../../index";
 import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./ListOfVzl.module.scss";
@@ -54,14 +55,14 @@ export default function ListOfVzl() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("normative-base")}>
-            <div className={styles.listOfVzl}>
+            <div className={styles.root}>
                 <img src="/images/normativeBase/img-3.webp" alt="" width="282px" height="218px"></img>
                 <h2 className="title">Перечень ВЗЛ</h2>
                 <p className="text-s">
                     Перечень ВЗЛ — часть положения о закупках <button>(Ст. 1 Закона №223-ФЗ)</button>, поэтому он утверждается вместе с принятием решения о
                     присоединении к Положению ПАО «Газпром» либо с принятием решения об утверждении своего положения о закупках (в составе этого положения).
                 </p>
-                <div className={styles.listOfVzlBlock}>
+                <div className={styles.block}>
                     <h3 className="subtitle">Для чего формировать перечень ВЗЛ?</h3>
                     <div>
                         <h4 className="modal-subtitle">Закупки у ВЗЛ</h4>
@@ -92,7 +93,7 @@ export default function ListOfVzl() {
                         secondaryColor="#F48A2C"
                     />
                 </div>
-                <div className={styles.listOfVzlText}>
+                <div className={styles.text}>
                     <h3 className="subtitle">Как сформировать Перечень ВЗЛ?</h3>
                     <p className="text-s">
                         В Перечень ВЗЛ Компании — заказчика могут быть включены как организации, которые уже включены <br /> в Перечень ПАО «Газпром», так и
@@ -102,7 +103,7 @@ export default function ListOfVzl() {
                         Порядок подготовки и внесения изменений в перечни ВЗЛ для целей закупок определен письмом Департамента от 16.06.2021 № 46.06.1809.
                     </p>
                 </div>
-                <div className={styles.listOfVzlList}>
+                <div className={styles.list}>
                     <h3 className="subtitle">Для формирования Перечня</h3>
                     <ul>
                         {list.map((item, index) => (
@@ -115,7 +116,7 @@ export default function ListOfVzl() {
                     <img src="/images/normativeBase/img-4.webp" alt="" width="303px" height="193px"></img>
                     <Important color="#FFE6D0" list={importantList} width="100%" secondaryColor="#F48A2C" />
                 </div>
-                <div className={styles.listOfVzlDocuments}>
+                <div className={styles.documents}>
                     <h3 className="subtitle">Шаблоны и документы</h3>
                     <div>
                         {buttons.map((item, index) => (
@@ -123,18 +124,18 @@ export default function ListOfVzl() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.listOfVzlAgreement}>
+                <div className={styles.agreement}>
                     <h3 className="subtitle">Как согласовывать перечень ВЗЛ с ЦОХЗ?</h3>
                     <div>
                         <p>Для согласования Перечня:</p>
-                        <ul>
+                        <ul className={styles.agreementList}>
                             {agreementList.map((item, index) => (
                                 <li key={index} className={item.icon}>
                                     <div>
                                         <p className="text-medium-s">{item.title}</p>
                                         <p className="text-s">{item.text}</p>
                                         {item.list && (
-                                            <ul className="text-s">
+                                            <ul className={classNames("text-s", styles.agreementSublist)}>
                                                 {item.list.map((item, index) => (
                                                     <li key={index}>{item}</li>
                                                 ))}

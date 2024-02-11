@@ -1,4 +1,4 @@
-.switcher {
+.root {
     padding: 4px 4px 4px 8px;
     border-radius: 24px;
     background: #fff;
@@ -26,18 +26,18 @@
         opacity: 0;
         visibility: hidden;
     }
-    &Active {
-        outline: 1px solid #dedede;
-        background-color: white;
-        & > div {
-            background-color: #39a1ed;
-            transform: translateX(51px);
-        }
-        & > span {
-            opacity: 1;
-            visibility: visible;
-            transition: 0.7s;
-            transition-delay: 0.5s;
-        }
+}
+.active {
+    outline: 1px solid #dedede;
+    background-color: white;
+    & > div {
+        background-color: #39a1ed;
+        transform: translateX(51px);
+    }
+    & > span {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.7s;
+        transition-delay: 0.5s;
     }
 }

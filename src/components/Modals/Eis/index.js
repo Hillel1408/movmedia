@@ -68,10 +68,10 @@ export default function Eis() {
     return (
         <>
             <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
-                <div className={styles.eis}>
+                <div className={styles.root}>
                     <img src="/images/informationSystems/img-8.webp" alt="" width="287px" height="223px"></img>
                     <h2 className="title">ЕИС</h2>
-                    <div className={classNames(styles.eisText, "text-s")}>
+                    <div className={classNames(styles.text, "text-s")}>
                         <p>
                             Документы в открытом доступе размещаются на официальном сайте ЕИС, отдельные документы закрытого доступа размещаются в закрытой
                             части ЕИС.
@@ -81,7 +81,7 @@ export default function Eis() {
                             Положения.
                         </p>
                     </div>
-                    <div className={styles.eisGrid}>
+                    <div className={styles.grid}>
                         <h3 className="subtitle">Зачем регистрироваться в ЕИС?</h3>
                         <span className="text-medium-s">В ЕИС размещается:</span>
                         <div>
@@ -160,7 +160,7 @@ export default function Eis() {
                             </p>
                         </div>
                     </div>
-                    <div className={styles.eisStepper}>
+                    <div className={styles.stepper}>
                         <h3 className="subtitle">Как зарегистрироваться в ЕИС?</h3>
                         <div>
                             <button className="text-xs">Инструкция на официальном сайте ЕИС</button>

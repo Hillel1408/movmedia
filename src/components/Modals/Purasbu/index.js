@@ -35,11 +35,11 @@ export default function Purasbu() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
-            <div className={styles.purasbu}>
+            <div className={styles.root}>
                 <img src="/images/informationSystems/img-7.webp" alt="" width="276px" height="213px"></img>
                 <h2 className="title">ПУР АСБУ</h2>
                 <p className="text-s">Эта система, в которую подгружается информация о договорах и их исполнении.</p>
-                <div className={styles.purasbuGrid}>
+                <div className={styles.grid}>
                     <h3 className="subtitle">Зачем регистрироваться на ЭТП?</h3>
                     <div>
                         {list.map((item, index) => (
@@ -49,9 +49,9 @@ export default function Purasbu() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.purasbuStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Как зарегистрироваться в ПУР АСБУ?</h3>
-                    <div className={classNames("text-s", styles.purasbuText)}>
+                    <div className={classNames("text-s", styles.text)}>
                         <p>
                             <span>Срок регистрации:</span>1 месяц.
                         </p>
@@ -61,7 +61,7 @@ export default function Purasbu() {
                     </div>
                     <Stepper image="/images/informationSystems/img-10.webp" steps={steps} width="215px" height="186px" />
                 </div>
-                <div className={styles.purasbuInstructions}>
+                <div className={styles.instructions}>
                     <h3 className={classNames("subtitle", "icon-developer-guide")}>Инструкции пользователей: в АСБУ.</h3>
                     <HorizontalStepper list={horizontalStepperList} color="#5545D7" grid="179px 165px 261px 111px" type="primary" />
                 </div>

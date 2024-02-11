@@ -17,14 +17,14 @@ export default function Smsp() {
     return (
         <>
             <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
-                <div className={styles.smsp}>
+                <div className={styles.root}>
                     <img src="/images/planningElements/img-12.webp" alt="" width="321px" height="258px"></img>
                     <h2 className="title">Закупки у СМСП</h2>
                     <h3 className="subtitle">
                         Зачем обеспечивать выполнение требований к обеспечению доли закупок у субъектов малого и среднего предпринимательства?
                     </h3>
                     <p className="text-medium-s">Для организации выполнения доли закупок у СМСП:</p>
-                    <ul className={classNames(styles.smspList, "text-s")}>
+                    <ul className={classNames(styles.list, "text-s")}>
                         <li>
                             <p>
                                 Утвердите перечень товаров, работ, услуг, закупки которых вы осуществляете у субъектов малого и среднего предпринимательства
@@ -255,7 +255,7 @@ export default function Smsp() {
                                     <span className="text-medium-s">
                                         Закупки, участниками которых являются только СМСП, могут осуществляться следующими способами:
                                     </span>
-                                    <div className={styles.smspGrid}>
+                                    <div className={styles.grid}>
                                         <p className="icon-polygon">конкурентными: конкурс, аукцион, запрос предложений, запрос котировок;</p>
                                         <p className="icon-polygon">
                                             неконкурентными: маркетинговые исследования, Торговый портал, безальтернативна закупка, закупка у единственного

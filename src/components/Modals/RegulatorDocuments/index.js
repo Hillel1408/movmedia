@@ -40,18 +40,18 @@ export default function RegulatorDocuments() {
     return (
         <>
             <LayoutPageModal clickHandler={() => value.setActiveModal("normative-base")}>
-                <div className={styles.regulatorDocuments}>
+                <div className={styles.root}>
                     <img src="/images/normativeBase/img-1.webp" alt="" width="293px" height="209px"></img>
                     <h2 className="title">
                         Регламентные
                         <br />
                         документы
                     </h2>
-                    <div className={styles.regulatorDocumentsStepper}>
+                    <div className={styles.stepper}>
                         <h3 className="subtitle">Компания должна описать закупочные процессы:</h3>
                         <HorizontalStepper list={stepperList} color="#F48A2C" grid="225px 262px 276px" type="secondary" />
                     </div>
-                    <div className={styles.regulatorDocumentsList}>
+                    <div className={styles.list}>
                         <img src="/images/normativeBase/img-2.webp" width="326px" height="177px" alt=""></img>
                         <h3 className="subtitle">Руководящими документами должны быть определены</h3>
                         <ul className="text-s">
@@ -62,7 +62,7 @@ export default function RegulatorDocuments() {
                             ))}
                         </ul>
                     </div>
-                    <div className={styles.regulatorDocumentsBlock}>
+                    <div className={styles.block}>
                         <h3 className="subtitle">В рамках разработки Регламентных документов:</h3>
                         <div>
                             <div className="text-s">
@@ -116,11 +116,11 @@ export default function RegulatorDocuments() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.regulatorDocumentsGrid}>
+                    <div className={styles.grid}>
                         <h3 className="subtitle">Нормативные акты, которыми в том числе необходимо руководствоваться</h3>
                         <div>
                             {gridList.map((item, index) => (
-                                <div className={styles.regulatorDocumentsGridItem}>
+                                <div className={styles.gridItem}>
                                     <span className="text-s">{item}</span>
                                     <div className="text-xs">0{index + 1}</div>
                                 </div>

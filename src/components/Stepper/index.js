@@ -1,13 +1,15 @@
 import styles from "./Stepper.module.scss";
+import { SkewBlock } from "../index";
 import classNames from "classnames";
 
 export default function Stepper({ image, steps, width, height }) {
     return (
-        <div className={classNames(styles.stepper, "block")}>
+        <div className={classNames(styles.root)}>
+            <SkewBlock color="#F3F1FF" />
             <img src={image} alt="" width={width} height={height}></img>
             <ul>
                 {steps.map((item, index) => (
-                    <li key={index} className={styles.stepperItem}>
+                    <li key={index} className={styles.item}>
                         <span className="text-medium-s">{item.title}</span>
                         {item.text && <p className="text-s">{item.text}</p>}
                         {item.list && (

@@ -81,13 +81,13 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                     setActiveModal("");
                 }}
             />
-            <div className={classNames("container", styles.menuContainer)}>
+            <div className={classNames("container", styles.container)}>
                 <div
                     onClick={(e) => e.stopPropagation()}
-                    className={classNames(styles.menu, active && styles.menuActive)}
+                    className={classNames(styles.root, active && styles.active)}
                     style={{ boxShadow: !active && "-4px 4px 16px 0px rgba(25, 58, 84, 0.12)" }}
                 >
-                    <ul>
+                    <ul className={styles.list}>
                         {navItems.map((item, index) => (
                             <li
                                 key={index}
@@ -99,7 +99,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                                 <span>{item.title}</span>
                                 {item.modals.length > 0 && (
                                     <ul
-                                        className={classNames("text-s")}
+                                        className={classNames("text-s", styles.subList)}
                                         style={{ maxHeight: (active === item.modal || item.modals.find((el) => el.modal === active)) && "700px" }}
                                     >
                                         {item.modals.map(

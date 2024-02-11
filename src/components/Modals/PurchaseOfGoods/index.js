@@ -51,14 +51,14 @@ export default function PurchaseOfGoods() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
-            <div className={styles.purchaseOfGoods}>
+            <div className={styles.root}>
                 <img src="/images/planningElements/img-4.webp" alt="" width="284px" height="195px" />
                 <h2 className="title">Закупки квотируемых товаров</h2>
                 <p className="text-s">
                     Требования к обеспечению выполнения доли закупок квотируемых товаров российского происхождения предусмотрены Постановлением Правительства
                     Российской Федерации от 03.12.2020 № 2013 «О минимальной доле закупок товаров российского происхождения».
                 </p>
-                <div className={styles.purchaseOfGoodsGrid}>
+                <div className={styles.grid}>
                     <h3 className="subtitle">Для организации соблюдения и контроля выполнения доли закупок квотируемых товаров:</h3>
                     <GridList gridList={list} />
                 </div>

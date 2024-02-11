@@ -1,4 +1,4 @@
-.purasbu {
+.root {
     position: relative;
     & > img {
         position: absolute;
@@ -15,63 +15,63 @@
         max-width: 457px;
         margin-bottom: 48px;
     }
-    &Stepper {
-        margin-bottom: 49px;
-        & > h3 {
-            color: #193a54;
-            margin-bottom: 24px;
-        }
+}
+.stepper {
+    margin-bottom: 49px;
+    & > h3 {
+        color: #193a54;
+        margin-bottom: 24px;
     }
-    &Text {
+}
+.text {
+    display: flex;
+    gap: 168px;
+    padding-bottom: 24px;
+    & > p {
         display: flex;
-        gap: 168px;
-        padding-bottom: 24px;
+        flex-direction: column;
+        gap: 8px;
+        color: #265071;
+        & > span {
+            color: #193a54;
+            font-weight: 500;
+        }
+    }
+}
+.grid {
+    border-radius: 8px;
+    border: 1px solid #5545d7;
+    padding: 24px;
+    margin-bottom: 48px;
+    & > h3 {
+        color: #193a54;
+        margin-bottom: 24px;
+    }
+    & > div {
+        grid-template-columns: 314px 314px;
+        justify-content: space-between;
+        display: grid;
         & > p {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
             color: #265071;
-            & > span {
-                color: #193a54;
-                font-weight: 500;
-            }
-        }
-    }
-    &Grid {
-        border-radius: 8px;
-        border: 1px solid #5545d7;
-        padding: 24px;
-        margin-bottom: 48px;
-        & > h3 {
-            color: #193a54;
-            margin-bottom: 24px;
-        }
-        & > div {
-            grid-template-columns: 314px 314px;
-            justify-content: space-between;
-            display: grid;
-            & > p {
-                color: #265071;
-                display: flex;
-                gap: 8px;
-                &:before {
-                    font-size: 16px;
-                    color: #5545d7;
-                }
-            }
-        }
-    }
-    &Instructions {
-        & > h3 {
-            color: #193a54;
             display: flex;
-            gap: 16px;
-            align-items: center;
-            margin-bottom: 24px;
+            gap: 8px;
             &:before {
-                font-size: 32px;
+                font-size: 16px;
                 color: #5545d7;
             }
+        }
+    }
+}
+.instructions {
+    & > h3 {
+        color: #193a54;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 24px;
+        &:before {
+            font-size: 32px;
+            color: #5545d7;
         }
     }
 }

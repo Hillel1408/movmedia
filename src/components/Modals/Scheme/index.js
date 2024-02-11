@@ -67,14 +67,14 @@ export default function Scheme({ setActiveModal }) {
                     setActiveModal("");
                 }}
             />
-            <div className={classNames(styles.schemeContainer, "container")}>
-                <div className={styles.scheme}>
+            <div className={classNames(styles.container, "container")}>
+                <div className={styles.root}>
                     <BackButton
                         clickHandler={() => {
                             setActiveModal("");
                         }}
                     />
-                    <div className={styles.schemeGrid}>
+                    <div className={styles.grid}>
                         <h2 className="subtitle">
                             Закупочная деятельность в Группе Газпром осуществляются в соответствии с едиными правилами и принципами. В этом разделе мы подробно
                             рассказываем, как устроен закупочный процесс.
@@ -87,11 +87,11 @@ export default function Scheme({ setActiveModal }) {
                             <span>Единый реестр МТР</span> – Держателем является Департамент ПАО «Газпром».
                         </p>
                     </div>
-                    <div className={styles.schemeSpoilers}>
+                    <div className={styles.spoilers}>
                         {spoilers.map((item, index) => (
                             <Spoiler key={index} item={item} />
                         ))}
-                        <div className={styles.schemeLastSpoiler}>
+                        <div className={styles.lastSpoiler}>
                             <img src="/images/scheme/img-1.webp" alt="" width="254px" height="206px"></img>
                             <div>
                                 <div>

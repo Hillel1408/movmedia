@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import { createPortal } from "react-dom";
 import styles from "./TextModal.module.scss";
+import classNames from "classnames";
 
 export default function TextModal({ value, setActiveModal, width, color }) {
     const modalRef = useRef(null);
 
     return createPortal(
-        <div className={styles.textModal} onClick={() => setActiveModal(false)}>
+        <div className={styles.root} onClick={() => setActiveModal(false)}>
             <div
                 ref={modalRef}
                 style={{
@@ -23,12 +24,12 @@ export default function TextModal({ value, setActiveModal, width, color }) {
                 {value.title && <span>{value.title}</span>}
                 {value.text && <p className="text-s">{value.text}</p>}
                 {value.list && (
-                    <ul className="text-s" style={{ paddingLeft: value.type === "numbered" && "14px" }}>
+                    <ul className={classNames("text-s", styles.list)} style={{ paddingLeft: value.type === "numbered" && "14px" }}>
                         {value.list.map((item, index) => (
                             <li key={index} style={{ listStyleType: value.type === "numbered" && "auto" }}>
                                 {typeof item === "string" ? item : item.text}
                                 {item.subList && (
-                                    <ul>
+                                    <ul className={styles.subList}>
                                         {item.subList.map((item, index) => (
                                             <li key={index}>{item}</li>
                                         ))}

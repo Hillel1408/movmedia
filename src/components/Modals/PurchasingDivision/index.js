@@ -44,7 +44,7 @@ export default function PurchasingDivision() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
-            <div className={styles.purchasingDivision}>
+            <div className={styles.root}>
                 <img src="/images/listOfParticipants/img-3.webp" alt="" width="283px" height="252px"></img>
                 <h2 className="title">
                     Сформируйте
@@ -53,19 +53,19 @@ export default function PurchasingDivision() {
                     <br />
                     подразделение
                 </h2>
-                <div className={styles.purchasingDivisionBlock}>
+                <div className={styles.block}>
                     <h3 className="subtitle">Для чего нужно формировать закупочное подразделение?</h3>
                     <p className="text-s">
                         Для организации закупочной деятельности должно быть сформировано подразделение по подготовке и проведению закупок либо определено лицо,
                         ответственное за организацию и проведение закупок, если объем закупок незначителен <button>(Положение)</button>.
                     </p>
                 </div>
-                <div className={styles.purchasingDivisionStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Для организации закупочной деятельности нужно:</h3>
                     <HorizontalStepper list={secondaryStepperList} color="#39A1ED" grid="291px 291px 1fr" type="secondary" />
                     <Important color="#e3f3ff" list={importantList} width="538px" secondaryColor="#39A1ED" />
                 </div>
-                <div className={styles.purchasingDivisionList}>
+                <div className={styles.list}>
                     <h3 className="subtitle">Как сформировать закупочное подразделение?</h3>
                     <ul>
                         {list.map((item, index) => (
@@ -89,14 +89,14 @@ export default function PurchasingDivision() {
                         ))}
                     </ul>
                 </div>
-                <div className={styles.purchasingDivisionGrid}>
+                <div className={styles.grid}>
                     <h3 className="subtitle">
                         Как согласовать кандидатуру руководителя подразделения или специалиста, ответственного за обеспечение закупочной деятельности?
                     </h3>
                     <p className="text-s">
                         <span>Срок согласования:</span>не более 1-го месяца.
                     </p>
-                    <div className={styles.purchasingDivisionGridList}>
+                    <div className={styles.gridList}>
                         {gridList.map((item, index) => (
                             <p key={index} className={classNames("text-medium-s", item.icon)}>
                                 {item.text}

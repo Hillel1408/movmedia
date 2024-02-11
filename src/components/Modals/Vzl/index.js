@@ -27,25 +27,25 @@ export default function Vzl() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
-            <div className={styles.vzl}>
+            <div className={styles.root}>
                 <img src="/images/planningElements/img-1.webp" alt="" width="257px" height="277px"></img>
                 <h2 className="title">Закупки у ВЗЛ</h2>
                 <p className="text-s">
                     Закупки у ВЗЛ включаются в план закупок на срок не менее чем 1 (один) год в соответствии с требованиями к форме такого плана, установленными
                     Департаментом. План закупок формируется с использованием АСЭЗ. <button>пункт 22.5 Положения ПАО «Газпром»</button>.
                 </p>
-                <div className={styles.vzlGrid}>
+                <div className={styles.grid}>
                     <h3 className="subtitle">Способы закупок у ВЗЛ:</h3>
                     <div>
                         {gridList.map((item, index) => (
-                            <div key={index} className={styles.vzlGridItem}>
+                            <div key={index} className={styles.gridItem}>
                                 <img src={item.image.url} alt="" width={item.image.width} height={item.image.height}></img>
                                 <p className="text-s">{item.text}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className={styles.vzlBlock}>
+                <div className={styles.block}>
                     <h3 className="subtitle">Особенности закупок у ВЗЛ, осуществленных по разделу 22 Положения ПАО «Газпром»:</h3>
                     <div>
                         {list.map((item, index) => (

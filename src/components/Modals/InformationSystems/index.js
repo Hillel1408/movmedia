@@ -1,4 +1,3 @@
-import React from "react";
 import { LayoutModal } from "../../index";
 import styles from "./InformationSystems.module.scss";
 
@@ -13,7 +12,7 @@ export default function InformationSystems() {
 
     return (
         <LayoutModal>
-            <div className={styles.informationSystems}>
+            <div className={styles.root}>
                 <h2 className="modal-subtitle">Регистрация в информационных системах</h2>
                 <p className="text-s">Для работы с закупками компании нужно зарегистрироваться в нескольких системах:</p>
                 <ul>

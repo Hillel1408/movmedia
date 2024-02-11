@@ -29,14 +29,14 @@ export default function Etpgpb() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
-            <div className={styles.etpgpb}>
+            <div className={styles.root}>
                 <img src="/images/informationSystems/img-3.webp" alt="" width="253px" height="233px" />
                 <h2 className="title">ЭТП ГПБ</h2>
                 <p className="text-s">
                     Используется для закупок по <button>№ 223-ФЗ</button>, <button>№ 44-ФЗ</button> и коммерческих тендеров, проведения онлайн торгов и
                     аукционов, выдачи ЭЦП и банковских гарантий.
                 </p>
-                <div className={styles.etpgpbGrid}>
+                <div className={styles.grid}>
                     <h3 className="subtitle">Зачем регистрироваться на ЭТП?</h3>
                     <div>
                         {list.map((item, index) => (
@@ -46,12 +46,12 @@ export default function Etpgpb() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.etpgpbStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Как зарегистрироваться на ЭТП?</h3>
                     <p className="text-s">Служба поддержки ЭТП ГПБ: 8-495-276-00-51 добавочный 396. E-mail: tech@etpgpb.ru.</p>
                     <Stepper image="/images/informationSystems/img-4.webp" steps={steps} width="221px" height="199px" />
                 </div>
-                <div className={styles.etpgpbSecondaryGrid}>
+                <div className={styles.secondaryGrid}>
                     <h3 className="subtitle">Инструкция для работы на ЭТП ГПБ.</h3>
                     <div>
                         {secondaryList.map((item, index) => (

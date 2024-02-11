@@ -4,7 +4,7 @@ import styles from "./Switcher.module.scss";
 export default function Switcher({ activeSwitcher, setActiveSwitcher }) {
     return (
         <div
-            className={classNames(styles.switcher, activeSwitcher && styles.switcherActive)}
+            className={classNames(styles.root, activeSwitcher && styles.active)}
             onClick={() => {
                 setActiveSwitcher((prev) => !prev);
             }}

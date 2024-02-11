@@ -42,10 +42,10 @@ export default function Asez() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("information-systems")}>
-            <div className={styles.asez}>
+            <div className={styles.root}>
                 <img src="/images/informationSystems/img-2.webp" alt="" width="282px" height="278px"></img>
                 <h2 className="title">АСЭЗ</h2>
-                <div className={classNames(styles.asezText, "text-s")}>
+                <div className={classNames(styles.text, "text-s")}>
                     <p>
                         Это система, обеспечивающая поддержку бизнес-процессов закупочной деятельности Группы Газпром, а также выполняющая функции корпоративной
                         информационной системы в сфере закупок, взаимодействующей с единой информационной системой (п. 1.2.1 Положения).
@@ -55,11 +55,11 @@ export default function Asez() {
                         Положения.
                     </p>
                 </div>
-                <div className={styles.asezGrid}>
+                <div className={styles.grid}>
                     <h3 className="subtitle">Зачем регистрироваться в АСЭЗ?</h3>
                     <div>
                         {list.map((item, index) => (
-                            <div key={index} className={classNames(styles.asezGridItem, "text-s", item.polygon && "icon-polygon")}>
+                            <div key={index} className={classNames(styles.gridItem, "text-s", item.polygon && "icon-polygon")}>
                                 <p>
                                     {item.title && <span>{item.title}</span>}
                                     {item.text}
@@ -68,7 +68,7 @@ export default function Asez() {
                         ))}
                     </div>
                 </div>
-                <div className={styles.asezStepper}>
+                <div className={styles.stepper}>
                     <h3 className="subtitle">Как зарегистрироваться в АСЭЗ?</h3>
                     <Stepper image="/images/informationSystems/img-1.webp" steps={steps} width="232px" height="328px" />
                 </div>

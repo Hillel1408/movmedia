@@ -111,7 +111,7 @@ export default function FormationOfNeed() {
     return (
         <>
             <LayoutPageModal clickHandler={() => value.setActiveModal("planning-elements")}>
-                <div className={styles.formationOfNeed}>
+                <div className={styles.root}>
                     <img src="/images/planningElements/img-8.webp" alt="" width="282px" height="255px" />
                     <h2 className="title">
                         Формирование
@@ -121,7 +121,7 @@ export default function FormationOfNeed() {
                         закупок
                     </h2>
                     <p className="text-s">Формируйте потребности в заключении договоров на закупку товаров, работ, услуг и включайте их в план закупок.</p>
-                    <div className={styles.formationOfNeedGrid}>
+                    <div className={styles.grid}>
                         <h3 className="subtitle">Зачем нужно формировать потребности и включать их в план закупок?</h3>
                         <ul>
                             {list.map((item, index) => (
@@ -134,7 +134,7 @@ export default function FormationOfNeed() {
                             ))}
                         </ul>
                     </div>
-                    <div className={styles.formationOfNeedStepper}>
+                    <div className={styles.stepper}>
                         <h3 className="subtitle">Как формировать потребность (ППЗ) для включения в план:</h3>
                         <p className="text-medium-s">Инициатор закупки по направлению:</p>
                         <HorizontalStepper list={stepperList} color="#F46C63" grid="199px 297px 1fr" type="secondary" />
@@ -144,7 +144,7 @@ export default function FormationOfNeed() {
                         </p>
                         <Important color="#FFE8E7" list={importantList} width="100%" secondaryColor="#F46C63" />
                     </div>
-                    <div className={styles.formationOfNeedBlock}>
+                    <div className={styles.block}>
                         <h3 className="subtitle">Как формировать план закупок?</h3>
                         <GridList gridList={gridList} />
                     </div>

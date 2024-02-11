@@ -46,7 +46,7 @@ export default function PurchasingCommission() {
 
     return (
         <LayoutPageModal clickHandler={() => value.setActiveModal("list-of-participants")}>
-            <div className={styles.purchasingCommission}>
+            <div className={styles.root}>
                 <img src="/images/listOfParticipants/img-4.webp" alt="" width="299px" height="335px"></img>
                 <h2 className="title">
                     Сформируйте
@@ -60,7 +60,7 @@ export default function PurchasingCommission() {
                     генеральным директором <button>(п. 1.4.2 Положения)</button>.
                 </p>
                 <Important color="#e3f3ff" list={importantList} width="100%" secondaryColor="#39A1ED" />
-                <div className={styles.purchasingCommissionBlock}>
+                <div className={styles.block}>
                     <h3 className="subtitle">Для чего нужно формировать закупочное подразделение?</h3>
                     <div>
                         <p className="text-s">
@@ -93,7 +93,7 @@ export default function PurchasingCommission() {
                         </ul>
                     </div>
                 </div>
-                <div className={styles.purchasingCommissionList}>
+                <div className={styles.list}>
                     <h3 className="subtitle">Как согласовать список членов закупочной комиссии?</h3>
                     <p className="text-s">
                         Тем, кого предполагается включить в состав потенциальных членов закупочных комиссий, нужно получить в АСЭЗ роль ZS_U_G_DISPLAY_***_00 -

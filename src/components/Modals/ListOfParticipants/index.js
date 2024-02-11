@@ -11,7 +11,7 @@ export default function ListOfParticipants() {
     ];
     return (
         <LayoutModal>
-            <div className={styles.listOfParticipants}>
+            <div className={styles.root}>
                 <h2 className="modal-subtitle">Состав участников</h2>
             </div>
             <List list={list} color="#39A1ED" />
