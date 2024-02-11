@@ -4,7 +4,7 @@ import styles from "./BackButton.module.scss";
 
 export default function BackButton({ clickHandler }) {
     return (
-        <button className={classNames("text-s", "icon-chevron-right", styles.backButton)} onClick={() => clickHandler()}>
+        <button className={classNames("text-s", "icon-chevron-right", styles.root)} onClick={() => clickHandler()}>
             назад
         </button>
     );

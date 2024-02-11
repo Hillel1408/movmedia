@@ -3,14 +3,14 @@ import styles from "./GridList.module.scss";
 
 export default function GridList({ gridList }) {
     return (
-        <div className={styles.gridList}>
+        <div className={styles.root}>
             {gridList.map((el, index) =>
                 el.image ? (
                     <img key={index} src={el.image.url} alt="" width={el.image.width} height={el.image.height} />
                 ) : (
-                    <div key={index}>
+                    <div key={index} className={styles.list}>
                         {el.items.map((item, index) => (
-                            <div key={index}>
+                            <div key={index} className={styles.listItem}>
                                 <h4 className="text-medium-s">{item.title}</h4>
                                 {item.text && <p className="text-s">{item.text}</p>}
                                 {item.list && (

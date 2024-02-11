@@ -3,10 +3,10 @@ import styles from "./HorizontalStepper.module.scss";
 
 export default function HorizontalStepper({ list, color, grid, type }) {
     return (
-        <div className={styles.horizontalStepper} style={{ gridTemplateColumns: grid, gap: type === "primary" && "8px" }}>
+        <div className={styles.root} style={{ gridTemplateColumns: grid, gap: type === "primary" && "8px" }}>
             {list.map((item, index) => (
-                <div>
-                    <div style={{ gap: type === "primary" && "8px" }}>
+                <div className={styles.grid}>
+                    <div className={styles.gridItem} style={{ gap: type === "primary" && "8px" }}>
                         <div style={{ backgroundColor: color }}></div>
                         {index === list.length - 1 && type === "primary" ? (
                             ""
