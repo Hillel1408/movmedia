@@ -38,6 +38,7 @@ import Transition from "./Transition";
 import ProcurementRegulations from "./Modals/ProcurementRegulations";
 import Button from "./Button";
 import Smsp from "./Modals/Smsp";
+import Loader from "./Loader";
 
 export {
     Switcher,
@@ -80,4 +81,5 @@ export {
     ProcurementRegulations,
     Button,
     Smsp,
+    Loader,
 };

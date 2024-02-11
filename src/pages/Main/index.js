@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import classNames from "classnames";
-import { Switcher, Menu, Scheme, Transition } from "../../components";
+import { Switcher, Menu, Scheme, Transition, Loader } from "../../components";
 import styles from "./Main.module.scss";
 
 export default function Main() {
@@ -141,10 +141,9 @@ export default function Main() {
                         </div>
                     </div>
                 </div>
-
                 <div className={styles.navigation}>
                     {loading ? (
-                        <div class="loader"></div>
+                        <Loader />
                     ) : (
                         <>
                             <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
