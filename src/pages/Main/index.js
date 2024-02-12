@@ -164,11 +164,11 @@ export default function Main() {
                 </div>
             </div>
 
-            <Transition activeModal={activeModal === "scheme"} cls="animation">
+            <Transition activeModal={activeModal === "scheme"} cls="animation" timeout={350}>
                 <Scheme setActiveModal={setActiveModal} />
             </Transition>
 
-            <Transition activeModal={activeModal !== "scheme" && activeModal} cls="animation">
+            <Transition activeModal={activeModal !== "scheme" && activeModal} cls="animation" timeout={350}>
                 <Menu activeModal={activeModal} setActiveModal={setActiveModal} activeSwitcher={activeSwitcher} />
             </Transition>
         </>
