@@ -34,6 +34,25 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
     margin-top: 37px;
+    & > div {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            & > div:first-child {
+                min-height: 241px;
+            }
+        }
+        &:nth-child(3) {
+            position: relative;
+            &::before {
+                content: url("../../../../public/images/icons/03.svg");
+                position: absolute;
+                z-index: -1;
+                left: 136px;
+                top: 16px;
+            }
+        }
+    }
 }
 .lastSpoiler {
     display: flex;

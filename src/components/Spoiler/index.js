@@ -7,7 +7,9 @@ export default function Spoiler({ item }) {
 
     return (
         <div className={styles.root}>
-            <img src={item.image.url} alt="" width={item.image.width} height={item.image.height}></img>
+            <div>
+                <img src={item.image.url} alt="" width={item.image.width} height={item.image.height}></img>
+            </div>
             <h3>{item.title}</h3>
             <div className={styles.line}></div>
             <div

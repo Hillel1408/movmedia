@@ -25,7 +25,7 @@ export default function Scheme({ setActiveModal }) {
             registration: ["ЕИС", "АСЭЗ"],
         },
         {
-            image: { url: "/images/scheme/img-4.webp", width: "328px", height: "230px" },
+            image: { url: "/images/scheme/img-4.webp", width: "232px", height: "166px" },
             title: "Организация закупки",
             text: "После включения закупки в план, ее нужно организовать: собрать исходные данные, провести закупку, определить поставщика (подрядчика, исполнителя). Порядок проведения закупки зависит от её условий (предмета, способа, цены и прочих условий).",
             participants: [

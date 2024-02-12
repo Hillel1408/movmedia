@@ -1,6 +1,8 @@
 .root {
-    & > img {
+    & > div:first-child {
         margin-bottom: 16px;
+        display: flex;
+        align-items: flex-end;
     }
     & > h3 {
         font-family: "Roboto Flex";
