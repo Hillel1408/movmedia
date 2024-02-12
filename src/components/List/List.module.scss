@@ -10,6 +10,7 @@
     min-height: 96px;
     border-radius: 4px;
     transition: 0.2s;
+    cursor: pointer;
     &:hover {
         background-color: #f8f9ff;
         & > div {
@@ -35,6 +36,7 @@
             gap: 4px;
             align-items: flex-start;
             justify-content: center;
+            flex: 1 1 auto;
             & > h3 {
                 color: #193a54;
                 font-family: "Roboto Flex";

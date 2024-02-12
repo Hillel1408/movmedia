@@ -6,7 +6,7 @@ export default function List({ list, color }) {
             {list.map((item, index) => (
                 <div key={index} className={styles.item}>
                     <div style={{ color: `${color}`, borderLeft: `1px solid ${color}` }}>{index + 1}</div>
-                    <div>
+                    <div onClick={() => item.click()}>
                         <h3>{item.title}</h3>
                         {item.text && <p className="text-xs">{item.text}</p>}
                         {item.button && (

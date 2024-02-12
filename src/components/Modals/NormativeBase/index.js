@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { LayoutModal, List, TextModal, Transition } from "../../index";
+import { ModalContext } from "../../../components/Modals/Menu";
 import styles from "./NormativeBase.module.scss";
 
 export default function NormativeBase() {
     const [textModal, setTextModal] = useState("");
     const [activeModal, setActiveModal] = useState(false);
+
+    const value = useContext(ModalContext);
 
     useEffect(() => {
         textModal && setActiveModal(true);
@@ -27,6 +30,9 @@ export default function NormativeBase() {
                     clientY: e.clientY,
                 });
             },
+            click: () => {
+                value.setActiveModal("procurement-regulations");
+            },
         },
         {
             title: "Перечень ВЗЛ",
@@ -40,8 +46,17 @@ export default function NormativeBase() {
                     clientY: e.clientY,
                 });
             },
+            click: () => {
+                value.setActiveModal("list-of-vzl");
+            },
         },
-        { title: "Регламентные документы", text: "Регламентные документы в сфере закупок\n(оформляются приказом, инструкцией\n(регламентом)." },
+        {
+            title: "Регламентные документы",
+            text: "Регламентные документы в сфере закупок\n(оформляются приказом, инструкцией\n(регламентом).",
+            click: () => {
+                value.setActiveModal("regulator-documents");
+            },
+        },
     ];
 
     return (
