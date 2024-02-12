@@ -66,7 +66,7 @@ export default function Main() {
     };
 
     useEffect(() => {
-        cacheImages([].concat(...pedestals.map((pd) => [pd.imageTop.url, pd.imageBottom.url]), "/images/main/main.avif"));
+        cacheImages([].concat(...pedestals.map((pd) => [pd.imageTop.url, pd.imageBottom.url]), "/images/main/main.svg"));
         window.addEventListener("click", clickHandler);
         return () => {
             window.removeEventListener("click", clickHandler);
@@ -144,7 +144,7 @@ export default function Main() {
                         <Loader />
                     ) : (
                         <>
-                            <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
+                            <img src="/images/main/main.svg" alt="" width="1440px" height="722px" />
                             <div className={styles.navigationPedestals}>
                                 {pedestals.map((item, index) => (
                                     <div
