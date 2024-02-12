@@ -18,33 +18,31 @@ export default function Main() {
         "дочерние хозяйственные общества, в уставном капитале которых более 50% долей в совокупности принадлежит указанным выше юридическим лицам;",
         "дочерние хозяйственные общества, в уставном капитале которых более 50% долей в совокупности принадлежит указанным выше дочерним хозяйственным обществам.",
     ];
-    const buttons = [
-        { text: "Создать нормативную базу", icon: "icon-box-edit", modal: "normative-base" },
-        { text: "Организовать работу в информационных системах", icon: "icon-display-settings", modal: "information-systems" },
-        { text: "Наладить взаимодействие участников процесса", icon: "icon-groups", modal: "list-of-participants" },
-        { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring", modal: "planning-elements" },
-        { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "working-with-contracts" },
-    ];
     const pedestals = [
         {
             imageTop: { url: "/images/main/pedestals/1/img-1.avif", width: "283px", height: "317px" },
             imageBottom: { url: "/images/main/pedestals/1/img-2.avif", width: "283px", height: "259px" },
+            button: { text: "Создать нормативную базу", icon: "icon-box-edit", modal: "normative-base" },
         },
         {
             imageTop: { url: "/images/main/pedestals/2/img-1.avif", width: "283px", height: "309px" },
             imageBottom: { url: "/images/main/pedestals/2/img-2.avif", width: "283px", height: "330px" },
+            button: { text: "Организовать работу в информационных системах", icon: "icon-display-settings", modal: "information-systems" },
         },
         {
             imageTop: { url: "/images/main/pedestals/3/img-1.avif", width: "283px", height: "300px" },
             imageBottom: { url: "/images/main/pedestals/3/img-2.avif", width: "283px", height: "292px" },
+            button: { text: "Обеспечить контроль, работу с договорами, формирование отчетности", icon: "icon-folder-open", modal: "working-with-contracts" },
         },
         {
             imageTop: { url: "/images/main/pedestals/4/img-1.avif", width: "283px", height: "323px" },
             imageBottom: { url: "/images/main/pedestals/4/img-2.avif", width: "283px", height: "368px" },
+            button: { text: "Настроить отдельные элементы планирования", icon: "icon-monitoring", modal: "planning-elements" },
         },
         {
             imageTop: { url: "/images/main/pedestals/5/img-1.avif", width: "283px", height: "334px" },
             imageBottom: { url: "/images/main/pedestals/5/img-2.avif", width: "287px", height: "420px" },
+            button: { text: "Наладить взаимодействие участников процесса", icon: "icon-groups", modal: "list-of-participants" },
         },
     ];
 
@@ -147,24 +145,17 @@ export default function Main() {
                     ) : (
                         <>
                             <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
-                            <div className={styles.navigationButtons}>
-                                {buttons.map((item, index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => {
-                                            setActiveModal(item.modal);
-                                        }}
-                                        className={classNames(item.icon)}
-                                    >
-                                        {item.text}
-                                    </button>
-                                ))}
-                            </div>
                             <div className={styles.navigationPedestals}>
                                 {pedestals.map((item, index) => (
-                                    <div key={index}>
+                                    <div
+                                        key={index}
+                                        onClick={() => {
+                                            setActiveModal(item.button.modal);
+                                        }}
+                                    >
                                         <img src={item.imageTop.url} alt="" width={item.imageTop.width} height={item.imageTop.height}></img>
                                         <img src={item.imageBottom.url} alt="" width={item.imageBottom.width} height={item.imageBottom.height}></img>
+                                        <button className={classNames(item.button.icon)}>{item.button.text}</button>
                                     </div>
                                 ))}
                             </div>
