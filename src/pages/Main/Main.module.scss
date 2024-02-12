@@ -162,7 +162,6 @@
                 transition: 0.4s;
                 z-index: 6;
                 &:hover {
-                    box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
                 }
                 &:active {
                     box-shadow: none;
@@ -207,7 +206,7 @@
                 & > button {
                     top: -50px;
                     left: -110px;
-                    background: linear-gradient(270deg, #ffe8d5, #ffbe84, #ffa85a, white 50%);
+                    background: linear-gradient(270deg, #ffcb9d, #ffb97b, #fd973d, white 50%);
                     background-size: 300% 300%;
                     &:before {
                         color: #f48a2c;
@@ -216,6 +215,7 @@
                 &:hover {
                     & > button {
                         background-position: 99% 50%;
+                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
                     }
                 }
             }
@@ -232,7 +232,7 @@
                     top: -60px;
                     left: -70px;
                     width: 240px;
-                    background: linear-gradient(270deg, #eedaff, #d3a0ff, #c481ff, white 50%);
+                    background: linear-gradient(270deg, #e3c3ff, #ce95ff, #b560ff, white 50%);
                     background-size: 300% 300%;
                     &:before {
                         color: #5545d7;
@@ -244,6 +244,7 @@
                 &:hover {
                     & > button {
                         background-position: 99% 50%;
+                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
                     }
                 }
             }
@@ -260,7 +261,7 @@
                     top: 190px;
                     left: 180px;
                     width: 292px;
-                    background: linear-gradient(270deg, #eaffb7, #c1e763, #a2c942, white 50%);
+                    background: linear-gradient(270deg, #e1ff97, #aad440, #8db923, white 50%);
                     background-size: 300% 300%;
                     &:before {
                         color: #9cc040;
@@ -272,6 +273,7 @@
                 &:hover {
                     & > button {
                         background-position: 99% 50%;
+                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
                     }
                 }
             }
@@ -288,7 +290,7 @@
                     top: 155px;
                     left: 240px;
                     width: 268px;
-                    background: linear-gradient(270deg, #ffe0dd, #f99087, #ff7c71, white 50%);
+                    background: linear-gradient(270deg, #ffc0bb, #ffa098, #ff7367, white 50%);
                     background-size: 300% 300%;
                     &:before {
                         color: #f46c63;
@@ -300,6 +302,7 @@
                 &:hover {
                     & > button {
                         background-position: 99% 50%;
+                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
                     }
                 }
             }
@@ -316,7 +319,7 @@
                     top: 35px;
                     right: -180px;
                     width: 270px;
-                    background: linear-gradient(270deg, #dff2ff, #9ad4ff, #99d4ff, white 50%);
+                    background: linear-gradient(270deg, #dcf0ff, #82caff, #6cc1ff, white 50%);
                     background-size: 300% 300%;
                     &:before {
                         color: #39a1ed;
@@ -328,6 +331,7 @@
                 &:hover {
                     & > button {
                         background-position: 99% 50%;
+                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
                     }
                 }
             }

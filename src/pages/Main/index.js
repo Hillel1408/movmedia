@@ -144,7 +144,6 @@ export default function Main() {
                         <Loader />
                     ) : (
                         <>
-                            <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
                             <div className={styles.navigationPedestals}>
                                 {pedestals.map((item, index) => (
                                     <div
@@ -159,6 +158,7 @@ export default function Main() {
                                     </div>
                                 ))}
                             </div>
+                            <img src="/images/main/main.avif" alt="" width="1440px" height="722px" />
                         </>
                     )}
                 </div>
