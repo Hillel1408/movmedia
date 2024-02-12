@@ -10,7 +10,13 @@ export default function List({ list, color }) {
                         <h3>{item.title}</h3>
                         {item.text && <p className="text-xs">{item.text}</p>}
                         {item.button && (
-                            <button className="text-xs" onClick={(e) => item.clickHandler(e)}>
+                            <button
+                                className="text-xs"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    item.clickHandler(e);
+                                }}
+                            >
                                 {item.button}
                             </button>
                         )}
