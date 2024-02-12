@@ -3,6 +3,7 @@
 @import "icons";
 
 body {
+    min-width: 1440px;
     &.lock {
         overflow: hidden;
     }
