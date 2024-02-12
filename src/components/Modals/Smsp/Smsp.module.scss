@@ -64,6 +64,14 @@
     padding-left: 16px;
     margin-left: 22px;
     padding-bottom: 32px;
+    position: relative;
+    &:after {
+        content: url("../../../../public/images/icons/arrow-2.svg");
+        position: absolute;
+        bottom: -7px;
+        transform: rotate(90deg);
+        left: -5px;
+    }
     & > li {
         display: flex;
         flex-direction: column;
@@ -140,6 +148,11 @@
         & > button {
             color: #39a1ed;
             background-color: transparent;
+        }
+    }
+    & > ul {
+        &:after {
+            display: none;
         }
     }
 }
