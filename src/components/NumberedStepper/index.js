@@ -36,7 +36,7 @@ export default function NumberedStepper({ item, idx, bgColor }) {
                         }}
                     >
                         {item.list?.map((el, index) => (
-                            <li>
+                            <li key={index}>
                                 <span style={{ backgroundColor: bgColor === "#39A1ED" ? "white" : "#39a1ed" }}></span>
                                 {el}
                             </li>

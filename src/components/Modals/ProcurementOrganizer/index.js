@@ -113,7 +113,7 @@ export default function ProcurementOrganizer() {
                 </div>
                 <div className={styles.grid}>
                     {gridList.map((item, index) => (
-                        <div>
+                        <div key={index}>
                             <h3 className="subtitle">{item.title}</h3>
                             <ul key={index} className="text-s">
                                 {item.list.map((item, index) => (
