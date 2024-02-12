@@ -31,6 +31,13 @@
                 border-left: 1px solid #f46c63;
             }
         }
+        &:last-child {
+            & > ul {
+                &::after {
+                    display: none;
+                }
+            }
+        }
     }
     &Title {
         font-weight: 500;
