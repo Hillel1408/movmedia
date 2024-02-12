@@ -62,9 +62,7 @@ export default function Main() {
             });
         });
         await Promise.all(promises);
-        setTimeout(async () => {
-            setLoading(false);
-        }, 200);
+        setLoading(false);
     };
 
     useEffect(() => {
