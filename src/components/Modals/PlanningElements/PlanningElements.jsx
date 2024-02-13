@@ -1,13 +1,40 @@
-import React from 'react'
+import { useContext } from 'react'
 import { LayoutModal, List } from '../../index'
+import { ModalContext } from '../Menu/Menu'
 import styles from './PlanningElements.module.scss'
 
 export default function PlanningElements() {
+  const value = useContext(ModalContext)
+
   const list = [
-    { title: 'Формирование потребностей и плана закупок' },
-    { title: 'Закупки у СМСП' },
-    { title: 'Закупки у квотируемых товаров' },
-    { title: 'Закупки у ВЗЛ' }
+    {
+      title: 'Формирование потребностей и плана закупок',
+      active: true,
+      click: () => {
+        value.setActiveModal('formation-of-need')
+      }
+    },
+    {
+      title: 'Закупки у СМСП',
+      active: value.activeSwitcher,
+      click: () => {
+        value.setActiveModal('smsp')
+      }
+    },
+    {
+      title: 'Закупки у квотируемых товаров',
+      active: value.activeSwitcher,
+      click: () => {
+        value.setActiveModal('purchase-of-goods')
+      }
+    },
+    {
+      title: 'Закупки у ВЗЛ',
+      active: true,
+      click: () => {
+        value.setActiveModal('vzl')
+      }
+    }
   ]
 
   return (

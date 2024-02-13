@@ -18,6 +18,7 @@ export default function NormativeBase() {
       title: 'Положение о закупках',
       text: 'Утверждается уполномоченным\nорганом управления организации',
       button: '(Ст.2 №223-ФЗ).',
+      active: true,
       clickHandler: e => {
         setTextModal({
           title: 'Ч. 3 ст. 2 Закона № 223-ФЗ',
@@ -38,6 +39,7 @@ export default function NormativeBase() {
       title: 'Перечень ВЗЛ',
       text: 'Перечень взаимозависимых с заказчиком лиц (ВЗЛ)\nдля целей применения положения о закупках является\nнеотъемлемой частью Положения о закупках',
       button: '(Ст.1 №223-ФЗ).',
+      active: true,
       clickHandler: e => {
         setTextModal({
           title: 'п. 13 ч. 4 ст.1 Закон 223-ФЗ',
@@ -53,6 +55,7 @@ export default function NormativeBase() {
     {
       title: 'Регламентные документы',
       text: 'Регламентные документы в сфере закупок\n(оформляются приказом, инструкцией\n(регламентом).',
+      active: true,
       click: () => {
         value.setActiveModal('regulator-documents')
       }

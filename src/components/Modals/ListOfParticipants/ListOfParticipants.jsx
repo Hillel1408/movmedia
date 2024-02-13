@@ -1,13 +1,40 @@
-import React from 'react'
+import { useContext } from 'react'
 import { LayoutModal, List } from '../../index'
+import { ModalContext } from '../Menu/Menu'
 import styles from './ListOfParticipants.module.scss'
 
 export default function ListOfParticipants() {
+  const value = useContext(ModalContext)
+
   const list = [
-    { title: 'Закупочное подразделение' },
-    { title: 'Закупочная комиссия' },
-    { title: 'Ответственные за работу в ЕИС и АСЭЗ' },
-    { title: 'Организатор закупок' }
+    {
+      title: 'Закупочное подразделение',
+      active: true,
+      click: () => {
+        value.setActiveModal('purchasing-division')
+      }
+    },
+    {
+      title: 'Закупочная комиссия',
+      active: true,
+      click: () => {
+        value.setActiveModal('purchasing-commission')
+      }
+    },
+    {
+      title: 'Ответственные за работу в ЕИС и АСЭЗ',
+      active: true,
+      click: () => {
+        value.setActiveModal('responsible-ASEZEIS')
+      }
+    },
+    {
+      title: 'Организатор закупок',
+      active: true,
+      click: () => {
+        value.setActiveModal('procurement-organizer')
+      }
+    }
   ]
   return (
     <LayoutModal>

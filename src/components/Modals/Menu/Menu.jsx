@@ -178,7 +178,11 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         </div>
 
         <ModalContext.Provider
-          value={{ closeModal: setActiveModal, setActiveModal: setActive }}
+          value={{
+            closeModal: setActiveModal,
+            setActiveModal: setActive,
+            activeSwitcher
+          }}
         >
           <Transition
             activeModal={Boolean(active)}

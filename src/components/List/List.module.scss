@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 16px;
   transform: translateX(-8px);
+  counter-reset: progress 0;
 }
 .item {
   display: flex;
@@ -11,6 +12,7 @@
   border-radius: 4px;
   transition: 0.2s;
   cursor: pointer;
+  counter-increment: progress 1;
   &:hover {
     background-color: #f8f9ff;
     & > div {
@@ -29,6 +31,9 @@
       width: 51px;
       justify-content: center;
       overflow: hidden;
+      &:before {
+        content: counter(progress);
+      }
     }
     &:last-child {
       display: flex;
