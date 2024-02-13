@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, Stepper } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./Asez.module.scss";
 
 export default function Asez() {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, NumberedStepper } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./ProcurementOrganizer.module.scss";
 
 export default function ProcurementOrganizer() {

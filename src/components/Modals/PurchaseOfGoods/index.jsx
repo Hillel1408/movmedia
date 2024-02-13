@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LayoutPageModal, GridList } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./PurchaseOfGoods.module.scss";
 
 export default function PurchaseOfGoods() {

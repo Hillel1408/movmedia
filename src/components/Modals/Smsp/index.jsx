@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, Important, Transition, TextModal } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./Smsp.module.scss";
 
 export default function Smsp() {

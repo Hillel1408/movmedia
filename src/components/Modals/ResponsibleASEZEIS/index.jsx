@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LayoutPageModal } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./ResponsibleASEZEIS.module.scss";
 
 export default function ResponsibleASEZEIS() {

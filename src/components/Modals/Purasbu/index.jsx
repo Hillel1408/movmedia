@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LayoutPageModal, Stepper, HorizontalStepper } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./Purasbu.module.scss";
 import classNames from "classnames";
 

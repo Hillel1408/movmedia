@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { LayoutModal, List, TextModal, Transition } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./NormativeBase.module.scss";
 
 export default function NormativeBase() {

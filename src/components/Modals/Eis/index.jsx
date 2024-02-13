@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, Stepper, TextModal, Transition } from "../../index";
-import { ModalContext } from "../../../components/Modals/Menu";
+import { ModalContext } from "../Menu";
 import styles from "./Eis.module.scss";
 
 export default function Eis() {
