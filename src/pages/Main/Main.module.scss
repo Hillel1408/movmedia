@@ -1,342 +1,377 @@
 .header {
-    padding: 20px 40px 24px 40px;
-    background-color: #f8f9ff;
-    &Flex {
+  padding: 20px 40px 24px 40px;
+  background-color: #f8f9ff;
+  &Flex {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      &:first-child {
+        h2 {
+          max-width: 675px;
+          color: #005c9a;
+          margin-top: 12px;
+          margin-bottom: 24px;
+        }
+        p {
+          max-width: 557px;
+          color: #265071;
+        }
+      }
+      &:last-child {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        & > div {
-            &:first-child {
-                h2 {
-                    max-width: 675px;
-                    color: #005c9a;
-                    margin-top: 12px;
-                    margin-bottom: 24px;
-                }
-                p {
-                    max-width: 557px;
-                    color: #265071;
-                }
-            }
-            &:last-child {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-        }
+      }
     }
-    &SecondaryFlex {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-        & > div {
-            &:first-child {
-                max-width: 331px;
-                p {
-                    color: #265071;
-                    display: grid;
-                    grid-template-columns: 24px 1fr;
-                    gap: 8px;
-                    margin-bottom: 4px;
-                    &::before {
-                        font-size: 24px;
-                        color: #39a1ed;
-                    }
-                }
-            }
-        }
-    }
-    &Btn > button,
-    &SecondaryBtn {
-        background-color: transparent;
-        text-align: left;
-        display: grid;
-        grid-template-columns: 24px 1fr;
-        gap: 8px;
-        &::before {
+  }
+  &SecondaryFlex {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    & > div {
+      &:first-child {
+        max-width: 331px;
+        p {
+          color: #265071;
+          display: grid;
+          grid-template-columns: 24px 1fr;
+          gap: 8px;
+          margin-bottom: 4px;
+          &::before {
             font-size: 24px;
             color: #39a1ed;
+          }
         }
+      }
     }
-    &Btn {
-        width: 390px;
-        padding: 16px;
-        transform: translateX(-16px);
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        position: relative;
-        transition: 0.4s;
-        & > button {
-            color: #39a1ed;
-            transition: 0.4s;
-        }
-        & > p {
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.4s;
-            transform: translateX(-16px);
-            position: absolute;
-            width: 100%;
-            padding: 8px 16px 16px 48px;
-            background-color: white;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
+  }
+  &Btn > button,
+  &SecondaryBtn {
+    background-color: transparent;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 8px;
+    &::before {
+      font-size: 24px;
+      color: #39a1ed;
     }
-    &SecondaryBtn {
-        width: 423px;
-        padding: 16px 8px 16px 16px;
-        border: 1px solid #39a1ed;
-        border-radius: 8px;
-        color: #193a54;
-        transition: 0.4s;
-        &:hover {
-            background-color: white;
-        }
+  }
+  &Btn {
+    width: 390px;
+    padding: 16px;
+    transform: translateX(-16px);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    position: relative;
+    transition: 0.4s;
+    & > button {
+      color: #39a1ed;
+      transition: 0.4s;
     }
-    &LinkBtn {
-        position: relative;
-        margin-left: 32px;
-        & > button {
-            background-color: transparent;
-            color: #39a1ed;
-            padding: 4px 0;
-            display: flex;
-            gap: 4px;
-            flex-direction: row-reverse;
-            &::before {
-                font-size: 16px;
-                color: #39a1ed;
-                transform: rotate(-90deg);
-            }
-        }
-        & > ul {
-            position: absolute;
-            top: 32px;
-            z-index: 7;
-            opacity: 0;
-            visibility: hidden;
-            transition: 0.4s;
-            padding: 16px 16px 16px 32px;
-            width: 419px;
-            border-radius: 8px;
-            background: #ebf3fb;
-            color: #003f6a;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            li {
-                list-style-type: disc;
-            }
-        }
+    & > p {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s;
+      transform: translateX(-16px);
+      position: absolute;
+      width: 100%;
+      padding: 8px 16px 16px 48px;
+      background-color: white;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
+  }
+  &SecondaryBtn {
+    width: 423px;
+    padding: 16px 8px 16px 16px;
+    border: 1px solid #39a1ed;
+    border-radius: 8px;
+    color: #193a54;
+    transition: 0.4s;
+    &:hover {
+      background-color: white;
+    }
+  }
+  &LinkBtn {
+    position: relative;
+    margin-left: 32px;
+    & > button {
+      background-color: transparent;
+      color: #39a1ed;
+      padding: 4px 0;
+      display: flex;
+      gap: 4px;
+      flex-direction: row-reverse;
+      &::before {
+        font-size: 16px;
+        color: #39a1ed;
+        transform: rotate(-90deg);
+      }
+    }
+    & > ul {
+      position: absolute;
+      top: 32px;
+      z-index: 7;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s;
+      padding: 16px 16px 16px 32px;
+      width: 419px;
+      border-radius: 8px;
+      background: #ebf3fb;
+      color: #003f6a;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
 }
 .navigation {
-    position: relative;
-    overflow: hidden;
-    background: #cdd9e7;
-    height: 722px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &Pedestals {
-        & > div {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            & > button {
-                position: absolute;
-                border-radius: 8px;
-                box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
-                display: grid;
-                grid-template-columns: 32px 1fr;
-                gap: 10px;
-                font-family: "Roboto Flex";
-                font-size: 16px;
-                font-weight: 600;
-                padding: 16px 12px;
-                align-items: center;
-                color: #193a54;
-                text-align: left;
-                transition: 0.4s;
-                z-index: 6;
-                &:active {
-                    box-shadow: none;
-                }
-                &:before {
-                    font-size: 32px;
-                    transition: 0.4s;
-                }
-            }
-            &:hover {
-                & > img {
-                    &:nth-child(1) {
-                        transform: matrix(1, 0, 0, 1, 0, -25);
-                    }
-                }
-                & > button {
-                    color: white;
-                    &:before {
-                        color: white !important;
-                    }
-                }
-            }
-            & > img {
-                &:nth-child(1) {
-                    position: relative;
-                    z-index: 1;
-                    transition: 0.4s;
-                }
-                &:nth-child(2) {
-                    position: absolute;
-                }
-            }
-            &:nth-child(1) {
-                bottom: 98px;
-                left: 199px;
-                z-index: 5;
-                & > img {
-                    &:nth-child(2) {
-                        bottom: -36px;
-                    }
-                }
-                & > button {
-                    top: -50px;
-                    left: -110px;
-                    background: linear-gradient(270deg, #ffcb9d, #ffb97b, #fd973d, white 50%);
-                    background-size: 300% 300%;
-                    &:before {
-                        color: #f48a2c;
-                    }
-                }
-                &:hover {
-                    & > button {
-                        background-position: 99% 50%;
-                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-                    }
-                }
-            }
-            &:nth-child(2) {
-                bottom: 233px;
-                left: 453px;
-                z-index: 3;
-                & > img {
-                    &:nth-child(2) {
-                        bottom: -108px;
-                    }
-                }
-                & > button {
-                    top: -60px;
-                    left: -70px;
-                    width: 240px;
-                    background: linear-gradient(270deg, #e3c3ff, #ce95ff, #b560ff, white 50%);
-                    background-size: 300% 300%;
-                    &:before {
-                        color: #5545d7;
-                    }
-                    &:hover {
-                        background-position: 99% 50%;
-                    }
-                }
-                &:hover {
-                    & > button {
-                        background-position: 99% 50%;
-                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-                    }
-                }
-            }
-            &:nth-child(3) {
-                bottom: 53px;
-                left: 662px;
-                z-index: 4;
-                & > img {
-                    &:nth-child(2) {
-                        bottom: -65px;
-                    }
-                }
-                & > button {
-                    top: 190px;
-                    left: 180px;
-                    width: 292px;
-                    background: linear-gradient(270deg, #e1ff97, #aad440, #8db923, white 50%);
-                    background-size: 300% 300%;
-                    &:before {
-                        color: #9cc040;
-                    }
-                    &:hover {
-                        background-position: 99% 50%;
-                    }
-                }
-                &:hover {
-                    & > button {
-                        background-position: 99% 50%;
-                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-                    }
-                }
-            }
-            &:nth-child(4) {
-                bottom: 232px;
-                left: 895px;
-                z-index: 2;
-                & > img {
-                    &:nth-child(2) {
-                        bottom: -145px;
-                    }
-                }
-                & > button {
-                    top: 155px;
-                    left: 240px;
-                    width: 268px;
-                    background: linear-gradient(270deg, #ffc0bb, #ffa098, #ff7367, white 50%);
-                    background-size: 300% 300%;
-                    &:before {
-                        color: #f46c63;
-                    }
-                    &:hover {
-                        background-position: 99% 50%;
-                    }
-                }
-                &:hover {
-                    & > button {
-                        background-position: 99% 50%;
-                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-                    }
-                }
-            }
-            &:nth-child(5) {
-                bottom: 374px;
-                left: 690px;
-                z-index: 1;
-                & > img {
-                    &:nth-child(2) {
-                        bottom: -199px;
-                    }
-                }
-                & > button {
-                    top: 35px;
-                    right: -180px;
-                    width: 270px;
-                    background: linear-gradient(270deg, #dcf0ff, #82caff, #6cc1ff, white 50%);
-                    background-size: 300% 300%;
-                    &:before {
-                        color: #39a1ed;
-                    }
-                    &:hover {
-                        background-position: 99% 50%;
-                    }
-                }
-                &:hover {
-                    & > button {
-                        background-position: 99% 50%;
-                        box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12), 4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
-                    }
-                }
-            }
+  position: relative;
+  overflow: hidden;
+  background: #cdd9e7;
+  height: 722px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &Pedestals {
+    & > div {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      & > button {
+        position: absolute;
+        border-radius: 8px;
+        box-shadow: 8px 8px 16px 0px rgba(12, 22, 44, 0.12);
+        display: grid;
+        grid-template-columns: 32px 1fr;
+        gap: 10px;
+        font-family: 'Roboto Flex';
+        font-size: 16px;
+        font-weight: 600;
+        padding: 16px 12px;
+        align-items: center;
+        color: #193a54;
+        text-align: left;
+        transition: 0.4s;
+        z-index: 6;
+        &:active {
+          box-shadow: none;
         }
+        &:before {
+          font-size: 32px;
+          transition: 0.4s;
+        }
+      }
+      &:hover {
+        & > img {
+          &:nth-child(1) {
+            transform: matrix(1, 0, 0, 1, 0, -25);
+          }
+        }
+        & > button {
+          color: white;
+          &:before {
+            color: white !important;
+          }
+        }
+      }
+      & > img {
+        &:nth-child(1) {
+          position: relative;
+          z-index: 1;
+          transition: 0.4s;
+        }
+        &:nth-child(2) {
+          position: absolute;
+        }
+      }
+      &:nth-child(1) {
+        bottom: 98px;
+        left: 199px;
+        z-index: 5;
+        & > img {
+          &:nth-child(2) {
+            bottom: -36px;
+          }
+        }
+        & > button {
+          top: -50px;
+          left: -110px;
+          background: linear-gradient(
+            270deg,
+            #ffcb9d,
+            #ffb97b,
+            #fd973d,
+            white 50%
+          );
+          background-size: 300% 300%;
+          &:before {
+            color: #f48a2c;
+          }
+        }
+        &:hover {
+          & > button {
+            background-position: 99% 50%;
+            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12),
+              4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+          }
+        }
+      }
+      &:nth-child(2) {
+        bottom: 233px;
+        left: 453px;
+        z-index: 3;
+        & > img {
+          &:nth-child(2) {
+            bottom: -108px;
+          }
+        }
+        & > button {
+          top: -60px;
+          left: -70px;
+          width: 240px;
+          background: linear-gradient(
+            270deg,
+            #e3c3ff,
+            #ce95ff,
+            #b560ff,
+            white 50%
+          );
+          background-size: 300% 300%;
+          &:before {
+            color: #5545d7;
+          }
+          &:hover {
+            background-position: 99% 50%;
+          }
+        }
+        &:hover {
+          & > button {
+            background-position: 99% 50%;
+            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12),
+              4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+          }
+        }
+      }
+      &:nth-child(3) {
+        bottom: 53px;
+        left: 662px;
+        z-index: 4;
+        & > img {
+          &:nth-child(2) {
+            bottom: -65px;
+          }
+        }
+        & > button {
+          top: 190px;
+          left: 180px;
+          width: 292px;
+          background: linear-gradient(
+            270deg,
+            #e1ff97,
+            #aad440,
+            #8db923,
+            white 50%
+          );
+          background-size: 300% 300%;
+          &:before {
+            color: #9cc040;
+          }
+          &:hover {
+            background-position: 99% 50%;
+          }
+        }
+        &:hover {
+          & > button {
+            background-position: 99% 50%;
+            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12),
+              4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+          }
+        }
+      }
+      &:nth-child(4) {
+        bottom: 232px;
+        left: 895px;
+        z-index: 2;
+        & > img {
+          &:nth-child(2) {
+            bottom: -145px;
+          }
+        }
+        & > button {
+          top: 155px;
+          left: 240px;
+          width: 268px;
+          background: linear-gradient(
+            270deg,
+            #ffc0bb,
+            #ffa098,
+            #ff7367,
+            white 50%
+          );
+          background-size: 300% 300%;
+          &:before {
+            color: #f46c63;
+          }
+          &:hover {
+            background-position: 99% 50%;
+          }
+        }
+        &:hover {
+          & > button {
+            background-position: 99% 50%;
+            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12),
+              4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+          }
+        }
+      }
+      &:nth-child(5) {
+        bottom: 374px;
+        left: 690px;
+        z-index: 1;
+        & > img {
+          &:nth-child(2) {
+            bottom: -199px;
+          }
+        }
+        & > button {
+          top: 35px;
+          right: -180px;
+          width: 270px;
+          background: linear-gradient(
+            270deg,
+            #dcf0ff,
+            #82caff,
+            #6cc1ff,
+            white 50%
+          );
+          background-size: 300% 300%;
+          &:before {
+            color: #39a1ed;
+          }
+          &:hover {
+            background-position: 99% 50%;
+          }
+        }
+        &:hover {
+          & > button {
+            background-position: 99% 50%;
+            box-shadow: 4px 4px 16px 0px rgba(0, 63, 106, 0.12),
+              4px 4px 4px 0px rgba(255, 255, 255, 0.25) inset;
+          }
+        }
+      }
     }
+  }
 }
 .activeTooltip {
-    opacity: 1 !important;
-    visibility: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }

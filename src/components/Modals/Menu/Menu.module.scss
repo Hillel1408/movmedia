@@ -1,158 +1,186 @@
 .root {
-    position: absolute;
-    background: #f2f5f8;
-    width: 597px;
-    height: 100%;
-    top: 0;
-    right: 0;
-    padding: 32px 40px;
-    overflow-y: auto;
-    z-index: 1;
+  position: absolute;
+  background: #f2f5f8;
+  width: 597px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 32px 40px;
+  overflow-y: auto;
+  z-index: 1;
 }
 .list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Roboto Flex';
+  color: #193a54;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  & > li {
+    padding: 18px 24px;
+    background-color: white;
+    border-radius: 8px;
+    min-height: 105px;
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: 0.4s;
+    outline: 1px solid transparent;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    font-family: "Roboto Flex";
-    color: #193a54;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: normal;
-    & > li {
-        padding: 18px 24px;
-        background-color: white;
-        border-radius: 8px;
-        min-height: 105px;
-        background-repeat: no-repeat;
-        background-position: right;
-        transition: 0.4s;
-        outline: 1px solid transparent;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        cursor: pointer;
-        position: relative;
-        & > div {
-            background: linear-gradient(90deg, #ffffff 55%, rgba(255, 255, 255, 0) 89%);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-        & > span {
-            max-width: 291px;
-            color: #193a54;
-            z-index: 1;
-        }
-        &:nth-child(1) {
-            background-image: url("../../../../public/images/main/menu/img-1.webp");
-            background-size: 231px;
-            &:hover {
-                outline: 1px solid #f48a2c;
-            }
-            & > ul > li {
-                outline: 1px solid #f48a2c;
-                background: linear-gradient(270deg, #ffcb9d, #ffb97b, #fd973d, white 50%);
-                background-size: 300% 300%;
-                &:hover {
-                    background-position: 99% 50%;
-                    outline: 1px solid #ffe8d5;
-                }
-            }
-        }
-        &:nth-child(2) {
-            background-image: url("../../../../public/images/main/menu/img-2.webp");
-            background-size: 291px;
-            &:hover {
-                outline: 1px solid #5545d7;
-            }
-            & > ul > li {
-                outline: 1px solid #5545d7;
-                background: linear-gradient(270deg, #e3c3ff, #ce95ff, #b560ff, white 50%);
-                background-size: 300% 300%;
-                &:hover {
-                    background-position: 99% 50%;
-                    outline: 1px solid #eedaff;
-                }
-            }
-        }
-        &:nth-child(3) {
-            background-image: url("../../../../public/images/main/menu/img-5.webp");
-            background-size: 262px;
-            &:hover {
-                outline: 1px solid #39a1ed;
-            }
-            & > ul > li {
-                outline: 1px solid #39a1ed;
-                background: linear-gradient(270deg, #dcf0ff, #82caff, #6cc1ff, white 50%);
-                background-size: 300% 300%;
-                &:hover {
-                    background-position: 99% 50%;
-                    outline: 1px solid #dff2ff;
-                }
-            }
-        }
-        &:nth-child(4) {
-            background-image: url("../../../../public/images/main/menu/img-4.webp");
-            background-size: 240px;
-            & > span {
-                max-width: 281px;
-            }
-            &:hover {
-                outline: 1px solid #9cc040;
-            }
-        }
-        &:nth-child(5) {
-            background-image: url("../../../../public/images/main/menu/img-3.webp");
-            background-size: 272px;
-            &:hover {
-                outline: 1px solid #f46c63;
-            }
-            & > ul > li {
-                outline: 1px solid #f46c63;
-                background: linear-gradient(270deg, #ffc0bb, #ffa098, #ff7367, white 50%);
-                background-size: 300% 300%;
-                &:hover {
-                    background-position: 99% 50%;
-                    outline: 1px solid #ffe0dd;
-                }
-            }
-        }
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    & > div {
+      background: linear-gradient(
+        90deg,
+        #ffffff 55%,
+        rgba(255, 255, 255, 0) 89%
+      );
+      position: absolute;
+      width: 100%;
+      height: 100%;
     }
+    & > span {
+      max-width: 291px;
+      color: #193a54;
+      z-index: 1;
+    }
+    &:nth-child(1) {
+      background-image: url('../../../../public/images/main/menu/img-1.webp');
+      background-size: 231px;
+      &:hover {
+        outline: 1px solid #f48a2c;
+      }
+      & > ul > li {
+        outline: 1px solid #f48a2c;
+        background: linear-gradient(
+          270deg,
+          #ffcb9d,
+          #ffb97b,
+          #fd973d,
+          white 50%
+        );
+        background-size: 300% 300%;
+        &:hover {
+          background-position: 99% 50%;
+          outline: 1px solid #ffe8d5;
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-image: url('../../../../public/images/main/menu/img-2.webp');
+      background-size: 291px;
+      &:hover {
+        outline: 1px solid #5545d7;
+      }
+      & > ul > li {
+        outline: 1px solid #5545d7;
+        background: linear-gradient(
+          270deg,
+          #e3c3ff,
+          #ce95ff,
+          #b560ff,
+          white 50%
+        );
+        background-size: 300% 300%;
+        &:hover {
+          background-position: 99% 50%;
+          outline: 1px solid #eedaff;
+        }
+      }
+    }
+    &:nth-child(3) {
+      background-image: url('../../../../public/images/main/menu/img-5.webp');
+      background-size: 262px;
+      &:hover {
+        outline: 1px solid #39a1ed;
+      }
+      & > ul > li {
+        outline: 1px solid #39a1ed;
+        background: linear-gradient(
+          270deg,
+          #dcf0ff,
+          #82caff,
+          #6cc1ff,
+          white 50%
+        );
+        background-size: 300% 300%;
+        &:hover {
+          background-position: 99% 50%;
+          outline: 1px solid #dff2ff;
+        }
+      }
+    }
+    &:nth-child(4) {
+      background-image: url('../../../../public/images/main/menu/img-4.webp');
+      background-size: 240px;
+      & > span {
+        max-width: 281px;
+      }
+      &:hover {
+        outline: 1px solid #9cc040;
+      }
+    }
+    &:nth-child(5) {
+      background-image: url('../../../../public/images/main/menu/img-3.webp');
+      background-size: 272px;
+      &:hover {
+        outline: 1px solid #f46c63;
+      }
+      & > ul > li {
+        outline: 1px solid #f46c63;
+        background: linear-gradient(
+          270deg,
+          #ffc0bb,
+          #ffa098,
+          #ff7367,
+          white 50%
+        );
+        background-size: 300% 300%;
+        &:hover {
+          background-position: 99% 50%;
+          outline: 1px solid #ffe0dd;
+        }
+      }
+    }
+  }
 }
 .subList {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    color: #265071;
-    max-height: 0;
-    overflow: hidden;
-    padding: 1px;
-    transition: 0.7s;
-    z-index: 1;
-    & > li {
-        padding: 8px;
-        border-radius: 4px;
-        transition: 0.4s;
-        &:hover {
-            color: white;
-        }
-        &:first-child {
-            margin-top: 16px;
-        }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: #265071;
+  max-height: 0;
+  overflow: hidden;
+  padding: 1px;
+  transition: 0.7s;
+  z-index: 1;
+  & > li {
+    padding: 8px;
+    border-radius: 4px;
+    transition: 0.4s;
+    &:hover {
+      color: white;
     }
+    &:first-child {
+      margin-top: 16px;
+    }
+  }
 }
 .active {
-    transform: none;
+  transform: none;
 }
 .container {
-    position: fixed;
-    max-height: 980px;
-    height: 100%;
-    width: 1440px;
-    top: 0;
-    left: 50%;
-    z-index: 7;
-    transform: translateX(-50%);
-    overflow: hidden;
+  position: fixed;
+  max-height: 980px;
+  height: 100%;
+  width: 1440px;
+  top: 0;
+  left: 50%;
+  z-index: 7;
+  transform: translateX(-50%);
+  overflow: hidden;
 }

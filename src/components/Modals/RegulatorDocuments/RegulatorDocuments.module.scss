@@ -1,150 +1,150 @@
 .root {
-    position: relative;
-    & > img {
-        position: absolute;
-        right: 0;
-        top: -55px;
-    }
-    & > h2 {
-        color: #193a54;
-        margin-top: 24px;
-        margin-bottom: 48px;
-    }
+  position: relative;
+  & > img {
+    position: absolute;
+    right: 0;
+    top: -55px;
+  }
+  & > h2 {
+    color: #193a54;
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
 }
 .list {
-    position: relative;
-    margin-top: 48px;
-    margin-bottom: 48px;
-    & > img {
-        position: absolute;
-        right: 0;
-        top: 69px;
+  position: relative;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  & > img {
+    position: absolute;
+    right: 0;
+    top: 69px;
+  }
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #265071;
+    & > li {
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      &:before {
+        color: #f48a2c;
+        font-size: 32px;
+      }
     }
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
-    & > ul {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        color: #265071;
-        & > li {
-            display: flex;
-            align-items: center;
-            gap: 19px;
-            &:before {
-                color: #f48a2c;
-                font-size: 32px;
-            }
-        }
-    }
+  }
 }
 .stepper {
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
 }
 .grid {
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  &Item {
+    min-height: 113px;
+    background-color: #ffe6d0;
+    padding: 16px 0 0 16px;
+    border-right: 16px solid white;
+    border-bottom: 16px solid white;
+    border-radius: 5px;
+    position: relative;
+    & > span {
+      color: #265071;
+      white-space: pre-wrap;
     }
     & > div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+      position: absolute;
+      width: 42px;
+      height: 35px;
+      background-color: white;
+      right: -16px;
+      bottom: -16px;
+      border-top-left-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f48a2c;
     }
-    &Item {
-        min-height: 113px;
-        background-color: #ffe6d0;
-        padding: 16px 0 0 16px;
-        border-right: 16px solid white;
-        border-bottom: 16px solid white;
-        border-radius: 5px;
-        position: relative;
-        & > span {
-            color: #265071;
-            white-space: pre-wrap;
-        }
-        & > div {
-            position: absolute;
-            width: 42px;
-            height: 35px;
-            background-color: white;
-            right: -16px;
-            bottom: -16px;
-            border-top-left-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #f48a2c;
-        }
-        &:after,
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            background-color: #ffe6d0;
-        }
-        &:after {
-            width: 199px;
-            height: 16px;
-            left: 0;
-            bottom: -16px;
-            border-radius: 0 0 5px 5px;
-        }
-        &:before {
-            width: 16px;
-            height: 78px;
-            right: -16px;
-            top: 0;
-            border-radius: 0 5px 5px 0;
-        }
+    &:after,
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: #ffe6d0;
     }
+    &:after {
+      width: 199px;
+      height: 16px;
+      left: 0;
+      bottom: -16px;
+      border-radius: 0 0 5px 5px;
+    }
+    &:before {
+      width: 16px;
+      height: 78px;
+      right: -16px;
+      top: 0;
+      border-radius: 0 5px 5px 0;
+    }
+  }
 }
 .block {
-    margin-bottom: 48px;
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
+  margin-bottom: 48px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > div {
+    display: grid;
+    grid-template-columns: 354px 372px;
+    gap: 36px;
     & > div {
-        display: grid;
-        grid-template-columns: 354px 372px;
-        gap: 36px;
-        & > div {
-            position: relative;
-            padding-top: 16px;
-            & > h4 {
-                color: #193a54;
-                font-weight: 500;
-            }
-            & > p {
-                margin-top: 8px;
-                color: #265071;
-                & > button {
-                    color: #39a1ed;
-                    background-color: transparent;
-                    text-align: left;
-                }
-            }
-            & > span {
-                color: #f48a2c;
-                position: absolute;
-                top: -8px;
-                right: 0;
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 79px;
-                height: 2px;
-                background-color: #f48a2c;
-                top: 0;
-            }
+      position: relative;
+      padding-top: 16px;
+      & > h4 {
+        color: #193a54;
+        font-weight: 500;
+      }
+      & > p {
+        margin-top: 8px;
+        color: #265071;
+        & > button {
+          color: #39a1ed;
+          background-color: transparent;
+          text-align: left;
         }
+      }
+      & > span {
+        color: #f48a2c;
+        position: absolute;
+        top: -8px;
+        right: 0;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 79px;
+        height: 2px;
+        background-color: #f48a2c;
+        top: 0;
+      }
     }
+  }
 }

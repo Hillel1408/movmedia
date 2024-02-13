@@ -1,57 +1,57 @@
 .root {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transform: translateX(-8px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transform: translateX(-8px);
 }
 .item {
-    display: flex;
-    padding: 8px;
-    min-height: 96px;
-    border-radius: 4px;
-    transition: 0.2s;
-    cursor: pointer;
-    &:hover {
-        background-color: #f8f9ff;
-        & > div {
-            &:first-child {
-                width: 0;
-                border: none !important;
-                color: transparent !important;
-            }
-        }
-    }
+  display: flex;
+  padding: 8px;
+  min-height: 96px;
+  border-radius: 4px;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    background-color: #f8f9ff;
     & > div {
-        &:first-child {
-            transition: width 0.2s;
-            display: flex;
-            align-items: center;
-            width: 51px;
-            justify-content: center;
-            overflow: hidden;
-        }
-        &:last-child {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            align-items: flex-start;
-            justify-content: center;
-            flex: 1 1 auto;
-            & > h3 {
-                color: #193a54;
-                font-family: "Roboto Flex";
-                font-size: 16px;
-                font-weight: 600;
-                line-height: normal;
-            }
-            & > p {
-                color: #265071;
-                white-space: pre-wrap;
-            }
-            & > button {
-                background-color: transparent;
-                color: #39a1ed;
-            }
-        }
+      &:first-child {
+        width: 0;
+        border: none !important;
+        color: transparent !important;
+      }
     }
+  }
+  & > div {
+    &:first-child {
+      transition: width 0.2s;
+      display: flex;
+      align-items: center;
+      width: 51px;
+      justify-content: center;
+      overflow: hidden;
+    }
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1 1 auto;
+      & > h3 {
+        color: #193a54;
+        font-family: 'Roboto Flex';
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+      }
+      & > p {
+        color: #265071;
+        white-space: pre-wrap;
+      }
+      & > button {
+        background-color: transparent;
+        color: #39a1ed;
+      }
+    }
+  }
 }

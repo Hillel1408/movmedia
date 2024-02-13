@@ -1,5 +1,5 @@
-import styles from "./Loader.module.scss";
+import styles from './Loader.module.scss'
 
 export default function Loader() {
-    return <div className={styles.root}></div>;
+  return <div className={styles.root}></div>
 }

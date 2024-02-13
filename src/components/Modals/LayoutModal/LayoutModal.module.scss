@@ -1,19 +1,19 @@
 .root {
-    width: 632px;
-    background-color: white;
-    padding: 32px 33px 52px 80px;
+  width: 632px;
+  background-color: white;
+  padding: 32px 33px 52px 80px;
+  position: absolute;
+  right: 597px;
+  top: 0;
+  border-radius: 8px 0px 0px 8px;
+  & > button {
     position: absolute;
-    right: 597px;
-    top: 0;
-    border-radius: 8px 0px 0px 8px;
-    & > button {
-        position: absolute;
-        background-color: transparent;
-        left: 40px;
-        top: 32px;
-        &:before {
-            font-size: 24px;
-            color: #39a1ed;
-        }
+    background-color: transparent;
+    left: 40px;
+    top: 32px;
+    &:before {
+      font-size: 24px;
+      color: #39a1ed;
     }
+  }
 }

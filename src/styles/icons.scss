@@ -1,140 +1,142 @@
 @font-face {
-    font-family: "icomoon";
-    src: url("../fonts/icomoon.eot?rxc3q1");
-    src: url("../fonts/icomoon.eot?rxc3q1#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?rxc3q1") format("truetype"),
-        url("../fonts/icomoon.woff?rxc3q1") format("woff"), url("../fonts/icomoon.svg?rxc3q1#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?rxc3q1');
+  src: url('../fonts/icomoon.eot?rxc3q1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?rxc3q1') format('truetype'),
+    url('../fonts/icomoon.woff?rxc3q1') format('woff'),
+    url('../fonts/icomoon.svg?rxc3q1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-[class^="icon-"]::before,
-[class*=" icon-"]::before {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icomoon" !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-record-voice-over:before {
-    content: "\e923";
+  content: '\e923';
 }
 .icon-partner-exchange:before {
-    content: "\e924";
+  content: '\e924';
 }
 .icon-person-play:before {
-    content: "\e925";
+  content: '\e925';
 }
 .icon-support-agent:before {
-    content: "\e926";
+  content: '\e926';
 }
 .icon-developer-guide:before {
-    content: "\e901";
+  content: '\e901';
 }
 .icon-file-copy:before {
-    content: "\e902";
+  content: '\e902';
 }
 .icon-folder-supervised:before {
-    content: "\e903";
+  content: '\e903';
 }
 .icon-person-pin:before {
-    content: "\e904";
+  content: '\e904';
 }
 .icon-star:before {
-    content: "\e905";
+  content: '\e905';
 }
 .icon-list-alt:before {
-    content: "\e906";
+  content: '\e906';
 }
 .icon-fact-check:before {
-    content: "\e907";
+  content: '\e907';
 }
 .icon-social-distance:before {
-    content: "\e908";
+  content: '\e908';
 }
 .icon-speed:before {
-    content: "\e909";
+  content: '\e909';
 }
 .icon-chart-data:before {
-    content: "\e90a";
+  content: '\e90a';
 }
 .icon-manage-history:before {
-    content: "\e90b";
+  content: '\e90b';
 }
 .icon-deployed-code-account:before {
-    content: "\e90c";
+  content: '\e90c';
 }
 .icon-cancel:before {
-    content: "\e90d";
+  content: '\e90d';
 }
 .icon-receipt-long:before {
-    content: "\e90e";
+  content: '\e90e';
 }
 .icon-unknown-document:before {
-    content: "\e90f";
+  content: '\e90f';
 }
 .icon-captive-portal:before {
-    content: "\e910";
+  content: '\e910';
 }
 .icon-polygon:before {
-    content: "\e911";
+  content: '\e911';
 }
 .icon-north-east:before {
-    content: "\e912";
+  content: '\e912';
 }
 .icon-deployed-code-alert:before {
-    content: "\e913";
+  content: '\e913';
 }
 .icon-notification-important:before {
-    content: "\e914";
+  content: '\e914';
 }
 .icon-tabs:before {
-    content: "\e915";
+  content: '\e915';
 }
 .icon-box-edit:before {
-    content: "\e916";
+  content: '\e916';
 }
 .icon-display-settings:before {
-    content: "\e917";
+  content: '\e917';
 }
 .icon-groups:before {
-    content: "\e918";
+  content: '\e918';
 }
 .icon-monitoring:before {
-    content: "\e919";
+  content: '\e919';
 }
 .icon-folder-open:before {
-    content: "\e91a";
+  content: '\e91a';
 }
 .icon-admin-panel-settings:before {
-    content: "\e91b";
+  content: '\e91b';
 }
 .icon-05:before {
-    content: "\e91c";
+  content: '\e91c';
 }
 .icon-04:before {
-    content: "\e91d";
+  content: '\e91d';
 }
 .icon-03:before {
-    content: "\e91e";
+  content: '\e91e';
 }
 .icon-line:before {
-    content: "\e900";
+  content: '\e900';
 }
 .icon-02:before {
-    content: "\e91f";
+  content: '\e91f';
 }
 .icon-01:before {
-    content: "\e920";
+  content: '\e920';
 }
 .icon-chevron-right:before {
-    content: "\e921";
+  content: '\e921';
 }

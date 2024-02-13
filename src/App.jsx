@@ -1,7 +1,7 @@
-import { Main } from "./pages";
+import { Main } from './pages'
 
 function App() {
-    return <Main />;
+  return <Main />
 }
 
-export default App;
+export default App

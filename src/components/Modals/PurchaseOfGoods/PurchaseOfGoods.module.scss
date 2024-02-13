@@ -1,25 +1,25 @@
 .root {
-    position: relative;
-    & > img {
-        position: absolute;
-        right: 0;
-        top: -50px;
-    }
-    & > h2 {
-        color: #193a54;
-        margin-top: 24px;
-        margin-bottom: 32px;
-        max-width: 487px;
-    }
-    & > p {
-        color: #265071;
-        max-width: 666px;
-        margin-bottom: 48px;
-    }
+  position: relative;
+  & > img {
+    position: absolute;
+    right: 0;
+    top: -50px;
+  }
+  & > h2 {
+    color: #193a54;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    max-width: 487px;
+  }
+  & > p {
+    color: #265071;
+    max-width: 666px;
+    margin-bottom: 48px;
+  }
 }
 .grid {
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
 }

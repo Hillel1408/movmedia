@@ -1,26 +1,26 @@
 .root {
-    position: relative;
-    & > img {
-        position: absolute;
-        right: 0;
-        top: -55px;
+  position: relative;
+  & > img {
+    position: absolute;
+    right: 0;
+    top: -55px;
+  }
+  & > h2 {
+    color: #193a54;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > p {
+    color: #265071;
+    max-width: 548px;
+    & > button {
+      background-color: transparent;
+      color: #39a1ed;
+      text-decoration: underline;
     }
-    & > h2 {
-        color: #193a54;
-        margin-top: 24px;
-        margin-bottom: 32px;
-    }
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
-    & > p {
-        color: #265071;
-        max-width: 548px;
-        & > button {
-            background-color: transparent;
-            color: #39a1ed;
-            text-decoration: underline;
-        }
-    }
+  }
 }

@@ -1,234 +1,234 @@
 .root {
-    position: relative;
-    & > img {
-        position: absolute;
-        right: 0;
-        top: -50px;
-    }
-    & > h2 {
-        color: #193a54;
-        margin-top: 24px;
-        margin-bottom: 48px;
-    }
+  position: relative;
+  & > img {
+    position: absolute;
+    right: 0;
+    top: -50px;
+  }
+  & > h2 {
+    color: #193a54;
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
 }
 .text {
-    margin-bottom: 51px;
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
+  margin-bottom: 51px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > p {
+    color: #265071;
+    & > button {
+      color: #39a1ed;
+      background-color: transparent;
+    }
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 4px;
+    & > span {
+      font-family: 'Roboto Flex';
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18.75px;
+      color: #193a54;
     }
     & > p {
-        color: #265071;
-        & > button {
-            color: #39a1ed;
-            background-color: transparent;
-        }
+      color: #265071;
     }
-    & > div {
-        display: flex;
-        flex-direction: column;
-        margin-top: 24px;
-        gap: 4px;
-        & > span {
-            font-family: "Roboto Flex";
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 18.75px;
-            color: #193a54;
-        }
-        & > p {
-            color: #265071;
-        }
-    }
+  }
 }
 .grid {
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 16px;
-        max-width: 575px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 16px;
+    max-width: 575px;
+  }
+  & > ul {
+    display: grid;
+    grid-template-columns: 194px 266px 163px;
+    gap: 70px;
+    color: #265071;
+    & > li {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &:before {
+        color: #f48a2c;
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+      & > button {
+        background-color: transparent;
+        color: #39a1ed;
+      }
     }
-    & > ul {
-        display: grid;
-        grid-template-columns: 194px 266px 163px;
-        gap: 70px;
-        color: #265071;
-        & > li {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            &:before {
-                color: #f48a2c;
-                font-size: 32px;
-                margin-bottom: 8px;
-            }
-            & > button {
-                background-color: transparent;
-                color: #39a1ed;
-            }
-        }
-    }
+  }
 }
 .important {
-    margin-top: 32px;
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
-    & > div {
-        &:nth-child(2) {
-            display: grid;
-            grid-template-columns: 362px 379px;
-            gap: 22px;
-            color: #265071;
-            padding-bottom: 24px;
-            & > p {
-                &:before {
-                    content: "";
-                    display: block;
-                    width: 100px;
-                    height: 2px;
-                    background-color: #f48a2c;
-                    margin-bottom: 8px;
-                }
-                & > button {
-                    color: #39a1ed;
-                    background-color: transparent;
-                }
-            }
+  margin-top: 32px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > div {
+    &:nth-child(2) {
+      display: grid;
+      grid-template-columns: 362px 379px;
+      gap: 22px;
+      color: #265071;
+      padding-bottom: 24px;
+      & > p {
+        &:before {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 2px;
+          background-color: #f48a2c;
+          margin-bottom: 8px;
         }
+        & > button {
+          color: #39a1ed;
+          background-color: transparent;
+        }
+      }
     }
+  }
 }
 .documents {
-    margin-top: 48px;
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
+  margin-top: 48px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > div {
+    display: grid;
+    grid-template-columns: 295px 210px;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  & > p {
+    color: #265071;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 16px;
+    border-left: 2px solid #f48a2c;
+    max-width: 539px;
+    & > span {
+      color: #193a54;
+      font-weight: 500;
     }
-    & > div {
-        display: grid;
-        grid-template-columns: 295px 210px;
-        gap: 12px;
-        margin-bottom: 48px;
-    }
-    & > p {
-        color: #265071;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding-left: 16px;
-        border-left: 2px solid #f48a2c;
-        max-width: 539px;
-        & > span {
-            color: #193a54;
-            font-weight: 500;
-        }
-    }
+  }
 }
 .stepper {
-    margin-top: 32px;
-    & > h3 {
-        color: #193a54;
-        margin-bottom: 24px;
-    }
-    & > ul {
-        color: #265071;
-        display: grid;
-        grid-template-columns: 388px 1fr;
-        column-gap: 10px;
-        padding-left: 26px;
-        & > li {
-            padding-top: 16px;
-            padding-bottom: 16px;
-            position: relative;
-            & > span {
-                display: block;
-                width: 16px;
-                height: 16px;
-                border-radius: 100%;
-                background-color: #f48a2c;
-                position: absolute;
-                top: 0;
-                transform: translateY(-50%);
-                &:before {
-                    content: "";
-                    display: block;
-                    width: 8px;
-                    height: 16px;
-                    position: absolute;
-                }
-            }
-            & > button {
-                color: #39a1ed;
-                background: transparent;
-            }
-            &:nth-child(1) {
-                border-top: 1px solid #f48a2c;
-            }
-            &:nth-child(2) {
-                border-top: 1px solid #f48a2c;
-                border-right: 1px solid #f48a2c;
-                border-bottom: 1px solid #f48a2c;
-                border-radius: 0 13px 13px 0;
-                & > span {
-                    &:before {
-                        background-color: white;
-                        transform: translateX(100%);
-                        right: 0;
-                    }
-                }
-            }
-            &:nth-child(3) {
-                margin-left: -26px;
-                padding-left: 26px;
-                border-top: 1px solid #f48a2c;
-                border-left: 1px solid #f48a2c;
-                border-bottom: 1px solid #f48a2c;
-                border-radius: 13px 0 0 13px;
-            }
-            &:nth-child(4) {
-                & > span {
-                    &:before {
-                        background-color: white;
-                        transform: translateX(100%);
-                        right: 0;
-                    }
-                }
-            }
-            &:nth-child(5) {
-                & > span {
-                    &:before {
-                        background-color: white;
-                        transform: translateX(-100%);
-                        left: 0;
-                    }
-                }
-            }
-            &:nth-child(1),
-            &:nth-child(5) {
-                &:before {
-                    content: url("../../../../public/images/icons/arrow.svg");
-                    position: absolute;
-                    top: -8px;
-                    right: -1px;
-                }
-            }
-            &:nth-child(2) {
-                &:before {
-                    content: url("../../../../public/images/icons/arrow.svg");
-                    position: absolute;
-                    transform: rotate(-180deg);
-                    bottom: -8px;
-                    left: 23.5px;
-                }
-            }
-            &:nth-child(3) {
-                &:before {
-                    content: url("../../../../public/images/icons/arrow.svg");
-                    position: absolute;
-                    bottom: -11px;
-                    left: 11.5px;
-                }
-            }
+  margin-top: 32px;
+  & > h3 {
+    color: #193a54;
+    margin-bottom: 24px;
+  }
+  & > ul {
+    color: #265071;
+    display: grid;
+    grid-template-columns: 388px 1fr;
+    column-gap: 10px;
+    padding-left: 26px;
+    & > li {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      position: relative;
+      & > span {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background-color: #f48a2c;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+        &:before {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 16px;
+          position: absolute;
         }
+      }
+      & > button {
+        color: #39a1ed;
+        background: transparent;
+      }
+      &:nth-child(1) {
+        border-top: 1px solid #f48a2c;
+      }
+      &:nth-child(2) {
+        border-top: 1px solid #f48a2c;
+        border-right: 1px solid #f48a2c;
+        border-bottom: 1px solid #f48a2c;
+        border-radius: 0 13px 13px 0;
+        & > span {
+          &:before {
+            background-color: white;
+            transform: translateX(100%);
+            right: 0;
+          }
+        }
+      }
+      &:nth-child(3) {
+        margin-left: -26px;
+        padding-left: 26px;
+        border-top: 1px solid #f48a2c;
+        border-left: 1px solid #f48a2c;
+        border-bottom: 1px solid #f48a2c;
+        border-radius: 13px 0 0 13px;
+      }
+      &:nth-child(4) {
+        & > span {
+          &:before {
+            background-color: white;
+            transform: translateX(100%);
+            right: 0;
+          }
+        }
+      }
+      &:nth-child(5) {
+        & > span {
+          &:before {
+            background-color: white;
+            transform: translateX(-100%);
+            left: 0;
+          }
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(5) {
+        &:before {
+          content: url('../../../../public/images/icons/arrow.svg');
+          position: absolute;
+          top: -8px;
+          right: -1px;
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: url('../../../../public/images/icons/arrow.svg');
+          position: absolute;
+          transform: rotate(-180deg);
+          bottom: -8px;
+          left: 23.5px;
+        }
+      }
+      &:nth-child(3) {
+        &:before {
+          content: url('../../../../public/images/icons/arrow.svg');
+          position: absolute;
+          bottom: -11px;
+          left: 11.5px;
+        }
+      }
     }
+  }
 }

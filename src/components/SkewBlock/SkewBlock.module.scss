@@ -1,11 +1,11 @@
 .root {
-    width: 135px;
-    border-radius: 8px 4px 0px 0px;
+  width: 135px;
+  border-radius: 8px 4px 0px 0px;
+  height: 26px;
+  & > div {
+    width: 60px;
     height: 26px;
-    & > div {
-        width: 60px;
-        height: 26px;
-        border-radius: 0px 4px 0px 0px;
-        transform: skew(60deg) translateX(100px);
-    }
+    border-radius: 0px 4px 0px 0px;
+    transform: skew(60deg) translateX(100px);
+  }
 }
