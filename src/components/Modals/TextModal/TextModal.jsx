@@ -58,6 +58,6 @@ export default function TextModal({ value, setActiveModal, width, color }) {
         )}
       </div>
     </div>,
-    document.getElementById('portal')
+    document.getElementById('interactive-course-portal')
   )
 }

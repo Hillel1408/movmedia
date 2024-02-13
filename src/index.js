@@ -3,5 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './styles/globals.scss'
 import App from './App'
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(
+  document.getElementById('interactive-course-root')
+)
 root.render(<App />)

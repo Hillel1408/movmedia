@@ -154,6 +154,6 @@ export default function Scheme({ setActiveModal }) {
         </div>
       </div>
     </div>,
-    document.getElementById('portal')
+    document.getElementById('interactive-course-portal')
   )
 }

@@ -190,6 +190,6 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         </ModalContext.Provider>
       </div>
     </div>,
-    document.getElementById('portal')
+    document.getElementById('interactive-course-portal')
   )
 }
