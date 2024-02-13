@@ -180,13 +180,13 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         <ModalContext.Provider
           value={{
             closeModal: setActiveModal,
-            setActiveModal: setActive,
+            setActiveModal: clickHandler,
             activeSwitcher
           }}
         >
           <Transition
             activeModal={Boolean(active)}
-            cls="secondary-animation"
+            cls="interactive-course-secondary-animation"
             timeout={600}
           >
             <>{active && <ModalsSwitcn modal={active} />}</>

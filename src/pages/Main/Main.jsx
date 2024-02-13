@@ -297,7 +297,7 @@ export default function Main() {
 
       <Transition
         activeModal={activeModal === 'scheme'}
-        cls="animation"
+        cls="interactive-course-animation"
         timeout={350}
       >
         <Scheme setActiveModal={setActiveModal} />
@@ -305,7 +305,7 @@ export default function Main() {
 
       <Transition
         activeModal={Boolean(activeModal !== 'scheme' && activeModal)}
-        cls="animation"
+        cls="interactive-course-animation"
         timeout={350}
       >
         <Menu

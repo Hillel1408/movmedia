@@ -173,7 +173,7 @@ export default function RegulatorDocuments() {
         </div>
       </LayoutPageModal>
 
-      <Transition activeModal={activeModal} cls="animation">
+      <Transition activeModal={activeModal} cls="interactive-course-animation">
         <TextModal
           value={textModal}
           setActiveModal={setActiveModal}
