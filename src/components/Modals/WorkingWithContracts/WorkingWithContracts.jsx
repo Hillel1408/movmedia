@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { LayoutPageModal } from '../../index'
+import { LayoutPageModal, SkewBlock } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './WorkingWithContracts.module.scss'
 import classNames from 'classnames'
@@ -42,21 +42,24 @@ export default function WorkingWithContracts() {
         ></img>
         <h2 className="title">Работа с договорами. Отчетность. Контроль.</h2>
         <h3 className="subtitle">С какими документами нужно работать:</h3>
-        <ul className={classNames('block', styles.list)}>
-          {list.map((item, index) => (
-            <li key={index}>
-              <span className="subtitle">0{index + 1}</span>
-              <p className="text-s">{item.text}</p>
-              {item.sublist && (
-                <ul className={classNames('text-xs', styles.subList)}>
-                  {item.sublist.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.listContainer}>
+          <SkewBlock color="#F2FBDC" />
+          <ul className={classNames(styles.list)}>
+            {list.map((item, index) => (
+              <li key={index}>
+                <span className="subtitle">0{index + 1}</span>
+                <p className="text-s">{item.text}</p>
+                {item.sublist && (
+                  <ul className={classNames('text-xs', styles.subList)}>
+                    {item.sublist.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </LayoutPageModal>
   )

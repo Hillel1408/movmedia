@@ -25,6 +25,18 @@
   &:after {
     background-color: #f2fbdc;
   }
+  &Container {
+    margin-top: 26px;
+    position: relative;
+    & > div {
+      &:first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+      }
+    }
+  }
   & > li {
     padding: 16px 24px 24px 24px;
     border-radius: 8px 8px 0px 0px;
