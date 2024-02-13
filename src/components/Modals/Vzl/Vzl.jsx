@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal } from "../../index";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./Vzl.module.scss";
 
 export default function Vzl() {

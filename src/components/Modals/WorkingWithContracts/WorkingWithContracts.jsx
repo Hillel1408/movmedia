@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LayoutPageModal } from "../../index";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./WorkingWithContracts.module.scss";
 import classNames from "classnames";
 

@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { LayoutPageModal, TextModal, Important, Button, Transition } from "../../index";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./ProcurementRegulations.module.scss";
 
 export default function ProcurementRegulations() {

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LayoutPageModal, Stepper } from "../../index";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./Iusmtr.module.scss";
 import classNames from "classnames";
 

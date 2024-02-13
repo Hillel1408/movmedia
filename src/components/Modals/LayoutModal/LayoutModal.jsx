@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./LayoutModal.module.scss";
 
 export default function LayoutModal({ children }) {

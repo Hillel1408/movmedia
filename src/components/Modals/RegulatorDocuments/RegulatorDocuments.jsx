@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { LayoutPageModal, HorizontalStepper, Transition, TextModal } from "../../index";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./RegulatorDocuments.module.scss";
 
 export default function RegulatorDocuments() {

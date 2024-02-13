@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import classNames from "classnames";
 import { LayoutPageModal, TextModal, HorizontalStepper, Important, GridList, Transition } from "../../index";
-import { ModalContext } from "../Menu";
+import { ModalContext } from "../Menu/Menu";
 import styles from "./FormationOfNeed.module.scss";
 
 export default function FormationOfNeed() {
