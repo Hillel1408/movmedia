@@ -3,12 +3,12 @@
 @import 'icons';
 
 body {
+  margin: 0;
   &.lock {
     overflow: hidden;
   }
 }
-#interactive-course-root,
-#interactive-course-portal {
+.interactive-course {
   .container {
     max-width: 1440px;
     min-width: 1440px;
@@ -59,29 +59,30 @@ body {
     line-height: normal;
   }
 }
-
-.interactive-course-animation-enter {
-  opacity: 0;
-  z-index: 7;
-  position: relative;
-}
-.interactive-course-animation-enter-active {
-  opacity: 1;
-  transition: 300ms;
-}
-.interactive-course-animation-exit {
-  opacity: 1;
-  z-index: 7;
-  position: relative;
-}
-.interactive-course-animation-exit-active {
-  opacity: 0;
-  transition: 300ms;
-}
-.interactive-course-secondary-animation-enter {
-  transform: translateX(100%);
-}
-.interactive-course-secondary-animation-enter-active {
-  transform: none;
-  transition: 600ms;
+.interactive-course {
+  &-animation-enter {
+    opacity: 0;
+    z-index: 7;
+    position: relative;
+  }
+  &-animation-enter-active {
+    opacity: 1;
+    transition: 300ms;
+  }
+  &-animation-exit {
+    opacity: 1;
+    z-index: 7;
+    position: relative;
+  }
+  &-animation-exit-active {
+    opacity: 0;
+    transition: 300ms;
+  }
+  &-secondary-animation-enter {
+    transform: translateX(100%);
+  }
+  &-secondary-animation-enter-active {
+    transform: none;
+    transition: 600ms;
+  }
 }

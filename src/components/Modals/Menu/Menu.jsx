@@ -180,7 +180,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
         <ModalContext.Provider
           value={{
             closeModal: setActiveModal,
-            setActiveModal: clickHandler,
+            setActiveModal: setActive,
             activeSwitcher
           }}
         >
