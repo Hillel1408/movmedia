@@ -304,7 +304,7 @@ export default function Main() {
       </Transition>
 
       <Transition
-        activeModal={activeModal !== 'scheme' && activeModal}
+        activeModal={Boolean(activeModal !== 'scheme' && activeModal)}
         cls="animation"
         timeout={350}
       >

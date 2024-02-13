@@ -163,7 +163,7 @@ export default function RegulatorDocuments() {
             </h3>
             <div>
               {gridList.map((item, index) => (
-                <div className={styles.gridItem}>
+                <div key={index} className={styles.gridItem}>
                   <span className="text-s">{item}</span>
                   <div className="text-xs">0{index + 1}</div>
                 </div>
