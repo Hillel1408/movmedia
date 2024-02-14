@@ -6,7 +6,7 @@ export default function Button({ href, text, download }) {
     <a
       href={href}
       className={classNames('icon-north-east', 'text-s', styles.root)}
-      download={download && text}
+      download={download && text + '.docx'}
     >
       {text}
     </a>
