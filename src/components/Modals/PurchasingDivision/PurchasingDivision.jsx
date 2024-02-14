@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 import { LayoutPageModal, HorizontalStepper, Important } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchasingDivision.module.scss'
@@ -84,7 +85,11 @@ export default function PurchasingDivision() {
             Для организации закупочной деятельности должно быть сформировано
             подразделение по подготовке и проведению закупок либо определено
             лицо, ответственное за организацию и проведение закупок, если объем
-            закупок незначителен <button>(Положение)</button>.
+            закупок незначителен{' '}
+            <Link to="/library/ipoz/document#chapter1_2_45">
+              (п. 1.2.45 Положения)
+            </Link>
+            .
           </p>
         </div>
         <div className={styles.stepper}>
