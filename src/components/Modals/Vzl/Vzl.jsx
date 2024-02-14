@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 import { LayoutPageModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Vzl.module.scss'
@@ -49,7 +50,9 @@ export default function Vzl() {
           Закупки у ВЗЛ включаются в план закупок на срок не менее чем 1 (один)
           год в соответствии с требованиями к форме такого плана, установленными
           Департаментом. План закупок формируется с использованием АСЭЗ.{' '}
-          <button>пункт 22.5 Положения ПАО «Газпром»</button>.
+          <Link to="/library/ipoz/document#chapter22_5">
+            пункт 22.5 Положения ПАО «Газпром».
+          </Link>
         </p>
         <div className={styles.grid}>
           <h3 className="subtitle">Способы закупок у ВЗЛ:</h3>

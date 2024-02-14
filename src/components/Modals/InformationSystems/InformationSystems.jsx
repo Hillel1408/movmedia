@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { LayoutModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './InformationSystems.module.scss'
@@ -25,10 +26,14 @@ export default function InformationSystems() {
     },
     {
       title: 'ЭТП ГПБ',
-      text: 'Электронная торговая площадка\nГазпромбанка (п. 1.2.50 Положения).',
+      text: 'Электронная торговая площадка\nГазпромбанка ',
       active: true,
       click: () => {
         value.setActiveModal('etpgpb')
+      },
+      link: {
+        href: '/library/ipoz/document#chapter1_2_50',
+        text: '(п. 1.2.50 Положения).'
       }
     },
     {
@@ -65,7 +70,12 @@ export default function InformationSystems() {
               item.active && (
                 <li key={index} onClick={() => item.click()}>
                   <h3>{item.title}</h3>
-                  <p className="text-xs">{item.text}</p>
+                  <p className="text-xs">
+                    {item.text}
+                    {item.link && (
+                      <Link to={item.link.href}>{item.link.text}</Link>
+                    )}
+                  </p>
                 </li>
               )
           )}

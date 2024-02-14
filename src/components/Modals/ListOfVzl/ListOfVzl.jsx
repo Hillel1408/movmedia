@@ -52,11 +52,14 @@ export default function ListOfVzl() {
     }
   ]
   const buttons = [
-    { text: 'Проект нового перечня', href: '/' },
-    { text: 'Проект изменений в перечень', href: '/' },
+    { text: 'Проект нового перечня', href: '/documents/draftNewList.docx' },
+    {
+      text: 'Проект изменений в перечень',
+      href: '/documents/draftChangesToTheList.docx'
+    },
     {
       text: 'Справка-обоснование включения юридического лица в перечень',
-      href: '/'
+      href: '/documents/helpJustification.docx'
     }
   ]
 
@@ -159,7 +162,7 @@ export default function ListOfVzl() {
           <h3 className="subtitle">Шаблоны и документы</h3>
           <div>
             {buttons.map((item, index) => (
-              <Button key={index} text={item.text} href={item.href} />
+              <Button key={index} text={item.text} href={item.href} download />
             ))}
           </div>
         </div>

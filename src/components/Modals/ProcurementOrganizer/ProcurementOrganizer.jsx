@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 import { LayoutPageModal, NumberedStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ProcurementOrganizer.module.scss'
@@ -126,7 +127,10 @@ export default function ProcurementOrganizer() {
         <div className={classNames('text-s', styles.text)}>
           <p>
             Организатор закупки определяется на стадии планирования закупок
-            заказчика Департаментом ЦОУЗ <button>(п. 1.3.1.3 Положения)</button>
+            заказчика Департаментом ЦОУЗ{' '}
+            <Link to="/library/ipoz/document#chapter1_3_1_3">
+              (п. 1.3.1.3 Положения)
+            </Link>
             .
           </p>
           <p>

@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 import { LayoutPageModal, Stepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Asez.module.scss'
@@ -75,8 +76,10 @@ export default function Asez() {
             Это система, обеспечивающая поддержку бизнес-процессов закупочной
             деятельности Группы Газпром, а также выполняющая функции
             корпоративной информационной системы в сфере закупок,
-            взаимодействующей с единой информационной системой (п. 1.2.1
-            Положения).
+            взаимодействующей с единой информационной системой{' '}
+            <Link to="/library/ipoz/document#chapter1_2_1">
+              (п. 1.2.1 Положения).
+            </Link>
           </p>
           <p>
             Важно начать процесс регистрации в АСЭЗ параллельно с процессом

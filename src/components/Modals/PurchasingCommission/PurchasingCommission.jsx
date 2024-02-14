@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 import { LayoutPageModal, Important, NumberedStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchasingCommission.module.scss'
@@ -70,7 +71,11 @@ export default function PurchasingCommission() {
         <p className="text-s">
           Закупочная комиссия формируется Организатором из числа лиц, включенных
           в состав потенциальных членов закупочной комиссии, утвержденный
-          генеральным директором <button>(п. 1.4.2 Положения)</button>.
+          генеральным директором{' '}
+          <Link to="/library/ipoz/document#chapter1_4_2">
+            (п. 1.4.2 Положения)
+          </Link>
+          .
         </p>
         <Important
           color="#e3f3ff"

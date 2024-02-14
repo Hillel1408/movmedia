@@ -32,6 +32,9 @@
       & > p {
         color: #265071;
         white-space: pre-wrap;
+        & > a {
+          color: #39a1ed;
+        }
       }
     }
   }

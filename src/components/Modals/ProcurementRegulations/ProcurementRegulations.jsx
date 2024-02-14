@@ -1,4 +1,5 @@
 import { useEffect, useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
 import {
   LayoutPageModal,
   TextModal,
@@ -42,9 +43,9 @@ export default function ProcurementRegulations() {
   const buttons = [
     {
       text: 'Проект решения о присоединении к Положению ПАО «Газпром»',
-      href: '/'
+      href: '#'
     },
-    { text: 'Проект перечня ВЗЛ', href: '/' }
+    { text: 'Проект перечня ВЗЛ', href: '#' }
   ]
 
   return (
@@ -68,13 +69,18 @@ export default function ProcurementRegulations() {
             <p className="text-s">
               Дочерние и дочерние дочерних обществ ПАО «Газпром» должны
               присоединиться к Положению ПАО «Газпром» —
-              <button>п. 1.1.4 Положения ПАО «Газпром»</button>
+              <Link to="/library/ipoz/document#chapter1_1_4">
+                п. 1.1.4 Положения ПАО «Газпром»
+              </Link>
               . Иные Компании Группы Газпром должны рассмотреть вопрос
               <br />о присоединении к Положению ПАО «Газпром» и только, если
               органы, уполномоченные принять решение
               <br />о присоединении, такое решение не приняли — разработать и
               утвердить свое положение на основе Положения ПАО «Газпром» —{' '}
-              <button>п. 1.1.4 Положения ПАО «Газпром»</button>.
+              <Link to="/library/ipoz/document#chapter1_1_4">
+                п. 1.1.4 Положения ПАО «Газпром»
+              </Link>
+              .
             </p>
             <div>
               <span>Продолжительность этапа:</span>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import classNames from 'classnames'
+import { Link } from 'react-router-dom'
 import {
   LayoutPageModal,
   TextModal,
@@ -33,8 +34,10 @@ export default function FormationOfNeed() {
     },
     {
       text: 'Закупки в Группе Газпром осуществляются на основании годового плана закупок Группы Газпром. ',
-      button: '(Раздел 2 Положения)',
-      clickHandler: e => {}
+      link: {
+        href: '/library/ipoz/document#chapter2',
+        text: '(п. 2.2 Положения).'
+      }
     },
     {
       text: 'Договоры заключаются по результатам закупок, включенных в план закупок ',
@@ -174,6 +177,9 @@ export default function FormationOfNeed() {
                       <button onClick={e => item.clickHandler(e)}>
                         {item.button}
                       </button>
+                    )}
+                    {item.link && (
+                      <Link to={item.link.href}>{item.link.text}</Link>
                     )}
                   </p>
                 </li>
