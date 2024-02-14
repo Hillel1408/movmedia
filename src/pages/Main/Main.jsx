@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { Switcher, Menu, Scheme, Transition, Loader } from '../../components'
+import { Switcher, Menu, Scheme, Transition } from '../../components'
 import styles from './Main.module.scss'
 
 export default function Main() {
   const [activeModal, setActiveModal] = useState(false)
   const [activeTooltip, setActiveTooltip] = useState('')
   const [activeSwitcher, setActiveSwitcher] = useState(false)
-  const [loading, setLoading] = useState(true)
 
   const list = [
     'государственные корпорации;',
@@ -114,26 +113,7 @@ export default function Main() {
     if (!e.target.closest('.btnTooltipOpen')) setActiveTooltip(false)
   }
 
-  const cacheImages = async srcArray => {
-    const promises = await srcArray.map(src => {
-      return new Promise((resolve, reject) => {
-        const img = new Image()
-        img.src = src
-        img.onload = resolve
-        img.onerror = reject
-      })
-    })
-    await Promise.all(promises)
-    setLoading(false)
-  }
-
   useEffect(() => {
-    cacheImages(
-      [].concat(
-        ...pedestals.map(pd => [pd.imageTop.url, pd.imageBottom.url]),
-        '/images/main/main.avif'
-      )
-    )
     window.addEventListener('click', clickHandler)
     return () => {
       window.removeEventListener('click', clickHandler)
@@ -254,44 +234,40 @@ export default function Main() {
           </div>
         </div>
         <div className={styles.navigation}>
-          {loading ? (
-            <Loader />
-          ) : (
-            <>
-              <div className={styles.navigationPedestals}>
-                {pedestals.map((item, index) => (
-                  <div
-                    key={index}
-                    onClick={() => {
-                      setActiveModal(item.button.modal)
-                    }}
-                  >
-                    <img
-                      src={item.imageTop.url}
-                      alt=""
-                      width={item.imageTop.width}
-                      height={item.imageTop.height}
-                    ></img>
-                    <img
-                      src={item.imageBottom.url}
-                      alt=""
-                      width={item.imageBottom.width}
-                      height={item.imageBottom.height}
-                    ></img>
-                    <button className={classNames(item.button.icon)}>
-                      {item.button.text}
-                    </button>
-                  </div>
-                ))}
-              </div>
-              <img
-                src="/images/main/main.avif"
-                alt=""
-                width="1440px"
-                height="722px"
-              />
-            </>
-          )}
+          <>
+            <div className={styles.navigationPedestals}>
+              {pedestals.map((item, index) => (
+                <div
+                  key={index}
+                  onClick={() => {
+                    setActiveModal(item.button.modal)
+                  }}
+                >
+                  <img
+                    src={item.imageTop.url}
+                    alt=""
+                    width={item.imageTop.width}
+                    height={item.imageTop.height}
+                  ></img>
+                  <img
+                    src={item.imageBottom.url}
+                    alt=""
+                    width={item.imageBottom.width}
+                    height={item.imageBottom.height}
+                  ></img>
+                  <button className={classNames(item.button.icon)}>
+                    {item.button.text}
+                  </button>
+                </div>
+              ))}
+            </div>
+            <img
+              src="/images/main/main.avif"
+              alt=""
+              width="1440px"
+              height="722px"
+            />
+          </>
         </div>
       </div>
 
