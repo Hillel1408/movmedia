@@ -52,14 +52,17 @@ export default function ListOfVzl() {
     }
   ]
   const buttons = [
-    { text: 'Проект нового перечня', href: '/documents/draft-new-list.docx' },
+    {
+      text: 'Проект нового перечня',
+      href: '/documents/Проект нового перечня.docx'
+    },
     {
       text: 'Проект изменений в перечень',
-      href: '/documents/draft-сhanges-to-the-list.docx'
+      href: '/documents/Проект изменений в перечень.docx'
     },
     {
       text: 'Справка-обоснование включения юридического лица в перечень',
-      href: '/documents/help-justification.docx'
+      href: '/documents/Справка-обоснование включения юридического лица в перечень.docx'
     }
   ]
 
