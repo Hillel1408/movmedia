@@ -128,7 +128,7 @@ export default function ProcurementRegulations() {
               <p>
                 Для Компаний, для которых ПАО «Газпром» — единственный участник
                 (акционер), — подготовку и утверждение решения осуществляет ПАО
-                «Газпром». Вам необходимо обеспечить направление в ЦОУЗ перечень
+                «Газпром». Вам необходимо обеспечить направление в ЦОУЗ переченя
                 ВЗЛ для утверждения.
               </p>
               <p>
@@ -244,9 +244,7 @@ export default function ProcurementRegulations() {
                 >
                   Ст. 4 Закона
                 </button>
-                , <button>постановление № 908</button>),
-                <br />
-                постановление № 908, а также в АСЭЗ
+                , <button>постановление № 908</button>), а также в АСЭЗ
                 <br />
                 одновременно с размещением в ЕИС.
               </li>
@@ -273,7 +271,7 @@ export default function ProcurementRegulations() {
           </div>
           <div className={styles.documents}>
             <h3 className="modal-subtitle">Шаблоны и документы</h3>
-            <div>
+            <div style={{ marginBottom: '0' }}>
               {buttons.map((item, index) => (
                 <Button key={index} text={item.text} href={item.href} />
               ))}
