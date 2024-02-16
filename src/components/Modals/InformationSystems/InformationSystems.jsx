@@ -73,7 +73,13 @@ export default function InformationSystems() {
                   <p className="text-xs">
                     {item.text}
                     {item.link && (
-                      <Link to={item.link.href} target="_blank">
+                      <Link
+                        to={item.link.href}
+                        target="_blank"
+                        onClick={e => {
+                          e.stopPropagation()
+                        }}
+                      >
                         {item.link.text}
                       </Link>
                     )}
