@@ -9,6 +9,9 @@
   }
   & > p {
     color: #265071;
+    & > a {
+      color: #39a1ed;
+    }
   }
   &Item {
     display: flex;

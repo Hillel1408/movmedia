@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './HorizontalStepper.module.scss'
 
 export default function HorizontalStepper({ list, color, grid, type }) {
@@ -27,7 +28,17 @@ export default function HorizontalStepper({ list, color, grid, type }) {
             )}
           </div>
           {item.title && <span className="text-medium-s">{item.title}</span>}
-          {item.text && <p className="text-xs">{item.text}</p>}
+          {item.text && (
+            <p className="text-xs">
+              {item.text}
+              {item.links &&
+                item.links.map((item, index) => (
+                  <Link key={index} to={item.href} target="_blank">
+                    {item.text}
+                  </Link>
+                ))}
+            </p>
+          )}
         </div>
       ))}
     </div>
