@@ -103,10 +103,17 @@ export default function RegulatorDocuments() {
               <div className="text-s">
                 <h4>Изучите регламентные документы ПАО «Газпром».</h4>
                 <p>
-                  Список есть, но он постоянно обновляется. Ознакомиться можно
-                  по <button>здесь</button>. Либо направить запрос на адрес
-                  электронной почты: 646-2-3m# с темой «Свод ЛНА Газпром для
-                  вновь принятой КГГ».
+                  Список есть, но он постоянно обновляется. Ознакомиться можно{' '}
+                  <a
+                    href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/documents?category=all&subcategory=1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    здесь
+                  </a>
+                  . Либо направить запрос на адрес электронной почты:
+                  646-2-3m@adm.gazprom.ru с темой «Свод ЛНА Газпром для вновь
+                  принятой КГГ».
                 </p>
                 <span className="text-medium-s">01</span>
               </div>

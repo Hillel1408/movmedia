@@ -17,7 +17,14 @@ export default function GridList({ gridList }) {
           <div key={index} className={styles.list}>
             {el.items.map((item, index) => (
               <div key={index} className={styles.listItem}>
-                <h4 className="text-medium-s">{item.title}</h4>
+                <h4 className="text-medium-s">
+                  {item.title}
+                  {item.link && (
+                    <a href={item.link.href} target="_blank" rel="noreferrer">
+                      {item.link.title}
+                    </a>
+                  )}
+                </h4>
                 {item.text && <p className="text-s">{item.text}</p>}
                 {item.list && (
                   <ul className="text-xs">

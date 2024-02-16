@@ -61,6 +61,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      white-space: pre-wrap;
       &::before {
         font-size: 16px;
         color: #f46c63;

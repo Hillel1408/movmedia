@@ -179,7 +179,9 @@ export default function FormationOfNeed() {
                       </button>
                     )}
                     {item.link && (
-                      <Link to={item.link.href}>{item.link.text}</Link>
+                      <Link to={item.link.href} target="_blank">
+                        {item.link.text}
+                      </Link>
                     )}
                   </p>
                 </li>

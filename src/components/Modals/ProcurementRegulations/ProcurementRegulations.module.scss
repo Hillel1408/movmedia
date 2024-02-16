@@ -160,6 +160,9 @@
         color: #39a1ed;
         background: transparent;
       }
+      & > a {
+        color: #39a1ed;
+      }
       &:nth-child(1) {
         border-top: 1px solid #f48a2c;
       }

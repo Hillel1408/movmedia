@@ -97,4 +97,10 @@
     color: #265071;
     margin-bottom: 16px;
   }
+  & > div {
+    padding: 0;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
 }

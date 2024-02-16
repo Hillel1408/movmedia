@@ -112,7 +112,7 @@
   }
   & > div {
     display: grid;
-    grid-template-columns: 354px 372px;
+    grid-template-columns: 369px 1fr;
     gap: 36px;
     & > div {
       position: relative;
@@ -128,6 +128,9 @@
           color: #39a1ed;
           background-color: transparent;
           text-align: left;
+        }
+        & > a {
+          color: #39a1ed;
         }
       }
       & > span {

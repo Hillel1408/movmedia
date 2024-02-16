@@ -69,7 +69,7 @@ export default function ProcurementRegulations() {
             <p className="text-s">
               Дочерние и дочерние дочерних обществ ПАО «Газпром» должны
               присоединиться к Положению ПАО «Газпром» —
-              <Link to="/library/ipoz/document#chapter1_1_4">
+              <Link to="/library/ipoz/document#chapter1_1_4" target="_blank">
                 п. 1.1.4 Положения ПАО «Газпром»
               </Link>
               . Иные Компании Группы Газпром должны рассмотреть вопрос
@@ -77,7 +77,7 @@ export default function ProcurementRegulations() {
               органы, уполномоченные принять решение
               <br />о присоединении, такое решение не приняли — разработать и
               утвердить свое положение на основе Положения ПАО «Газпром» —{' '}
-              <Link to="/library/ipoz/document#chapter1_1_4">
+              <Link to="/library/ipoz/document#chapter1_1_4" target="_blank">
                 п. 1.1.4 Положения ПАО «Газпром»
               </Link>
               .
@@ -244,7 +244,15 @@ export default function ProcurementRegulations() {
                 >
                   Ст. 4 Закона
                 </button>
-                , <button>постановление № 908</button>), а также в АСЭЗ
+                ,{' '}
+                <a
+                  href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/142"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  постановление № 908
+                </a>
+                ), а также в АСЭЗ
                 <br />
                 одновременно с размещением в ЕИС.
               </li>

@@ -43,7 +43,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 17px;
-    padding-bottom: 56px;
+    padding-bottom: 140px;
     & > li {
       color: #265071;
       display: flex;
@@ -64,7 +64,7 @@
   & > img {
     position: absolute;
     right: 0;
-    top: 260px;
+    top: 285px;
   }
 }
 .block {

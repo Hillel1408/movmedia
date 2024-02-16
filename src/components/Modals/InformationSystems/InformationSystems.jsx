@@ -38,7 +38,7 @@ export default function InformationSystems() {
     },
     {
       title: 'ИУС МТР',
-      text: 'Информационно-управляющая система\nматериально-технических ресурсов ПАО\n«Газпром»',
+      text: 'Информационно-управляющая система\nматериально-технических ресурсов ПАО «Газпром»',
       active: true,
       click: () => {
         value.setActiveModal('iusmtr')
@@ -73,7 +73,9 @@ export default function InformationSystems() {
                   <p className="text-xs">
                     {item.text}
                     {item.link && (
-                      <Link to={item.link.href}>{item.link.text}</Link>
+                      <Link to={item.link.href} target="_blank">
+                        {item.link.text}
+                      </Link>
                     )}
                   </p>
                 </li>

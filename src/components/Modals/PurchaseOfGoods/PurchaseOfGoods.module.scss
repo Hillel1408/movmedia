@@ -15,6 +15,9 @@
     color: #265071;
     max-width: 666px;
     margin-bottom: 48px;
+    & > a {
+      color: #39a1ed;
+    }
   }
 }
 .grid {

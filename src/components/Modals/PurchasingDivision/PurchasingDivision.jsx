@@ -86,7 +86,7 @@ export default function PurchasingDivision() {
             подразделение по подготовке и проведению закупок либо определено
             лицо, ответственное за организацию и проведение закупок, если объем
             закупок незначителен{' '}
-            <Link to="/library/ipoz/document#chapter1_2_45">
+            <Link to="/library/ipoz/document#chapter1_2_45" target="_blank">
               (п. 1.2.45 Положения)
             </Link>
             .

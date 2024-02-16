@@ -66,8 +66,15 @@ export default function Smsp() {
                 <li>
                   <p className="icon-polygon">
                     Проверьте, есть ли у вас необходимость в товарах, работах и
-                    услугах, которые относятся к исключениям по пункту 7
-                    Положения Правительства № 1352 — не включайте их в перечень.
+                    услугах, которые относятся к исключениям по{' '}
+                    <a
+                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      пункту 7 Положения № 1352
+                    </a>{' '}
+                    — не включайте их в перечень.
                   </p>
                 </li>
                 <li>
@@ -167,8 +174,23 @@ export default function Smsp() {
                     либо с органами исполнительной власти субъектов РФ в случае,
                     если ваша компания включена в перечень конкретных
                     заказчиков, в отношении планов закупок которых проводится
-                    оценка соответствия (Распоряжение № 2258-р, Распоряжение №
-                    717-р).
+                    оценка соответствия (
+                    <a
+                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/185"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Распоряжение № 2258-р
+                    </a>
+                    ,{' '}
+                    <a
+                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/184"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Распоряжение № 717-р
+                    </a>
+                    ).
                   </p>
                 </li>
                 <li>
@@ -331,7 +353,15 @@ export default function Smsp() {
                         <p className="icon-polygon">
                           Сформируйте и разместите в ЕИС годовой отчет о закупке
                           инновационной продукции, высокотехнологичной
-                          продукции, в том числе у СМСП (Постановление № 1442).
+                          продукции, в том числе у СМСП (
+                          <a
+                            href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/165"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Постановление № 1442
+                          </a>
+                          ).
                         </p>
                       </li>
                     </ul>

@@ -39,28 +39,57 @@ export default function NumberedStepper({ item, idx, bgColor }) {
             {item.text}
           </p>
         )}
-        {item.list && (
-          <ul
-            className={classNames('text-xs', styles.list)}
-            style={{
-              borderLeft:
-                bgColor === '#39A1ED' ? '1px solid white' : '1px solid #39a1ed',
-              color: bgColor === '#39A1ED' ? 'white' : '#265071'
-            }}
-          >
-            {item.list?.map((el, index) => (
-              <li key={index}>
-                <span
+        {item.lists && (
+          <div className={styles.lists}>
+            {item.lists.map((item, index) => (
+              <div key={index}>
+                {item.title && <p className="text-s">{item.title}</p>}
+                {item.subtitle && (
+                  <span className="text-xs">{item.subtitle}</span>
+                )}
+                <ul
+                  className={classNames('text-xs', styles.list)}
                   style={{
-                    backgroundColor: bgColor === '#39A1ED' ? 'white' : '#39a1ed'
+                    borderLeft:
+                      bgColor === '#39A1ED'
+                        ? '1px solid white'
+                        : '1px solid #39a1ed',
+                    color: bgColor === '#39A1ED' ? 'white' : '#265071'
                   }}
-                ></span>
-                {el}
-              </li>
+                >
+                  {item.list?.map((el, index) => (
+                    <li key={index}>
+                      <span
+                        style={{
+                          backgroundColor:
+                            bgColor === '#39A1ED' ? 'white' : '#39a1ed'
+                        }}
+                      ></span>
+                      {el}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
       </div>
+      {item.note && (
+        <div className={classNames(styles.note, 'icon-star')}>
+          <div>
+            <span className="text-medium-s">{item.note.title}</span>
+            {item.note.list && (
+              <ul className="text-s">
+                {item.note.list.map((item, index) => (
+                  <li key={index} className="">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
