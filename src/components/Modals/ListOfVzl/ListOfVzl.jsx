@@ -1,11 +1,24 @@
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { LayoutPageModal, Important, Button } from '../../index'
+import {
+  LayoutPageModal,
+  Important,
+  Button,
+  Transition,
+  TextModal
+} from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ListOfVzl.module.scss'
 
 export default function ListOfVzl() {
+  const [textModal, setTextModal] = useState('')
+  const [activeModal, setActiveModal] = useState(false)
+
   const value = useContext(ModalContext)
+
+  useEffect(() => {
+    textModal && setActiveModal(true)
+  }, [textModal])
 
   const list = [
     'Проанализируйте свою потребность на предмет возможности ее удовлетворения взаимозависимыми лицами.',
@@ -67,143 +80,171 @@ export default function ListOfVzl() {
   ]
 
   return (
-    <LayoutPageModal
-      clickHandler={() => value.setActiveModal('normative-base')}
-    >
-      <div className={styles.root}>
-        <img
-          src="/images/normativeBase/img-3.webp"
-          alt=""
-          width="282px"
-          height="218px"
-        ></img>
-        <h2 className="title">Перечень ВЗЛ</h2>
-        <p className="text-s">
-          Перечень ВЗЛ — часть положения о закупках{' '}
-          <button>(Ст. 1 Закона №223-ФЗ)</button>, поэтому он утверждается
-          вместе с принятием решения о присоединении к Положению ПАО «Газпром»
-          либо с принятием решения об утверждении своего положения о закупках (в
-          составе этого положения).
-        </p>
-        <div className={styles.block}>
-          <h3 className="subtitle">Для чего формировать перечень ВЗЛ?</h3>
-          <div>
-            <h4 className="modal-subtitle">Закупки у ВЗЛ</h4>
-            <div className="text-s">
-              <p>
-                <span></span>
-                не подпадают под действие Закона № 223-ФЗ, если проводятся у ВЗЛ{' '}
-                <br /> = заказчиков по Закону № 223-ФЗ, либо у иных ВЗЛ в целях
-                <br />
-                обеспечения единого технологического процесса;
-              </p>
-              <p>
-                <span></span>осуществляются в соответствии с разделом 22
-                Положения <br /> о закупках.
-              </p>
-              <svg width="120" height="92" viewBox="0 0 120 92" fill="none">
-                <path
-                  d="M0 46H96C108.703 46 119 35.7025 119 23V0"
-                  stroke="#F48A2C"
-                  strokeDasharray="2 2"
-                />
-                <path
-                  d="M0 46H96C108.703 46 119 56.2975 119 69V92"
-                  stroke="#F48A2C"
-                  strokeDasharray="2 2"
-                />
-              </svg>
-            </div>
-          </div>
-          <Important
-            color="#FFE6D0"
-            list={[
-              {
-                text: 'Компании Группы Газпром не могут применять перечень ВЗЛ ПАО «Газпром» для своих закупок. Исключение — случаи, когда Компания Группы Газпром выступает агентом и осуществляет закупку от имени ПАО «Газпром».'
-              }
-            ]}
-            width="100%"
-            secondaryColor="#F48A2C"
-          />
-        </div>
-        <div className={styles.text}>
-          <h3 className="subtitle">Как сформировать Перечень ВЗЛ?</h3>
-          <p className="text-s">
-            В Перечень ВЗЛ Компании — заказчика могут быть включены как
-            организации, которые уже включены <br /> в Перечень ПАО «Газпром»,
-            так и организации, которые в нем не указаны.
-          </p>
-          <p className="text-s">
-            Порядок подготовки и внесения изменений в перечни ВЗЛ для целей
-            закупок определен письмом Департамента от 16.06.2021 № 06/46-1809.
-          </p>
-        </div>
-        <div className={styles.list}>
-          <h3 className="subtitle">Для формирования Перечня</h3>
-          <ul>
-            {list.map((item, index) => (
-              <li key={index} className="text-xs">
-                <span>{index + 1}</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+    <>
+      <LayoutPageModal
+        clickHandler={() => value.setActiveModal('normative-base')}
+      >
+        <div className={styles.root}>
           <img
-            src="/images/normativeBase/img-4.webp"
+            src="/images/normativeBase/img-3.webp"
             alt=""
-            width="303px"
-            height="193px"
+            width="282px"
+            height="218px"
           ></img>
-          <Important
-            color="#FFE6D0"
-            list={importantList}
-            width="100%"
-            secondaryColor="#F48A2C"
-          />
-        </div>
-        <div className={styles.documents}>
-          <h3 className="subtitle">Шаблоны и документы</h3>
-          <div>
-            {buttons.map((item, index) => (
-              <Button key={index} text={item.text} href={item.href} download />
-            ))}
+          <h2 className="title">Перечень ВЗЛ</h2>
+          <p className="text-s">
+            Перечень ВЗЛ — часть положения о закупках{' '}
+            <button
+              onClick={e =>
+                setTextModal({
+                  title: 'П. 13 ч. 4 ст. 1 Закона № 223-ФЗ:',
+                  text: '13) … перечень предусмотренных настоящим пунктом юридических лиц определен правовыми актами, предусмотренными частью 1 статьи 2 настоящего Федерального закона и регламентирующими правила закупок. В таких правовых актах указывается обоснование включения в указанный перечень каждого юридического лица в соответствии с положениями Налогового кодекса Российской Федерации;',
+                  clientX: e.clientX,
+                  clientY: e.clientY
+                })
+              }
+            >
+              (Ст. 1 Закона №223-ФЗ)
+            </button>
+            , поэтому он утверждается вместе с принятием решения о присоединении
+            к Положению ПАО «Газпром» либо с принятием решения об утверждении
+            своего положения о закупках (в составе этого положения).
+          </p>
+          <div className={styles.block}>
+            <h3 className="subtitle">Для чего формировать перечень ВЗЛ?</h3>
+            <div>
+              <h4 className="modal-subtitle">Закупки у ВЗЛ</h4>
+              <div className="text-s">
+                <p>
+                  <span></span>
+                  не подпадают под действие Закона № 223-ФЗ, если проводятся у
+                  ВЗЛ <br /> = заказчиков по Закону № 223-ФЗ, либо у иных ВЗЛ в
+                  целях
+                  <br />
+                  обеспечения единого технологического процесса;
+                </p>
+                <p>
+                  <span></span>осуществляются в соответствии с разделом 22
+                  Положения <br /> о закупках.
+                </p>
+                <svg width="120" height="92" viewBox="0 0 120 92" fill="none">
+                  <path
+                    d="M0 46H96C108.703 46 119 35.7025 119 23V0"
+                    stroke="#F48A2C"
+                    strokeDasharray="2 2"
+                  />
+                  <path
+                    d="M0 46H96C108.703 46 119 56.2975 119 69V92"
+                    stroke="#F48A2C"
+                    strokeDasharray="2 2"
+                  />
+                </svg>
+              </div>
+            </div>
+            <Important
+              color="#FFE6D0"
+              list={[
+                {
+                  text: 'Компании Группы Газпром не могут применять перечень ВЗЛ ПАО «Газпром» для своих закупок. Исключение — случаи, когда Компания Группы Газпром выступает агентом и осуществляет закупку от имени ПАО «Газпром».'
+                }
+              ]}
+              width="100%"
+              secondaryColor="#F48A2C"
+            />
           </div>
-        </div>
-        <div className={styles.agreement}>
-          <h3 className="subtitle">Как согласовывать перечень ВЗЛ с ЦОУЗ?</h3>
-          <div>
-            <p>Для согласования Перечня:</p>
-            <ul className={styles.agreementList}>
-              {agreementList.map((item, index) => (
-                <li key={index} className={item.icon}>
-                  <div>
-                    <p className="text-medium-s">{item.title}</p>
-                    <p className="text-s">{item.text}</p>
-                    {item.list && (
-                      <ul
-                        className={classNames(
-                          'text-s',
-                          styles.agreementSublist
-                        )}
-                      >
-                        {item.list.map((item, index) => (
-                          <li key={index}>{item}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
+          <div className={styles.text}>
+            <h3 className="subtitle">Как сформировать Перечень ВЗЛ?</h3>
+            <p className="text-s">
+              В Перечень ВЗЛ Компании — заказчика могут быть включены как
+              организации, которые уже включены <br /> в Перечень ПАО «Газпром»,
+              так и организации, которые в нем не указаны.
+            </p>
+            <p className="text-s">
+              Порядок подготовки и внесения изменений в перечни ВЗЛ для целей
+              закупок определен письмом Департамента от 16.06.2021 № 06/46-1809.
+            </p>
+          </div>
+          <div className={styles.list}>
+            <h3 className="subtitle">Для формирования Перечня</h3>
+            <ul>
+              {list.map((item, index) => (
+                <li key={index} className="text-xs">
+                  <span>{index + 1}</span>
+                  {item}
                 </li>
               ))}
             </ul>
+            <img
+              src="/images/normativeBase/img-4.webp"
+              alt=""
+              width="303px"
+              height="193px"
+            ></img>
+            <Important
+              color="#FFE6D0"
+              list={importantList}
+              width="100%"
+              secondaryColor="#F48A2C"
+            />
           </div>
-          <Important
-            color="#FFE6D0"
-            list={importantList2}
-            width="100%"
-            secondaryColor="#F48A2C"
-          />
+          <div className={styles.documents}>
+            <h3 className="subtitle">Шаблоны и документы</h3>
+            <div>
+              {buttons.map((item, index) => (
+                <Button
+                  key={index}
+                  text={item.text}
+                  href={item.href}
+                  download
+                />
+              ))}
+            </div>
+          </div>
+          <div className={styles.agreement}>
+            <h3 className="subtitle">Как согласовывать перечень ВЗЛ с ЦОУЗ?</h3>
+            <div>
+              <p>Для согласования Перечня:</p>
+              <ul className={styles.agreementList}>
+                {agreementList.map((item, index) => (
+                  <li key={index} className={item.icon}>
+                    <div>
+                      <p className="text-medium-s">{item.title}</p>
+                      <p className="text-s">{item.text}</p>
+                      {item.list && (
+                        <ul
+                          className={classNames(
+                            'text-s',
+                            styles.agreementSublist
+                          )}
+                        >
+                          {item.list.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <Important
+              color="#FFE6D0"
+              list={importantList2}
+              width="100%"
+              secondaryColor="#F48A2C"
+            />
+          </div>
         </div>
-      </div>
-    </LayoutPageModal>
+      </LayoutPageModal>
+
+      <Transition activeModal={activeModal} cls="interactive-course-animation">
+        <TextModal
+          value={textModal}
+          setActiveModal={setActiveModal}
+          width="392px"
+          color="#FFE6D0"
+        />
+      </Transition>
+    </>
   )
 }

@@ -126,7 +126,14 @@ export default function ProcurementRegulations() {
                   (Ст. 1 Закона № 223-ФЗ)
                 </button>
                 . Как разработать перечень ВЗЛ —<br />
-                <button>посмотрите информацию</button>.
+                <button
+                  onClick={() => {
+                    value.setActiveModal('list-of-vzl')
+                  }}
+                >
+                  посмотрите информацию
+                </button>
+                .
               </p>
               <p>
                 Для Компаний, для которых ПАО «Газпром» — единственный участник
@@ -177,7 +184,10 @@ export default function ProcurementRegulations() {
               list={[
                 {
                   text: 'Помните, что к моменту размещения в ЕИС организация уже должна быть зарегистрирована в ЕИС. Как пройти регистрацию в ЕИС ',
-                  button: 'посмотрите информацию.'
+                  button: 'посмотрите информацию.',
+                  clickHandler: () => {
+                    value.setActiveModal('eis')
+                  }
                 }
               ]}
               width="100%"
@@ -273,7 +283,10 @@ export default function ProcurementRegulations() {
               list={[
                 {
                   text: 'Помните, что к моменту размещения в ЕИС организация уже должна быть зарегистрирована в АСЭЗ. Как пройти регистрацию в АСЭЗ ',
-                  button: 'посмотрите информацию.'
+                  button: 'посмотрите информацию.',
+                  clickHandler: () => {
+                    value.setActiveModal('asez')
+                  }
                 }
               ]}
               width="100%"
