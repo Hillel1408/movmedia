@@ -65,7 +65,21 @@ export default function NumberedStepper({ item, idx, bgColor }) {
                             bgColor === '#39A1ED' ? 'white' : '#39a1ed'
                         }}
                       ></span>
-                      {el}
+                      <p>
+                        {typeof el === 'string' && el}
+                        {el.text && el.text}
+                        {el.link && (
+                          <a
+                            href={el.link.href}
+                            download={el.link.download}
+                            style={{
+                              color: bgColor === '#39A1ED' ? 'white' : '#39a1ed'
+                            }}
+                          >
+                            {el.link.text}
+                          </a>
+                        )}
+                      </p>
                     </li>
                   ))}
                 </ul>
