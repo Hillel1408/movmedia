@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { Overlay, ModalsSwitcn, Transition } from '../../index'
 import styles from './Menu.module.scss'
@@ -8,6 +8,7 @@ export const ModalContext = createContext()
 
 export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
   const [active, setActive] = useState(activeModal)
+  const [links, setLinks] = useState('')
 
   const navItems = [
     {
@@ -107,6 +108,18 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
     }, 10)
   }
 
+  useEffect(() => {
+    ;(() => {
+      fetch('data/links.json')
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (links) {
+          setLinks(links)
+        })
+    })()
+  }, [])
+
   return createPortal(
     <div>
       <Overlay
@@ -181,7 +194,8 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
           value={{
             closeModal: setActiveModal,
             setActiveModal: setActive,
-            activeSwitcher
+            activeSwitcher,
+            links
           }}
         >
           <Transition
