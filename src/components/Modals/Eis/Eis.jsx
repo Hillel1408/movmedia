@@ -9,6 +9,7 @@ export default function Eis() {
   const [activeModal, setActiveModal] = useState(false)
 
   const value = useContext(ModalContext)
+  const links = value.links.informationSystems.eis
 
   useEffect(() => {
     textModal && setActiveModal(true)
@@ -191,9 +192,14 @@ export default function Eis() {
           <div className={styles.stepper}>
             <h3 className="subtitle">Как зарегистрироваться в ЕИС?</h3>
             <div>
-              <button className="text-xs">
-                Инструкция на официальном сайте ЕИС
-              </button>
+              <a
+                className="text-xs"
+                href={links.instructions.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {links.instructions.text}
+              </a>
             </div>
             <Stepper
               image="/images/informationSystems/img-9.webp"

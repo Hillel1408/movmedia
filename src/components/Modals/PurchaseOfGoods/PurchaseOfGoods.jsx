@@ -5,6 +5,7 @@ import styles from './PurchaseOfGoods.module.scss'
 
 export default function PurchaseOfGoods() {
   const value = useContext(ModalContext)
+  const links = value.links.planningElements.purchaseOfGoods
 
   const list = [
     {
@@ -21,8 +22,8 @@ export default function PurchaseOfGoods() {
           title:
             'Определите планируемый общий стоимостной объем закупок товаров. Сделать это можно по кодам и наименованиям  приложенном к ',
           link: {
-            title: 'Постановлению № 2013 перечне.',
-            href: 'https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/138'
+            title: links.decree2013.text,
+            href: links.decree2013.href
           },
           list: [
             'Реестр промышленной продукции, произведенной на территории государства — члена Евразийского экономического союза;',
@@ -90,13 +91,8 @@ export default function PurchaseOfGoods() {
         <p className="text-s">
           Требования к обеспечению выполнения доли закупок квотируемых товаров
           российского происхождения предусмотрены{' '}
-          <a
-            href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/138"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Постановлением Правительства Российской Федерации от 03.12.2020 №
-            2013
+          <a href={links.decree2013v.href} target="_blank" rel="noreferrer">
+            {links.decree2013v.text}
           </a>{' '}
           «О минимальной доле закупок товаров российского происхождения».
         </p>

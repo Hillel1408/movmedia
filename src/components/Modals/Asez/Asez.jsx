@@ -7,6 +7,7 @@ import styles from './Asez.module.scss'
 
 export default function Asez() {
   const value = useContext(ModalContext)
+  const links = value.links.informationSystems.asez
 
   const list = [
     {
@@ -77,9 +78,10 @@ export default function Asez() {
             деятельности Группы Газпром, а также выполняющая функции
             корпоративной информационной системы в сфере закупок,
             взаимодействующей с единой информационной системой{' '}
-            <Link to="/library/ipoz/document#chapter1_2_1" target="_blank">
-              (п. 1.2.1 Положения).
+            <Link to={links.chapter1_2_1.href} target="_blank">
+              {links.chapter1_2_1.text}
             </Link>
+            .
           </p>
           <p>
             Важно начать процесс регистрации в АСЭЗ параллельно с процессом

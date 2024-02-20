@@ -7,6 +7,7 @@ import styles from './ProcurementOrganizer.module.scss'
 
 export default function ProcurementOrganizer() {
   const value = useContext(ModalContext)
+  const links = value.links.listOfParticipants.procurementOrganizer
 
   const list = [
     {
@@ -150,8 +151,8 @@ export default function ProcurementOrganizer() {
           <p>
             Организатор закупки определяется на стадии планирования закупок
             заказчика Департаментом ЦОУЗ{' '}
-            <Link to="/library/ipoz/document#chapter1_3_1_3" target="_blank">
-              (п. 1.3.1.3 Положения)
+            <Link to={links.chapter1_3_1_3.href} target="_blank">
+              {links.chapter1_3_1_3.text}
             </Link>
             .
           </p>

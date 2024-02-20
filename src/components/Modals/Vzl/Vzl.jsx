@@ -7,6 +7,7 @@ import styles from './Vzl.module.scss'
 
 export default function Vzl() {
   const value = useContext(ModalContext)
+  const links = value.links.planningElements.vzl
 
   const list = [
     'информацию о таких закупках не нужно размещать в ЕИС;',
@@ -50,8 +51,8 @@ export default function Vzl() {
           Закупки у ВЗЛ включаются в план закупок на срок не менее чем 1 (один)
           год в соответствии с требованиями к форме такого плана, установленными
           Департаментом. План закупок формируется с использованием АСЭЗ.{' '}
-          <Link to="/library/ipoz/document#chapter22_5" target="_blank">
-            пункт 22.5 Положения ПАО «Газпром».
+          <Link to={links.chapter22_5.href} target="_blank">
+            {links.chapter22_5.text}
           </Link>
         </p>
         <div className={styles.grid}>

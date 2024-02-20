@@ -33,6 +33,9 @@
         background-color: transparent;
         text-decoration: underline;
       }
+      & > a {
+        color: #39a1ed;
+      }
     }
     &:not(:first-child) {
       margin-top: -10px;

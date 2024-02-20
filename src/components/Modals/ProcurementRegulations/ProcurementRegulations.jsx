@@ -15,6 +15,7 @@ export default function ProcurementRegulations() {
   const [activeModal, setActiveModal] = useState(false)
 
   const value = useContext(ModalContext)
+  const links = value.links.normativeBase.procurementRegulations
 
   useEffect(() => {
     textModal && setActiveModal(true)
@@ -72,16 +73,16 @@ export default function ProcurementRegulations() {
             <p className="text-s">
               Дочерние и дочерние дочерних обществ ПАО «Газпром» должны
               присоединиться к Положению ПАО «Газпром» —
-              <Link to="/library/ipoz/document#chapter1_1_4" target="_blank">
-                п. 1.1.4 Положения ПАО «Газпром»
+              <Link to={links.chapter1_1_4.href} target="_blank">
+                {links.chapter1_1_4.text}
               </Link>
               . Иные Компании Группы Газпром должны рассмотреть вопрос
               <br />о присоединении к Положению ПАО «Газпром» и только, если
               органы, уполномоченные принять решение
               <br />о присоединении, такое решение не приняли — разработать и
               утвердить свое положение на основе Положения ПАО «Газпром» —{' '}
-              <Link to="/library/ipoz/document#chapter1_1_4" target="_blank">
-                п. 1.1.4 Положения ПАО «Газпром»
+              <Link to={links.chapter1_1_4.href} target="_blank">
+                {links.chapter1_1_4.text}
               </Link>
               .
             </p>
@@ -258,12 +259,8 @@ export default function ProcurementRegulations() {
                   Ст. 4 Закона
                 </button>
                 ,{' '}
-                <a
-                  href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/142"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  постановление № 908
+                <a href={links.decree908.href} target="_blank" rel="noreferrer">
+                  {links.decree908.text}
                 </a>
                 ), а также в АСЭЗ
                 <br />

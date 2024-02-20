@@ -17,6 +17,7 @@ export default function FormationOfNeed() {
   const [activeModal, setActiveModal] = useState(false)
 
   const value = useContext(ModalContext)
+  const links = value.links.planningElements.formationOfNeed
 
   useEffect(() => {
     textModal && setActiveModal(true)
@@ -35,8 +36,8 @@ export default function FormationOfNeed() {
     {
       text: 'Закупки в Группе Газпром осуществляются на основании годового плана закупок Группы Газпром. ',
       link: {
-        href: '/library/ipoz/document#chapter2',
-        text: '(п. 2.2 Положения).'
+        href: links.chapter2.href,
+        text: links.chapter2.text
       }
     },
     {
@@ -57,8 +58,8 @@ export default function FormationOfNeed() {
       text: 'Ведет полный учет потребностей ',
       links: [
         {
-          text: '(п. 2.2 Положения)',
-          href: '/library/ipoz/document#chapter2_2'
+          href: links.chapter2_2.href,
+          text: links.chapter2_2.text
         }
       ]
     },
@@ -66,8 +67,8 @@ export default function FormationOfNeed() {
       text: 'Обеспечивает своевременное согласование в порядке, определенном Заказчиком ',
       links: [
         {
-          text: '(п. 2.2 Положения)',
-          href: '/library/ipoz/document#chapter2_2'
+          href: links.chapter2_2.href,
+          text: links.chapter2_2.text
         }
       ]
     },
@@ -75,12 +76,12 @@ export default function FormationOfNeed() {
       text: 'Обеспечивает своевременное представление потребностей для включения в годовой план закупок Группы Газпром в соответствии с установленными ЦОУЗ процедурами в АСЭЗ ',
       links: [
         {
-          text: '(п. 2.2, ',
-          href: '/library/ipoz/document#chapter2_2'
+          text: links.chapter2_2v.text,
+          href: links.chapter2_2v.href
         },
         {
-          text: 'п. 2.4 Положения)',
-          href: '/library/ipoz/document#chapter2_4'
+          text: links.chapter2_4.text,
+          href: links.chapter2_4.href
         }
       ]
     }

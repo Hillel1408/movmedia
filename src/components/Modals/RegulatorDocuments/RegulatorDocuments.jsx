@@ -13,6 +13,7 @@ export default function RegulatorDocuments() {
   const [activeModal, setActiveModal] = useState(false)
 
   const value = useContext(ModalContext)
+  const links = value.links.normativeBase.regulatorDocuments
 
   useEffect(() => {
     textModal && setActiveModal(true)
@@ -105,11 +106,11 @@ export default function RegulatorDocuments() {
                 <p>
                   Список есть, но он постоянно обновляется. Ознакомиться можно{' '}
                   <a
-                    href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/documents?category=all&subcategory=1"
+                    href={links.regulatoryDocuments.href}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    здесь
+                    {links.regulatoryDocuments.text}
                   </a>
                   . Либо направить запрос на адрес электронной почты:
                   646-2-3m@adm.gazprom.ru с темой «Свод ЛНА Газпром для вновь

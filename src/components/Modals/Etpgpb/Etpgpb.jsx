@@ -6,6 +6,7 @@ import styles from './Etpgpb.module.scss'
 
 export default function Etpgpb() {
   const value = useContext(ModalContext)
+  const links = value.links.informationSystems.etpgpb
 
   const list = [
     'Основная масса закупок в Группе Газпром проводится в электронном виде на ЭТП ГПБ.',
@@ -49,9 +50,11 @@ export default function Etpgpb() {
         />
         <h2 className="title">ЭТП ГПБ</h2>
         <p className="text-s">
-          Используется для закупок по <button>№ 223-ФЗ</button>,{' '}
-          <button>№ 44-ФЗ</button> и коммерческих тендеров, проведения онлайн
-          торгов и аукционов, выдачи ЭЦП и банковских гарантий.
+          Используется для закупок по{' '}
+          <a href={links.fz223.href}>{links.fz223.text}</a>,{' '}
+          <a href={links.fz44.href}>{links.fz44.text}</a> и коммерческих
+          тендеров, проведения онлайн торгов и аукционов, выдачи ЭЦП и
+          банковских гарантий.
         </p>
         <div className={styles.grid}>
           <h3 className="subtitle">Зачем регистрироваться на ЭТП?</h3>

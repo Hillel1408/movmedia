@@ -10,6 +10,7 @@ export default function Smsp() {
   const [activeSpoiler, setActiveSpoiler] = useState(false)
 
   const value = useContext(ModalContext)
+  const links = value.links.planningElements.smsp
 
   useEffect(() => {
     textModal && setActiveModal(true)
@@ -68,11 +69,11 @@ export default function Smsp() {
                     Проверьте, есть ли у вас необходимость в товарах, работах и
                     услугах, которые относятся к исключениям по{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      href={links.decree1352p7.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      пункту 7 Положения № 1352
+                      {links.decree1352p7.text}
                     </a>{' '}
                     — не включайте их в перечень.
                   </p>
@@ -92,11 +93,11 @@ export default function Smsp() {
                     общему объему закупок за вычетом товаров, работ, услуг, не
                     учитываемых в расчете в силу по{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      href={links.decree1352p7.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      п. 7 Положения № 1352
+                      {links.decree1352p7.text}
                     </a>
                     .
                   </p>
@@ -147,11 +148,11 @@ export default function Smsp() {
                     на уровне 30%). При расчете объема закупок у СМСП
                     исключаются закупки товаров, работ, услуг по{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      href={links.decree1352p7.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      п. 7 Положения № 1352
+                      {links.decree1352p7.text}
                     </a>
                     .
                   </p>
@@ -162,11 +163,11 @@ export default function Smsp() {
                     по стоимостному объему оплат в отчетном периоде по
                     договорам, заключенным с даты распространения на Общество{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      href={links.decree1352.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Постановления № 1352
+                      {links.decree1352.text}
                     </a>
                     .
                   </p>
@@ -196,23 +197,23 @@ export default function Smsp() {
                     либо с органами исполнительной власти субъектов РФ в случае,
                     если ваша компания включена в перечень конкретных
                     заказчиков, в отношении планов закупок которых проводится
-                    оценка соответствия{' '}
+                    оценка соответствия (
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/185"
+                      href={links.order2258.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      (Распоряжение № 2258-р
+                      {links.order2258.text}
                     </a>
                     ,{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/184"
+                      href={links.order717.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Распоряжение № 717-р)
+                      {links.order717.text}
                     </a>
-                    .
+                    ) .
                   </p>
                 </li>
                 <li>
@@ -360,11 +361,11 @@ export default function Smsp() {
                           предыдущий год, увеличенному на 5%, но не более 5%
                           запланированного общего объема{' '}
                           <a
-                            href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                            href={links.decree1352p5_3.href}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            (п. 5.3 Положения № 1352)
+                            {links.decree1352p5_3.text}
                           </a>
                           .
                         </p>
@@ -374,20 +375,20 @@ export default function Smsp() {
                           Выполните годовой объем закупки продукции равный
                           объему за предыдущий год, увеличенному на 10%{' '}
                           <a
-                            href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/165"
+                            href={links.decree1442p2.href}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            (п. 2 Положения, утв. Постановлением № 1442)
+                            {links.decree1442p2.text}
                           </a>
                           , а также у СМСП, равный объему за предыдущий год,
                           увеличенному на 5%{' '}
                           <a
-                            href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                            href={links.decree1352p5_2.href}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            (п. 5.2 Положения № 1352)
+                            {links.decree1352p5_2.text}
                           </a>
                           .
                         </p>
@@ -398,11 +399,11 @@ export default function Smsp() {
                           инновационной продукции, высокотехнологичной
                           продукции, в том числе у СМСП{' '}
                           <a
-                            href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/165"
+                            href={links.decree1442.href}
                             target="_blank"
                             rel="noreferrer"
                           >
-                            (Постановление № 1442)
+                            {links.decree1442.text}
                           </a>
                           .
                         </p>
@@ -521,11 +522,11 @@ export default function Smsp() {
                     Составьте годовой отчет о закупке у СМСП (требования к
                     содержанию и форма годового отчета утверждены{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      href={links.decree1352v.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Постановлением № 1352
+                      {links.decree1352v.text}
                     </a>
                     ).
                   </p>
@@ -540,11 +541,11 @@ export default function Smsp() {
                     предыдущие отчетные периоды (с даты распространения на
                     Общество{' '}
                     <a
-                      href="https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/145"
+                      href={links.decree1352.href}
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Постановления № 1352
+                      {links.decree1352.text}
                     </a>
                     )).
                   </p>

@@ -28,6 +28,11 @@ export default function Important({ list, color, width, secondaryColor }) {
                   {item.button}
                 </button>
               )}
+              {item.link && (
+                <a href={item.href} target="_blank" rel="noreferrer">
+                  {item.link}
+                </a>
+              )}
             </p>
           </li>
         ))}

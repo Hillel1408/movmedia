@@ -7,11 +7,13 @@ import styles from './PurchasingCommission.module.scss'
 
 export default function PurchasingCommission() {
   const value = useContext(ModalContext)
+  const links = value.links.listOfParticipants.purchasingCommission
 
   const importantList = [
     {
       text: 'Состав потенциальных членов закупочной комиссии должен быть согласован с ЦОУЗ. Ознакомиться с порядком согласования Вы можете ',
-      button: 'здесь.'
+      link: links.approvalProcedure.text,
+      href: links.approvalProcedure.href
     }
   ]
   const list = [
@@ -91,8 +93,8 @@ export default function PurchasingCommission() {
           Закупочная комиссия формируется Организатором из числа лиц, включенных
           в состав потенциальных членов закупочной комиссии, утвержденный
           генеральным директором{' '}
-          <Link to="/library/ipoz/document#chapter1_4_2" target="_blank">
-            (п. 1.4.2 Положения)
+          <Link to={links.chapter1_4_2.href} target="_blank">
+            {links.chapter1_4_2.text}
           </Link>
           .
         </p>
