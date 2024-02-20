@@ -63,8 +63,8 @@ export default function ProcurementOrganizer() {
             {
               text: 'Заполненная анкета потенциального контрагента ',
               link: {
-                text: '(анкета).',
-                href: '/documents/Анкета.doc',
+                text: links.questionnaire.text,
+                href: links.questionnaire.href,
                 download: true
               }
             },
@@ -109,8 +109,8 @@ export default function ProcurementOrganizer() {
             {
               text: 'Заполненная анкета потенциального контрагента ',
               link: {
-                text: '(анкета).',
-                href: '/documents/Анкета.doc',
+                text: links.questionnaire.text,
+                href: links.questionnaire.href,
                 download: true
               }
             },

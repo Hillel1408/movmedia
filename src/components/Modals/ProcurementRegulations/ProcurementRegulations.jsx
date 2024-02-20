@@ -43,12 +43,12 @@ export default function ProcurementRegulations() {
   ]
   const buttons = [
     {
-      text: 'Проект решения о присоединении к Положению ПАО «Газпром»',
-      href: '/documents/Приложение_2.docx'
+      text: links.joiningGazprom.text,
+      href: links.joiningGazprom.href
     },
     {
-      text: 'Проект перечня ВЗЛ',
-      href: '/documents/Проект нового перечня.docx'
+      text: links.projectVzl.text,
+      href: links.projectVzl.href
     }
   ]
 

@@ -8,6 +8,28 @@
       "decree908": {
         "text": "постановление № 908",
         "href": "https://pempz-rapplb.codm.gazprom.loc:463/library/e-library/document/142"
+      },
+      "joiningGazprom": {
+        "text": "Проект решения о присоединении к Положению ПАО «Газпром»",
+        "href": "/documents/Приложение_2.docx"
+      },
+      "projectVzl": {
+        "text": "Проект перечня ВЗЛ",
+        "href": "/documents/Проект нового перечня.docx"
+      }
+    },
+    "listOfVzl": {
+      "draftNewList": {
+        "text": "Проект нового перечня",
+        "href": "/documents/Проект нового перечня.docx"
+      },
+      "draftChangesToTheList": {
+        "text": "Проект изменений в перечень",
+        "href": "/documents/Проект изменений в перечень.docx"
+      },
+      "reference": {
+        "text": "Справка-обоснование включения юридического лица в перечень",
+        "href": "/documents/Справка-обоснование включения юридического лица в перечень.docx"
       }
     },
     "regulatorDocuments": {
@@ -56,6 +78,10 @@
       "chapter1_3_1_3": {
         "text": "(п. 1.3.1.3 Положения)",
         "href": "/library/ipoz/document#chapter1_3_1_3"
+      },
+      "questionnaire": {
+        "text": "(анкета).",
+        "href": "/documents/Анкета.doc"
       }
     }
   },

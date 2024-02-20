@@ -15,6 +15,7 @@ export default function ListOfVzl() {
   const [activeModal, setActiveModal] = useState(false)
 
   const value = useContext(ModalContext)
+  const links = value.links.normativeBase.listOfVzl
 
   useEffect(() => {
     textModal && setActiveModal(true)
@@ -66,16 +67,16 @@ export default function ListOfVzl() {
   ]
   const buttons = [
     {
-      text: 'Проект нового перечня',
-      href: '/documents/Проект нового перечня.docx'
+      text: links.draftNewList.text,
+      href: links.draftNewList.href
     },
     {
-      text: 'Проект изменений в перечень',
-      href: '/documents/Проект изменений в перечень.docx'
+      text: links.draftChangesToTheList.text,
+      href: links.draftChangesToTheList.href
     },
     {
-      text: 'Справка-обоснование включения юридического лица в перечень',
-      href: '/documents/Справка-обоснование включения юридического лица в перечень.docx'
+      text: links.reference.text,
+      href: links.reference.href
     }
   ]
 
