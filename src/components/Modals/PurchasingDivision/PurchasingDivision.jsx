@@ -5,6 +5,8 @@ import { LayoutPageModal, HorizontalStepper, Important } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchasingDivision.module.scss'
 
+import images from '../../../assets/images'
+
 export default function PurchasingDivision() {
   const value = useContext(ModalContext)
   const links = value.links.listOfParticipants.purchasingDivision
@@ -65,12 +67,7 @@ export default function PurchasingDivision() {
       clickHandler={() => value.setActiveModal('list-of-participants')}
     >
       <div className={styles.root}>
-        <img
-          src="/images/listOfParticipants/img-3.webp"
-          alt=""
-          width="283px"
-          height="252px"
-        ></img>
+        <img src={images.threeMan} alt="" width="283px" height="252px"></img>
         <h2 className="title">
           Сформируйте
           <br />

@@ -4,6 +4,8 @@ import { ModalContext } from '../Menu/Menu'
 import styles from './Iusmtr.module.scss'
 import classNames from 'classnames'
 
+import images from '../../../assets/images'
+
 export default function Iusmtr() {
   const value = useContext(ModalContext)
 
@@ -40,7 +42,7 @@ export default function Iusmtr() {
     >
       <div className={styles.root}>
         <img
-          src="/images/informationSystems/img-5.webp"
+          src={images.manAtTheComputer}
           alt=""
           width="232px"
           height="220px"
@@ -71,7 +73,7 @@ export default function Iusmtr() {
         <div className={styles.stepper}>
           <h3 className="subtitle">Для регистрации в ИУС МТР</h3>
           <Stepper
-            image="/images/informationSystems/img-6.webp"
+            image={images.manWithCloud}
             steps={steps}
             width="164px"
             height="200px"

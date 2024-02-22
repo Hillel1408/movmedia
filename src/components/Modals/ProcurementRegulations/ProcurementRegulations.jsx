@@ -10,6 +10,8 @@ import {
 import { ModalContext } from '../Menu/Menu'
 import styles from './ProcurementRegulations.module.scss'
 
+import images from '../../../assets/images'
+
 export default function ProcurementRegulations() {
   const [textModal, setTextModal] = useState('')
   const [activeModal, setActiveModal] = useState(false)
@@ -58,12 +60,7 @@ export default function ProcurementRegulations() {
         clickHandler={() => value.setActiveModal('normative-base')}
       >
         <div className={styles.root}>
-          <img
-            src="/images/normativeBase/img-5.webp"
-            alt=""
-            width="316px"
-            height="223px"
-          ></img>
+          <img src={images.loaderTwo} alt="" width="316px" height="223px"></img>
           <h2 className="title">Положение о закупках</h2>
           <div className={styles.text}>
             <h3 className="subtitle">

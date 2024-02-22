@@ -208,7 +208,7 @@
       &:nth-child(1),
       &:nth-child(5) {
         &:before {
-          content: url('../../../../public/images/icons/arrow.svg');
+          content: url('../../../assets/images/icons/arrow.svg');
           position: absolute;
           top: -8px;
           right: -1px;
@@ -216,7 +216,7 @@
       }
       &:nth-child(2) {
         &:before {
-          content: url('../../../../public/images/icons/arrow.svg');
+          content: url('../../../assets/images/icons/arrow.svg');
           position: absolute;
           transform: rotate(-180deg);
           bottom: -8px;
@@ -225,7 +225,7 @@
       }
       &:nth-child(3) {
         &:before {
-          content: url('../../../../public/images/icons/arrow.svg');
+          content: url('../../../assets/images/icons/arrow.svg');
           position: absolute;
           bottom: -11px;
           left: 11.5px;

@@ -48,7 +48,7 @@
       z-index: 1;
     }
     &:nth-child(1) {
-      background-image: url('../../../../public/images/main/menu/img-1.webp');
+      background-image: url('../../../assets/images/main/menu/normativeBase.webp');
       background-size: 231px;
       &:hover {
         outline: 1px solid #f48a2c;
@@ -70,7 +70,7 @@
       }
     }
     &:nth-child(2) {
-      background-image: url('../../../../public/images/main/menu/img-2.webp');
+      background-image: url('../../../assets/images/main/menu/networks.webp');
       background-size: 291px;
       &:hover {
         outline: 1px solid #5545d7;
@@ -92,7 +92,7 @@
       }
     }
     &:nth-child(3) {
-      background-image: url('../../../../public/images/main/menu/img-5.webp');
+      background-image: url('../../../assets/images/main/menu/interaction.webp');
       background-size: 262px;
       &:hover {
         outline: 1px solid #39a1ed;
@@ -114,7 +114,7 @@
       }
     }
     &:nth-child(4) {
-      background-image: url('../../../../public/images/main/menu/img-4.webp');
+      background-image: url('../../../assets/images/main/menu/planning.webp');
       background-size: 240px;
       & > span {
         max-width: 281px;
@@ -124,7 +124,7 @@
       }
     }
     &:nth-child(5) {
-      background-image: url('../../../../public/images/main/menu/img-3.webp');
+      background-image: url('../../../assets/images/main/menu/reporting.webp');
       background-size: 272px;
       &:hover {
         outline: 1px solid #f46c63;

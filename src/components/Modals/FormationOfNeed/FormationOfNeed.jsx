@@ -12,6 +12,8 @@ import {
 import { ModalContext } from '../Menu/Menu'
 import styles from './FormationOfNeed.module.scss'
 
+import images from '../../../assets/images'
+
 export default function FormationOfNeed() {
   const [textModal, setTextModal] = useState('')
   const [activeModal, setActiveModal] = useState(false)
@@ -97,7 +99,7 @@ export default function FormationOfNeed() {
   const gridList = [
     {
       image: {
-        url: '/images/planningElements/img-9.webp',
+        url: images.peopleWithClouds,
         width: '297px',
         height: '262px'
       }
@@ -127,14 +129,14 @@ export default function FormationOfNeed() {
     },
     {
       image: {
-        url: '/images/planningElements/img-10.webp',
+        url: images.foldersThree,
         width: '299px',
         height: '165px'
       }
     },
     {
       image: {
-        url: '/images/planningElements/img-11.webp',
+        url: images.manAtTheComputerThree,
         width: '306px',
         height: '235px'
       }
@@ -170,7 +172,7 @@ export default function FormationOfNeed() {
       >
         <div className={styles.root}>
           <img
-            src="/images/planningElements/img-8.webp"
+            src={images.peopleAtTheTableTwo}
             alt=""
             width="282px"
             height="255px"

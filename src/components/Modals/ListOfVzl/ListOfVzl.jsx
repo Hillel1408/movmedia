@@ -10,6 +10,8 @@ import {
 import { ModalContext } from '../Menu/Menu'
 import styles from './ListOfVzl.module.scss'
 
+import images from '../../../assets/images'
+
 export default function ListOfVzl() {
   const [textModal, setTextModal] = useState('')
   const [activeModal, setActiveModal] = useState(false)
@@ -87,7 +89,7 @@ export default function ListOfVzl() {
       >
         <div className={styles.root}>
           <img
-            src="/images/normativeBase/img-3.webp"
+            src={images.peopleAtTheTable}
             alt=""
             width="282px"
             height="218px"
@@ -175,12 +177,7 @@ export default function ListOfVzl() {
                 </li>
               ))}
             </ul>
-            <img
-              src="/images/normativeBase/img-4.webp"
-              alt=""
-              width="303px"
-              height="193px"
-            ></img>
+            <img src={images.folders} alt="" width="303px" height="193px"></img>
             <Important
               color="#FFE6D0"
               list={importantList}

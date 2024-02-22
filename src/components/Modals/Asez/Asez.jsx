@@ -5,6 +5,8 @@ import { LayoutPageModal, Stepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Asez.module.scss'
 
+import images from '../../../assets/images'
+
 export default function Asez() {
   const value = useContext(ModalContext)
   const links = value.links.informationSystems.asez
@@ -65,12 +67,7 @@ export default function Asez() {
       clickHandler={() => value.setActiveModal('information-systems')}
     >
       <div className={styles.root}>
-        <img
-          src="/images/informationSystems/img-2.webp"
-          alt=""
-          width="282px"
-          height="278px"
-        ></img>
+        <img src={images.asez} alt="" width="282px" height="278px"></img>
         <h2 className="title">АСЭЗ</h2>
         <div className={classNames(styles.text, 'text-s')}>
           <p>
@@ -112,7 +109,7 @@ export default function Asez() {
         <div className={styles.stepper}>
           <h3 className="subtitle">Как зарегистрироваться в АСЭЗ?</h3>
           <Stepper
-            image="/images/informationSystems/img-1.webp"
+            image={images.server}
             steps={steps}
             width="232px"
             height="328px"

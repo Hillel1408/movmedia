@@ -4,6 +4,8 @@ import { ModalContext } from '../Menu/Menu'
 import styles from './WorkingWithContracts.module.scss'
 import classNames from 'classnames'
 
+import images from '../../../assets/images'
+
 export default function WorkingWithContracts() {
   const value = useContext(ModalContext)
 
@@ -35,7 +37,7 @@ export default function WorkingWithContracts() {
     <LayoutPageModal clickHandler={() => value.closeModal('')}>
       <div className={styles.root}>
         <img
-          src="/images/workingWithContracts/img-1.webp"
+          src={images.manWithTable}
           alt=""
           width="276px"
           height="269px"

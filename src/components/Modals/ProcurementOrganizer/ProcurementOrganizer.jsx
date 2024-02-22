@@ -5,6 +5,8 @@ import { LayoutPageModal, NumberedStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ProcurementOrganizer.module.scss'
 
+import images from '../../../assets/images'
+
 export default function ProcurementOrganizer() {
   const value = useContext(ModalContext)
   const links = value.links.listOfParticipants.procurementOrganizer
@@ -132,12 +134,7 @@ export default function ProcurementOrganizer() {
       clickHandler={() => value.setActiveModal('list-of-participants')}
     >
       <div className={styles.root}>
-        <img
-          src="/images/listOfParticipants/img-2.webp"
-          alt=""
-          width="326px"
-          height="280px"
-        ></img>
+        <img src={images.man} alt="" width="326px" height="280px"></img>
         <h2 className="title">
           Организатор
           <br />

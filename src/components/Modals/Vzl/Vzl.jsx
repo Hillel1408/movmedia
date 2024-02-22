@@ -5,6 +5,8 @@ import { LayoutPageModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Vzl.module.scss'
 
+import images from '../../../assets/images'
+
 export default function Vzl() {
   const value = useContext(ModalContext)
   const links = value.links.planningElements.vzl
@@ -19,7 +21,7 @@ export default function Vzl() {
   const gridList = [
     {
       image: {
-        url: '/images/planningElements/img-2.webp',
+        url: images.billboard,
         width: '202px',
         height: '168px'
       },
@@ -27,7 +29,7 @@ export default function Vzl() {
     },
     {
       image: {
-        url: '/images/planningElements/img-3.webp',
+        url: images.box,
         width: '203px',
         height: '141px'
       },
@@ -41,7 +43,7 @@ export default function Vzl() {
     >
       <div className={styles.root}>
         <img
-          src="/images/planningElements/img-1.webp"
+          src={images.peopleWithBoxes}
           alt=""
           width="257px"
           height="277px"

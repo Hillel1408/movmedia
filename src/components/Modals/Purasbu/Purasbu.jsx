@@ -4,6 +4,8 @@ import { ModalContext } from '../Menu/Menu'
 import styles from './Purasbu.module.scss'
 import classNames from 'classnames'
 
+import images from '../../../assets/images'
+
 export default function Purasbu() {
   const value = useContext(ModalContext)
 
@@ -47,7 +49,7 @@ export default function Purasbu() {
     >
       <div className={styles.root}>
         <img
-          src="/images/informationSystems/img-7.webp"
+          src={images.computersTwo}
           alt=""
           width="276px"
           height="213px"
@@ -78,7 +80,7 @@ export default function Purasbu() {
             </p>
           </div>
           <Stepper
-            image="/images/informationSystems/img-10.webp"
+            image={images.cloudWithLetter}
             steps={steps}
             width="215px"
             height="186px"

@@ -4,6 +4,8 @@ import { LayoutPageModal, Stepper, TextModal, Transition } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Eis.module.scss'
 
+import images from '../../../assets/images'
+
 export default function Eis() {
   const [textModal, setTextModal] = useState('')
   const [activeModal, setActiveModal] = useState(false)
@@ -90,7 +92,7 @@ export default function Eis() {
       >
         <div className={styles.root}>
           <img
-            src="/images/informationSystems/img-8.webp"
+            src={images.computerTwo}
             alt=""
             width="287px"
             height="223px"
@@ -202,7 +204,7 @@ export default function Eis() {
               </a>
             </div>
             <Stepper
-              image="/images/informationSystems/img-9.webp"
+              image={images.listPurple}
               steps={steps}
               width="231px"
               height="309px"

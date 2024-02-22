@@ -3,6 +3,8 @@ import { LayoutPageModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ResponsibleASEZEIS.module.scss'
 
+import images from '../../../assets/images'
+
 export default function ResponsibleASEZEIS() {
   const value = useContext(ModalContext)
 
@@ -12,7 +14,7 @@ export default function ResponsibleASEZEIS() {
     >
       <div className={styles.root}>
         <img
-          src="/images/listOfParticipants/img-1.webp"
+          src={images.manAtTheComputerTwo}
           alt=""
           width="276px"
           height="256px"

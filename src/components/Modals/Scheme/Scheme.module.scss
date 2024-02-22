@@ -45,7 +45,7 @@
     &:nth-child(3) {
       position: relative;
       &::before {
-        content: url('../../../../public/images/icons/03.svg');
+        content: url('../../../assets/images/icons/three.svg');
         position: absolute;
         z-index: -1;
         left: 136px;

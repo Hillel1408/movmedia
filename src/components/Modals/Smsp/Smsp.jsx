@@ -4,6 +4,8 @@ import { LayoutPageModal, Important, Transition, TextModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Smsp.module.scss'
 
+import images from '../../../assets/images'
+
 export default function Smsp() {
   const [textModal, setTextModal] = useState('')
   const [activeModal, setActiveModal] = useState(false)
@@ -23,7 +25,7 @@ export default function Smsp() {
       >
         <div className={styles.root}>
           <img
-            src="/images/planningElements/img-12.webp"
+            src={images.peopleWithBoxesTwo}
             alt=""
             width="321px"
             height="258px"

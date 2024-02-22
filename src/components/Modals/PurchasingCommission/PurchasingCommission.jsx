@@ -5,6 +5,8 @@ import { LayoutPageModal, Important, NumberedStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchasingCommission.module.scss'
 
+import images from '../../../assets/images'
+
 export default function PurchasingCommission() {
   const value = useContext(ModalContext)
   const links = value.links.listOfParticipants.purchasingCommission
@@ -77,7 +79,7 @@ export default function PurchasingCommission() {
     >
       <div className={styles.root}>
         <img
-          src="/images/listOfParticipants/img-4.webp"
+          src={images.formationOfNeedTwo}
           alt=""
           width="299px"
           height="335px"

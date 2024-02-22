@@ -4,6 +4,8 @@ import { LayoutPageModal, Stepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Etpgpb.module.scss'
 
+import images from '../../../assets/images'
+
 export default function Etpgpb() {
   const value = useContext(ModalContext)
   const links = value.links.informationSystems.etpgpb
@@ -42,12 +44,7 @@ export default function Etpgpb() {
       clickHandler={() => value.setActiveModal('information-systems')}
     >
       <div className={styles.root}>
-        <img
-          src="/images/informationSystems/img-3.webp"
-          alt=""
-          width="253px"
-          height="233px"
-        />
+        <img src={images.computer} alt="" width="253px" height="233px" />
         <h2 className="title">ЭТП ГПБ</h2>
         <p className="text-s">
           Используется для закупок по{' '}
@@ -73,7 +70,7 @@ export default function Etpgpb() {
             tech@etpgpb.ru.
           </p>
           <Stepper
-            image="/images/informationSystems/img-4.webp"
+            image={images.cloudWithMan}
             steps={steps}
             width="221px"
             height="199px"

@@ -8,6 +8,8 @@ import {
 import { ModalContext } from '../Menu/Menu'
 import styles from './RegulatorDocuments.module.scss'
 
+import images from '../../../assets/images'
+
 export default function RegulatorDocuments() {
   const [textModal, setTextModal] = useState('')
   const [activeModal, setActiveModal] = useState(false)
@@ -57,7 +59,7 @@ export default function RegulatorDocuments() {
       >
         <div className={styles.root}>
           <img
-            src="/images/normativeBase/img-1.webp"
+            src={images.foldersTwo}
             alt=""
             width="293px"
             height="209px"
@@ -80,7 +82,7 @@ export default function RegulatorDocuments() {
           </div>
           <div className={styles.list}>
             <img
-              src="/images/normativeBase/img-2.webp"
+              src={images.openBook}
               width="326px"
               height="177px"
               alt=""

@@ -3,11 +3,13 @@ import { Overlay, BackButton, Spoiler } from '../../index'
 import styles from './Scheme.module.scss'
 import classNames from 'classnames'
 
+import images from '../../../assets/images'
+
 export default function Scheme({ setActiveModal }) {
   const spoilers = [
     {
       image: {
-        url: '/images/scheme/img-2.webp',
+        url: images.formationOfNeed,
         width: '284px',
         height: '241px'
       },
@@ -18,7 +20,7 @@ export default function Scheme({ setActiveModal }) {
     },
     {
       image: {
-        url: '/images/scheme/img-3.webp',
+        url: images.procurementPlan,
         width: '340px',
         height: '239px'
       },
@@ -34,7 +36,7 @@ export default function Scheme({ setActiveModal }) {
     },
     {
       image: {
-        url: '/images/scheme/img-4.webp',
+        url: images.loader,
         width: '232px',
         height: '166px'
       },
@@ -50,7 +52,7 @@ export default function Scheme({ setActiveModal }) {
     },
     {
       image: {
-        url: '/images/scheme/img-5.webp',
+        url: images.peopleShakingHands,
         width: '357px',
         height: '188px'
       },
@@ -64,7 +66,7 @@ export default function Scheme({ setActiveModal }) {
     },
     {
       image: {
-        url: '/images/scheme/img-6.webp',
+        url: images.conclusionOfContracts,
         width: '325px',
         height: '189px'
       },
@@ -118,7 +120,7 @@ export default function Scheme({ setActiveModal }) {
             ))}
             <div className={styles.lastSpoiler}>
               <img
-                src="/images/scheme/img-1.webp"
+                src={images.computers}
                 alt=""
                 width="254px"
                 height="206px"

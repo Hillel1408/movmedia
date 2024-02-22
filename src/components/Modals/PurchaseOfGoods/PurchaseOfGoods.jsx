@@ -3,6 +3,8 @@ import { LayoutPageModal, GridList } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchaseOfGoods.module.scss'
 
+import images from '../../../assets/images'
+
 export default function PurchaseOfGoods() {
   const value = useContext(ModalContext)
   const links = value.links.planningElements.purchaseOfGoods
@@ -10,7 +12,7 @@ export default function PurchaseOfGoods() {
   const list = [
     {
       image: {
-        url: '/images/planningElements/img-5.webp',
+        url: images.foldersWithBoxes,
         width: '374px',
         height: '219px'
       }
@@ -53,14 +55,14 @@ export default function PurchaseOfGoods() {
     },
     {
       image: {
-        url: '/images/planningElements/img-6.webp',
+        url: images.redList,
         width: '373px',
         height: '290px'
       }
     },
     {
       image: {
-        url: '/images/planningElements/img-7.webp',
+        url: images.rackWithRedBoxes,
         width: '285px',
         height: '275px'
       }
@@ -81,12 +83,7 @@ export default function PurchaseOfGoods() {
       clickHandler={() => value.setActiveModal('planning-elements')}
     >
       <div className={styles.root}>
-        <img
-          src="/images/planningElements/img-4.webp"
-          alt=""
-          width="284px"
-          height="195px"
-        />
+        <img src={images.loaderThree} alt="" width="284px" height="195px" />
         <h2 className="title">Закупки квотируемых товаров</h2>
         <p className="text-s">
           Требования к обеспечению выполнения доли закупок квотируемых товаров
