@@ -1,4 +1,14 @@
 const images = {
+  pedestalTop1: require('./main/pedestals/1/pedestalTop1.avif'),
+  pedestalBottom1: require('./main/pedestals/1/pedestalBottom1.avif'),
+  pedestalTop2: require('./main/pedestals/2/pedestalTop2.avif'),
+  pedestalBottom2: require('./main/pedestals/2/pedestalBottom2.avif'),
+  pedestalTop3: require('./main/pedestals/3/pedestalTop3.avif'),
+  pedestalBottom3: require('./main/pedestals/3/pedestalBottom3.avif'),
+  pedestalTop4: require('./main/pedestals/4/pedestalTop4.avif'),
+  pedestalBottom4: require('./main/pedestals/4/pedestalBottom4.avif'),
+  pedestalTop5: require('./main/pedestals/5/pedestalTop5.avif'),
+  pedestalBottom5: require('./main/pedestals/5/pedestalBottom5.avif'),
   computers: require('./scheme/computers.webp'),
   formationOfNeed: require('./scheme/formationOfNeed.webp'),
   procurementPlan: require('./scheme/procurementPlan.webp'),
@@ -40,7 +50,7 @@ const images = {
   arrow: require('./icons/arrow.svg'),
   arrowTwo: require('./icons/arrowTwo.svg'),
   three: require('./icons/three.svg'),
-  mainBg: require('./main/main.avif')
+  mainBg: require('./main/mainBg.avif')
 }
 
 export default images

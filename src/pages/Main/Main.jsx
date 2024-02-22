@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { Switcher, Menu, Scheme, Transition } from '../../components'
+import { Switcher, Menu, Scheme, Transition, Loader } from '../../components'
 import styles from './Main.module.scss'
+
+import images from '../../assets/images'
 
 export default function Main() {
   const [activeModal, setActiveModal] = useState(false)
   const [activeTooltip, setActiveTooltip] = useState('')
   const [activeSwitcher, setActiveSwitcher] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const list = [
     'государственные корпорации;',
@@ -20,12 +23,12 @@ export default function Main() {
   const pedestals = [
     {
       imageTop: {
-        url: '/images/main/pedestals/1/img-1.avif',
+        url: images.pedestalTop1,
         width: '283px',
         height: '317px'
       },
       imageBottom: {
-        url: '/images/main/pedestals/1/img-2.avif',
+        url: images.pedestalBottom1,
         width: '283px',
         height: '259px'
       },
@@ -37,12 +40,12 @@ export default function Main() {
     },
     {
       imageTop: {
-        url: '/images/main/pedestals/2/img-1.avif',
+        url: images.pedestalTop2,
         width: '283px',
         height: '309px'
       },
       imageBottom: {
-        url: '/images/main/pedestals/2/img-2.avif',
+        url: images.pedestalBottom2,
         width: '283px',
         height: '330px'
       },
@@ -54,12 +57,12 @@ export default function Main() {
     },
     {
       imageTop: {
-        url: '/images/main/pedestals/3/img-1.avif',
+        url: images.pedestalTop3,
         width: '283px',
         height: '300px'
       },
       imageBottom: {
-        url: '/images/main/pedestals/3/img-2.avif',
+        url: images.pedestalBottom3,
         width: '283px',
         height: '292px'
       },
@@ -71,12 +74,12 @@ export default function Main() {
     },
     {
       imageTop: {
-        url: '/images/main/pedestals/4/img-1.avif',
+        url: images.pedestalTop4,
         width: '283px',
         height: '323px'
       },
       imageBottom: {
-        url: '/images/main/pedestals/4/img-2.avif',
+        url: images.pedestalBottom4,
         width: '283px',
         height: '368px'
       },
@@ -88,12 +91,12 @@ export default function Main() {
     },
     {
       imageTop: {
-        url: '/images/main/pedestals/5/img-1.avif',
+        url: images.pedestalTop5,
         width: '283px',
         height: '334px'
       },
       imageBottom: {
-        url: '/images/main/pedestals/5/img-2.avif',
+        url: images.pedestalBottom5,
         width: '287px',
         height: '420px'
       },
@@ -113,7 +116,26 @@ export default function Main() {
     if (!e.target.closest('.btnTooltipOpen')) setActiveTooltip(false)
   }
 
+  const cacheImages = async srcArray => {
+    const promises = await srcArray.map(src => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.src = src
+        img.onload = resolve
+        img.onerror = reject
+      })
+    })
+    await Promise.all(promises)
+    setLoading(false)
+  }
+
   useEffect(() => {
+    cacheImages(
+      [].concat(
+        ...pedestals.map(pd => [pd.imageTop.url, pd.imageBottom.url]),
+        images.mainBg
+      )
+    )
     window.addEventListener('click', clickHandler)
     return () => {
       window.removeEventListener('click', clickHandler)
@@ -234,40 +256,39 @@ export default function Main() {
           </div>
         </div>
         <div className={styles.navigation}>
-          <>
-            <div className={styles.navigationPedestals}>
-              {pedestals.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    setActiveModal(item.button.modal)
-                  }}
-                >
-                  <img
-                    src={item.imageTop.url}
-                    alt=""
-                    width={item.imageTop.width}
-                    height={item.imageTop.height}
-                  ></img>
-                  <img
-                    src={item.imageBottom.url}
-                    alt=""
-                    width={item.imageBottom.width}
-                    height={item.imageBottom.height}
-                  ></img>
-                  <button className={classNames(item.button.icon)}>
-                    {item.button.text}
-                  </button>
-                </div>
-              ))}
-            </div>
-            <img
-              src="/images/main/main.avif"
-              alt=""
-              width="1440px"
-              height="722px"
-            />
-          </>
+          {loading ? (
+            <Loader />
+          ) : (
+            <>
+              <div className={styles.navigationPedestals}>
+                {pedestals.map((item, index) => (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      setActiveModal(item.button.modal)
+                    }}
+                  >
+                    <img
+                      src={item.imageTop.url}
+                      alt=""
+                      width={item.imageTop.width}
+                      height={item.imageTop.height}
+                    ></img>
+                    <img
+                      src={item.imageBottom.url}
+                      alt=""
+                      width={item.imageBottom.width}
+                      height={item.imageBottom.height}
+                    ></img>
+                    <button className={classNames(item.button.icon)}>
+                      {item.button.text}
+                    </button>
+                  </div>
+                ))}
+              </div>
+              <img src={images.mainBg} alt="" width="1440px" height="722px" />
+            </>
+          )}
         </div>
       </div>
 
