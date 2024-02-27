@@ -1,4 +1,6 @@
 .root {
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
   position: fixed;
   background: rgba(12, 27, 38, 0.5);
   width: 100%;
@@ -6,6 +8,12 @@
   z-index: 7;
   top: 0;
   left: 0;
+  * {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  }
   & > div {
     padding: 16px;
     border-radius: 8px;
@@ -30,6 +38,9 @@
   flex-direction: column;
   gap: 10px;
   color: #193a54;
+  & > li {
+    list-style-type: none;
+  }
 }
 .subList {
   display: flex;
