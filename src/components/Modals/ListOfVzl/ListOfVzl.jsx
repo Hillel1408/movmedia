@@ -9,6 +9,7 @@ import {
 } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ListOfVzl.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -58,13 +59,13 @@ export default function ListOfVzl() {
         'если нужно, справку и документы, обосновывающие необходимость срочного принятия решения;',
         'обоснование включения юридических лиц в перечень, в т. ч. с указанием объёмов закупок за предыдущие 3 года и  планируемых к проведению.'
       ],
-      icon: 'icon-list-alt'
+      icon: globalStyles.iconListAlt
     },
     {
       title:
         'Если в перечне есть организации, признанные взаимозависимыми по п. 6 ст. 105.1 НК РФ, в том числе АО «СОГАЗ»:',
       text: 'К списку документов нужно приложить копию обращения АО «СОГАЗ» о возможности признания/сохранения взаимозависимости с Компанией Группы Газпром и копию обращения Компании Группы Газпром к АО «СОГАЗ» о получении согласия на  самостоятельное признание взаимозависимости. Компания обязана обеспечить ежегодный обмен такими письмами-подтверждениями вне зависимости от того, вносятся ли изменения в перечень.',
-      icon: 'icon-fact-check'
+      icon: globalStyles.iconFactCheck
     }
   ]
   const buttons = [
@@ -94,8 +95,8 @@ export default function ListOfVzl() {
             width="282px"
             height="218px"
           ></img>
-          <h2 className="title">Перечень ВЗЛ</h2>
-          <p className="text-s">
+          <h2 className={globalStyles.title}>Перечень ВЗЛ</h2>
+          <p className={globalStyles.textS}>
             Перечень ВЗЛ — часть положения о закупках{' '}
             <button
               onClick={e =>
@@ -114,10 +115,12 @@ export default function ListOfVzl() {
             своего положения о закупках (в составе этого положения).
           </p>
           <div className={styles.block}>
-            <h3 className="subtitle">Для чего формировать перечень ВЗЛ?</h3>
+            <h3 className={globalStyles.subtitle}>
+              Для чего формировать перечень ВЗЛ?
+            </h3>
             <div>
-              <h4 className="modal-subtitle">Закупки у ВЗЛ</h4>
-              <div className="text-s">
+              <h4 className={globalStyles.modalSubtitle}>Закупки у ВЗЛ</h4>
+              <div className={globalStyles.textS}>
                 <p>
                   <span></span>
                   не подпадают под действие Закона № 223-ФЗ, если проводятся у
@@ -156,22 +159,24 @@ export default function ListOfVzl() {
             />
           </div>
           <div className={styles.text}>
-            <h3 className="subtitle">Как сформировать Перечень ВЗЛ?</h3>
-            <p className="text-s">
+            <h3 className={globalStyles.subtitle}>
+              Как сформировать Перечень ВЗЛ?
+            </h3>
+            <p className={globalStyles.textS}>
               В Перечень ВЗЛ Компании — заказчика могут быть включены как
               организации, которые уже включены <br /> в Перечень ПАО «Газпром»,
               так и организации, которые в нем не указаны.
             </p>
-            <p className="text-s">
+            <p className={globalStyles.textS}>
               Порядок подготовки и внесения изменений в перечни ВЗЛ для целей
               закупок определен письмом Департамента от 16.06.2021 № 06/46-1809.
             </p>
           </div>
           <div className={styles.list}>
-            <h3 className="subtitle">Для формирования Перечня</h3>
+            <h3 className={globalStyles.subtitle}>Для формирования Перечня</h3>
             <ul>
               {list.map((item, index) => (
-                <li key={index} className="text-xs">
+                <li key={index} className={globalStyles.textXs}>
                   <span>{index + 1}</span>
                   {item}
                 </li>
@@ -186,7 +191,7 @@ export default function ListOfVzl() {
             />
           </div>
           <div className={styles.documents}>
-            <h3 className="subtitle">Шаблоны и документы</h3>
+            <h3 className={globalStyles.subtitle}>Шаблоны и документы</h3>
             <div>
               {buttons.map((item, index) => (
                 <Button
@@ -199,19 +204,21 @@ export default function ListOfVzl() {
             </div>
           </div>
           <div className={styles.agreement}>
-            <h3 className="subtitle">Как согласовывать перечень ВЗЛ с ЦОУЗ?</h3>
+            <h3 className={globalStyles.subtitle}>
+              Как согласовывать перечень ВЗЛ с ЦОУЗ?
+            </h3>
             <div>
               <p>Для согласования Перечня:</p>
               <ul className={styles.agreementList}>
                 {agreementList.map((item, index) => (
                   <li key={index} className={item.icon}>
                     <div>
-                      <p className="text-medium-s">{item.title}</p>
-                      <p className="text-s">{item.text}</p>
+                      <p className={globalStyles.textMediumS}>{item.title}</p>
+                      <p className={globalStyles.textS}>{item.text}</p>
                       {item.list && (
                         <ul
                           className={classNames(
-                            'text-s',
+                            globalStyles.textS,
                             styles.agreementSublist
                           )}
                         >

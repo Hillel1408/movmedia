@@ -1,6 +1,7 @@
 import styles from './Stepper.module.scss'
 import { SkewBlock } from '../index'
 import classNames from 'classnames'
+import globalStyles from '../../styles/Globals.module.scss'
 
 export default function Stepper({ image, steps, width, height }) {
   return (
@@ -10,11 +11,11 @@ export default function Stepper({ image, steps, width, height }) {
       <ul>
         {steps.map((item, index) => (
           <li key={index} className={styles.item}>
-            <span className="text-medium-s">{item.title}</span>
-            {item.text && <p className="text-s">{item.text}</p>}
+            <span className={globalStyles.textMediumS}>{item.title}</span>
+            {item.text && <p className={globalStyles.textS}>{item.text}</p>}
             {item.list && (
               <ul
-                className="text-s"
+                className={globalStyles.textS}
                 style={{
                   paddingLeft: item.list?.dots && '15px',
                   gap: !item.list?.dots && '8px'

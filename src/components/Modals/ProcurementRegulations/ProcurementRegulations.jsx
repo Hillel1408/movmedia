@@ -9,6 +9,7 @@ import {
 } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ProcurementRegulations.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -24,14 +25,14 @@ export default function ProcurementRegulations() {
   }, [textModal])
 
   const gridList = [
-    { text: 'подготовить проект Решения', icon: 'icon-receipt-long' },
+    { text: 'подготовить проект Решения', icon: globalStyles.iconReceiptLong },
     {
       text: 'вынести вопрос о присоединении на рассмотрение уполномоченного органа с соблюдением корпоративных процедур',
-      icon: 'icon-unknown-document'
+      icon: globalStyles.iconUnknownDocument
     },
     {
       text: 'разместить решение о присоединении в ЕИС на официальном сайте',
-      icon: 'icon-captive-portal',
+      icon: globalStyles.iconCaptivePortal,
       button: '(Ст. 2 Закона № 223-ФЗ)',
       clickHandler: e => {
         setTextModal({
@@ -61,13 +62,13 @@ export default function ProcurementRegulations() {
       >
         <div className={styles.root}>
           <img src={images.loaderTwo} alt="" width="316px" height="223px"></img>
-          <h2 className="title">Положение о закупках</h2>
+          <h2 className={globalStyles.title}>Положение о закупках</h2>
           <div className={styles.text}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Присоединитесь к Положению
               <br />о закупках ПАО «Газпром».
             </h3>
-            <p className="text-s">
+            <p className={globalStyles.textS}>
               Дочерние и дочерние дочерних обществ ПАО «Газпром» должны
               присоединиться к Положению ПАО «Газпром» —
               <Link to={links.chapter1_1_4.href} target="_blank">
@@ -85,14 +86,14 @@ export default function ProcurementRegulations() {
             </p>
             <div>
               <span>Продолжительность этапа:</span>
-              <p className="text-s">До 1-го месяца.</p>
+              <p className={globalStyles.textS}>До 1-го месяца.</p>
             </div>
           </div>
           <div className={styles.grid}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Для присоединения к Положению ПАО «Газпром» нужно:
             </h3>
-            <ul className="text-s">
+            <ul className={globalStyles.textS}>
               {gridList.map((item, index) => (
                 <li key={index} className={item.icon}>
                   {item.text}
@@ -106,8 +107,8 @@ export default function ProcurementRegulations() {
             </ul>
           </div>
           <div className={styles.important}>
-            <h3 className="modal-subtitle">Что важно помнить</h3>
-            <div className="text-s">
+            <h3 className={globalStyles.modalSubtitle}>Что важно помнить</h3>
+            <div className={globalStyles.textS}>
               <p>
                 В решении о присоединении должно быть указано на утверждение
                 перечня ВЗЛ — этот перечень у каждого заказчика свой{' '}
@@ -193,13 +194,13 @@ export default function ProcurementRegulations() {
             />
           </div>
           <div className={styles.documents}>
-            <h3 className="modal-subtitle">Шаблоны и документы</h3>
+            <h3 className={globalStyles.modalSubtitle}>Шаблоны и документы</h3>
             <div>
               {buttons.map((item, index) => (
                 <Button key={index} text={item.text} href={item.href} />
               ))}
             </div>
-            <p className="text-s">
+            <p className={globalStyles.textS}>
               <span>
                 Либо утвердите свое Положение о закупках, если решение о
                 присоединении к Положению ПАО «Газпром» не принято.
@@ -208,10 +209,10 @@ export default function ProcurementRegulations() {
             </p>
           </div>
           <div className={styles.stepper}>
-            <h3 className="modal-subtitle">
+            <h3 className={globalStyles.modalSubtitle}>
               Для утверждения своего Положения о закупках нужно:
             </h3>
-            <ul className="text-s">
+            <ul className={globalStyles.textS}>
               <li>
                 <span></span>
                 Разработать проект положения о закупках, соответствующий
@@ -288,7 +289,7 @@ export default function ProcurementRegulations() {
             />
           </div>
           <div className={styles.documents}>
-            <h3 className="modal-subtitle">Шаблоны и документы</h3>
+            <h3 className={globalStyles.modalSubtitle}>Шаблоны и документы</h3>
             <div style={{ marginBottom: '0' }}>
               {buttons.map((item, index) => (
                 <Button key={index} text={item.text} href={item.href} />

@@ -1,5 +1,6 @@
 import { Important } from '../index'
 import styles from './GridList.module.scss'
+import globalStyles from '../../styles/Globals.module.scss'
 
 export default function GridList({ gridList }) {
   return (
@@ -17,7 +18,7 @@ export default function GridList({ gridList }) {
           <div key={index} className={styles.list}>
             {el.items.map((item, index) => (
               <div key={index} className={styles.listItem}>
-                <h4 className="text-medium-s">
+                <h4 className={globalStyles.textMediumS}>
                   {item.title}
                   {item.link && (
                     <a href={item.link.href} target="_blank" rel="noreferrer">
@@ -25,9 +26,9 @@ export default function GridList({ gridList }) {
                     </a>
                   )}
                 </h4>
-                {item.text && <p className="text-s">{item.text}</p>}
+                {item.text && <p className={globalStyles.textS}>{item.text}</p>}
                 {item.list && (
-                  <ul className="text-xs">
+                  <ul className={globalStyles.textXs}>
                     {item.list.map((listItem, index) => (
                       <li key={index}>{listItem}</li>
                     ))}
@@ -41,7 +42,7 @@ export default function GridList({ gridList }) {
                     secondaryColor="#F46C63"
                   />
                 )}
-                <span className="text-medium-s">{item.idx}</span>
+                <span className={globalStyles.textMediumS}>{item.idx}</span>
               </div>
             ))}
           </div>

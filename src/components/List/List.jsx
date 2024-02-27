@@ -1,4 +1,5 @@
 import styles from './List.module.scss'
+import globalStyles from '../../styles/Globals.module.scss'
 
 export default function List({ list, color }) {
   return (
@@ -12,10 +13,12 @@ export default function List({ list, color }) {
               ></div>
               <div onClick={() => item.click()}>
                 <h3>{item.title}</h3>
-                {item.text && <p className="text-xs">{item.text}</p>}
+                {item.text && (
+                  <p className={globalStyles.textXs}>{item.text}</p>
+                )}
                 {item.button && (
                   <button
-                    className="text-xs"
+                    className={globalStyles.textXs}
                     onClick={e => {
                       e.stopPropagation()
                       item.clickHandler(e)

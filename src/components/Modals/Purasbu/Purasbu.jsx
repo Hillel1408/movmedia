@@ -3,6 +3,7 @@ import { LayoutPageModal, Stepper, HorizontalStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Purasbu.module.scss'
 import classNames from 'classnames'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -54,24 +55,34 @@ export default function Purasbu() {
           width="276px"
           height="213px"
         ></img>
-        <h2 className="title">ПУР АСБУ</h2>
-        <p className="text-s">
+        <h2 className={globalStyles.title}>ПУР АСБУ</h2>
+        <p className={globalStyles.textS}>
           Эта система, в которую подгружается информация о договорах и их
           исполнении.
         </p>
         <div className={styles.grid}>
-          <h3 className="subtitle">Зачем регистрироваться на ЭТП?</h3>
+          <h3 className={globalStyles.subtitle}>
+            Зачем регистрироваться на ЭТП?
+          </h3>
           <div>
             {list.map((item, index) => (
-              <p key={index} className={classNames('text-s', 'icon-polygon')}>
+              <p
+                key={index}
+                className={classNames(
+                  globalStyles.textS,
+                  globalStyles.iconPolygon
+                )}
+              >
                 {item}
               </p>
             ))}
           </div>
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">Как зарегистрироваться в ПУР АСБУ?</h3>
-          <div className={classNames('text-s', styles.text)}>
+          <h3 className={globalStyles.subtitle}>
+            Как зарегистрироваться в ПУР АСБУ?
+          </h3>
+          <div className={classNames(globalStyles.textS, styles.text)}>
             <p>
               <span>Срок регистрации:</span>1 месяц.
             </p>
@@ -87,7 +98,12 @@ export default function Purasbu() {
           />
         </div>
         <div className={styles.instructions}>
-          <h3 className={classNames('subtitle', 'icon-developer-guide')}>
+          <h3
+            className={classNames(
+              globalStyles.subtitle,
+              globalStyles.iconDeveloperGuide
+            )}
+          >
             Инструкции пользователей: в АСБУ.
           </h3>
           <HorizontalStepper

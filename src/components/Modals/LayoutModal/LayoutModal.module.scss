@@ -6,11 +6,22 @@
   right: 597px;
   top: 0;
   border-radius: 8px 0px 0px 8px;
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  * {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  }
   & > button {
+    font-family: 'Roboto', sans-serif;
     position: absolute;
     background-color: transparent;
     left: 40px;
     top: 32px;
+    cursor: pointer;
     &:before {
       font-size: 24px;
       color: #39a1ed;

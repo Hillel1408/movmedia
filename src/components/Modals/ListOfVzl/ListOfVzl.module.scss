@@ -14,8 +14,10 @@
     max-width: 471px;
     color: #265071;
     & > button {
+      font-family: 'Roboto', sans-serif;
       color: #39a1ed;
       background-color: transparent;
+      cursor: pointer;
     }
   }
 }
@@ -121,6 +123,7 @@
     grid-template-columns: 231px 267px;
     gap: 8px;
     & > a {
+      text-decoration: none;
       &:nth-child(3) {
         grid-column: span 2;
       }

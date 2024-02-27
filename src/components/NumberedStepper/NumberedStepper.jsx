@@ -1,6 +1,7 @@
 import classNames from 'classnames'
 import { SkewBlock } from '../index'
 import styles from './NumberedStepper.module.scss'
+import globalStyles from '../../styles/Globals.module.scss'
 
 export default function NumberedStepper({ item, idx, bgColor }) {
   return (
@@ -11,13 +12,13 @@ export default function NumberedStepper({ item, idx, bgColor }) {
       <div>{bgColor !== 'transparent' && <SkewBlock color={bgColor} />}</div>
       <div>
         <span
-          className="title"
+          className={globalStyles.title}
           style={{ color: bgColor === '#e3f3ff' ? 'white' : '#E3F3FF' }}
         >
           0{idx + 1}
         </span>
         <p
-          className="text-medium-s"
+          className={globalStyles.textMediumS}
           style={{ color: bgColor === '#39A1ED' ? 'white' : '#193a54' }}
         >
           {item.title}
@@ -25,7 +26,7 @@ export default function NumberedStepper({ item, idx, bgColor }) {
       </div>
       <div>
         {item.secondaryList && (
-          <ul className={classNames(styles.secondaryList, 'text-xs')}>
+          <ul className={classNames(styles.secondaryList, globalStyles.textXs)}>
             {item.secondaryList.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -33,7 +34,7 @@ export default function NumberedStepper({ item, idx, bgColor }) {
         )}
         {item.text && (
           <p
-            className="text-xs"
+            className={globalStyles.textXs}
             style={{ color: bgColor === '#e3f3ff' ? '#265071' : 'white' }}
           >
             {item.text}
@@ -43,12 +44,14 @@ export default function NumberedStepper({ item, idx, bgColor }) {
           <div className={styles.lists}>
             {item.lists.map((item, index) => (
               <div key={index}>
-                {item.title && <p className="text-s">{item.title}</p>}
+                {item.title && (
+                  <p className={globalStyles.textS}>{item.title}</p>
+                )}
                 {item.subtitle && (
-                  <span className="text-xs">{item.subtitle}</span>
+                  <span className={globalStyles.textXs}>{item.subtitle}</span>
                 )}
                 <ul
-                  className={classNames('text-xs', styles.list)}
+                  className={classNames(globalStyles.textXs, styles.list)}
                   style={{
                     borderLeft:
                       bgColor === '#39A1ED'
@@ -89,11 +92,11 @@ export default function NumberedStepper({ item, idx, bgColor }) {
         )}
       </div>
       {item.note && (
-        <div className={classNames(styles.note, 'icon-star')}>
+        <div className={classNames(styles.note, globalStyles.iconStar)}>
           <div>
-            <span className="text-medium-s">{item.note.title}</span>
+            <span className={globalStyles.textMediumS}>{item.note.title}</span>
             {item.note.list && (
-              <ul className="text-s">
+              <ul className={globalStyles.textS}>
                 {item.note.list.map((item, index) => (
                   <li key={index} className="">
                     {item}

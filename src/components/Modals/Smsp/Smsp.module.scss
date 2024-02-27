@@ -26,6 +26,7 @@
   gap: 16px;
   & > li {
     counter-increment: progress 1;
+    list-style-type: none;
     &:not(:last-child) {
       & > ul {
         border-left: 1px solid #f46c63;
@@ -87,11 +88,14 @@
       position: relative;
       padding-left: 24px;
       & > button {
+        font-family: 'Roboto', sans-serif;
         color: #39a1ed;
         background-color: transparent;
+        cursor: pointer;
       }
       & > a {
         color: #39a1ed;
+        text-decoration: none;
       }
       &:before {
         color: #f46c63;
@@ -119,6 +123,7 @@
       }
     }
     & > button {
+      font-family: 'Roboto', sans-serif;
       font-size: 16px;
       line-height: 22px;
       color: #39a1ed;
@@ -127,6 +132,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      cursor: pointer;
       &:before {
         font-size: 24px;
       }
@@ -156,8 +162,10 @@
     display: block;
     margin-left: 39px;
     & > button {
+      font-family: 'Roboto', sans-serif;
       color: #39a1ed;
       background-color: transparent;
+      cursor: pointer;
     }
   }
   & > ul {

@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { LayoutPageModal, Important, Transition, TextModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Smsp.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -30,15 +31,15 @@ export default function Smsp() {
             width="321px"
             height="258px"
           ></img>
-          <h2 className="title">Закупки у СМСП</h2>
-          <h3 className="subtitle">
+          <h2 className={globalStyles.title}>Закупки у СМСП</h2>
+          <h3 className={globalStyles.subtitle}>
             Зачем обеспечивать выполнение требований к обеспечению доли закупок
             у субъектов малого и среднего предпринимательства?
           </h3>
-          <p className="text-medium-s">
+          <p className={globalStyles.textMediumS}>
             Для организации выполнения доли закупок у СМСП:
           </p>
-          <ul className={classNames(styles.list, 'text-s')}>
+          <ul className={classNames(styles.list, globalStyles.textS)}>
             <li>
               <p className={styles.listTitle}>
                 <span>1</span>
@@ -48,7 +49,7 @@ export default function Smsp() {
               </p>
               <ul className={styles.subList}>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Проанализируйте перечень своих поставщиков на наличие в них
                     СМСП и сведений о товарах и услугах, которые они поставляют.
                   </p>
@@ -60,14 +61,14 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Выделите список товаров, услуг и работ, которые уже
                     оказываются или могут быть оказаны силами СМСП с указанием
                     кодов ОКПД 2 и их прогнозной стоимостью.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Проверьте, есть ли у вас необходимость в товарах, работах и
                     услугах, которые относятся к исключениям по{' '}
                     <a
@@ -81,7 +82,7 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Сформируйте перечень товаров, работ и услуг, стоимость
                     которых не превышает 800 млн рублей. Товары, работы, услуги,
                     включенные в перечень, возможно также закупать на общих
@@ -89,7 +90,7 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Сделайте расчет предполагаемой доли закупок у СМСП на
                     основании данных о закупках прошлых лет по отношению к
                     общему объему закупок за вычетом товаров, работ, услуг, не
@@ -105,25 +106,29 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Утвердите перечень и определите лицо, которое будет
                     подписывать перечень электронной подписью в ЕИС от лица
                     вашей организации.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">Сформируйте перечень в АСЭЗ.</p>
+                  <p className={globalStyles.iconPolygon}>
+                    Сформируйте перечень в АСЭЗ.
+                  </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Отправьте перечень из АСЭЗ в ЕИС.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">Подпишите перечень в ЕИС.</p>
+                  <p className={globalStyles.iconPolygon}>
+                    Подпишите перечень в ЕИС.
+                  </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Если нужно будет актуализировать перечень, делать это нужно
                     в том же порядке: сначала в АСЭЗ, потом — в ЕИС.
                   </p>
@@ -137,13 +142,13 @@ export default function Smsp() {
               </p>
               <ul className={styles.subList}>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Включите в проект плана закупок/утвержденный план закупок
                     раздел об участии в закупках СМСП.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Для закупок, участниками которых могут быть только СМСП,
                     предусмотрите долю не менее 20% от годового стоимостного
                     объема планируемых закупок (рекомендуется поддерживать долю
@@ -160,7 +165,7 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Определение фактической доли закупок у СМСП осуществляется
                     по стоимостному объему оплат в отчетном периоде по
                     договорам, заключенным с даты распространения на Общество{' '}
@@ -175,7 +180,7 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Разместите план закупки в ЕИС в течение 10 календарных дней
                     с даты утверждения.
                   </p>
@@ -191,10 +196,10 @@ export default function Smsp() {
                   />
                 </li>
                 <li>
-                  <span className="text-medium-s">
+                  <span className={globalStyles.textMediumS}>
                     Как понять, что проект плана нужно согласовать?
                   </span>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Проекты планов закупок нужно согласовать с Корпорацией МСП
                     либо с органами исполнительной власти субъектов РФ в случае,
                     если ваша компания включена в перечень конкретных
@@ -219,21 +224,21 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Срок согласования проекта плана: по вновь размещенному
                     проекту — 5 рабочих дней, по проекту изменений плана — 3
                     рабочих дня.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Оценка\мониторинг ведется с использованием функционала ЕИС.
                     После размещения плана, изменений в план или годового отчета
                     сведения уйдут на проверку.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     В ходе согласования/мониторинга проверяются объемы
                     планируемых закупок у СМСП, соответствие раздела плана
                     закупки у СМСП перечню соответствующих товаров, работ,
@@ -265,7 +270,7 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     По результатам оценки/мониторинга в вашем личном кабинете в
                     ЕИС появится заключение Уполномоченного органа о
                     соответствии либо уведомление о несоответствии плана,
@@ -286,14 +291,14 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Если вы получили уведомление о несоответствии, вы должны
                     устранить замечания в течении 10 рабочих дней. В случае
                     несогласия с выводами — направьте в ЕИС протокол разногласий
                     в течение 3 рабочих дней.
                   </p>
                   <button
-                    className="icon-chevron-right"
+                    className={globalStyles.iconChevronRight}
                     onClick={() => {
                       setActiveSpoiler(prev => !prev)
                     }}
@@ -313,7 +318,7 @@ export default function Smsp() {
                       продукции, высокотехнологичной продукции у СМСП.
                     </p>
                     <span
-                      className="text-s"
+                      className={globalStyles.textS}
                       style={{ margin: '0 0 16px 40px' }}
                     >
                       В соответствии с{' '}
@@ -339,10 +344,10 @@ export default function Smsp() {
                       style={{ padding: '0', marginLeft: '10px' }}
                     >
                       <li>
-                        <p className="icon-polygon">
+                        <p className={globalStyles.iconPolygon}>
                           Разработайте, утвердите и разместите в ЕИС:
                         </p>
-                        <ul className="text-xs">
+                        <ul className={globalStyles.textXs}>
                           <li>
                             перечень товаров, работ, услуг, удовлетворяющих
                             критериям отнесения к инновационной продукции,
@@ -357,7 +362,7 @@ export default function Smsp() {
                         </ul>
                       </li>
                       <li>
-                        <p className="icon-polygon">
+                        <p className={globalStyles.iconPolygon}>
                           Предусмотрите в плане закупки инновационной продукции
                           объем закупок только у СМСП, равный объему за
                           предыдущий год, увеличенному на 5%, но не более 5%
@@ -373,7 +378,7 @@ export default function Smsp() {
                         </p>
                       </li>
                       <li>
-                        <p className="icon-polygon">
+                        <p className={globalStyles.iconPolygon}>
                           Выполните годовой объем закупки продукции равный
                           объему за предыдущий год, увеличенному на 10%{' '}
                           <a
@@ -396,7 +401,7 @@ export default function Smsp() {
                         </p>
                       </li>
                       <li>
-                        <p className="icon-polygon">
+                        <p className={globalStyles.iconPolygon}>
                           Сформируйте и разместите в ЕИС годовой отчет о закупке
                           инновационной продукции, высокотехнологичной
                           продукции, в том числе у СМСП{' '}
@@ -440,10 +445,10 @@ export default function Smsp() {
                     </button>
                     .
                   </p>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Разработайте закупочную документацию для проведения:
                   </p>
-                  <ul className="text-xs">
+                  <ul className={globalStyles.textXs}>
                     <li>
                       конкурентного отбора, предусматривающую для СМСП особые
                       условия договора;
@@ -459,11 +464,11 @@ export default function Smsp() {
                   </ul>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     В проекте договора, заключаемого с СМСП, вне зависимости от
                     способа закупки следует предусматривать:
                   </p>
-                  <ul className="text-xs">
+                  <ul className={globalStyles.textXs}>
                     <li>
                       срок оплаты поставленных товаров (выполненных работ,
                       оказанных услуг) — не более 7 рабочих дней со дня
@@ -481,7 +486,7 @@ export default function Smsp() {
                   </ul>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     В документации о закупке с условием о привлечении СМСП на
                     субподряд необходимо предусматривать обязанность участника
                     представить план привлечение СМСП на субподряд.
@@ -496,16 +501,16 @@ export default function Smsp() {
                     width="100%"
                     secondaryColor="#F46C63"
                   />
-                  <span className="text-medium-s">
+                  <span className={globalStyles.textMediumS}>
                     Закупки, участниками которых являются только СМСП, могут
                     осуществляться следующими способами:
                   </span>
                   <div className={styles.grid}>
-                    <p className="icon-polygon">
+                    <p className={globalStyles.iconPolygon}>
                       конкурентными: конкурс, аукцион, запрос предложений,
                       запрос котировок;
                     </p>
-                    <p className="icon-polygon">
+                    <p className={globalStyles.iconPolygon}>
                       неконкурентными: маркетинговые исследования, Торговый
                       портал, безальтернативна закупка, закупка у единственного
                       поставщика (подрядчика, исполнителя), закупка на торгах.
@@ -520,7 +525,7 @@ export default function Smsp() {
               </p>
               <ul className={styles.subList}>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Составьте годовой отчет о закупке у СМСП (требования к
                     содержанию и форма годового отчета утверждены{' '}
                     <a
@@ -534,7 +539,7 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Включите в него сведения о количестве и стоимости
                     заключенных договоров за отчетный период, а также
                     стоимостной объем оплаты в отчетном году (с учетом объема
@@ -553,19 +558,19 @@ export default function Smsp() {
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Разместите годовой отчет в ЕИС не позднее 1 февраля года,
                     следующего за прошедшим календарным годом, подписав его в
                     ЕИС электронной подписью уполномоченного должностного лица.
                   </p>
                 </li>
                 <li>
-                  <p className="icon-polygon">
+                  <p className={globalStyles.iconPolygon}>
                     Для того, чтобы закупка, участниками которой являются только
                     СМСП, могла быть учтена в годовом отчете в составе 20%
                     обязательной доли, должны соблюдаться следующие условия:
                   </p>
-                  <ul className="text-xs">
+                  <ul className={globalStyles.textXs}>
                     <li>
                       товары, работы, услуги должны быть включены в перечень;
                     </li>

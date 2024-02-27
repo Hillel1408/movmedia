@@ -54,8 +54,10 @@
         white-space: pre-wrap;
       }
       & > button {
+        font-family: 'Roboto', sans-serif;
         background-color: transparent;
         color: #39a1ed;
+        cursor: pointer;
       }
     }
   }

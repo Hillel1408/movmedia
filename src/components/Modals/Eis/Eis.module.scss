@@ -81,8 +81,10 @@
     color: #265071;
     margin-bottom: 24px;
     & > button {
+      font-family: 'Roboto', sans-serif;
       background-color: transparent;
       color: #39a1ed;
+      cursor: pointer;
     }
   }
 }

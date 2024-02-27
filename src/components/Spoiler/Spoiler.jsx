@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import classNames from 'classnames'
 import styles from './Spoiler.module.scss'
+import globalStyles from '../../styles/Globals.module.scss'
 
 export default function Spoiler({ item }) {
   const [active, setActive] = useState(false)
@@ -26,8 +27,8 @@ export default function Spoiler({ item }) {
       >
         <p
           className={classNames(
-            'text-s',
-            'icon-chevron-right',
+            globalStyles.textS,
+            globalStyles.iconChevronRight,
             active && styles.iconActive
           )}
         >
@@ -36,8 +37,8 @@ export default function Spoiler({ item }) {
         <div className={styles.blocks}>
           {item.participants.length > 0 && (
             <div>
-              <p className="text-medium-s">В процессе участвуют</p>
-              <ul className="text-s">
+              <p className={globalStyles.textMediumS}>В процессе участвуют</p>
+              <ul className={globalStyles.textS}>
                 {item.participants.map((el, index) => (
                   <li
                     className={classNames(
@@ -56,8 +57,8 @@ export default function Spoiler({ item }) {
           )}
           {item.registration.length > 0 && (
             <div>
-              <p className="text-medium-s">Нужны регистрации</p>
-              <ul className="text-s">
+              <p className={globalStyles.textMediumS}>Нужны регистрации</p>
+              <ul className={globalStyles.textS}>
                 {item.registration.map((el, index) => (
                   <li key={index}>{el}</li>
                 ))}

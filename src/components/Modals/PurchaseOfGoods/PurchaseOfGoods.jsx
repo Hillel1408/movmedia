@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { LayoutPageModal, GridList } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchaseOfGoods.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -84,8 +85,8 @@ export default function PurchaseOfGoods() {
     >
       <div className={styles.root}>
         <img src={images.loaderThree} alt="" width="284px" height="195px" />
-        <h2 className="title">Закупки квотируемых товаров</h2>
-        <p className="text-s">
+        <h2 className={globalStyles.title}>Закупки квотируемых товаров</h2>
+        <p className={globalStyles.textS}>
           Требования к обеспечению выполнения доли закупок квотируемых товаров
           российского происхождения предусмотрены{' '}
           <a href={links.decree2013v.href} target="_blank" rel="noreferrer">
@@ -94,7 +95,7 @@ export default function PurchaseOfGoods() {
           «О минимальной доле закупок товаров российского происхождения».
         </p>
         <div className={styles.grid}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Для организации соблюдения и контроля выполнения доли закупок
             квотируемых товаров:
           </h3>

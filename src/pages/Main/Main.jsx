@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import { Switcher, Menu, Scheme, Transition, Loader } from '../../components'
 import styles from './Main.module.scss'
+import globalStyles from '../../styles/Globals.module.scss'
 
 import images from '../../assets/images'
 
@@ -34,7 +35,7 @@ export default function Main() {
       },
       button: {
         text: 'Создать нормативную базу',
-        icon: 'icon-box-edit',
+        icon: globalStyles.iconBoxEdit,
         modal: 'normative-base'
       }
     },
@@ -51,7 +52,7 @@ export default function Main() {
       },
       button: {
         text: 'Организовать работу в информационных системах',
-        icon: 'icon-display-settings',
+        icon: globalStyles.iconDisplaySettings,
         modal: 'information-systems'
       }
     },
@@ -68,7 +69,7 @@ export default function Main() {
       },
       button: {
         text: 'Обеспечить контроль, работу с договорами, формирование отчетности',
-        icon: 'icon-folder-open',
+        icon: globalStyles.iconFolderOpen,
         modal: 'working-with-contracts'
       }
     },
@@ -85,7 +86,7 @@ export default function Main() {
       },
       button: {
         text: 'Настроить отдельные элементы планирования',
-        icon: 'icon-monitoring',
+        icon: globalStyles.iconMonitoring,
         modal: 'planning-elements'
       }
     },
@@ -102,15 +103,15 @@ export default function Main() {
       },
       button: {
         text: 'Наладить взаимодействие участников процесса',
-        icon: 'icon-groups',
+        icon: globalStyles.iconGroups,
         modal: 'list-of-participants'
       }
     }
   ]
 
   activeModal
-    ? document.body.classList.add('lock')
-    : document.body.classList.remove('lock')
+    ? document.body.classList.add(globalStyles.lock)
+    : document.body.classList.remove(globalStyles.lock)
 
   const clickHandler = e => {
     if (!e.target.closest('.btnTooltipOpen')) setActiveTooltip(false)
@@ -144,7 +145,7 @@ export default function Main() {
 
   return (
     <>
-      <div className="container">
+      <div className={classNames(globalStyles.container, styles.root)}>
         <div className={styles.header}>
           <div className={styles.headerFlex}>
             <div>
@@ -156,8 +157,8 @@ export default function Main() {
               >
                 <button
                   className={classNames(
-                    'icon-deployed-code-alert',
-                    'text-xs',
+                    globalStyles.iconDeployedCodeAlert,
+                    globalStyles.textXs,
                     'btnTooltipOpen'
                   )}
                   onClick={() =>
@@ -171,7 +172,7 @@ export default function Main() {
                 </button>
                 <p
                   className={classNames(
-                    'text-xs',
+                    globalStyles.textXs,
                     activeTooltip === 'standards' && styles.activeTooltip
                   )}
                   onClick={e => e.stopPropagation()}
@@ -183,11 +184,11 @@ export default function Main() {
                   Положение ПАО «Газпром».
                 </p>
               </div>
-              <h2 className="subtitle">
+              <h2 className={globalStyles.subtitle}>
                 Что необходимо сделать для организации закупочной деятельности
                 по единым требованиям в Группе Газпром?
               </h2>
-              <p className="text-s">
+              <p className={globalStyles.textS}>
                 Для организации закупочного процесса в соответствии с
                 корпоративными правилами Группы Газпром необходимо сформировать
                 инфраструктуру системы управления закупочной деятельностью и
@@ -199,8 +200,8 @@ export default function Main() {
                 <div>
                   <p
                     className={classNames(
-                      'text-medium-xs',
-                      'icon-notification-important'
+                      globalStyles.textMediumXs,
+                      globalStyles.iconNotificationImportant
                     )}
                   >
                     Обратите внимание, состав мероприятий относится к
@@ -209,8 +210,8 @@ export default function Main() {
                   <div className={styles.headerLinkBtn}>
                     <button
                       className={classNames(
-                        'text-s',
-                        'icon-chevron-right',
+                        globalStyles.textS,
+                        globalStyles.iconChevronRight,
                         'btnTooltipOpen'
                       )}
                       onClick={() =>
@@ -223,7 +224,7 @@ export default function Main() {
                     </button>
                     <ul
                       className={classNames(
-                        'text-s',
+                        globalStyles.textS,
                         activeTooltip === '223-fz' && styles.activeTooltip
                       )}
                       onClick={e => e.stopPropagation()}
@@ -242,8 +243,8 @@ export default function Main() {
               <button
                 className={classNames(
                   styles.headerSecondaryBtn,
-                  'icon-tabs',
-                  'text-medium-s'
+                  globalStyles.iconTabs,
+                  globalStyles.textMediumS
                 )}
                 onClick={() => {
                   setActiveModal('scheme')

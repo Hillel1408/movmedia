@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import classNames from 'classnames'
 import { Overlay, ModalsSwitcn, Transition } from '../../index'
 import styles from './Menu.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 import { links } from '../../../constants/links'
 
 export const ModalContext = createContext()
@@ -115,7 +116,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
           setActiveModal('')
         }}
       />
-      <div className={classNames('container', styles.container)}>
+      <div className={classNames(globalStyles.container, styles.container)}>
         <div
           onClick={e => e.stopPropagation()}
           className={classNames(styles.root, active && styles.active)}
@@ -140,7 +141,7 @@ export default function Menu({ activeModal, setActiveModal, activeSwitcher }) {
                 <span>{item.title}</span>
                 {item.modals.length > 0 && (
                   <ul
-                    className={classNames('text-s', styles.subList)}
+                    className={classNames(globalStyles.textS, styles.subList)}
                     style={{
                       maxHeight:
                         (active === item.modal ||

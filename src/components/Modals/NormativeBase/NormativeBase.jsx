@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { LayoutModal, List, TextModal, Transition } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './NormativeBase.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 export default function NormativeBase() {
   const [textModal, setTextModal] = useState('')
@@ -66,7 +67,7 @@ export default function NormativeBase() {
     <>
       <LayoutModal>
         <div className={styles.root}>
-          <h2 className="modal-subtitle">
+          <h2 className={globalStyles.modalSubtitle}>
             Для перехода на систему управления закупочной деятельностью в
             соответствии с корпоративными правилами Группы Газпром компания
             должна создать нормативную базу:

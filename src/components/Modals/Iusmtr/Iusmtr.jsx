@@ -3,6 +3,7 @@ import { LayoutPageModal, Stepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Iusmtr.module.scss'
 import classNames from 'classnames'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -47,23 +48,29 @@ export default function Iusmtr() {
           width="232px"
           height="220px"
         ></img>
-        <h2 className="title">ИУС МТР</h2>
-        <p className="text-s">
+        <h2 className={globalStyles.title}>ИУС МТР</h2>
+        <p className={globalStyles.textS}>
           Это система, используемая централизованным поставщиком МТР для Группы
           Газпром.
         </p>
         <div className={styles.block}>
-          <h3 className="subtitle">Зачем регистрироваться в ИУС МТР?</h3>
-          <p className={classNames('icon-polygon', 'text-s')}>
+          <h3 className={globalStyles.subtitle}>
+            Зачем регистрироваться в ИУС МТР?
+          </h3>
+          <p
+            className={classNames(globalStyles.iconPolygon, globalStyles.textS)}
+          >
             Через ИУС МТР осуществляется сбор потребности в МТР
             <br /> централизованным поставщиком.
           </p>
         </div>
         <div className={styles.secondaryGrid}>
-          <h3 className="subtitle">Как зарегистрироваться в ИУС МТР?</h3>
+          <h3 className={globalStyles.subtitle}>
+            Как зарегистрироваться в ИУС МТР?
+          </h3>
           <div>
             {secondaryList.map((item, index) => (
-              <p key={index} className="text-s">
+              <p key={index} className={globalStyles.textS}>
                 <span>{item.title}</span>
                 {item.text}
               </p>
@@ -71,7 +78,7 @@ export default function Iusmtr() {
           </div>
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">Для регистрации в ИУС МТР</h3>
+          <h3 className={globalStyles.subtitle}>Для регистрации в ИУС МТР</h3>
           <Stepper
             image={images.manWithCloud}
             steps={steps}
@@ -79,7 +86,7 @@ export default function Iusmtr() {
             height="200px"
           />
         </div>
-        <div className={classNames(styles.text, 'text-s')}>
+        <div className={classNames(styles.text, globalStyles.textS)}>
           <span>Контакт техподдержки ООО «Газпром информ»:</span>
           <p>
             тел. (495) 719-45-88, газ. (701) 9-45-88, <br />{' '}

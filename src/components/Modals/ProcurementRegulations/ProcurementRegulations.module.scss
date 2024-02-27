@@ -21,6 +21,7 @@
     color: #265071;
     & > a {
       color: #39a1ed;
+      text-decoration: none;
     }
   }
   & > div {
@@ -55,14 +56,17 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      list-style-type: none;
       &:before {
         color: #f48a2c;
         font-size: 32px;
         margin-bottom: 8px;
       }
       & > button {
+        font-family: 'Roboto', sans-serif;
         background-color: transparent;
         color: #39a1ed;
+        cursor: pointer;
       }
     }
   }
@@ -90,8 +94,10 @@
           margin-bottom: 8px;
         }
         & > button {
+          font-family: 'Roboto', sans-serif;
           color: #39a1ed;
           background-color: transparent;
+          cursor: pointer;
         }
       }
     }
@@ -139,6 +145,7 @@
       padding-top: 16px;
       padding-bottom: 16px;
       position: relative;
+      list-style-type: none;
       & > span {
         display: block;
         width: 16px;
@@ -157,11 +164,14 @@
         }
       }
       & > button {
+        font-family: 'Roboto', sans-serif;
         color: #39a1ed;
         background: transparent;
+        cursor: pointer;
       }
       & > a {
         color: #39a1ed;
+        text-decoration: none;
       }
       &:nth-child(1) {
         border-top: 1px solid #f48a2c;

@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { LayoutPageModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ResponsibleASEZEIS.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -19,16 +20,16 @@ export default function ResponsibleASEZEIS() {
           width="276px"
           height="256px"
         ></img>
-        <h2 className="title">
+        <h2 className={globalStyles.title}>
           Ответственные
           <br /> за работу в ЕИС
           <br /> и АСЭЗ
         </h2>
-        <h3 className="subtitle">
+        <h3 className={globalStyles.subtitle}>
           Определите ответственных работников Закупочного подразделения за
           работу в ЕИС и АСЭЗ.
         </h3>
-        <p className="text-s">
+        <p className={globalStyles.textS}>
           Для этого утвердите приказ об ответственных за работу в ЕИС и АСЭЗ с
           учетом прав, предоставленных для работы в ЕИС и АСЭЗ (см. блоки про
           регистрацию Заказчика в{' '}

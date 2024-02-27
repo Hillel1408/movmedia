@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { LayoutPageModal, Stepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Etpgpb.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -45,8 +46,8 @@ export default function Etpgpb() {
     >
       <div className={styles.root}>
         <img src={images.computer} alt="" width="253px" height="233px" />
-        <h2 className="title">ЭТП ГПБ</h2>
-        <p className="text-s">
+        <h2 className={globalStyles.title}>ЭТП ГПБ</h2>
+        <p className={globalStyles.textS}>
           Используется для закупок по{' '}
           <a href={links.fz223.href}>{links.fz223.text}</a>,{' '}
           <a href={links.fz44.href}>{links.fz44.text}</a> и коммерческих
@@ -54,18 +55,28 @@ export default function Etpgpb() {
           банковских гарантий.
         </p>
         <div className={styles.grid}>
-          <h3 className="subtitle">Зачем регистрироваться на ЭТП?</h3>
+          <h3 className={globalStyles.subtitle}>
+            Зачем регистрироваться на ЭТП?
+          </h3>
           <div>
             {list.map((item, index) => (
-              <p key={index} className={classNames('text-s', 'icon-polygon')}>
+              <p
+                key={index}
+                className={classNames(
+                  globalStyles.textS,
+                  globalStyles.iconPolygon
+                )}
+              >
                 {item}
               </p>
             ))}
           </div>
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">Как зарегистрироваться на ЭТП?</h3>
-          <p className="text-s">
+          <h3 className={globalStyles.subtitle}>
+            Как зарегистрироваться на ЭТП?
+          </h3>
+          <p className={globalStyles.textS}>
             Служба поддержки ЭТП ГПБ: 8-495-276-00-51 добавочный 396. E-mail:
             tech@etpgpb.ru.
           </p>
@@ -77,10 +88,18 @@ export default function Etpgpb() {
           />
         </div>
         <div className={styles.secondaryGrid}>
-          <h3 className="subtitle">Инструкция для работы на ЭТП ГПБ.</h3>
+          <h3 className={globalStyles.subtitle}>
+            Инструкция для работы на ЭТП ГПБ.
+          </h3>
           <div>
             {secondaryList.map((item, index) => (
-              <p key={index} className={classNames('text-s', 'icon-polygon')}>
+              <p
+                key={index}
+                className={classNames(
+                  globalStyles.textS,
+                  globalStyles.iconPolygon
+                )}
+              >
                 {item}
               </p>
             ))}

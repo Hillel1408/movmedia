@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { LayoutPageModal, Stepper, TextModal, Transition } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Eis.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -97,8 +98,8 @@ export default function Eis() {
             width="287px"
             height="223px"
           ></img>
-          <h2 className="title">ЕИС</h2>
-          <div className={classNames(styles.text, 'text-s')}>
+          <h2 className={globalStyles.title}>ЕИС</h2>
+          <div className={classNames(styles.text, globalStyles.textS)}>
             <p>
               Документы в открытом доступе размещаются на официальном сайте ЕИС,
               отдельные документы закрытого доступа размещаются в закрытой части
@@ -111,16 +112,24 @@ export default function Eis() {
             </p>
           </div>
           <div className={styles.grid}>
-            <h3 className="subtitle">Зачем регистрироваться в ЕИС?</h3>
-            <span className="text-medium-s">В ЕИС размещается:</span>
+            <h3 className={globalStyles.subtitle}>
+              Зачем регистрироваться в ЕИС?
+            </h3>
+            <span className={globalStyles.textMediumS}>В ЕИС размещается:</span>
             <div>
               {list.map((item, index) => (
-                <p key={index} className={classNames('text-s', 'icon-polygon')}>
+                <p
+                  key={index}
+                  className={classNames(
+                    globalStyles.textS,
+                    globalStyles.iconPolygon
+                  )}
+                >
                   {item}
                 </p>
               ))}
             </div>
-            <p className="text-xs">
+            <p className={globalStyles.textXs}>
               Неразмещение/несоблюдение сроков размещения влечет за собой
               ответственность —{' '}
               <button
@@ -181,7 +190,7 @@ export default function Eis() {
                 ст. 7 КоАП.
               </button>
             </p>
-            <div className="text-s">
+            <div className={globalStyles.textS}>
               <p>
                 <span>Срок регистрации:</span>от 1-го до нескольких дней.
               </p>
@@ -192,10 +201,12 @@ export default function Eis() {
             </div>
           </div>
           <div className={styles.stepper}>
-            <h3 className="subtitle">Как зарегистрироваться в ЕИС?</h3>
+            <h3 className={globalStyles.subtitle}>
+              Как зарегистрироваться в ЕИС?
+            </h3>
             <div>
               <a
-                className="text-xs"
+                className={globalStyles.textXs}
                 href={links.instructions.href}
                 target="_blank"
                 rel="noreferrer"

@@ -1,3 +1,13 @@
+.root {
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
+  * {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  }
+}
 .header {
   padding: 20px 40px 24px 40px;
   background-color: #f8f9ff;
@@ -47,11 +57,13 @@
   }
   &Btn > button,
   &SecondaryBtn {
+    font-family: 'Roboto', sans-serif;
     background-color: transparent;
     text-align: left;
     display: grid;
     grid-template-columns: 24px 1fr;
     gap: 8px;
+    cursor: pointer;
     &::before {
       font-size: 24px;
       color: #39a1ed;
@@ -66,8 +78,10 @@
     position: relative;
     transition: 0.4s;
     & > button {
+      font-family: 'Roboto', sans-serif;
       color: #39a1ed;
       transition: 0.4s;
+      cursor: pointer;
     }
     & > p {
       opacity: 0;
@@ -97,12 +111,14 @@
     position: relative;
     margin-left: 32px;
     & > button {
+      font-family: 'Roboto', sans-serif;
       background-color: transparent;
       color: #39a1ed;
       padding: 4px 0;
       display: flex;
       gap: 4px;
       flex-direction: row-reverse;
+      cursor: pointer;
       &::before {
         font-size: 16px;
         color: #39a1ed;
@@ -161,6 +177,7 @@
         text-align: left;
         transition: 0.4s;
         z-index: 6;
+        cursor: pointer;
         &:active {
           box-shadow: none;
         }
@@ -212,6 +229,7 @@
             white 50%
           );
           background-size: 300% 300%;
+          cursor: pointer;
           &:before {
             color: #f48a2c;
           }

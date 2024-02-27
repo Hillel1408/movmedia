@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { createPortal } from 'react-dom'
 import styles from './TextModal.module.scss'
 import classNames from 'classnames'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 export default function TextModal({ value, setActiveModal, width, color }) {
   const modalRef = useRef(null)
@@ -33,10 +34,10 @@ export default function TextModal({ value, setActiveModal, width, color }) {
         onClick={e => e.stopPropagation()}
       >
         {value.title && <span>{value.title}</span>}
-        {value.text && <p className="text-s">{value.text}</p>}
+        {value.text && <p className={globalStyles.textS}>{value.text}</p>}
         {value.list && (
           <ul
-            className={classNames('text-s', styles.list)}
+            className={classNames(globalStyles.textS, styles.list)}
             style={{ paddingLeft: value.type === 'numbered' && '14px' }}
           >
             {value.list.map((item, index) => (

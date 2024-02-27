@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { LayoutPageModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Vzl.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -48,8 +49,8 @@ export default function Vzl() {
           width="257px"
           height="277px"
         ></img>
-        <h2 className="title">Закупки у ВЗЛ</h2>
-        <p className="text-s">
+        <h2 className={globalStyles.title}>Закупки у ВЗЛ</h2>
+        <p className={globalStyles.textS}>
           Закупки у ВЗЛ включаются в план закупок на срок не менее чем 1 (один)
           год в соответствии с требованиями к форме такого плана, установленными
           Департаментом. План закупок формируется с использованием АСЭЗ.{' '}
@@ -58,7 +59,7 @@ export default function Vzl() {
           </Link>
         </p>
         <div className={styles.grid}>
-          <h3 className="subtitle">Способы закупок у ВЗЛ:</h3>
+          <h3 className={globalStyles.subtitle}>Способы закупок у ВЗЛ:</h3>
           <div>
             {gridList.map((item, index) => (
               <div key={index} className={styles.gridItem}>
@@ -68,19 +69,25 @@ export default function Vzl() {
                   width={item.image.width}
                   height={item.image.height}
                 ></img>
-                <p className="text-s">{item.text}</p>
+                <p className={globalStyles.textS}>{item.text}</p>
               </div>
             ))}
           </div>
         </div>
         <div className={styles.block}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Особенности закупок у ВЗЛ, осуществленных по разделу 22 Положения
             ПАО «Газпром»:
           </h3>
           <div>
             {list.map((item, index) => (
-              <p key={index} className={classNames('text-s', 'icon-polygon')}>
+              <p
+                key={index}
+                className={classNames(
+                  globalStyles.textS,
+                  globalStyles.iconPolygon
+                )}
+              >
                 {item}
               </p>
             ))}

@@ -125,12 +125,15 @@
         margin-top: 8px;
         color: #265071;
         & > button {
+          font-family: 'Roboto', sans-serif;
           color: #39a1ed;
           background-color: transparent;
           text-align: left;
+          cursor: pointer;
         }
         & > a {
           color: #39a1ed;
+          text-decoration: none;
         }
       }
       & > span {

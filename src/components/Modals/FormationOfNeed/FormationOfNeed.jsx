@@ -11,6 +11,7 @@ import {
 } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './FormationOfNeed.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -177,26 +178,29 @@ export default function FormationOfNeed() {
             width="282px"
             height="255px"
           />
-          <h2 className="title">
+          <h2 className={globalStyles.title}>
             Формирование
             <br />
             потребности плана
             <br />
             закупок
           </h2>
-          <p className="text-s">
+          <p className={globalStyles.textS}>
             Формируйте потребности в заключении договоров на закупку товаров,
             работ, услуг и включайте их в план закупок.
           </p>
           <div className={styles.grid}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Зачем нужно формировать потребности и включать их в план закупок?
             </h3>
             <ul>
               {list.map((item, index) => (
                 <li
                   key={index}
-                  className={classNames('text-s', 'icon-polygon')}
+                  className={classNames(
+                    globalStyles.textS,
+                    globalStyles.iconPolygon
+                  )}
                 >
                   <p>
                     {item.text}
@@ -216,17 +220,19 @@ export default function FormationOfNeed() {
             </ul>
           </div>
           <div className={styles.stepper}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Как формировать потребность (ППЗ) для включения в план:
             </h3>
-            <p className="text-medium-s">Инициатор закупки по направлению:</p>
+            <p className={globalStyles.textMediumS}>
+              Инициатор закупки по направлению:
+            </p>
             <HorizontalStepper
               list={stepperList}
               color="#F46C63"
               grid="199px 297px 1fr"
               type="secondary"
             />
-            <p className="text-s">
+            <p className={globalStyles.textS}>
               Порядок формирования и согласования потребности в КГГ должен быть
               определен локальным нормативным актом, регламентирующим процесс
               планирования.
@@ -239,7 +245,9 @@ export default function FormationOfNeed() {
             />
           </div>
           <div className={styles.block}>
-            <h3 className="subtitle">Как формировать план закупок?</h3>
+            <h3 className={globalStyles.subtitle}>
+              Как формировать план закупок?
+            </h3>
             <GridList gridList={gridList} />
           </div>
         </div>

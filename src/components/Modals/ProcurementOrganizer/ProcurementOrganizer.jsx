@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { LayoutPageModal, NumberedStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ProcurementOrganizer.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -135,7 +136,7 @@ export default function ProcurementOrganizer() {
     >
       <div className={styles.root}>
         <img src={images.man} alt="" width="326px" height="280px"></img>
-        <h2 className="title">
+        <h2 className={globalStyles.title}>
           Организатор
           <br />
           закупок/
@@ -144,7 +145,7 @@ export default function ProcurementOrganizer() {
           <br />
           поставщик
         </h2>
-        <div className={classNames('text-s', styles.text)}>
+        <div className={classNames(globalStyles.textS, styles.text)}>
           <p>
             Организатор закупки определяется на стадии планирования закупок
             заказчика Департаментом ЦОУЗ{' '}
@@ -161,19 +162,19 @@ export default function ProcurementOrganizer() {
           </p>
         </div>
         <div className={styles.block}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Как организовать закупки с привлечением
             Организатора/централизованного поставщика:
           </h3>
-          <p className="text-s">
+          <p className={globalStyles.textS}>
             Чтобы организовать поставки и провести закупки, нужно подписать
             агентские договоры. Всего их четыре:
           </p>
           <div>
             {list.map((item, index) => (
               <div key={index}>
-                <span className="text-medium-s">{item.title}</span>
-                <p className="text-s">{item.text}</p>
+                <span className={globalStyles.textMediumS}>{item.title}</span>
+                <p className={globalStyles.textS}>{item.text}</p>
               </div>
             ))}
           </div>
@@ -181,13 +182,13 @@ export default function ProcurementOrganizer() {
         <div className={styles.grid}>
           {gridList.map((item, index) => (
             <div key={index}>
-              <h3 className="subtitle">{item.title}</h3>
-              <ul key={index} className="text-s">
+              <h3 className={globalStyles.subtitle}>{item.title}</h3>
+              <ul key={index} className={globalStyles.textS}>
                 {item.list.map((item, index) => (
-                  <li key={index} className="icon-polygon">
+                  <li key={index} className={globalStyles.iconPolygon}>
                     {item.text}
                     {item.sublist && (
-                      <ul className="text-xs">
+                      <ul className={globalStyles.textXs}>
                         {item.sublist.map((item, index) => (
                           <li key={index}>{item}</li>
                         ))}
@@ -200,7 +201,7 @@ export default function ProcurementOrganizer() {
           ))}
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Для передачи полномочий на организацию поставок <br /> ООО «Газпром
             комплектация»
           </h3>
@@ -216,7 +217,7 @@ export default function ProcurementOrganizer() {
           </div>
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Для оказания ООО «Газпром комплектация» услуг по проведению закупок:
           </h3>
           <div>

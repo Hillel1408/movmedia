@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './HorizontalStepper.module.scss'
+import globalStyles from '../../styles/Globals.module.scss'
 
 export default function HorizontalStepper({ list, color, grid, type }) {
   return (
@@ -27,9 +28,11 @@ export default function HorizontalStepper({ list, color, grid, type }) {
               </>
             )}
           </div>
-          {item.title && <span className="text-medium-s">{item.title}</span>}
+          {item.title && (
+            <span className={globalStyles.textMediumS}>{item.title}</span>
+          )}
           {item.text && (
-            <p className="text-xs">
+            <p className={globalStyles.textXs}>
               {item.text}
               {item.links &&
                 item.links.map((item, index) => (

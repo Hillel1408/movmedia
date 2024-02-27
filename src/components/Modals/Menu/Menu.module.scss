@@ -1,4 +1,7 @@
 .root {
+  cursor: default;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
   position: absolute;
   background: #f2f5f8;
   width: 597px;
@@ -8,6 +11,12 @@
   padding: 32px 40px;
   overflow-y: auto;
   z-index: 1;
+  * {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  }
 }
 .list {
   display: flex;

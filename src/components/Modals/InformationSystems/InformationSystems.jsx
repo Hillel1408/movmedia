@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { LayoutModal } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './InformationSystems.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 export default function InformationSystems() {
   const value = useContext(ModalContext)
@@ -57,10 +58,10 @@ export default function InformationSystems() {
   return (
     <LayoutModal>
       <div className={styles.root}>
-        <h2 className="modal-subtitle">
+        <h2 className={globalStyles.modalSubtitle}>
           Регистрация в информационных системах
         </h2>
-        <p className="text-s">
+        <p className={globalStyles.textS}>
           Для работы с закупками компании нужно зарегистрироваться в нескольких
           системах:
         </p>
@@ -70,7 +71,7 @@ export default function InformationSystems() {
               item.active && (
                 <li key={index} onClick={() => item.click()}>
                   <h3>{item.title}</h3>
-                  <p className="text-xs">
+                  <p className={globalStyles.textXs}>
                     {item.text}
                     {item.link && (
                       <Link

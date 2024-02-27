@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { LayoutPageModal, Stepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './Asez.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -68,8 +69,8 @@ export default function Asez() {
     >
       <div className={styles.root}>
         <img src={images.asez} alt="" width="282px" height="278px"></img>
-        <h2 className="title">АСЭЗ</h2>
-        <div className={classNames(styles.text, 'text-s')}>
+        <h2 className={globalStyles.title}>АСЭЗ</h2>
+        <div className={classNames(styles.text, globalStyles.textS)}>
           <p>
             Это система, обеспечивающая поддержку бизнес-процессов закупочной
             деятельности Группы Газпром, а также выполняющая функции
@@ -87,15 +88,17 @@ export default function Asez() {
           </p>
         </div>
         <div className={styles.grid}>
-          <h3 className="subtitle">Зачем регистрироваться в АСЭЗ?</h3>
+          <h3 className={globalStyles.subtitle}>
+            Зачем регистрироваться в АСЭЗ?
+          </h3>
           <div>
             {list.map((item, index) => (
               <div
                 key={index}
                 className={classNames(
                   styles.gridItem,
-                  'text-s',
-                  item.polygon && 'icon-polygon'
+                  globalStyles.textS,
+                  item.polygon && globalStyles.iconPolygon
                 )}
               >
                 <p>
@@ -107,7 +110,9 @@ export default function Asez() {
           </div>
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">Как зарегистрироваться в АСЭЗ?</h3>
+          <h3 className={globalStyles.subtitle}>
+            Как зарегистрироваться в АСЭЗ?
+          </h3>
           <Stepper
             image={images.server}
             steps={steps}

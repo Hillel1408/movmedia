@@ -7,6 +7,7 @@ import {
 } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './RegulatorDocuments.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -34,13 +35,16 @@ export default function RegulatorDocuments() {
   ]
   const list = [
     {
-      icon: 'icon-social-distance',
+      icon: globalStyles.iconSocialDistance,
       text: 'закупочные процессы и их участники,'
     },
-    { icon: 'icon-speed', text: 'сроки реализации,' },
-    { icon: 'icon-chart-data', text: 'ожидаемый результат,' },
-    { icon: 'icon-manage-history', text: 'процедуры контроля результата,' },
-    { icon: 'icon-deployed-code-account', text: 'ответственность.' }
+    { icon: globalStyles.iconSpeed, text: 'сроки реализации,' },
+    { icon: globalStyles.iconChartData, text: 'ожидаемый результат,' },
+    {
+      icon: globalStyles.iconManageHistory,
+      text: 'процедуры контроля результата,'
+    },
+    { icon: globalStyles.iconDeployedCodeAccount, text: 'ответственность.' }
   ]
   const stepperList = [
     { text: 'порядок их проведения' },
@@ -64,13 +68,13 @@ export default function RegulatorDocuments() {
             width="293px"
             height="209px"
           ></img>
-          <h2 className="title">
+          <h2 className={globalStyles.title}>
             Регламентные
             <br />
             документы
           </h2>
           <div className={styles.stepper}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Компания должна описать закупочные процессы:
             </h3>
             <HorizontalStepper
@@ -87,10 +91,10 @@ export default function RegulatorDocuments() {
               height="177px"
               alt=""
             ></img>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Руководящими документами должны быть определены
             </h3>
-            <ul className="text-s">
+            <ul className={globalStyles.textS}>
               {list.map((item, index) => (
                 <li key={index} className={item.icon}>
                   {item.text}
@@ -99,11 +103,11 @@ export default function RegulatorDocuments() {
             </ul>
           </div>
           <div className={styles.block}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               В рамках разработки Регламентных документов:
             </h3>
             <div>
-              <div className="text-s">
+              <div className={globalStyles.textS}>
                 <h4>Изучите регламентные документы ПАО «Газпром».</h4>
                 <p>
                   Список есть, но он постоянно обновляется. Ознакомиться можно{' '}
@@ -118,9 +122,9 @@ export default function RegulatorDocuments() {
                   646-2-3m@adm.gazprom.ru с темой «Свод ЛНА Газпром для вновь
                   принятой КГГ».
                 </p>
-                <span className="text-medium-s">01</span>
+                <span className={globalStyles.textMediumS}>01</span>
               </div>
-              <div className="text-s">
+              <div className={globalStyles.textS}>
                 <h4>
                   Опишите процессы организации закупочной деятельности на всех
                   стадиях закупки.
@@ -162,20 +166,20 @@ export default function RegulatorDocuments() {
                     Список рекомендованных к разработке и принятию документов
                   </button>
                 </p>
-                <span className="text-medium-s">02</span>
+                <span className={globalStyles.textMediumS}>02</span>
               </div>
             </div>
           </div>
           <div className={styles.grid}>
-            <h3 className="subtitle">
+            <h3 className={globalStyles.subtitle}>
               Нормативные акты, которыми в том числе необходимо
               руководствоваться
             </h3>
             <div>
               {gridList.map((item, index) => (
                 <div key={index} className={styles.gridItem}>
-                  <span className="text-s">{item}</span>
-                  <div className="text-xs">0{index + 1}</div>
+                  <span className={globalStyles.textS}>{item}</span>
+                  <div className={globalStyles.textXs}>0{index + 1}</div>
                 </div>
               ))}
             </div>

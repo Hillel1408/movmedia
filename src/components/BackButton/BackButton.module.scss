@@ -1,10 +1,12 @@
 .root {
+  font-family: 'Roboto', sans-serif;
   background-color: transparent;
   color: #39a1ed;
   display: flex;
   gap: 4px;
   align-items: center;
   padding: 4px;
+  cursor: pointer;
   &:before {
     transform: rotate(90deg);
     font-size: 24px;

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { LayoutPageModal, HorizontalStepper, Important } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchasingDivision.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -19,15 +20,15 @@ export default function PurchasingDivision() {
   ]
   const gridList = [
     {
-      icon: 'icon-file-copy',
+      icon: globalStyles.iconFileCopy,
       text: 'Подготовьте пакет необходимых документов в соответствии с письмом от 09.07.2019 № 06/46-395'
     },
     {
-      icon: 'icon-folder-supervised',
+      icon: globalStyles.iconFolderSupervised,
       text: 'Направьте кандидатуру на согласование в ЦОУЗ'
     },
     {
-      icon: 'icon-person-pin',
+      icon: globalStyles.iconPersonPin,
       text: 'После согласования выполните процедуры по оформлению кандидата на работу'
     }
   ]
@@ -68,7 +69,7 @@ export default function PurchasingDivision() {
     >
       <div className={styles.root}>
         <img src={images.threeMan} alt="" width="283px" height="252px"></img>
-        <h2 className="title">
+        <h2 className={globalStyles.title}>
           Сформируйте
           <br />
           Закупочное
@@ -76,10 +77,10 @@ export default function PurchasingDivision() {
           подразделение
         </h2>
         <div className={styles.block}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Для чего нужно формировать закупочное подразделение?
           </h3>
-          <p className="text-s">
+          <p className={globalStyles.textS}>
             Для организации закупочной деятельности должно быть сформировано
             подразделение по подготовке и проведению закупок либо определено
             лицо, ответственное за организацию и проведение закупок, если объем
@@ -91,7 +92,7 @@ export default function PurchasingDivision() {
           </p>
         </div>
         <div className={styles.stepper}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Для организации закупочной деятельности нужно:
           </h3>
           <HorizontalStepper
@@ -108,20 +109,22 @@ export default function PurchasingDivision() {
           />
         </div>
         <div className={styles.list}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Как сформировать закупочное подразделение?
           </h3>
           <ul>
             {list.map((item, index) => (
               <li key={index}>
-                <span className="title">0{index + 1}</span>
+                <span className={globalStyles.title}>0{index + 1}</span>
                 <div>
-                  <span className="text-medium-s">{item.title}</span>
-                  {item.text && <p className="text-s">{item.text}</p>}
+                  <span className={globalStyles.textMediumS}>{item.title}</span>
+                  {item.text && (
+                    <p className={globalStyles.textS}>{item.text}</p>
+                  )}
                   {item.subList && (
                     <ul>
                       {item.subList.map((item, index) => (
-                        <li key={index} className="text-s">
+                        <li key={index} className={globalStyles.textS}>
                           {item}
                         </li>
                       ))}
@@ -141,21 +144,24 @@ export default function PurchasingDivision() {
           </ul>
         </div>
         <div className={styles.grid}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Как согласовать кандидатуру руководителя подразделения или
             специалиста, ответственного за обеспечение закупочной деятельности?
           </h3>
-          <p className="text-s">
+          <p className={globalStyles.textS}>
             <span>Срок согласования:</span>не более 1-го месяца.
           </p>
           <div className={styles.gridList}>
             {gridList.map((item, index) => (
-              <p key={index} className={classNames('text-medium-s', item.icon)}>
+              <p
+                key={index}
+                className={classNames(globalStyles.textMediumS, item.icon)}
+              >
                 {item.text}
               </p>
             ))}
           </div>
-          <p className="text-s">Письмо размещено в АСЭЗ:</p>
+          <p className={globalStyles.textS}>Письмо размещено в АСЭЗ:</p>
           <HorizontalStepper
             list={stepperList}
             color="#39A1ED"

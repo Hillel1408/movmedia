@@ -18,9 +18,11 @@
     color: #265071;
     max-width: 548px;
     & > button {
+      font-family: 'Roboto', sans-serif;
       background-color: transparent;
       color: #39a1ed;
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 }

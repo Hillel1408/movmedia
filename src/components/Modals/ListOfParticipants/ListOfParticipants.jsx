@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { LayoutModal, List } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './ListOfParticipants.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 export default function ListOfParticipants() {
   const value = useContext(ModalContext)
@@ -39,7 +40,7 @@ export default function ListOfParticipants() {
   return (
     <LayoutModal>
       <div className={styles.root}>
-        <h2 className="modal-subtitle">Состав участников</h2>
+        <h2 className={globalStyles.modalSubtitle}>Состав участников</h2>
       </div>
       <List list={list} color="#39A1ED" />
     </LayoutModal>

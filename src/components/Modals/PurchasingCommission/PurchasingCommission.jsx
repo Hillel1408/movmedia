@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { LayoutPageModal, Important, NumberedStepper } from '../../index'
 import { ModalContext } from '../Menu/Menu'
 import styles from './PurchasingCommission.module.scss'
+import globalStyles from '../../../styles/Globals.module.scss'
 
 import images from '../../../assets/images'
 
@@ -84,14 +85,14 @@ export default function PurchasingCommission() {
           width="299px"
           height="335px"
         ></img>
-        <h2 className="title">
+        <h2 className={globalStyles.title}>
           Сформируйте
           <br />
           Закупочную
           <br />
           комиссию
         </h2>
-        <p className="text-s">
+        <p className={globalStyles.textS}>
           Закупочная комиссия формируется Организатором из числа лиц, включенных
           в состав потенциальных членов закупочной комиссии, утвержденный
           генеральным директором{' '}
@@ -107,11 +108,11 @@ export default function PurchasingCommission() {
           secondaryColor="#39A1ED"
         />
         <div className={styles.block}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Для чего нужно формировать закупочное подразделение?
           </h3>
           <div>
-            <p className="text-s">
+            <p className={globalStyles.textS}>
               <span>5–15</span>
               общая численность закупочной комиссии
             </p>
@@ -123,20 +124,25 @@ export default function PurchasingCommission() {
             </svg>
             <ul>
               {secondaryList.map((item, index) => (
-                <li key={index} className="text-s">
-                  <span className="title">{item.count}</span>
+                <li key={index} className={globalStyles.textS}>
+                  <span className={globalStyles.title}>{item.count}</span>
                   {item.text}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="text-medium-s">Не могут быть членами комиссии:</p>
+            <p className={globalStyles.textMediumS}>
+              Не могут быть членами комиссии:
+            </p>
             <ul>
               {list.map((item, index) => (
                 <li
                   key={index}
-                  className={classNames('text-s', 'icon-polygon')}
+                  className={classNames(
+                    globalStyles.textS,
+                    globalStyles.iconPolygon
+                  )}
                 >
                   {item}
                 </li>
@@ -145,10 +151,10 @@ export default function PurchasingCommission() {
           </div>
         </div>
         <div className={styles.list}>
-          <h3 className="subtitle">
+          <h3 className={globalStyles.subtitle}>
             Как согласовать список членов закупочной комиссии?
           </h3>
-          <p className="text-s">
+          <p className={globalStyles.textS}>
             Тем, кого предполагается включить в состав потенциальных членов
             закупочных комиссий, нужно получить в АСЭЗ роль
             ZS_U_G_DISPLAY_***_00 - Просмотр закупочных процедур *** через ООО
