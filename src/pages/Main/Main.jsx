@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import classNames from 'classnames'
-import { Switcher, Menu, Scheme, Transition, Loader } from '../../components'
+import { Switcher, Menu, Scheme, Transition } from '../../components'
 import styles from './Main.module.scss'
 import globalStyles from '../../styles/Globals.module.scss'
-
-import images from '../../assets/images'
 
 export default function Main() {
   const [activeModal, setActiveModal] = useState(false)
